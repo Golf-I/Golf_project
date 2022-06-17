@@ -11,7 +11,7 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing 
 		infrastructure -->
 
-	<!-- servlet-context.xml : 웹과 관련된 설정을 지정하는 파일 -->
+	<!-- servlet-context.xml : 웹과 관련된 설정을 지정하는 파일 --> 
 
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />

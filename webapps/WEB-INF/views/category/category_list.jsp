@@ -13,7 +13,7 @@
 <body>
 
 	<section class="sub">
-	<div class="japen01">
+	<div class="japen01"> 
 
 		<div class="japen_menu">
 

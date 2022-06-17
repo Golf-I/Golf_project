@@ -16,7 +16,7 @@
 
 		<p>회원가입</p>
 
-		<div class="join_box">
+		<div class="join_box"> 
 
 			<div class="join_logo">
 

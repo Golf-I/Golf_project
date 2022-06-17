@@ -17,7 +17,7 @@
 	<section class="join">
 
 	<div class="join_box">
-		<p>회원가입</p>
+		<p>회원가입</p> 
 
 		<form method="post" action="signup_" name="join" onsubmit="return join1_check();">
 			<!-- enctype="multipart/form-data" -->

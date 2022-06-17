@@ -15,7 +15,7 @@
 
         <div class="id_find">
             
-            <p>아이디/비밀번호찾기</p>
+            <p>아이디/비밀번호찾기</p> 
 
             <div class="find_box">
 

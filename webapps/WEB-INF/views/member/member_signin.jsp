@@ -14,7 +14,7 @@
 
 	<div class="login_ex">
         <div class="login">
-            <div class="title_login">
+            <div class="title_login"> 
                 <p>로그인</p>
             </div><!--title-->
 

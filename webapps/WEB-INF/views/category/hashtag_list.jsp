@@ -16,7 +16,7 @@
 	<section class="hashtag_box">
 
 	<div class="home_box">
-		<a href="index">
+		<a href="index"> 
 			<img
 			src="${pageContext.request.contextPath}/resources/img/hashtag/home.png">
 		</a>

@@ -7,7 +7,7 @@ public class MemberVO {
 
 	private String id; // 아이디
 	private String pw; // 비밀번호
-	private String name; // 이름
+	private String name; // 이름 
 	private String phone; // 전화번호
 	private Date birth; // 생년월일
 	private	String gender; // 성별

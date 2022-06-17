@@ -6,7 +6,7 @@ public interface MemberService {
 
 	public void insert(MemberVO vo) throws Exception; // 회원가입 메서드
 
-	public int duplCheck(String id) throws Exception; // 이메일 중복 확인 메서드
+	public int duplCheck(String id) throws Exception; // 이메일 중복 확인 메서드 
 	
 	public MemberVO loginMem(MemberVO vo) throws Exception; // 로그인 메서드
 	

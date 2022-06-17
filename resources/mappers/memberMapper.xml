@@ -5,7 +5,7 @@
 
 
 	<!-- 회원가입  -->	
-	<insert id="signUp">
+	<insert id="signUp"> 
 	<![CDATA[
 	INSERT INTO member(name, id, pw, phone, birth, gender, sns, mms, mail, push,  icon)
 	VALUES (#{name}, #{id}, #{pw}, #{phone}, #{birth}, #{gender}, #{sns}, #{mms}, #{mail}, #{push}, #{icon})

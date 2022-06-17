@@ -15,7 +15,7 @@
 	<section class="review">
 		<p>상품리뷰</p>
 		<div class="line01"></div>
-		<div class="title">
+		<div class="title"> 
 			<p>골프아이를 이용해서 잘 다녀 왔습니다.</p>
 			<p>
 				홍*동<span> 2022/05.20</span>

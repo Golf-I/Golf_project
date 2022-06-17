@@ -15,7 +15,7 @@
 
 	<section class="freegolf">
 
-	<div class="japen01">
+	<div class="japen01"> 
 
 		<div class="japen_menu">
 

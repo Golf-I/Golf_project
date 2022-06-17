@@ -14,7 +14,7 @@ import com.spring.domain.MemberVO;
 // 스프링에게 등록하는 어노테이션(root-context.xml파일)
 @Repository
 public class MemberDAOImpl implements MemberDAO{
- 
+  
 	@Inject
 	private SqlSession sqlSession; 	// DB와 연결, 자원 해제, SQL쿼리 실행 객체
 	

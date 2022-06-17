@@ -17,7 +17,7 @@
 	<input type="checkbox" id="talk">
 	<input type="checkbox" id="link">
 	<input type="checkbox" id="map">
-
+ 
 	<section class="detail_box">
 		<div class="detail">
 

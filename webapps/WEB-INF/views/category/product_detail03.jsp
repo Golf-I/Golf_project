@@ -18,7 +18,7 @@
 	<input type="checkbox" id="link">
 	<input type="checkbox" id="map">
 
-	<section class="detail_box">
+	<section class="detail_box"> 
 		<div class="detail">
 
 			<div class="route">

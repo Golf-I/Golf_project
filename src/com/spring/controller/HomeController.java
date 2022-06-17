@@ -22,7 +22,7 @@ import com.spring.domain.MemberVO;
 /**
  * Servlet implementation class HomeController
  */
-@Controller // 컨트롤러 어노테이션
+@Controller // 컨트롤러 어노테이션 
 @WebServlet("/HomeController")
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;

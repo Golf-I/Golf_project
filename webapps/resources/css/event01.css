@@ -1,0 +1,345 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+}
+
+@font-face {
+	src: url(../font/yangpyeong_B.ttf);
+	font-family: yangpyeong;
+}
+
+.event_01 {
+	width: 1340px;
+	margin: 0 auto;
+}
+
+.event_01 .route {
+	width: 1340px;
+	height: 20px;
+	overflow: hidden;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.route a, .route p {
+	float: left;
+}
+
+.route a {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.route p {
+	font-size: 14px;
+	margin-right: 5px;
+	line-height: 20px;
+}
+
+.route p:last-child {
+	color: #e5004f;
+}
+
+.event_01 .title {
+	width: 1340px;
+	height: 30px;
+	font-size: 24px;
+	font-family: yangpyeong;
+	line-height: 30px;
+	margin-bottom: 10px;
+}
+
+.event_01 .line01 {
+	width: 1340px;
+	height: 1px;
+	background-color: #ccc;
+	margin-bottom: 50px;
+}
+
+.event_01 .event_zon {
+	width: 1340px;
+	margin-bottom: 100px;
+}
+
+.event_zon .event_box01, .event_zon .event_box02, .event_zon .event_box03
+	{
+	width: 1340px;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+
+.event_zon .event_box04 {
+	width: 1340px;
+	overflow: hidden;
+}
+
+.event_box01 a, .event_box02 a, .event_box03 a, .event_box04 a {
+	width: 320px;
+	float: left;
+	margin-right: 20px;
+}
+
+.event_box01 a:last-child, .event_box02 a:last-child, .event_box03 a:last-child,
+	.event_box04 a:last-child {
+	margin-right: 0;
+}
+
+.event_box01 a .event01, .event_box01 a .event02, .event_box01 a .event03,
+	.event_box01 a .event04 {
+	width: 320px;
+}
+
+.event01>div:nth-child(1), .event02>div:nth-child(1), .event03>div:nth-child(1),
+	.event04>div:nth-child(1) {
+	width: 320px;
+	height: 320px;
+}
+
+.event01 .txt_01, .event02 .txt_02, .event03 .txt_03, .event04 .txt_04 {
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.txt_01 p:nth-child(1), .txt_02 p:nth-child(1), .txt_03 p:nth-child(1),
+	.txt_04 p:nth-child(1) {
+	width: 300px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 10px;
+	color: #0d75bc;
+	font-weight: bold;
+}
+
+.txt_01 p:nth-child(2), .txt_02 p:nth-child(2), .txt_03 p:nth-child(2),
+	.txt_04 p:nth-child(2) {
+	width: 300px;
+	height: 22px;
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.txt_01 p:nth-child(3), .txt_02 p:nth-child(3), .txt_03 p:nth-child(3),
+	.txt_04 p:nth-child(3) {
+	width: 300px;
+	height: 16px;
+	color: #595757;
+}
+
+/*02*/
+.event_box02 a .event05, .event_box02 a .event06, .event_box02 a .event07,
+	.event_box02 a .event08 {
+	width: 320px;
+}
+
+.event05>div:nth-child(1), .event06>div:nth-child(1), .event07>div:nth-child(1),
+	.event08>div:nth-child(1) {
+	width: 320px;
+	height: 320px;
+}
+
+.event05 .txt_05, .event06 .txt_06, .event07 .txt_07, .event08 .txt_08 {
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.txt_05 p:nth-child(1), .txt_06 p:nth-child(1), .txt_07 p:nth-child(1),
+	.txt_08 p:nth-child(1) {
+	width: 300px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 10px;
+	color: #0d75bc;
+	font-weight: bold;
+}
+
+.txt_05 p:nth-child(2), .txt_06 p:nth-child(2), .txt_07 p:nth-child(2),
+	.txt_08 p:nth-child(2) {
+	width: 300px;
+	height: 22px;
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.txt_05 p:nth-child(3), .txt_06 p:nth-child(3), .txt_07 p:nth-child(3),
+	.txt_08 p:nth-child(3) {
+	width: 300px;
+	height: 16px;
+	color: #595757;
+}
+
+/*03*/
+.event_box03 a .event09, .event_box03 a .event10, .event_box03 a .event11,
+	.event_box03 a .event12 {
+	width: 320px;
+}
+
+.event09>div:nth-child(1), .event10>div:nth-child(1), .event11>div:nth-child(1),
+	.event12>div:nth-child(1) {
+	width: 320px;
+	height: 320px;
+}
+
+.event09 .txt_09, .event10 .txt_10, .event11 .txt_11, .event12 .txt_12 {
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.txt_09 p:nth-child(1), .txt_10 p:nth-child(1), .txt_11 p:nth-child(1),
+	.txt_12 p:nth-child(1) {
+	width: 300px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 10px;
+	color: #0d75bc;
+	font-weight: bold;
+}
+
+.txt_09 p:nth-child(2), .txt_10 p:nth-child(2), .txt_11 p:nth-child(2),
+	.txt_12 p:nth-child(2) {
+	width: 300px;
+	height: 22px;
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.txt_09 p:nth-child(3), .txt_10 p:nth-child(3), .txt_11 p:nth-child(3),
+	.txt_12 p:nth-child(3) {
+	width: 300px;
+	height: 16px;
+	color: #595757;
+}
+
+/*04*/
+.event_box04 a .event13, .event_box04 a .event14, .event_box04 a .event15,
+	.event_box04 a .event16 {
+	width: 320px;
+}
+
+.event13>div:nth-child(1), .event14>div:nth-child(1), .event15>div:nth-child(1),
+	.event16>div:nth-child(1) {
+	width: 320px;
+	height: 320px;
+}
+
+.event13 .txt_13, .event14 .txt_14, .event15 .txt_15, .event16 .txt_16 {
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.txt_13 p:nth-child(1), .txt_14 p:nth-child(1), .txt_15 p:nth-child(1),
+	.txt_16 p:nth-child(1) {
+	width: 300px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 10px;
+	color: #0d75bc;
+	font-weight: bold;
+}
+
+.txt_13 p:nth-child(2), .txt_14 p:nth-child(2), .txt_15 p:nth-child(2),
+	.txt_16 p:nth-child(2) {
+	width: 300px;
+	height: 22px;
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #333;
+}
+
+.txt_13 p:nth-child(3), .txt_14 p:nth-child(3), .txt_15 p:nth-child(3),
+	.txt_16 p:nth-child(3) {
+	width: 300px;
+	height: 16px;
+	color: #595757;
+}
+
+.event_01 .number_btn {
+	width: 260px;
+	height: 20px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.number_btn a p {
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	margin-right: 10px;
+	font-weight: bold;
+	float: left;
+	color: #333;
+}
+
+.number_btn a:last-child p {
+	margin-right: 0;
+}
+
+.number_btn a:nth-child(2) p {
+	color: red;
+}
+
+.freedom {
+	width: 100%;
+	max-width: 1920px;
+	height: 430px;
+	margin: 0 auto;
+	background-image: url(../img/background.png);
+}
+
+.freedom .country {
+	overflow: hidden;
+	margin-left: 235px;
+}
+
+.freedom .country div {
+	width: 150px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 50px;
+	margin-top: 280px;
+	border: 1px solid white;
+	box-sizing: border-box;
+	float: left;
+}
+
+.country div a {
+	color: white;
+}

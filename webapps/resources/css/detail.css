@@ -1,0 +1,2258 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+}
+
+.detail_box {
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.detail_box .detail {
+	width: 1340px;
+	margin: 0 auto;
+}
+
+.detail .route {
+	width: 1340px;
+	height: 20px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.route a, .route p, .route select {
+	float: left;
+}
+
+.route p {
+	font-size: 14px;
+	line-height: 20px;
+	margin-right: 5px;
+	color: #333;
+}
+
+.route p:last-child {
+	color: #e5004f;
+}
+
+.route a {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.route select {
+	width: 120px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.detail .title_detail {
+	width: 1340px;
+	height: 40px;
+	position: relative;
+}
+
+.title_detail>p {
+	font-size: 24px;
+	line-height: 40px;
+	font-weight: bold;
+	float: left;
+}
+
+.title_detail .icon_detail {
+	float: right;
+}
+
+.icon_detail label {
+	width: 40px;
+	height: 40px;
+	margin-right: 20px;
+	float: left;
+}
+
+.icon_detail label:last-child {
+	margin-right: 0;
+}
+
+#call {
+	display: none;
+}
+
+#call:checked ~ .detail_box .detail .title_detail .icon_detail .call_sheet
+	{
+	display: block;
+}
+
+#call:checked ~ .detail_box .detail .title_detail .icon_detail .talk_sheet
+	{
+	display: none;
+}
+
+#call:checked ~ .detail_box .detail .title_detail .icon_detail .link_sheet
+	{
+	display: none;
+}
+
+#call:checked ~ .detail_box .detail .title_detail .icon_detail .map_sheet
+	{
+	display: none;
+}
+
+#talk {
+	display: none;
+}
+
+#talk:checked ~ .detail_box .detail .title_detail .icon_detail .talk_sheet
+	{
+	display: block;
+}
+
+#talk:checked ~ .detail_box .detail .title_detail .icon_detail .call_sheet
+	{
+	display: none;
+}
+
+#talk:checked ~ .detail_box .detail .title_detail .icon_detail .link_sheet
+	{
+	display: none;
+}
+
+#talk:checked ~ .detail_box .detail .title_detail .icon_detail .map_sheet
+	{
+	display: none;
+}
+
+#link {
+	display: none;
+}
+
+#link:checked ~ .detail_box .detail .title_detail .icon_detail .link_sheet
+	{
+	display: block;
+}
+
+#link:checked ~ .detail_box .detail .title_detail .icon_detail .call_sheet
+	{
+	display: none;
+}
+
+#link:checked ~ .detail_box .detail .title_detail .icon_detail .talk_sheet
+	{
+	display: none;
+}
+
+#link:checked ~ .detail_box .detail .title_detail .icon_detail .map_sheet
+	{
+	display: none;
+}
+
+#map {
+	display: none;
+}
+
+#map:checked ~ .detail_box .detail .title_detail .icon_detail .map_sheet
+	{
+	display: block;
+}
+
+#map:checked ~ .detail_box .detail .title_detail .icon_detail .call_sheet
+	{
+	display: none;
+}
+
+#map:checked ~ .detail_box .detail .title_detail .icon_detail .link_sheet
+	{
+	display: none;
+}
+
+#map:checked ~ .detail_box .detail .title_detail .icon_detail .talk_sheet
+	{
+	display: none;
+}
+
+.icon_detail .call_sheet {
+	position: absolute;
+	top: 61px;
+	right: 40px;
+	border: 1px solid #ccc;
+	display: none;
+}
+
+.call_sheet p:first-child {
+	width: 300px;
+	height: 50px;
+	font-size: 18px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	background-color: white;
+}
+
+.call_sheet p:last-child {
+	width: 300px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: white;
+	background-color: #333;
+	font-size: 14px;
+}
+
+.detail .line01 {
+	width: 1340px;
+	height: 1px;
+	background-color: #ccc;
+	margin-top: 10px;
+}
+
+.icon_detail .talk_sheet {
+	position: absolute;
+	top: 61px;
+	right: 0;
+	border: 1px solid #ccc;
+	display: none;
+}
+
+.talk_sheet div:nth-child(1) {
+	width: 300px;
+	height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	background-color: white;
+	box-sizing: border-box;
+}
+
+.talk_sheet div:nth-child(1) p {
+	margin-left: 5px;
+	line-height: 30px;
+}
+
+.talk_sheet div:nth-child(2) {
+	width: 300px;
+	height: 350px;
+	background-color: white;
+}
+
+.talk_sheet .talk_btn {
+	width: 300px;
+	height: 30px;
+	background-color: #0d75bb;
+}
+
+.talk_btn a {
+	width: 20px;
+	height: 20px;
+	display: block;
+	float: left;
+}
+
+.talk_btn a img {
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+#talk_box {
+	width: 220px;
+	height: 20px;
+	border: none;
+	float: left;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#talk_btn {
+	width: 35px;
+	height: 20px;
+	border: none;
+	float: left;
+	background-color: white;
+	margin-top: 5px;
+	color: #0d75bb;
+}
+
+.icon_detail .link_sheet {
+	width: 210px;
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	top: 61px;
+	right: 0;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 10px;
+	display: none;
+}
+
+.link_sheet a {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.link_sheet a:nth-child(1) {
+	margin-left: 10px;
+}
+
+.link_sheet a:last-child {
+	margin-right: 0;
+}
+
+.icon_detail .map_sheet {
+	width: 1340px;
+	height: 600px;
+	background-color: #ccc;
+	position: absolute;
+	top: 61px;
+	left: 0;
+	display: none;
+}
+
+.map_sheet .close {
+	width: 19px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.detail .detail_img_box {
+	width: 1340px;
+	height: 450px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.detail_img_box .detail_left {
+	width: 660px;
+	height: 450px;
+	margin-right: 20px;
+	background-color: #ccc;
+	float: left;
+}
+
+.detail_img_box .detail_right {
+	width: 660px;
+	height: 450px;
+	float: left;
+}
+
+.detail_right .explanation {
+	width: 660px;
+	height: 350px;
+	margin-bottom: 20px;
+}
+
+/*골프*/
+.explanation .golf {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.golf .golf_title {
+	width: 200px;
+	float: left;
+}
+
+.golf_title div, .golf_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.golf_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.golf .course {
+	float: left;
+	line-height: 50px;
+}
+
+/*호텔*/
+.explanation .hotel {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.hotel .hotel_title {
+	width: 200px;
+	float: left;
+}
+
+.hotel_title div, .hotel_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.hotel_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.hotel .hotel_name {
+	float: left;
+	line-height: 50px;
+}
+
+/*최소인원*/
+.explanation .people {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.people .people_title {
+	width: 200px;
+	float: left;
+}
+
+.people_title div, .people_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.people_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.people .people_num {
+	float: left;
+	line-height: 50px;
+}
+
+/*출발지역*/
+.explanation .region {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.region .region_title {
+	width: 200px;
+	float: left;
+}
+
+.region_title div, .region_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.region_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.region .region_course {
+	float: left;
+	line-height: 50px;
+}
+
+/*도착지역*/
+.explanation .arrival {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.arrival .arrival_title {
+	width: 200px;
+	float: left;
+}
+
+.arrival_title div, .arrival_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.arrival_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.arrival .arrival_course {
+	float: left;
+	line-height: 50px;
+}
+
+/*별점*/
+.explanation .evaluation {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.evaluation .evaluation_title {
+	width: 200px;
+	float: left;
+}
+
+.evaluation_title div, .evaluation_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.evaluation_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.evaluation .evaluation_s {
+	float: left;
+	line-height: 50px;
+}
+
+/*최적가*/
+.explanation .money {
+	width: 620px;
+	height: 50px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.money .money_title {
+	width: 200px;
+	float: left;
+}
+
+.money_title div, .money_title p {
+	float: left;
+	line-height: 50px;
+}
+
+.money_title div {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.money .money_num {
+	float: left;
+	line-height: 50px;
+}
+
+/*이미지 작은 것*/
+.detail_right .img_mini {
+	width: 660px;
+	height: 80px;
+	overflow: hidden;
+}
+
+.img_mini div {
+	width: 124px;
+	height: 80px;
+	background-color: #333;
+	float: left;
+	margin-right: 10px;
+}
+
+.img_mini div:last-child {
+	margin-right: 0;
+}
+
+.detail .detail_menu_box {
+	width: 1340px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.detail_menu_box a {
+	width: 300px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	line-height: 50px;
+	color: #5e5e5e;
+}
+
+.detail_menu_box a:first-child {
+	width: 300px;
+	height: 50px;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	border-top: 1px solid #333;
+	font-weight: bold;
+	color: #333;
+	box-sizing: border-box;
+}
+
+.detail .line02 {
+	width: 1040px;
+	height: 1px;
+	background-color: #333;
+	margin-left: 300px;
+	margin-bottom: 50px;
+}
+
+.detail .red_text {
+	width: 1340px;
+	height: 20px;
+	font-weight: bold;
+	color: red;
+	line-height: 20px;
+	margin-bottom: 20px;
+}
+
+.detail .reservation_zon {
+	width: 1340px;
+	margin-bottom: 80px;
+	overflow: hidden;
+}
+
+.reservation_zon .reservation {
+	width: 930px;
+	height: 300px;
+	border-top: 2px solid #333;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+	float: left;
+	margin-right: 50px;
+}
+
+.reservation .title_res {
+	width: 928px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 27px;
+	background-color: #f5f7f9;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	font-weight: bold;
+	color: #333;
+}
+
+.reservation .period {
+	width: 124px;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+	float: left;
+}
+
+.period>p {
+	width: 124px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.period .period01 {
+	width: 124px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.period .period02 {
+	width: 124px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.period .period03 {
+	width: 124px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.period .period04 {
+	width: 124px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	box-sizing: border-box;
+}
+
+.period01 p, .period02 p, .period03 p, .period04 p {
+	height: 14px;
+	line-height: 14px;
+}
+
+.period04 p:nth-child(1), .period03 p:nth-child(1), .period02 p:nth-child(1),
+	.period01 p:nth-child(1) {
+	padding-top: 9px;
+}
+
+.reservation .day {
+	width: 84px;
+	float: left;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.day>p {
+	width: 84px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.day .day01, .day .day02, .day .day03, .day .day04 {
+	width: 84px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.day .day04 {
+	border: none;
+}
+
+.reservation .lodging {
+	width: 134px;
+	float: left;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.lodging>p {
+	width: 134px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.lodging .lodging01, .lodging .lodging02, .lodging .lodging03, .lodging .lodging04
+	{
+	width: 134px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.lodging .lodging04 {
+	border: none;
+}
+
+.reservation .airline {
+	width: 132px;
+	float: left;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.airline>p {
+	width: 132px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.airline .airline01, .airline .airline02, .airline .airline03, .airline .airline04
+	{
+	width: 132px;
+	height: 60px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.airline .airline04 {
+	border: none;
+}
+
+.detail .weekday {
+	width: 227px;
+	float: left;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.weekday>p {
+	width: 227px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.weekday .weekday01, .weekday .weekday02, .weekday .weekday03, .weekday .weekday04
+	{
+	width: 227px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.weekday .weekday04 {
+	border: none;
+}
+
+.weekday01 .txt_week01 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_week01 p, .txt_week01 a {
+	float: left;
+}
+
+.weekday01 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_week01 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.weekday02 .txt_week02 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_week02 p, .txt_week02 a {
+	float: left;
+}
+
+.weekday02 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_week02 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.weekday03 .txt_week03 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_week03 p, .txt_week03 a {
+	float: left;
+}
+
+.weekday03 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_week03 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.weekday04 .txt_week04 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_week04 p, .txt_week04 a {
+	float: left;
+}
+
+.weekday04 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_week04 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.detail .weekend {
+	width: 227px;
+	float: left;
+}
+
+.weekend>p {
+	width: 227px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.weekend .weekend01, .weekend .weekend02, .weekend .weekend03, .weekend .weekend04
+	{
+	width: 227px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.weekend .weekend04 {
+	border: none;
+}
+
+.weekend01 .txt_weekend01 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_weekend01 p, .txt_weekend01 a {
+	float: left;
+}
+
+.txt_weekend01 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_weekend01 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.weekend02 .txt_weekend02 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_weekend02 p, .txt_weekend02 a {
+	float: left;
+}
+
+.txt_weekend02 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_weekend02 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.weekend03 .txt_weekend03 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_weekend03 p, .txt_weekend03 a {
+	float: left;
+}
+
+.txt_weekend03 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_weekend03 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.weekend04 .txt_weekend04 {
+	width: 160px;
+	height: 20px;
+	overflow: hidden;
+	margin: 19px auto;
+}
+
+.txt_weekend04 p, .txt_weekend04 a {
+	float: left;
+}
+
+.txt_weekend04 a {
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #f49800;
+	color: white;
+	font-weight: bold;
+}
+
+.txt_weekend04 p {
+	line-height: 20px;
+	color: red;
+	font-weight: bold;
+}
+
+.reservation_zon .no_reservation {
+	width: 360px;
+	height: 300px;
+	float: left;
+	border-top: 2px solid #333;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.no_reservation>p {
+	width: 360px;
+	height: 30px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	line-height: 27px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: #f5f7f9;
+	color: #333;
+}
+
+.no_reservation .no_day {
+	width: 124px;
+	height: 270px;
+	float: left;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.no_day p {
+	width: 124px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 58px;
+	font-size: 14px;
+}
+
+.no_day p:first-child {
+	width: 124px;
+	height: 30px;
+	line-height: 28px;
+}
+
+.no_day div {
+	width: 124px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.no_reservation .no_txt {
+	width: 234px;
+	height: 270px;
+	float: left;
+}
+
+.no_txt p {
+	width: 234px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 58px;
+	font-size: 14px;
+}
+
+.no_txt p:first-child {
+	width: 234x;
+	height: 30px;
+	line-height: 28px;
+}
+
+.no_txt div {
+	width: 234px;
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/*포함 불포함*/
+.detail .include_box {
+	width: 1340px;
+}
+
+.include_box .include_top {
+	width: 1340px;
+	height: 320px;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+}
+
+.include_top .include01 {
+	width: 535px;
+	height: 320px;
+	margin-left: 10px;
+	float: left;
+}
+
+.include01 .include_txt01 {
+	width: 535px;
+	margin-top: 20px;
+}
+
+.include_txt01>p {
+	line-height: 25px;
+	font-size: 14px;
+	margin-left: 50px;
+}
+
+.include_txt01 .title_in01 {
+	width: 535px;
+	height: 40px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.title_in01 div, .title_in01 p {
+	float: left;
+}
+
+.title_in01 div {
+	width: 40px;
+	height: 40px;
+}
+
+.title_in01 p {
+	margin-left: 10px;
+	line-height: 40px;
+	color: #333;
+	font-weight: bold;
+}
+
+.include_top .dot01 {
+	width: 200px;
+	height: 320px;
+	float: left;
+}
+
+.dot01 img {
+	width: 1px;
+	height: 270px;
+	margin: 0 auto;
+}
+
+.include_top .include02 {
+	width: 535px;
+	height: 320px;
+	margin-left: 10px;
+	float: left;
+}
+
+.include02 .include_txt02 {
+	width: 535px;
+	margin-top: 20px;
+}
+
+.include_txt02>p {
+	line-height: 25px;
+	font-size: 14px;
+	margin-left: 50px;
+}
+
+.include_txt02 .title_in02 {
+	width: 535px;
+	height: 40px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.title_in02 div, .title_in02 p {
+	float: left;
+}
+
+.title_in02 div {
+	width: 40px;
+	height: 40px;
+}
+
+.title_in02 p {
+	margin-left: 10px;
+	line-height: 40px;
+	color: #333;
+	font-weight: bold;
+}
+
+.include_box .include_bottom {
+	width: 1340px;
+	height: 380px;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.include_bottom .include03 {
+	width: 535px;
+	height: 320px;
+	margin-left: 10px;
+	float: left;
+}
+
+.include03 .include_txt03 {
+	width: 535px;
+	margin-top: 20px;
+}
+
+.include_txt03>p {
+	line-height: 25px;
+	font-size: 14px;
+	margin-left: 50px;
+}
+
+.include_txt03 .title_in03 {
+	width: 535px;
+	height: 40px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.title_in03 div, .title_in03 p {
+	float: left;
+}
+
+.title_in03 div {
+	width: 40px;
+	height: 40px;
+}
+
+.title_in03 p {
+	margin-left: 10px;
+	line-height: 40px;
+	color: #333;
+	font-weight: bold;
+}
+
+.include_bottom .dot02 {
+	width: 200px;
+	height: 320px;
+	float: left;
+}
+
+.dot02 img {
+	width: 1px;
+	height: 310px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.include_bottom .include04 {
+	width: 535px;
+	height: 320px;
+	margin-left: 10px;
+	float: left;
+}
+
+.include04 .include_txt04 {
+	width: 535px;
+	margin-top: 20px;
+}
+
+.include_txt04>p {
+	line-height: 25px;
+	font-size: 14px;
+	margin-left: 50px;
+}
+
+.include_txt04 .title_in04 {
+	width: 535px;
+	height: 40px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.title_in04 div, .title_in04 p {
+	float: left;
+}
+
+.title_in04 div {
+	width: 40px;
+	height: 40px;
+}
+
+.title_in04 p {
+	margin-left: 10px;
+	line-height: 40px;
+	color: #333;
+	font-weight: bold;
+}
+
+/*여행일정*/
+.detail .calendar_box {
+	width: 1340px;
+	overflow: hidden;
+	margin-bottom: 80px;
+	margin-top: 80px;
+}
+
+.calendar_box>p {
+	width: 1340px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.calendar_box .reference {
+	width: 1340px;
+	height: 120px;
+	background-color: #f3f3f3;
+	margin-bottom: 40px;
+}
+
+.reference .refernce_box {
+	width: 1340px;
+	height: 42px;
+	padding-top: 39px;
+}
+
+.refernce_box .reference_txt {
+	width: 1340px;
+	height: 16px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.reference_txt div, .reference_txt p {
+	float: left;
+}
+
+.reference_txt div {
+	width: 15px;
+	height: 16px;
+	margin-left: 50px;
+}
+
+.reference_txt p {
+	line-height: 16px;
+	margin-left: 5px;
+	font-weight: bold;
+	color: #333;
+}
+
+.refernce_box>p {
+	margin-left: 50px;
+	font-size: 14px;
+}
+
+.calendar_box .calender_left {
+	width: 980px;
+	float: left;
+	margin-right: 50px;
+}
+
+/*1일차*/
+.calender_left .calendar_01 {
+	width: 980px;
+	height: 256px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.calendar_01 .one_day, .calendar_01 .routine01, .calendar_01 .food_ex_01
+	{
+	float: left;
+}
+
+.calendar_01 .one_day {
+	width: 120px;
+	height: 256px;
+	border-top: 2px solid #f49800;
+	border-right: 1px solid #ccc;
+	background-color: #f3f3f3;
+	box-sizing: border-box;
+}
+
+.calendar_01 .routine01 {
+	width: 630px;
+	height: 256px;
+	border-top: 2px solid #333;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.one_day p {
+	text-align: center;
+	line-height: 256px;
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+}
+
+.routine01 .routin_box01 {
+	width: 590px;
+	height: 214px;
+	margin-top: 18px;
+	margin-left: 20px;
+}
+
+.routin_box01 p {
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.routin_box01 span {
+	color: #333;
+	font-weight: bold;
+}
+
+.routin_box01 p:nth-child(2) {
+	margin-bottom: 20px;
+}
+
+.routin_box01 p:nth-child(4) {
+	margin-bottom: 20px;
+}
+
+.routin_box01 p:nth-child(5) {
+	color: #e5004f;
+	font-weight: bold;
+}
+
+.calendar_01 .food_ex_01 {
+	width: 228px;
+	height: 256px;
+}
+
+.food_ex_01 .food01 {
+	width: 228px;
+	height: 206px;
+	border-bottom: 1px solid #ccc;
+	border-top: 2px solid #333;
+	box-sizing: border-box;
+}
+
+.food01 .food_box01 {
+	width: 188px;
+	margin-left: 20px;
+	margin-top: 20px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.food_ex_01 .lodging_box01 {
+	width: 228px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	background-color: #f3f3f3;
+}
+
+.lodging_box01 span {
+	font-weight: bold;
+	color: #333;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/*2일차*/
+.calender_left .calendar_02 {
+	width: 980px;
+	height: 320px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+.calendar_02 .two_day, .calendar_02 .routine02, .calendar_02 .food_ex_02
+	{
+	float: left;
+}
+
+.calendar_02 .two_day {
+	width: 120px;
+	height: 320px;
+	border-top: 2px solid #f49800;
+	border-right: 1px solid #ccc;
+	background-color: #f3f3f3;
+	box-sizing: border-box;
+}
+
+.calendar_02 .routine02 {
+	width: 630px;
+	height: 320px;
+	border-top: 2px solid #333;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.two_day p {
+	text-align: center;
+	line-height: 320px;
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+}
+
+.routine02 .routin_box02 {
+	width: 590px;
+	height: 320px;
+	margin-top: 18px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.routin_box02 p {
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.routin_box02 p:nth-child(1) {
+	margin-bottom: 20px;
+}
+
+.routin_box02 p:nth-child(2) {
+	margin-bottom: 20px;
+	color: #e5004f;
+	font-weight: bold;
+}
+
+.routin_box02 .routin_img {
+	width: 590px;
+	height: 130px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.routin_img div {
+	width: 190px;
+	height: 130px;
+	float: left;
+	margin-right: 10px;
+	background-color: #333;
+}
+
+.routin_img div:last-child {
+	margin-right: 0;
+}
+
+.calendar_02 .food_ex_02 {
+	width: 228px;
+	height: 320px;
+}
+
+.food_ex_02 .food02 {
+	width: 228px;
+	height: 270px;
+	border-bottom: 1px solid #ccc;
+	border-top: 2px solid #333;
+	box-sizing: border-box;
+}
+
+.food02 .food_box02 {
+	width: 188px;
+	margin-left: 20px;
+	margin-top: 20px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.food_ex_02 .lodging_box02 {
+	width: 228px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	background-color: #f3f3f3;
+}
+
+.lodging_box02 span {
+	font-weight: bold;
+	color: #333;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/*3일차*/
+.calender_left .calendar_03 {
+	width: 980px;
+	height: 200px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.calendar_03 .three_day, .calendar_03 .routine03, .calendar_03 .food_ex_03
+	{
+	float: left;
+}
+
+.calendar_03 .three_day {
+	width: 120px;
+	height: 200px;
+	border-top: 2px solid #f49800;
+	border-right: 1px solid #ccc;
+	background-color: #f3f3f3;
+	box-sizing: border-box;
+}
+
+.calendar_03 .routine03 {
+	width: 630px;
+	height: 200px;
+	border-top: 2px solid #333;
+	border-right: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.three_day p {
+	text-align: center;
+	line-height: 200px;
+	font-size: 24px;
+	color: #333;
+	font-weight: bold;
+}
+
+.routine03 .routin_box03 {
+	width: 590px;
+	margin-top: 18px;
+	margin-left: 20px;
+}
+
+.routin_box03 p {
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.routin_box03 p:nth-child(1) {
+	margin-bottom: 20px;
+}
+
+.routin_box03 p:nth-child(2) {
+	margin-bottom: 20px;
+	color: #e5004f;
+	font-weight: bold;
+}
+
+.routin_box03 span {
+	font-weight: bold;
+	color: #333;
+}
+
+.calendar_03 .food_ex_03 {
+	width: 228px;
+	height: 200px;
+}
+
+.food_ex_03 .food03 {
+	width: 228px;
+	height: 150px;
+	border-bottom: 1px solid #ccc;
+	border-top: 2px solid #333;
+	box-sizing: border-box;
+}
+
+.food03 .food_box03 {
+	width: 188px;
+	margin-left: 20px;
+	margin-top: 20px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.food_ex_03 .lodging_box03 {
+	width: 228px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	background-color: #f3f3f3;
+}
+
+.lodging_box03 span {
+	font-weight: bold;
+	color: #333;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/*다른 인기 상품*/
+.calendar_box .calender_right {
+	width: 310px;
+	float: left;
+}
+
+.calender_right .calender_r_title {
+	width: 310px;
+	height: 50px;
+	border-top: 2px solid #0d75bb;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+	background-color: #f3f3f3;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+/*상품01*/
+.calender_right a .product01 {
+	width: 310px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+.product01 .img_pro01 {
+	width: 310px;
+	height: 170px;
+}
+
+.product01 .product01_ex {
+	width: 288px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.product01_ex .product01_txt {
+	margin-bottom: 20px;
+}
+
+.product01_txt p {
+	width: 288x;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.product01_txt p:nth-child(1) {
+	color: #0d75bb;
+}
+
+.product01_txt p:nth-child(2) {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.product01_txt p:nth-child(3) {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.product01_txt p:nth-child(4) {
+	color: #e5004f;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.product01_ex .review01 {
+	width: 288px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.review01 .stat01 {
+	float: left;
+}
+
+.review01 .good_icon01 {
+	float: right;
+}
+
+.star01 div {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+.good_icon01 .talk_r_01, .good_icon01 .good_r_01 {
+	float: left;
+}
+
+.good_icon01 .good_r_01 {
+	margin-left: 10px;
+}
+
+.talk_r_01 div, .talk_r_01 p {
+	float: left;
+}
+
+.good_r_01 div, .good_r_01 p {
+	float: left;
+}
+
+.talk_r_01 p, .good_r_01 p {
+	margin-left: 5px;
+	line-height: 20px;
+	color: #ccc;
+}
+
+/*상품02*/
+.calender_right a .product02 {
+	width: 310px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.product02 .img_pro02 {
+	width: 310px;
+	height: 170px;
+}
+
+.product02 .product02_ex {
+	width: 288px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.product02_ex .product02_txt {
+	margin-bottom: 20px;
+}
+
+.product02_txt p {
+	width: 288x;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.product02_txt p:nth-child(1) {
+	color: #0d75bb;
+}
+
+.product02_txt p:nth-child(2) {
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.product02_txt p:nth-child(3) {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.product02_txt p:nth-child(4) {
+	color: #e5004f;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.product02_ex .review02 {
+	width: 288px;
+	height: 20px;
+	overflow: hidden;
+}
+
+.review02 .stat02 {
+	float: left;
+}
+
+.review02 .good_icon02 {
+	float: right;
+}
+
+.star02 div {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+
+.good_icon02 .talk_r_02, .good_icon02 .good_r_02 {
+	float: left;
+}
+
+.good_icon02 .good_r_02 {
+	margin-left: 10px;
+}
+
+.talk_r_02 div, .talk_r_02 p {
+	float: left;
+}
+
+.good_r_02 div, .good_r_02 p {
+	float: left;
+}
+
+.talk_r_02 p, .good_r_02 p {
+	margin-left: 5px;
+	line-height: 20px;
+	color: #ccc;
+}
+
+/*골프장정보*/
+.detail .golf_detail {
+	width: 1340px;
+	margin-bottom: 80px;
+}
+
+.golf_detail .golf_title_d {
+	width: 1340px;
+	height: 54px;
+	margin-bottom: 30px;
+}
+
+.golf_title_d .line_box01 {
+	width: 1340px;
+	height: 2px;
+	overflow: hidden;
+}
+
+.line_box01 .golf_line01 {
+	width: 120px;
+	height: 2px;
+	float: left;
+	background-color: #f49800;
+}
+
+.golf_title_d .golf_line02 {
+	width: 1220px;
+	height: 1px;
+	float: left;
+	background-color: #ccc;
+	margin-top: 1px;
+}
+
+.golf_title_d>p {
+	width: 1340px;
+	height: 50px;
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+	line-height: 50px;
+}
+
+.golf_title_d .line_box02 {
+	width: 1340px;
+	height: 2px;
+	overflow: hidden;
+}
+
+.line_box02 .golf_line03 {
+	width: 120px;
+	height: 2px;
+	float: left;
+	background-color: #f49800;
+}
+
+.line_box02 .golf_line04 {
+	width: 1220px;
+	height: 1px;
+	float: left;
+	background-color: #ccc;
+	margin-top: 1px;
+}
+
+.golf_detail .golf_img_detail {
+	width: 1340px;
+}
+
+.golf_img_detail>p {
+	width: 1340px;
+	height: 50px;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.golf_img_detail .golf_img_d {
+	width: 1340px;
+	height: 470px;
+	overflow: hidden;
+}
+
+.golf_img_d div {
+	width: 660px;
+	height: 470px;
+	float: left;
+	background-color: #ccc;
+}
+
+.golf_img_d div:first-child {
+	margin-right: 20px;
+}
+
+.golf_detail .golf_detail_txt {
+	width: 1340px;
+	height: 100px;
+	background-color: #f3f3f3;
+	margin-top: 30px;
+}
+
+.golf_detail_txt p {
+	width: 1300px;
+	margin-left: 20px;
+	padding-top: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+/*호텔정보*/
+.detail .hotel_detail {
+	width: 1340px;
+	margin-bottom: 100px;
+}
+
+.hotel_detail .hotel_title_d {
+	width: 1340px;
+	height: 54px;
+	margin-bottom: 30px;
+}
+
+.hotel_title_d .line_box03 {
+	width: 1340px;
+	height: 2px;
+	overflow: hidden;
+}
+
+.hotel_title_d .hotel_line05 {
+	width: 120px;
+	height: 2px;
+	float: left;
+	background-color: #f49800;
+}
+
+.hotel_title_d .hotel_line06 {
+	width: 1220px;
+	height: 1px;
+	float: left;
+	background-color: #ccc;
+	margin-top: 1px;
+}
+
+.hotel_title_d>p {
+	width: 1340px;
+	height: 50px;
+	font-size: 22px;
+	color: #333;
+	font-weight: bold;
+	line-height: 50px;
+}
+
+.hotel_title_d .line_box04 {
+	width: 1340px;
+	height: 2px;
+	overflow: hidden;
+}
+
+.line_box04 .hotel_line07 {
+	width: 120px;
+	height: 2px;
+	float: left;
+	background-color: #f49800;
+}
+
+.line_box04 .hotel_line08 {
+	width: 1220px;
+	height: 1px;
+	float: left;
+	background-color: #ccc;
+	margin-top: 1px;
+}
+
+.hotel_detail .hotel_img_detail {
+	width: 1340px;
+}
+
+.hotel_img_detail>p {
+	width: 1340px;
+	height: 50px;
+	font-size: 32px;
+	font-weight: bold;
+	line-height: 50px;
+	margin-bottom: 20px;
+}
+
+.hotel_img_detail .hotel_img_d {
+	width: 1340px;
+	height: 470px;
+	overflow: hidden;
+}
+
+.hotel_img_d div {
+	width: 660px;
+	height: 470px;
+	float: left;
+	background-color: #ccc;
+}
+
+.hotel_img_d div:first-child {
+	margin-right: 20px;
+}
+
+.hotel_detail .hotel_detail_txt {
+	width: 1340px;
+	height: 100px;
+	background-color: #f3f3f3;
+	margin-top: 30px;
+}
+
+.hotel_detail_txt p {
+	width: 1300px;
+	margin-left: 20px;
+	padding-top: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}

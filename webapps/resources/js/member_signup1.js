@@ -13,10 +13,10 @@
 			$("#pwfalse").attr("style", "color:#FF0000");
 			$("#password02").focus();
 			
-			// 3초 뒤 사라짐
+			// 2초 뒤 사라짐
 			setTimeout(function(){
 				$("#pwfalse").attr("style", "display:none");
-			}, 3000);
+			}, 2000);
 
 			return false;
 		}
@@ -28,10 +28,10 @@
 			$("#emailfalse").attr("style", "color:#FF0000");
 			$("#email").focus();
 			
-			// 3초 뒤 사라짐
+			// 2초 뒤 사라짐
 			setTimeout(function(){
 				$("#emailfalse").attr("style", "display:none");
-			}, 3000);
+			}, 2000);
 			return false;
 		}
 			
@@ -91,13 +91,66 @@
 	    Kakao.Auth.login({
 	      success: function(authObj) {
 	        //alert(JSON.stringify(authObj))
-	      },
+	    	//console.log(Kakao.Auth.getAccessToken());
+	    	Kakao.Auth.setAccessToken(authObj.access_token); // access 토큰값 저장 
+	    	  
+	    	getInfo();
+	      }, // success
+	      
 	      fail: function(err) {
 	        //alert(JSON.stringify(err))
-	      },
-	    })
-	  }
+	      }, // fail
+	      
+	   }) // Kakao.Auth.login
+	} // loginWithKakao
 	/* 카카오 로그인  */
+	
+	
+	function getInfo(){
+			    	  
+    	Kakao.API.request({
+            url: '/v2/user/me',
+            success: function (res) {
+
+//            	console.log(res);
+            	var vo = {};
+            	vo.id = res.kakao_account.email;
+	          	vo.birth = res.kakao_account.birthday;
+	          	vo.gender = res.kakao_account.gender;
+	          	vo.sns = "kakao";  
+	          	
+	          	document.join.submit(vo);
+	          	
+/*		    	$.ajax({
+					type:"POST",
+//					url: "member/kakao_signup", 
+					url: "./signup_", 
+					data: { id: id,
+							birth: birth,
+							gender: gender,
+							sns: sns },
+					datatype: "text",
+					success: function(check){
+//						console.log("ㅎㅎ?");
+					}, // success
+					
+					error: function(datastatus){
+						//alert("오류가 발생하였습니다. <br/> 관리자에게 문의해주세요.");
+						console.log(datastatus);
+						console.log("ㅎㅎ?");
+					} // error
+				}); // ajax
+*/		    	
+            }, // success
+            
+            fail: function (err) {
+              console.log(err)
+            }, // fail
+          }) // Kakao.API.request
+		
+	} // getInfo
+
+	
 	
 	/* 카카오 로그아웃  */
 	function logoutWithKakao() {
@@ -112,3 +165,23 @@
         });
     }
 	/* 카카오 로그아웃  */
+	
+	
+	/* 카카오 회원탈퇴  */
+	function secession() {
+		Kakao.API.request({
+	    	url: '/v1/user/unlink',
+	    	success: function(response) {
+	    		console.log(response);
+	    		//callback(); //연결끊기(탈퇴)성공시 서버에서 처리할 함수
+	    		window.location.href='/'
+	    	},
+	    	fail: function(error) {
+	    		console.log('탈퇴 미완료')
+	    		console.log(error);
+	    	},
+		});
+	};
+	/* 카카오 회원탈퇴  */
+
+	

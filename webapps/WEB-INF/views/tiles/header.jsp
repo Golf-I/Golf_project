@@ -179,7 +179,7 @@
 
 					<div class="line05"></div>
 
-					<li><a href="#">마이페이지</a></li>
+					<li><a href="mypage">마이페이지</a></li>
 
 					<div class="line06"></div>
 

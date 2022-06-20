@@ -56,51 +56,45 @@
            </a> -->
 
 			<script type="text/javascript">
-//		  	var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "http://localhost:8080/Golf_project/naverlogin"); // YOUR_CLIENT_ID, YOUR_CALLBACK_URL
-		  	var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "http://localhost:8080/Golf_project/naverlogin"); // YOUR_CLIENT_ID, YOUR_CALLBACK_URL
-		  	var state = naver_id_login.getUniqState();
-		  	naver_id_login.setButton("green", 3, 50);
-		  	naver_id_login.setDomain("http://localhost:8080/Golf_project/"); // YOUR_SERVICE_URL
-		  	naver_id_login.setState(state);
-		  	naver_id_login.setPopup();
-			naver_id_login.init_naver_id_login();
-		</script>
+			  	var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "http://localhost:8080/Golf_project/naverlogin"); // YOUR_CLIENT_ID, YOUR_CALLBACK_URL
+			  	var state = naver_id_login.getUniqState();
+			  	naver_id_login.setButton("green", 3, 50);
+			  	naver_id_login.setDomain("http://localhost:8080/Golf_project/"); // YOUR_SERVICE_URL
+			  	naver_id_login.setState(state);
+			  	naver_id_login.setPopup();
+				naver_id_login.init_naver_id_login();
+			</script>
 			<!-- 네이버 로그인 버튼 노출 영역 -->
 
 
 			<!-- 카카오 로그인 버튼 노출 영역 -->
-			<a id="custom-login-btn" href="javascript:loginWithKakao()"> <img
-				src="${pageContext.request.contextPath}/resources/img/signup/kakao_login_medium_wide.png"
-				id="kakao_join" alt="카카오 로그인 버튼">
+			<a href="javascript:loginWithKakao()">
+            	<div class="kakao_join">
+                    <div>
+                        <img src="${pageContext.request.contextPath}/resources/img/kakaotalk_login.png" alt="카카오 로그인 버튼">
+                    </div>
+                    <p>카카오톡 로그인</p>
+            	</div>
 			</a>
-			<p id="token-result"></p>
-			<%-- <a href="#">
-            <div class="kakao_join">
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/signup/kakao_login_medium_wide.png">
-                </div>
-                <p>카카오톡 로그인</p>
-            </div>
-        </a> --%>
 			<!-- 카카오 로그인 버튼 노출 영역 -->
 
 
-			<input type="checkbox" id="btn01" name="icon1"> <input
-				type="checkbox" id="btn02" name="icon2"> <input
-				type="checkbox" id="btn03" name="icon3"> <input
-				type="checkbox" id="btn04" name="icon4"> <input
-				type="checkbox" id="btn05" name="icon5"> <input
-				type="checkbox" id="btn06" name="icon6"> <input
-				type="checkbox" id="btn07" name="icon7"> <input
-				type="checkbox" id="btn08" name="icon8"> <input
-				type="checkbox" id="btn09" name="icon9"> <input
-				type="checkbox" id="btn10" name="icon10"> <input
-				type="checkbox" id="btn11" name="icon11"> <input
-				type="checkbox" id="btn12" name="icon12"> <input
-				type="checkbox" id="btn13" name="icon13"> <input
-				type="checkbox" id="btn14" name="icon14"> <input
-				type="checkbox" id="btn15" name="icon15"> <input
-				type="checkbox" id="btn16" name="icon16">
+			<input type="checkbox" id="btn01" name="icon1"> 
+			<input type="checkbox" id="btn02" name="icon2"> 
+			<input type="checkbox" id="btn03" name="icon3"> 
+			<input type="checkbox" id="btn04" name="icon4"> 
+			<input type="checkbox" id="btn05" name="icon5"> 
+			<input type="checkbox" id="btn06" name="icon6"> 
+			<input type="checkbox" id="btn07" name="icon7"> 
+			<input type="checkbox" id="btn08" name="icon8"> 
+			<input type="checkbox" id="btn09" name="icon9"> 
+			<input type="checkbox" id="btn10" name="icon10"> 
+			<input type="checkbox" id="btn11" name="icon11"> 
+			<input type="checkbox" id="btn12" name="icon12"> 
+			<input type="checkbox" id="btn13" name="icon13"> 
+			<input type="checkbox" id="btn14" name="icon14"> 
+			<input type="checkbox" id="btn15" name="icon15"> 
+			<input type="checkbox" id="btn16" name="icon16"> 
 
 			<div class="pop_up_ex">
 				<div class="pop_up">
@@ -178,6 +172,6 @@
 		</form>
 	</div>
 	<!--join_box--> </section>
-
+	
 </body>
 </html>

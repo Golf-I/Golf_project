@@ -1,1465 +1,1977 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+*{margin: 0; padding: 0;}
+a {text-decoration: none;}
+img {display: block;}
 
-a {
-	text-decoration: none;
-}
-
-img {
-	display: block;
-}
- 
 @font-face {
-	font-family: yangpyeong;
-	src: url(../font/yangpyeong_B.ttf);
+    font-family: yangpyeong;
+    src: url(../font/yangpyeong_B.ttf);
 }
 
-.freegolf_detail_box {
-	width: 100%;
-	max-width: 1920px;
-	margin: 0 auto;
+@font-face {
+    font-family: yangpyeong_l;
+    src: url(../font/yangpyeong_L.ttf);
 }
 
-.freegolf_detail_box .freegolf_detail {
-	width: 1340px;
-	margin: 0 auto;
-}
+.freegolf_detail_box
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
 
-.freegolf_detail .route {
-	width: 1340px;
-	height: 20px;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	overflow: hidden;
-}
+.freegolf_detail_box .freegolf_detail
+{width: 1340px;
+margin: 0 auto;}
 
-.route a, .route p, .route select {
-	float: left;
-}
+.freegolf_detail .route
+{width: 1340px; height: 20px;
+margin-top: 50px;
+margin-bottom: 50px;
+overflow: hidden;}
 
-.route p {
-	font-size: 14px;
-	line-height: 20px;
-	margin-right: 5px;
-	color: #333;
-}
+.route a, .route p, .route select
+{float: left;}
 
-.route p:last-child {
-	color: #e5004f;
-}
+.route p 
+{font-size: 14px;
+line-height: 20px;
+margin-right: 5px;
+color: #333;}
 
-.route a {
-	width: 20px;
-	height: 20px;
-	margin-right: 5px;
-}
+.route p:last-child
+{color: #e5004f;}
 
-.route select {
-	width: 120px;
-	height: 20px;
-	margin-right: 5px;
-}
+.route a
+{width: 20px; height: 20px;
+margin-right: 5px;}
 
-.freegolf_detail .title_detail {
-	width: 1340px;
-	height: 40px;
-	position: relative;
-	font-family: yangpyeong;
-}
+.route select
+{width: 120px; height: 20px;
+margin-right: 5px;}
 
-.title_detail>p {
-	font-size: 24px;
-	line-height: 40px;
-	font-weight: bold;
-	float: left;
-}
+.freegolf_detail .title_detail
+{width: 1340px; height: 40px;
+position: relative;}
 
-.title_detail .icon_detail {
-	float: right;
-}
+.title_detail>p
+{font-size: 24px; line-height: 40px;
+font-weight: bold;
+float: left;
+font-family: yangpyeong;}
 
-.icon_detail label {
-	width: 40px;
-	height: 40px;
-	margin-right: 20px;
-	float: left;
-}
+.title_detail .icon_detail
+{float: right;}
 
-.icon_detail label:last-child {
-	margin-right: 0;
-}
+.icon_detail label
+{width: 40px; height: 40px;
+margin-right: 20px;
+float: left;}
 
-#call {
-	display: none;
-}
+.icon_detail label:last-child
+{margin-right: 0;}
 
-#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet
-	{
-	display: block;
-}
+#call {display: none;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: block;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: none;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: none;}
+#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: none;}
 
-#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet
-	{
-	display: none;
-}
 
-#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet
-	{
-	display: none;
-}
 
-#call:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet
-	{
-	display: none;
-}
+#talk {display: none;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: block;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: none;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: none;}
+#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: none;}
 
-#talk {
-	display: none;
-}
+#link {display: none;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: block;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: none;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: none;}
+#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: none;}
 
-#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet
-	{
-	display: block;
-}
+#map {display: none;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet {display: block;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet {display: none;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet {display: none;}
+#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet {display: none;}
 
-#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet
-	{
-	display: none;
-}
+.icon_detail .call_sheet
+{position: absolute;
+top: 61px; right: 40px;
+border: 1px solid #ccc;
+display: none;}
 
-#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet
-	{
-	display: none;
-}
+.call_sheet p:first-child
+{width: 300px; height: 50px;
+font-size: 18px; text-align: center; line-height: 50px;
+font-weight: bold;
+background-color: white;}
 
-#talk:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet
-	{
-	display: none;
-}
+.call_sheet p:last-child
+{width: 300px; height: 30px;
+text-align: center; line-height: 30px; color: white;
+background-color: #333;
+font-size: 14px;}
 
-#link {
-	display: none;
-}
+.freegolf_detail .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-top: 10px;
+margin-bottom: 50px;}
 
-#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet
-	{
-	display: block;
-}
+.icon_detail .talk_sheet
+{position: absolute;
+top: 61px; right: 0;
+border: 1px solid #ccc;
+display: none;}
 
-#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet
-	{
-	display: none;
-}
+.talk_sheet div:nth-child(1)
+{width: 300px; height: 30px;
+font-size: 14px;
+border-bottom: 1px solid #ccc;
+background-color: white;
+box-sizing: border-box;}
 
-#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet
-	{
-	display: none;
-}
+.talk_sheet div:nth-child(1) p
+{margin-left: 5px;
+line-height: 30px;}
 
-#link:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet
-	{
-	display: none;
-}
+.talk_sheet div:nth-child(2)
+{width: 300px; height: 350px;
+background-color: white;}
 
-#map {
-	display: none;
-}
+.talk_sheet .talk_btn
+{width: 300px; height: 30px;
+background-color: #0d75bb;}
 
-#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .map_sheet
-	{
-	display: block;
-}
+.talk_btn a
+{width: 20px; height: 20px;
+display: block;
+float: left;}
 
-#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .call_sheet
-	{
-	display: none;
-}
+.talk_btn a img
+{margin-left: 5px;
+margin-top: 5px;}
 
-#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .link_sheet
-	{
-	display: none;
-}
+#talk_box
+{width: 220px; height: 20px;
+border: none;
+float: left;
+margin-top: 5px;
+margin-left: 10px;
+margin-right: 10px;}
 
-#map:checked ~ .freegolf_detail_box .freegolf_detail .title_detail .icon_detail .talk_sheet
-	{
-	display: none;
-}
+#talk_btn
+{width: 35px; height: 20px;
+border: none;
+float: left;
+background-color: white;
+margin-top: 5px;
+color: #0d75bb;}
 
-.icon_detail .call_sheet {
-	position: absolute;
-	top: 61px;
-	right: 40px;
-	border: 1px solid #ccc;
-	display: none;
-}
+.icon_detail .link_sheet
+{width: 210px; height: 50px;
+overflow: hidden;
+position: absolute;
+top: 61px; right: 0;
+border: 1px solid #ccc;
+box-sizing: border-box;
+background-color: white;
+border-radius: 10px;
+display: none;}
 
-.call_sheet p:first-child {
-	width: 300px;
-	height: 50px;
-	font-size: 18px;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	background-color: white;
-}
+.link_sheet a
+{width: 30px; height: 30px;
+float: left;
+margin-right: 10px;
+margin-top: 10px;}
 
-.call_sheet p:last-child {
-	width: 300px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	color: white;
-	background-color: #333;
-	font-size: 14px;
-}
+.link_sheet a:nth-child(1)
+{margin-left: 10px;}
 
-.freegolf_detail .line01 {
-	width: 1340px;
-	height: 1px;
-	background-color: #ccc;
-	margin-top: 10px;
-	margin-bottom: 50px;
-}
+.link_sheet a:last-child {margin-right: 0;}
 
-.icon_detail .talk_sheet {
-	position: absolute;
-	top: 61px;
-	right: 0;
-	border: 1px solid #ccc;
-	display: none;
-}
+.icon_detail .map_sheet
+{width: 1340px; height: 600px;
+background-color: #ccc;
+position: absolute;
+top: 61px; left: 0;
+display: none;}
 
-.talk_sheet div:nth-child(1) {
-	width: 300px;
-	height: 30px;
-	font-size: 14px;
-	border-bottom: 1px solid #ccc;
-	background-color: white;
-	box-sizing: border-box;
-}
+.map_sheet .close
+{width: 19px; height: 20px;
+position: absolute;
+top: 20px; right: 20px;}
 
-.talk_sheet div:nth-child(1) p {
-	margin-left: 5px;
-	line-height: 30px;
-}
-
-.talk_sheet div:nth-child(2) {
-	width: 300px;
-	height: 350px;
-	background-color: white;
-}
-
-.talk_sheet .talk_btn {
-	width: 300px;
-	height: 30px;
-	background-color: #0d75bb;
-}
-
-.talk_btn a {
-	width: 20px;
-	height: 20px;
-	display: block;
-	float: left;
-}
-
-.talk_btn a img {
-	margin-left: 5px;
-	margin-top: 5px;
-}
-
-#talk_box {
-	width: 220px;
-	height: 20px;
-	border: none;
-	float: left;
-	margin-top: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-#talk_btn {
-	width: 35px;
-	height: 20px;
-	border: none;
-	float: left;
-	background-color: white;
-	margin-top: 5px;
-	color: #0d75bb;
-}
-
-.icon_detail .link_sheet {
-	width: 210px;
-	height: 50px;
-	overflow: hidden;
-	position: absolute;
-	top: 61px;
-	right: 0;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	background-color: white;
-	border-radius: 10px;
-	display: none;
-}
-
-.link_sheet a {
-	width: 30px;
-	height: 30px;
-	float: left;
-	margin-right: 10px;
-	margin-top: 10px;
-}
-
-.link_sheet a:nth-child(1) {
-	margin-left: 10px;
-}
-
-.link_sheet a:last-child {
-	margin-right: 0;
-}
-
-.icon_detail .map_sheet {
-	width: 1340px;
-	height: 600px;
-	background-color: #ccc;
-	position: absolute;
-	top: 61px;
-	left: 0;
-	display: none;
-}
-
-.map_sheet .close {
-	width: 19px;
-	height: 20px;
-	position: absolute;
-	top: 20px;
-	right: 20px;
-}
 
 /*이미지*/
-.freegolf_detail .img_box {
-	width: 1340px;
-	margin-bottom: 100px;
-}
+.freegolf_detail .img_box
+{width: 1340px;
+margin-bottom: 100px;}
 
-.img_box .big_img {
-	width: 1340px;
-	height: 670px;
-	background-color: #ddddde;
-	margin-bottom: 10px;
-}
+.img_box .big_img
+{width: 1340px; height: 670px;
+background-color: #ddddde;
+margin-bottom: 10px;}
 
-.img_box .mini_img_box {
-	width: 1340px;
-	height: 70px;
-	overflow: hidden;
-}
+.img_box .mini_img_box
+{width: 1340px; height: 70px;
+overflow: hidden;}
 
-.mini_img_box div {
-	width: 125px;
-	height: 70px;
-	background-color: #ddddde;
-	float: left;
-	margin-right: 10px;
-}
+.mini_img_box div
+{width: 125px; height: 70px;
+background-color: #ddddde;
+float: left;
+margin-right: 10px;}
 
-.mini_img_box div:last-child {
-	margin-right: 0;
-}
+.mini_img_box div:last-child
+{margin-right: 0;}
 
 /*달력*/
-.freegolf_detail .plans_chk_box {
-	width: 1340px;
-	margin-bottom: 100px;
-}
 
-.plans_chk_box .calendar_box {
-	width: 1340px;
-	overflow: hidden;
-}
+#calendar_btn, #right_cal, #left_cal {display: none;}
 
-.calendar_box .calendar {
-	width: 646px;
-	float: left;
-	margin-right: 44px;
-}
+.freegolf_detail .calendar
+{width: 1340px;
+overflow: hidden;
+margin-bottom: 100px;}
 
-#right_m, #left_m {
-	display: none;
-}
+/*left*/
 
-.calendar .month {
-	width: 208px;
-	height: 30px;
-	margin: 0 auto;
-	margin-bottom: 20px;
-	overflow: hidden;
-}
+.calendar .calendar_left
+{width: 648px; 
+float: left;
+margin-right: 42px;}
 
-.month label, .month p {
-	float: left;
-}
+.calendar_left .calendar_day
+{width: 648px; height: 30px;
+overflow: hidden;
+margin-bottom: 10px;}
 
-.month label {
-	width: 29px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-}
+.calendar_day .top_cal
+{width: 158px; height: 30px;
+margin: 0 auto;}
 
-.month p {
-	width: 120px;
-	height: 30px;
-	font-size: 22px;
-	line-height: 30px;
-	text-align: center;
-	margin-left: 15px;
-	margin-right: 15px;
-	font-family: yangpyeong;
-}
+.calendar_day .top_cal label, .calendar_day .top_cal p
+{float: left;}
 
-.calendar .day_c {
-	width: 646px;
-	height: 50px;
-	overflow: hidden;
-	background-color: #0d75bb;
-}
+.top_cal label
+{width: 29px; height: 30px;}
 
-.calendar .day_c p {
-	width: 92px;
-	height: 50px;
-	float: left;
-	font-family: yangpyeong;
-	font-size: 18px;
-	text-align: center;
-	line-height: 50px;
-	color: white;
-	border-right: 1px solid white;
-	box-sizing: border-box;
-}
+.top_cal p
+{width: 100px; height: 30px;
+font-size: 20px; text-align: center;
+line-height: 30px;}
 
-.day_c p:last-child {
-	border: none;
-}
+.calendar .calendar_box
+{width: 648px;
+border: 1px solid #ccc;
+box-sizing: border-box;}
 
-.calendar_box .day_data {
-	width: 644px;
-	height: 400px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	overflow: hidden;
-}
+.calendar_box tr:nth-child(1)
+{width: 646px; height: 40px;
+background-color: #0d75bb;}
 
-.day_data a, .day_data div {
-	width: 92px;
-	height: 80px;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	float: left;
-}
+.calendar_box tr:nth-child(1)>td
+{width: 92px; height: 40px;
+border-right: 1px solid white;
+text-align: center; line-height: 40px;
+color: white;
+font-family: yangpyeong_l;}
 
-.day_data a p:nth-child(1) {
-	font-family: yangpyeong;
-	text-align: right;
-	margin-right: 5px;
-	margin-top: 5px;
-	color: #333;
-}
+.calendar_box tr:nth-child(1) td:last-child
+{border-right: none;}
 
-.day_data a p:nth-child(2) {
-	font-size: 14px;
-	text-align: center;
-	color: red;
-	margin-top: 35px;
-}
+.calendar_box tr:nth-child(2)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
 
-.day_data a:nth-child(1), .day_data a:nth-child(8), .day_data a:nth-child(15),
-	.day_data a:nth-child(22), .day_data a:nth-child(29) {
-	border-left: none;
-}
+.calendar_box tr:nth-child(2)>td:last-child
+{border-right: none;}
 
-.day_data a:nth-child(29), .day_data a:nth-child(30), .day_data a:nth-child(31)
-	{
-	border-bottom: none;
-}
+.calendar_box tr:nth-child(2)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-family: yangpyeong_l; font-weight: bold;}
 
-.day_data div:nth-child(32), .day_data div:nth-child(33), .day_data div:nth-child(34),
-	.day_data div:nth-child(35) {
-	border-bottom: none;
-}
+.calendar_box tr:nth-child(2)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
 
-.day_data a:nth-child(25) {
-	background-color: rgba(13, 117, 186, 0.5);
-}
+.calendar_box tr:nth-child(3)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
 
-/*오른쪽*/
-#plus01 {
-	display: none;
-}
+.calendar_box tr:nth-child(3)>td:last-child
+{border-right: none;}
 
-.calendar_box .calendar_data {
-	width: 650px;
-	height: 500px;
-	float: left;
-}
+.calendar_box tr:nth-child(3)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-family: yangpyeong_l; font-weight: bold;}
 
-.calendar_data .plus_btn {
-	width: 650px;
-	height: 30px;
-	overflow: hidden;
-	margin-bottom: 20px;
-}
+.calendar_box tr:nth-child(3)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
 
-.plus_btn p {
-	float: left;
-}
+.calendar_box tr:nth-child(4)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
 
-.plus_btn label {
-	float: right;
-}
+.calendar_box tr:nth-child(4)>td:last-child
+{border-right: none;}
 
-.plus_btn p {
-	width: 90px;
-	height: 30px;
-	margin-left: 490px;
-	font-size: 14px;
-	line-height: 30px;
-	color: red;
-	margin-right: 10px;
-}
+.calendar_box tr:nth-child(4)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-family: yangpyeong_l; font-weight: bold;}
 
-.plus_btn label {
-	width: 60px;
-	height: 30px;
-	background-color: #333;
-	text-align: center;
-	line-height: 30px;
-	font-size: 14px;
-	color: white;
-}
+.calendar_box tr:nth-child(4)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
 
-.freegolf_detail .line02 {
-	width: 1340px;
-	height: 1px;
-	background-color: #ccc;
-	margin-bottom: 50px;
-}
+.calendar_box tr:nth-child(5)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
 
-/*이용일*/
-.calendar_data .date_of_use {
-	width: 650px;
-	height: 100px;
-	overflow: hidden;
-	margin-bottom: 50px;
-}
+.calendar_box tr:nth-child(5)>td:last-child
+{border-right: none;}
 
-.date_of_use p, .date_of_use div {
-	float: left;
-}
+.calendar_box tr:nth-child(5)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-family: yangpyeong_l; font-weight: bold;}
 
-.date_of_use p:nth-child(1) {
-	width: 125px;
-	height: 50px;
-	border-top: 2px solid #f49800;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-}
+.calendar_box tr:nth-child(5)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
 
-.date_of_use p:nth-child(3) {
-	width: 125px;
-	height: 50px;
-	border-top: 2px solid #f49800;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-}
+.calendar_box tr:nth-child(5)>td:nth-child(4)
+{background-color: rgba(13, 117, 186, 0.53);}
 
-.date_of_use p:nth-child(2) {
-	width: 210px;
-	height: 50px;
-	border-top: 2px solid #333;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	font-size: 14px;
-	line-height: 50px;
-	text-indent: 14px;
-}
 
-.date_of_use p:nth-child(4) {
-	width: 190px;
-	height: 50px;
-	border-top: 2px solid #333;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	font-size: 14px;
-	line-height: 50px;
-	text-indent: 14px;
-}
+.calendar_box tr:nth-child(6)>td
+{width: 92px; height: 80px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
 
-.date_of_use p:nth-child(5), .date_of_use p:nth-child(7) {
-	width: 125px;
-	height: 50px;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-}
+.calendar_box tr:nth-child(6)>td:last-child
+{border-right: none;}
 
-.date_of_use p:nth-child(6) {
-	width: 210px;
-	height: 50px;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	font-size: 14px;
-	line-height: 50px;
-	text-indent: 14px;
-}
+.calendar_box tr:nth-child(6)>td>a>p:nth-child(1)
+{margin-bottom: 20px;
+text-align: right;
+margin-right: 10px;
+color: #333; font-family: yangpyeong_l; font-weight: bold;}
 
-.date_of_use div:nth-child(8) {
-	width: 190px;
-	height: 50px;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-}
+.calendar_box tr:nth-child(6)>td>a>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
 
-.date_of_use div select {
-	width: 170px;
-	height: 30px;
-	margin-left: 10px;
-	margin-top: 10px;
-}
 
-/*요금정보*/
-.calendar_data .date_of_use_data {
-	width: 650px;
-}
 
-.date_of_use_data p, .date_of_use_data div {
-	float: left;
-}
+/*right*/
 
-.date_of_use_data>p:nth-child(1) {
-	width: 650px;
-	height: 50px;
-	border-top: 2px solid #333;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-}
+.calendar .calendar_right
+{width: 650px;
+float: left;}
 
-.date_of_use_data>p:nth-child(2) {
-	width: 125px;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	text-align: center;
-	line-height: 60px;
-	font-weight: bold;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-}
+.calendar_right .calendar_right_title
+{width: 650px; height: 20px;
+overflow: hidden;
+margin-bottom: 20px;}
 
-.date_of_use_data div:nth-child(3) {
-	width: 525px;
-	font-size: 14px;
-	line-height: 20px;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-}
+.calendar_right_title>div
+{float: right;}
 
-.date_of_use_data div:nth-child(3) p {
-	margin-left: 14px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+.calendar_right_title div p, .calendar_right_title div label
+{float: left;}
 
-.date_of_use_data>p:nth-child(4), .date_of_use_data p:nth-child(6),
-	.date_of_use_data p:nth-child(8) {
-	width: 125px;
-	height: 50px;
-	background-color: #f3f3f3;
-	font-size: 14px;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	border-left: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-}
+.calendar_right_title div p
+{font-size: 14px; color: red;
+line-height: 20px; margin-right: 10px;}
 
-.date_of_use_data p:nth-child(5), .date_of_use_data p:nth-child(7),
-	.date_of_use_data p:nth-child(9) {
-	width: 525px;
-	height: 50px;
-	font-size: 14px;
-	line-height: 50px;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-	text-indent: 14px;
-}
+.calendar_right_title div label
+{width: 50px; height: 20px;
+background-color: #595757; color: white; font-size: 14px;
+text-align: center; line-height: 20px;}
+
+.calendar_right .calender_top
+{width: 650px; height: 100px;
+margin-bottom: 20px;}
+
+.calender_top tr td
+{border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calender_top tr:nth-child(1) td:nth-child(1),.calender_top tr:nth-child(1) td:nth-child(3)
+{width: 125px; height: 50px;
+font-size: 14px; text-align: center; line-height: 50px;
+border-bottom: none;
+font-weight: bold; background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.calender_top tr:nth-child(1) td:nth-child(2),.calender_top tr:nth-child(1) td:nth-child(4)
+{width: 200px; height: 50px;
+border-top: 2px solid #333;
+border-bottom: none;
+border-right: none;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.calender_top tr:nth-child(1) td:nth-child(4) 
+{border-right: 1px solid #ccc; box-sizing: border-box;
+color: red;}
+
+.calender_top tr:nth-child(2) td:nth-child(1),.calender_top tr:nth-child(2) td:nth-child(3)
+{width: 125px; height: 50px;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold; background-color: #f3f3f3;}
+
+.calender_top tr:nth-child(2) td:nth-child(2),.calender_top tr:nth-child(2) td:nth-child(4)
+{width: 200px; height: 50px;
+border-right: none;
+border-left: none;
+font-size: 14px; text-indent: 14px; line-height: 50px;}
+
+.calender_top tr:nth-child(2) td:nth-child(4)
+{border-right: 1px solid #ccc; box-sizing: border-box;}
+
+#calender_sel
+{width: 180px; height: 30px;
+margin-right: 10px;
+margin-bottom: 10px;}
+
+.calendar .calender_bot
+{width: 650px;}
+
+.calender_bot tr td
+{border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.calender_bot tr:nth-child(1) td:nth-child(1)
+{width: 650px; height: 40px;
+background-color: #f3f3f3;
+border-top: 2px solid #333;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(2) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-bottom: none;
+border-top: none;
+border-right: none;
+font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(2) td:nth-child(2)
+{width: 525px;
+border-top: none;
+border-bottom: none;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(2) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.calender_bot tr:nth-child(3) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-bottom: none;
+border-right: none; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(3) td:nth-child(2)
+{width: 525px;
+border-bottom: none;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(3) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.calender_bot tr:nth-child(4) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-bottom: none;
+border-right: none; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(4) td:nth-child(2)
+{width: 525px;
+border-bottom: none;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(4) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.calender_bot tr:nth-child(5) td:nth-child(1)
+{width: 125px;
+background-color: #f3f3f3;
+border-right: none; font-weight: bold;
+font-size: 14px; line-height: 40px; text-align: center;}
+
+.calender_bot tr:nth-child(5) td:nth-child(2)
+{width: 525px;
+font-size: 14px; line-height: 20px;}
+
+.calender_bot tr:nth-child(5) td:nth-child(2) p
+{margin-left: 10px;
+margin-top: 7px;
+margin-bottom: 10px;}
+
+.freegolf_detail .line02
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 100px;}
 
 /*여행일정*/
 
-/*선택한 예약 목록*/
-.freegolf_detail .reservation_items {
-	width: 1340px;
-	margin-bottom: 100px;
-}
+.freegolf_detail .travel_plans
+{width: 1340px;
+overflow: hidden;
+margin-bottom: 100px;}
 
-.reservation_items .title_reservation {
-	width: 1340px;
-	height: 54px;
-	overflow: hidden;
-	margin-bottom: 50px;
-}
+.travel_plans .travel_plans_title
+{width: 1340px; height: 30px;
+margin-bottom: 30px;
+overflow: hidden;}
 
-.title_reservation .line_box01 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.travel_plans_title p
+{float: left;
+line-height: 30px;}
 
-.line_box01 .re_title_line01 {
-	width: 587.5px;
-	height: 1px;
-	background-color: #ccc;
-	float: left;
-	margin-top: 1px;
-}
+.travel_plans_title p:nth-child(1)
+{font-size: 22px;
+font-weight: bold;
+margin-right: 10px;}
 
-.line_box01 .re_title_line02 {
-	width: 165px;
-	height: 2px;
-	background-color: #f49800;
-	float: left;
-}
+.travel_plans_title p:nth-child(2)
+{font-size: 14px;
+color: red;
+margin-right: 10px;}
 
-.line_box01 .re_title_line03 {
-	width: 587.5px;
-	height: 1px;
-	background-color: #ccc;
-	float: left;
-	margin-top: 1px;
-}
+#travel_plan
+{float: left;
+margin-top: 9px;}
 
-.title_reservation .re_txt {
-	width: 165px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 22px;
-	font-weight: bold;
-	margin: 0 auto;
-}
+.travel_plans .left_travel
+{width: 648px; height: 240px;
+float: left;
+overflow-y: scroll;
+border-top: 2px solid #333;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-left: 1px solid #ccc;}
 
-.line_box02 .re_title_line04 {
-	width: 587.5px;
-	height: 1px;
-	background-color: #ccc;
-	float: left;
-	margin-top: 1px;
-}
+.left_travel>table:nth-child(1)
+{width: 630px; height: 30px;
+background-color: #f3f3f3;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; font-weight: bold; color: #333;}
 
-.line_box02 .re_title_line05 {
-	width: 165px;
-	height: 2px;
-	background-color: #f49800;
-	float: left;
-}
+.left_travel>table:nth-child(1) td
+{border-right: 1px solid #ccc;
+box-sizing: border-box;}
 
-.line_box02 .re_title_line06 {
-	width: 587.5px;
-	height: 1px;
-	background-color: #ccc;
-	float: left;
-	margin-top: 1px;
-}
+.left_travel>table:nth-child(1) td:nth-child(1)
+{width: 270px; height: 30px;
+line-height: 30px; text-align: center;}
 
-/*top*/
-.reservation_items .reservation_top {
-	width: 1340px;
-	height: 50px;
-	overflow: hidden;
-	margin-bottom: 20px;
-}
+.left_travel>table:nth-child(1) td:nth-child(2)
+{width: 130px; height: 30px;
+line-height: 30px; text-align: center;}
 
-.reservation_top p {
-	float: left;
-}
+.left_travel>table:nth-child(1) td:nth-child(3)
+{width: 140px; height: 30px;
+line-height: 30px; text-align: center;}
 
-.reservation_top p:nth-child(1), .reservation_top p:nth-child(3),
-	.reservation_top p:nth-child(5), .reservation_top p:nth-child(7) {
-	width: 125px;
-	height: 50px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #f49800;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	font-size: 14px;
-}
+.left_travel>table:nth-child(1) td:nth-child(4)
+{width: 90px; height: 30px;
+line-height: 30px; text-align: center;
+border-right: none;}
 
-.reservation_top p:nth-child(3) {
-	border-left: none;
-}
+.left_travel .scroll_01
+{width: 630px; height: 210px;}
 
-.reservation_top p:nth-child(5) {
-	border-left: none;
-}
+.scroll_01 table
+{width: 630px;
+font-size: 14px;}
 
-.reservation_top p:nth-child(7) {
-	border-left: none;
-}
+.scroll_01 table tr td:nth-child(1)
+{width: 270px; height: 30px;
+line-height: 30px;
+text-indent: 14px;}
 
-.reservation_top p:nth-child(2) {
-	width: 375px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-}
+.scroll_01 table tr td:nth-child(2)
+{width: 130px; height: 30px;
+line-height: 30px; text-align: center;}
 
-.reservation_top p:nth-child(4), .reservation_top p:nth-child(6) {
-	width: 125px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-}
+.scroll_01 table tr td:nth-child(3)
+{width: 140px; height: 30px;
+line-height: 30px; text-align: center;}
 
-.reservation_top p:nth-child(8) {
-	width: 215px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-	color: red;
-}
+.scroll_01 table tr td:nth-child(4)
+{width: 90px; height: 30px;}
 
-/*mid*/
-.reservation_items .reservation_mid {
-	width: 1340px;
-	height: 100px;
-	overflow: hidden;
-	margin-bottom: 20px;
-}
+.scroll_01 table tr td a
+{width: 40px; height: 20px;
+display: block;
+background-color: #808080; text-align: center;
+color: white;
+margin: 0 auto;}
 
-.reservation_mid p, .reservation_mid div {
-	float: left;
-}
+.scroll_01 table tr:nth-child(4)
+{background-color: rgba(255, 0, 0, 0.44);}
 
-.reservation_mid p:nth-child(1), .reservation_mid p:nth-child(3),
-	.reservation_mid p:nth-child(5), .reservation_mid p:nth-child(7) {
-	width: 125px;
-	height: 50px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #f49800;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	font-size: 14px;
-}
+.scroll_01 table tr:nth-child(4) a 
+{background-color: red;}
 
-.reservation_mid p:nth-child(3) {
-	border-left: none;
-}
+/*right*/
 
-.reservation_mid p:nth-child(5) {
-	border-left: none;
-}
+#chk_day_01 {display: none;}
+#chk_day_02 {display: none;}
 
-.reservation_mid p:nth-child(7) {
-	border-left: none;
-}
+.travel_plans .right_travel
+{width: 650px; margin-left: 40px;
+float: left;}
 
-.reservation_mid p:nth-child(2) {
-	width: 375px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-}
+.right_travel .chk_in
+{width: 650px; height: 150px;
+margin-bottom: 50px;}
 
-.reservation_mid p:nth-child(4), .reservation_mid p:nth-child(6) {
-	width: 125px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-}
+.right_travel .chk_in table
+{width: 650px; height: 150px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px;}
 
-.reservation_mid p:nth-child(8) {
-	width: 215px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-	color: red;
-}
+.chk_in table tr td:nth-child(1)
+{width: 120px; height: 50px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+box-sizing: border-box;}
 
-.reservation_mid p:nth-child(9), .reservation_mid p:nth-child(10),
-	.reservation_mid p:nth-child(11), .reservation_mid p:nth-child(12) {
-	width: 125px;
-	height: 50px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	line-height: 50px;
-	font-size: 14px;
-}
+.chk_in table tr:nth-child(1) td:nth-child(3),.chk_in table tr:nth-child(2) td:nth-child(3),.chk_in table tr:nth-child(3) td:nth-child(3)
+{width: 120px; height: 50px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+box-sizing: border-box;}
 
-.reservation_mid p:nth-child(10) {
-	border-left: none;
-}
+.chk_in table tr:nth-child(3) td:nth-child(3)
+{border-bottom: none;}
 
-.reservation_mid p:nth-child(11) {
-	border-left: none;
-}
+.chk_in table tr:nth-child(1) td:nth-child(1)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
 
-.reservation_mid p:nth-child(9), .reservation_mid p:nth-child(11) {
-	text-align: center;
-	font-weight: bold;
-	background-color: #f3f3f3;
-}
+.chk_in table tr:nth-child(1) td:nth-child(3)
+{width: 120px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
 
-.reservation_mid p:nth-child(10), .reservation_mid p:nth-child(12) {
-	text-indent: 14px;
-}
+.chk_in table tr:nth-child(3) td:nth-child(1)
+{width: 120px; height: 50px;
+border-bottom: none;
+box-sizing: border-box;}
 
-.reservation_mid p:nth-child(12) {
-	color: red;
-	border-left: none;
-}
+.chk_in table tr:nth-child(1) td:nth-child(2)
+{width: 205px; height: 50px;
+overflow: hidden;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
 
-.reservation_mid div {
-	width: 840px;
-	height: 50px;
-	background-color: #f3f3f3;
-	border-bottom: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	box-sizing: border-box;
-}
+.chk_in table tr:nth-child(1) td:nth-child(4)
+{width: 205px; height: 50px;
+overflow: hidden;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+box-sizing: border-box;}
 
-/*bot*/
-.reservation_items .reservation_bot {
-	width: 1340px;
-	overflow: hidden;
-}
+.chk_in table tr:nth-child(1) td:nth-child(2) .chk_in_day01
+{width: 120px; height: 40px;
+margin-left: 5px;
+line-height: 40px; text-indent: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;} 
 
-.reservation_bot>p, .reservation_bot div {
-	float: left;
-}
+.chk_in table tr:nth-child(1) td:nth-child(2) label
+{width: 20px; height: 20px;
+margin-left: 5px;
+margin-top: 20px;
+float: left;}
 
-.reservation_bot>p:nth-child(1), .reservation_bot>p:nth-child(3),
-	.reservation_bot>p:nth-child(5), .reservation_bot>p:nth-child(7) {
-	width: 125px;
-	height: 50px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #f49800;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	text-align: center;
-	line-height: 50px;
-	font-weight: bold;
-	font-size: 14px;
-}
+.chk_in table tr:nth-child(1) td:nth-child(4) .chk_in_day02
+{width: 120px; height: 40px;
+margin-left: 5px;
+line-height: 40px; text-indent: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;} 
 
-.reservation_bot>p:nth-child(3) {
-	border-left: none;
-}
+.chk_in table tr:nth-child(1) td:nth-child(4) label
+{width: 20px; height: 20px;
+margin-left: 5px;
+margin-top: 20px;
+float: left;}
 
-.reservation_bot>p:nth-child(5) {
-	border-left: none;
-}
+.chk_in table tr:nth-child(2) td:nth-child(2)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
 
-.reservation_bot>p:nth-child(7) {
-	border-left: none;
-}
+.chk_in table tr:nth-child(2) td:nth-child(4)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+color: red;}
 
-.reservation_bot>p:nth-child(2) {
-	width: 375px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-}
+.chk_in table tr:nth-child(3) td:nth-child(2)
+{width: 205px; height: 50px;
+text-indent: 14px;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
 
-.reservation_bot>p:nth-child(4), .reservation_bot>p:nth-child(6) {
-	width: 125px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-}
+.chk_in table tr:nth-child(3) td:nth-child(4)
+{width: 205px; height: 50px;}
 
-.reservation_bot>p:nth-child(8) {
-	width: 215px;
-	height: 50px;
-	text-indent: 14px;
-	line-height: 50px;
-	font-size: 14px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-top: 2px solid #333;
-	box-sizing: border-box;
-	color: red;
-}
+#hotel_chk
+{width: 195px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 5px;}
 
-.reservation_bot>p:nth-child(9) {
-	width: 125px;
-	height: 100px;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	text-align: center;
-	line-height: 100px;
-	font-weight: bold;
-	font-size: 14px;
-}
+/*bottom*/
 
-.reservation_bot .car_txt01 {
-	width: 625px;
-	height: 100px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	font-size: 14px;
-	line-height: 20px;
-}
+.right_travel .facilities
+{width: 650px;}
 
-.car_txt01>p {
-	margin-left: 20px;
-	margin-top: 20px;
-}
+.facilities table
+{width: 650px; height: 125px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
 
-.reservation_bot>p:nth-child(11) {
-	width: 125px;
-	height: 100px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	background-color: #f3f3f3;
-	text-align: center;
-	line-height: 100px;
-	font-weight: bold;
-	font-size: 14px;
-}
+.facilities table tr:nth-child(1) td
+{width: 650px; height: 25px;
+border-top: 2px solid #333;
+border-bottom: 1px solid #ccc;
+background-color: #f3f3f3;
+font-size: 14px; line-height: 25px; text-align: center; font-weight: bold;
+box-sizing: border-box;}
 
-.reservation_bot .car_txt02 {
-	width: 465px;
-	height: 100px;
-	border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	box-sizing: border-box;
-	font-size: 14px;
-	line-height: 20px;
-}
+.facilities table tr:nth-child(2) td
+{width: 650px; height: 55px;}
 
-.car_txt02 p {
-	margin-top: 20px;
-	margin-left: 20px;
-}
+.facilities table tr:nth-child(2) td .facil_top
+{width: 600px; height: 20px;
+margin-left: 25px;
+margin-bottom: 10px;
+overflow: hidden;}
+
+.facil_top .facil01,.facil_top .facil02,.facil_top .facil03,.facil_top .facil04
+{width: 150px; height: 20px;
+float: left;}
+
+.facil01 div, .facil01 p, .facil02 div, .facil02 p, .facil03 div, .facil03 p, .facil04 div, .facil04 p
+{float: left;}
+
+.facil01 div, .facil02 div, .facil03 div, .facil04 div
+{width: 20px; height: 20px;}
+
+.facil01 p, .facil02 p, .facil03 p, .facil04 p
+{margin-left: 10px;
+font-size: 14px; line-height: 20px;}
+
+.facilities tr:nth-child(2) td .facil_bot
+{width: 600px; height: 20px;
+margin-left: 25px;
+overflow: hidden;}
+
+.facil_bot .facil05,.facil_bot .facil06,.facil_bot .facil07,.facil_bot .facil08
+{width: 150px; height: 20px;
+float: left;}
+
+.facil05 div, .facil05 p, .facil06 div, .facil06 p, .facil07 div, .facil07 p, .facil08 div, .facil08 p
+{float: left;}
+
+.facil05 div, .facil06 div, .facil07 div, .facil08 div
+{width: 20px; height: 20px;}
+
+.facil05 p, .facil06 p, .facil07 p, .facil08 p
+{margin-left: 10px;
+font-size: 14px; line-height: 20px;}
+
+.freegolf_detail .line03
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 100px;}
+
+/*옵션사항*/
+
+.freegolf_detail .option_zon
+{width: 1340px;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.option_zon .option_title
+{width: 1340px; height: 30px;
+margin-bottom: 30px;}
+
+.option_title p
+{font-size: 22px; font-weight: bold;}
+
+.option_zon .option_left
+{width: 648px; height: 240px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #333;
+overflow-y: scroll;
+margin-right: 40px; float: left;}
+
+.option_left table
+{width: 630px;}
+
+.option_left>table:nth-child(1) tr
+{width: 630px; height: 30px;
+background-color: #f3f3f3;}
+
+.option_left>table:nth-child(1) tr td:nth-child(1)
+{width: 400px; height: 30px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; line-height: 30px;
+font-size: 14px; font-weight: bold;}
+
+.option_left>table:nth-child(1) tr td:nth-child(2)
+{width: 140px; height: 30px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center; line-height: 30px;
+font-size: 14px; font-weight: bold;}
+
+.option_left>table:nth-child(1) tr td:nth-child(3)
+{width: 90px; height: 30px;
+text-align: center; line-height: 30px;
+border-bottom: 1px solid #ccc;
+font-size: 14px; font-weight: bold;}
+
+.option_left .scroll_02
+{width: 630px;}
+
+.scroll_02 table
+{width: 630px;}
+
+.scroll_02 table tr td:nth-child(1)
+{width: 400px; height: 30px;
+line-height: 30px; text-indent: 14px;
+font-size: 14px;}
+
+.scroll_02 table tr td:nth-child(2)
+{width: 140px; height: 30px;
+line-height: 30px; text-align: center;
+font-size: 14px;}
+
+.scroll_02 table tr td:nth-child(3)
+{width: 90px; height: 30px;
+text-align: center;
+font-size: 14px;}
+
+.scroll_02 table tr td:nth-child(3) a
+{width: 40px; height: 20px;
+display: block;
+background-color: #808080; text-align: center;
+color: white;
+margin: 5px auto;}
+
+.scroll_02 table tr:nth-child(3)
+{background-color: rgba(255, 0, 0, 0.44);}
+
+.scroll_02 table tr:nth-child(3) td a 
+{background-color: red;
+color: white;}
+
+#plus_opt {display: none;}
+#opt_left {display: none;}
+#opt_right {display: none;}
+
+.option_zon .option_right
+{width: 650px;
+float: left;}
+
+.option_right .opt_top
+{width: 650px;
+border-top: 2px solid #333;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.opt_top tr:nth-child(1)>td
+{width: 650px; height: 30px;
+text-align: center; line-height: 30px;
+font-size: 14px; font-weight: bold;
+background-color: #f3f3f3;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_top tr:nth-child(2) td div
+{width: 630px;
+margin-left: 10px; margin-top: 10px; margin-bottom: 10px;
+font-size: 14px; line-height: 20px;}
+
+.opt_top tr:nth-child(2) td span
+{font-weight: bold;}
+
+.option_right .opt_plus
+{width: 180px; height: 20px;
+float: right;
+margin-bottom: 10px;}
+
+.opt_plus p, .otp_plus label
+{float: left;}
+
+.opt_plus>p:nth-child(1)
+{width: 120px; height: 20px;
+line-height: 20px; font-size: 14px;
+color: red;}
+
+.opt_plus label p
+{width: 50px; height: 20px;
+background-color: #595757;
+color: white; font-size: 14px; line-height: 20px; text-align: center;
+margin-left: 10px;}
+
+.option_right .opt_bot
+{width: 650px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px;}
+
+.opt_bot tr td:nth-child(1)
+{width: 125px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold;
+text-align: center; background-color: #f3f3f3;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(1) td:nth-child(1)
+{border-top: 2px solid #f49800;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(1) td:nth-child(2)
+{width: 325px; height: 50px;
+border-top: 2px solid #333;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+overflow: hidden;}
+
+.opt_bot tr:nth-child(1) td:nth-child(2) .opt_chk_left, .opt_bot tr:nth-child(1) td:nth-child(2) .opt_chk_right, .opt_bot tr:nth-child(1) td:nth-child(2)>p
+{float: left;}
+
+.opt_chk_right, .opt_bot tr:nth-child(1) td:nth-child(2)>p
+{line-height: 40px;}
+
+.opt_chk_left div:nth-child(1)
+{width: 100px; height: 40px;
+border: 1px solid #ccc; box-sizing: border-box;
+text-align: center; line-height: 40px;
+margin-left: 5px; margin-right: 5px;
+float: left;}
+
+.opt_chk_left label
+{width: 20px; height: 20px;
+float: left;
+margin-right: 10px;
+margin-top: 20px;}
+
+.opt_chk_right div:nth-child(1)
+{width: 100px; height: 40px;
+border: 1px solid #ccc; box-sizing: border-box;
+margin-right: 10px; margin-left: 10px;
+text-align: center; line-height: 40px;
+float: left;}
+
+.opt_chk_right label
+{width: 20px; height: 20px;
+float: left;
+margin-top: 20px;}
+
+
+.opt_bot tr:nth-child(1) td:nth-child(3)
+{width: 200px; height: 50px;
+line-height: 50px; text-indent: 14px;
+border-top: 2px solid #f49800;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(2) td:nth-child(1)
+{border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(2) td:nth-child(2)
+{width: 525px; height: 50px;
+text-indent: 14px; line-height: 50px;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(3) td:nth-child(3)
+{width: 125px; height: 50px;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-weight: bold; text-align: center; line-height: 50px;}
+
+.opt_bot tr:nth-child(3) td:nth-child(2)
+{width: 200px; height: 50px;
+text-indent: 14px; color: red;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.opt_bot tr:nth-child(3) td:nth-child(4)
+{width: 200px; height: 50px;}
+
+#opt_num
+{width: 190px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-left: 5px;}
+
+/*선택한 예약항목*/
+
+.freegolf_detail .reservation
+{width: 1340px;
+margin-bottom: 100px;}
+
+.reservation .title_re
+{width: 1340px; height: 54px;
+margin-bottom: 50px;}
+
+.title_re .line_box_re01
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box_re01 div
+{float: left;}
+
+.line_box_re01 div:nth-child(2)
+{width: 180px; height: 2px;
+background-color: #f49800;}
+
+.line_box_re01 div:nth-child(1),.line_box_re01 div:nth-child(3)
+{width: 580px; height: 1px;
+background-color: #ccc;
+margin-top: 1px;}
+
+.title_re>p
+{height: 50px;
+font-size: 22px; font-weight: bold; line-height: 50px;
+text-align: center;}
+
+.title_re .line_box_re02
+{width: 1340px; height: 2px;
+overflow: hidden;}
+
+.line_box_re02 div
+{float: left;}
+
+.line_box_re02 div:nth-child(2)
+{width: 180px; height: 2px;
+background-color: #f49800;}
+
+.line_box_re02 div:nth-child(1),.line_box_re02 div:nth-child(3)
+{width: 580px; height: 1px;
+background-color: #ccc;}
+
+.reservation .top_re
+{width: 1340px; height: 50px;
+border : 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.top_re td 
+{border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.reservation .top_re td:nth-child(1),.reservation .top_re td:nth-child(3),.reservation .top_re td:nth-child(5),.reservation .top_re td:nth-child(7)
+{width: 125px; height: 50px;
+border-top: 2px solid #f49800;
+border-right: 1px solid #ccc;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+.reservation .top_re td:nth-child(4),.reservation .top_re td:nth-child(6)
+{width: 125px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box; 
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.reservation .top_re td:nth-child(2)
+{width: 375px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.reservation .top_re td:nth-child(8)
+{width: 215px; height: 50px;
+border-top: 2px solid #333;
+border-right: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;
+color: red;}
+
+.reservation .mid_re
+{width: 1340px; height: 100px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.mid_re tr td 
+{border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.mid_re tr:first-child td:nth-child(1),.mid_re tr:first-child td:nth-child(3),.mid_re tr:first-child td:nth-child(5),.mid_re tr:first-child td:nth-child(7)
+{width: 125px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+.mid_re tr:first-child td:nth-child(1)
+{border-left: none;}
+
+.mid_re tr:first-child td:nth-child(2)
+{width: 375px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.mid_re tr:first-child td:nth-child(4),.mid_re tr:first-child td:nth-child(6)
+{width: 125px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.mid_re tr:first-child td:nth-child(8)
+{width: 215px; height: 50px;
+border-top: 2px solid #333;
+border-right: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;
+color: red;}
+
+.mid_re tr:nth-child(2) td:nth-child(1), .mid_re tr:nth-child(2) td:nth-child(3)
+{width: 125px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: none;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;
+font-weight: bold;
+background-color: #f3f3f3;}
+
+.mid_re tr:nth-child(2) td:nth-child(2),.mid_re tr:nth-child(2) td:nth-child(4)
+{width: 125px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.mid_re tr:nth-child(2) td:nth-child(4) {color: red;}
+
+.mid_re tr:nth-child(2) td:nth-child(5)
+{background-color: #f3f3f3;
+border-bottom: none;
+border-right: none;}
+
+.reservation .bot_re
+{width: 1340px; height: 100px;
+border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;
+margin-bottom: 30px;}
+
+.bot_re tr:first-child td
+{border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+
+.bot_re tr:first-child td:nth-child(1),.bot_re tr:first-child td:nth-child(3),.bot_re tr:first-child td:nth-child(5),.bot_re tr:first-child td:nth-child(7)
+{width: 125px; height: 50px;
+border-top: 2px solid #f49800;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+
+.bot_re tr:first-child td:nth-child(2)
+{width: 375px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.bot_re tr:first-child td:nth-child(4),.bot_re tr:first-child td:nth-child(6)
+{width: 125px; height: 50px;
+border-top: 2px solid #333;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;}
+
+.bot_re tr:first-child td:nth-child(8)
+{width: 215px; height: 50px;
+border-top: 2px solid #333;
+border-right: none;
+box-sizing: border-box;
+font-weight: normal;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; text-align: left;
+color: red;}
+
+.bot_re tr:last-child td
+{border-right: 1px solid #ccc;}
+
+.bot_re tr:nth-child(2) td:nth-child(1),.bot_re tr:nth-child(2) td:nth-child(3)
+{width: 125px;
+box-sizing: border-box; font-weight: bold;
+font-size: 14px; text-align: center; line-height: 50px;
+background-color: #f3f3f3;}
+
+.bot_re tr:nth-child(2) td:nth-child(4) 
+{border-right: none;}
+
+.bot_re tr:nth-child(2) td:nth-child(2)>div
+{margin-top: 5px; margin-left: 14px; 
+margin-bottom: 5px;
+font-size: 14px; line-height: 20px;}
+
+.bot_re tr:nth-child(2) td:nth-child(2)>div p:nth-child(1)
+{font-weight: bold;}
+
+.bot_re tr:nth-child(2) td:nth-child(4)
+{font-size: 14px; line-height: 20px; text-indent: 14px;}
 
 /*골프장정보*/
-.freegolf_detail .golf_detail {
-	width: 1340px;
-	margin-bottom: 80px;
-}
 
-.golf_detail .golf_title_d {
-	width: 1340px;
-	height: 54px;
-	margin-bottom: 30px;
-}
+.freegolf_detail .golf_detail
+{width: 1340px;
+margin-bottom: 80px;}
 
-.golf_title_d .line_box01 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.golf_detail .golf_title_d
+{width: 1340px; height: 54px;
+margin-bottom: 30px;}
 
-.line_box01 .golf_line01 {
-	width: 120px;
-	height: 2px;
-	float: left;
-	background-color: #f49800;
-}
+.golf_title_d .line_box01
+{width: 1340px; height: 2px;
+overflow: hidden;}
 
-.golf_title_d .golf_line02 {
-	width: 1220px;
-	height: 1px;
-	float: left;
-	background-color: #ccc;
-	margin-top: 1px;
-}
+.line_box01 .golf_line01
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
 
-.golf_title_d>p {
-	width: 1340px;
-	height: 50px;
-	font-size: 22px;
-	color: #333;
-	font-weight: bold;
-	line-height: 50px;
-}
+.golf_title_d .golf_line02
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
 
-.golf_title_d .line_box02 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.golf_title_d>p
+{width: 1340px; height: 50px;
+font-size: 22px; color: #333;
+font-weight: bold; line-height: 50px;}
 
-.line_box02 .golf_line03 {
-	width: 120px;
-	height: 2px;
-	float: left;
-	background-color: #f49800;
-}
+.golf_title_d .line_box02
+{width: 1340px; height: 2px;
+overflow: hidden;}
 
-.line_box02 .golf_line04 {
-	width: 1220px;
-	height: 1px;
-	float: left;
-	background-color: #ccc;
-	margin-top: 1px;
-}
+.line_box02 .golf_line03
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
 
-.golf_detail .golf_img_detail {
-	width: 1340px;
-}
+.line_box02 .golf_line04
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
 
-.golf_img_detail>p {
-	width: 1340px;
-	height: 50px;
-	font-size: 32px;
-	font-weight: bold;
-	line-height: 50px;
-	margin-bottom: 20px;
-	font-family: yangpyeong;
-}
+.golf_detail .golf_img_detail
+{width: 1340px;}
 
-.golf_img_detail .golf_img_d {
-	width: 1340px;
-	height: 470px;
-	overflow: hidden;
-}
+.golf_img_detail>p
+{width: 1340px; height: 50px;
+font-size: 32px; font-weight: bold;
+line-height: 50px;
+margin-bottom: 20px;
+font-family: yangpyeong;}
 
-.golf_img_d div {
-	width: 660px;
-	height: 470px;
-	float: left;
-	background-color: #ccc;
-}
+.golf_img_detail .golf_img_d
+{width: 1340px; height: 470px;
+overflow: hidden;}
 
-.golf_img_d div:first-child {
-	margin-right: 20px;
-}
+.golf_img_d div
+{width: 660px; height: 470px;
+float: left;
+background-color: #ccc;}
 
-.golf_detail .golf_detail_txt {
-	width: 1340px;
-	height: 100px;
-	background-color: #f3f3f3;
-	margin-top: 30px;
-}
+.golf_img_d div:first-child
+{margin-right: 20px;}
 
-.golf_detail_txt p {
-	width: 1300px;
-	margin-left: 20px;
-	padding-top: 20px;
-	line-height: 20px;
-	font-size: 14px;
-}
+.golf_detail .golf_detail_txt
+{width: 1340px; height: 100px;
+background-color: #f3f3f3;
+margin-top: 30px;}
+
+.golf_detail_txt p
+{width: 1300px; 
+margin-left: 20px; padding-top: 20px;
+line-height: 20px;
+font-size: 14px;}
 
 /*호텔정보*/
-.freegolf_detail .hotel_detail {
-	width: 1340px;
-	margin-bottom: 80px;
-}
 
-.hotel_detail .hotel_title_d {
-	width: 1340px;
-	height: 54px;
-	margin-bottom: 30px;
-}
+.freegolf_detail .hotel_detail
+{width: 1340px;
+margin-bottom: 80px;}
 
-.hotel_title_d .line_box03 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.hotel_detail .hotel_title_d
+{width: 1340px; height: 54px;
+margin-bottom: 30px;}
 
-.hotel_title_d .hotel_line05 {
-	width: 120px;
-	height: 2px;
-	float: left;
-	background-color: #f49800;
-}
+.hotel_title_d .line_box03
+{width: 1340px; height: 2px;
+overflow: hidden;}
 
-.hotel_title_d .hotel_line06 {
-	width: 1220px;
-	height: 1px;
-	float: left;
-	background-color: #ccc;
-	margin-top: 1px;
-}
+.hotel_title_d .hotel_line05
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
 
-.hotel_title_d>p {
-	width: 1340px;
-	height: 50px;
-	font-size: 22px;
-	color: #333;
-	font-weight: bold;
-	line-height: 50px;
-}
+.hotel_title_d .hotel_line06
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
 
-.hotel_title_d .line_box04 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.hotel_title_d>p
+{width: 1340px; height: 50px;
+font-size: 22px; color: #333;
+font-weight: bold; line-height: 50px;}
 
-.line_box04 .hotel_line07 {
-	width: 120px;
-	height: 2px;
-	float: left;
-	background-color: #f49800;
-}
+.hotel_title_d .line_box04
+{width: 1340px; height: 2px;
+overflow: hidden;}
 
-.line_box04 .hotel_line08 {
-	width: 1220px;
-	height: 1px;
-	float: left;
-	background-color: #ccc;
-	margin-top: 1px;
-}
+.line_box04 .hotel_line07
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
 
-.hotel_detail .hotel_img_detail {
-	width: 1340px;
-}
+.line_box04 .hotel_line08
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
 
-.hotel_img_detail>p {
-	width: 1340px;
-	height: 50px;
-	font-size: 32px;
-	font-weight: bold;
-	line-height: 50px;
-	margin-bottom: 20px;
-	font-family: yangpyeong;
-}
+.hotel_detail .hotel_img_detail
+{width: 1340px;}
 
-.hotel_img_detail .hotel_img_d {
-	width: 1340px;
-	height: 470px;
-	overflow: hidden;
-}
+.hotel_img_detail>p
+{width: 1340px; height: 50px;
+font-size: 32px; font-weight: bold;
+line-height: 50px;
+margin-bottom: 20px;
+font-family: yangpyeong;}
 
-.hotel_img_d div {
-	width: 660px;
-	height: 470px;
-	float: left;
-	background-color: #ccc;
-}
+.hotel_img_detail .hotel_img_d
+{width: 1340px; height: 470px;
+overflow: hidden;}
 
-.hotel_img_d div:first-child {
-	margin-right: 20px;
-}
+.hotel_img_d div
+{width: 660px; height: 470px;
+float: left;
+background-color: #ccc;}
 
-.hotel_detail .hotel_detail_txt {
-	width: 1340px;
-	height: 100px;
-	background-color: #f3f3f3;
-	margin-top: 30px;
-}
+.hotel_img_d div:first-child
+{margin-right: 20px;}
 
-.hotel_detail_txt p {
-	width: 1300px;
-	margin-left: 20px;
-	padding-top: 20px;
-	line-height: 20px;
-	font-size: 14px;
-}
+.hotel_detail .hotel_detail_txt
+{width: 1340px; height: 100px;
+background-color: #f3f3f3;
+margin-top: 30px;}
+
+.hotel_detail_txt p
+{width: 1300px; 
+margin-left: 20px; padding-top: 20px;
+line-height: 20px;
+font-size: 14px;}
 
 /*옵션정보*/
-.freegolf_detail .option_detail {
-	width: 1340px;
-	margin-bottom: 100px;
-}
 
-.option_detail .option_title_d {
-	width: 1340px;
-	height: 54px;
-	margin-bottom: 30px;
-}
+.freegolf_detail .option_detail
+{width: 1340px;
+margin-bottom: 100px;}
 
-.option_title_d .line_box05 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.option_detail .option_title_d
+{width: 1340px; height: 54px;
+margin-bottom: 30px;}
 
-.option_title_d .option_line09 {
-	width: 120px;
-	height: 2px;
-	float: left;
-	background-color: #f49800;
-}
+.option_title_d .line_box05
+{width: 1340px; height: 2px;
+overflow: hidden;}
 
-.option_title_d .option_line10 {
-	width: 1220px;
-	height: 1px;
-	float: left;
-	background-color: #ccc;
-	margin-top: 1px;
-}
+.option_title_d .option_line09
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
 
-.option_title_d>p {
-	width: 1340px;
-	height: 50px;
-	font-size: 22px;
-	color: #333;
-	font-weight: bold;
-	line-height: 50px;
-}
+.option_title_d .option_line10
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
 
-.optionl_title_d .line_box06 {
-	width: 1340px;
-	height: 2px;
-	overflow: hidden;
-}
+.option_title_d>p
+{width: 1340px; height: 50px;
+font-size: 22px; color: #333;
+font-weight: bold; line-height: 50px;}
 
-.line_box06 .option_line11 {
-	width: 120px;
-	height: 2px;
-	float: left;
-	background-color: #f49800;
-}
+.optionl_title_d .line_box06
+{width: 1340px; height: 2px;
+overflow: hidden;}
 
-.line_box06 .option_line12 {
-	width: 1220px;
-	height: 1px;
-	float: left;
-	background-color: #ccc;
-	margin-top: 1px;
-}
+.line_box06 .option_line11
+{width: 120px; height: 2px;
+float: left;
+background-color: #f49800;}
 
-.option_detail .option_img_detail {
-	width: 1340px;
-}
+.line_box06 .option_line12
+{width: 1220px; height: 1px;
+float: left;
+background-color: #ccc;
+margin-top: 1px;}
 
-.option_img_detail>p {
-	width: 1340px;
-	height: 50px;
-	font-size: 32px;
-	font-weight: bold;
-	line-height: 50px;
-	margin-bottom: 20px;
-	font-family: yangpyeong;
-}
+.option_detail .option_img_detail
+{width: 1340px;}
 
-.option_img_detail .option_img_d {
-	width: 1340px;
-	height: 470px;
-	overflow: hidden;
-}
+.option_img_detail>p
+{width: 1340px; height: 50px;
+font-size: 32px; font-weight: bold;
+line-height: 50px;
+margin-bottom: 20px;
+font-family: yangpyeong;}
 
-.option_img_d div {
-	width: 660px;
-	height: 470px;
-	float: left;
-	background-color: #ccc;
-}
+.option_img_detail .option_img_d
+{width: 1340px; height: 470px;
+overflow: hidden;}
 
-.option_img_d div:first-child {
-	margin-right: 20px;
-}
+.option_img_d div
+{width: 660px; height: 470px;
+float: left;
+background-color: #ccc;}
 
-.option_detail .option_detail_txt {
-	width: 1340px;
-	height: 100px;
-	background-color: #f3f3f3;
-	margin-top: 30px;
-}
+.option_img_d div:first-child
+{margin-right: 20px;}
 
-.option_detail_txt p {
-	width: 1300px;
-	margin-left: 20px;
-	padding-top: 20px;
-	line-height: 20px;
-	font-size: 14px;
-}
+.option_detail .option_detail_txt
+{width: 1340px; height: 100px;
+background-color: #f3f3f3;
+margin-top: 30px;}
+
+.option_detail_txt p
+{width: 1300px; 
+margin-left: 20px; padding-top: 20px;
+line-height: 20px;
+font-size: 14px;}
+
+/*총이용금액*/
+
+.freegolf_detail .usage_amount
+{width: 1340px;
+position: relative;
+overflow: hidden;}
+
+.usage_amount>p
+{width: 1340px; height: 50px;
+font-size: 22px; font-weight: bold; line-height: 50px;
+margin-bottom: 20px;} 
+
+.usage_amount .amount01
+{width: 1340px; height: 200px;
+border-top: 2px solid #333;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+border-collapse: collapse;
+text-align: center;
+margin-bottom: 50px;}
+
+.usage_amount tr,.usage_amount td
+{border: 1px solid #ccc;}
+
+.usage_amount tr:nth-child(1)
+{width: 1340px; height: 50px;
+background-color: #f3f3f3;
+font-size: 14px; line-height: 50px;}
+
+.usage_amount td 
+{border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-weight: bold;}
+
+.usage_amount td:nth-child(1)
+{width: 250px;}
+
+.usage_amount td:nth-child(2)
+{width: 250px;}
+
+.usage_amount td:nth-child(3)
+{width: 250px;}
+
+.usage_amount td:nth-child(4)
+{width: 250px;}
+
+.usage_amount td:nth-child(5)
+{width: 340px;}
+
+.usage_amount tr:nth-child(2) td
+{font-size: 25px;}
+
+.usage_amount tr:nth-child(2) td:last-child
+{color: red;}
+
+.usage_amount .amount_icon01
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; left: 230px;}
+
+.usage_amount .amount_icon02
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; left: 480px;}
+
+.usage_amount .amount_icon03
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; left: 730px;}
+
+.usage_amount .amount_icon04
+{width: 40px; height: 40px;
+position: absolute;
+top: 175px; right: 320px;}
+
+/*예약자정보*/
+
+.freegolf_detail .booker01
+{width: 1340px;
+margin-bottom: 50px;}
+
+.booker01 .booker_tit01
+{width: 1340px; height: 50px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.booker_tit01 p
+{float: left;}
+
+.booker_tit01 p:nth-child(1)
+{font-size: 22px; font-weight: bold;
+line-height: 50px;}
+
+.booker_tit01 p:nth-child(2)
+{font-size: 14px;
+color: red;
+line-height: 50px;
+margin-left: 20px;
+margin-right: 10px;}
+
+#booker
+{float: left;
+margin-top: 20px;}
+
+.booker01 .booker_table01
+{width: 1340px; height: 50px;
+overflow: hidden;}
+
+.booker_table01 tr td
+{border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;}
+
+.booker_table01 tr td:nth-child(1),.booker_table01 td:nth-child(3),.booker_table01 td:nth-child(5),.booker_table01 td:nth-child(7)
+{width: 125px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.booker_table01 tr td span {color: red;}
+
+.booker_table01 tr td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table01 tr td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+#gender
+{width: 140px; height: 30px;
+margin-right: 10px;}
+
+.booker_table01 tr td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table01 tr td:nth-child(8)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.freegolf_detail .booker_line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+/*02*/
+
+.freegolf_detail .booker02
+{width: 1340px;
+margin-bottom: 50px;}
+
+.booker02 .booker_tit02
+{width: 1340px; height: 50px;
+line-height: 50px; font-size: 22px; font-weight: bold;
+margin-bottom: 10px;}
+
+.booker02 .booker_table02
+{width: 1340px; height: 50px;
+overflow: hidden;}
+
+.booker_table02 tr td
+{border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;}
+
+.booker_table02 tr td:nth-child(1),.booker_table02 td:nth-child(3),.booker_table02 td:nth-child(5),.booker_table02 td:nth-child(7)
+{width: 125px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.booker_table02 tr td span {color: red;}
+
+.booker_table02 tr td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table02 tr td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table02 tr td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table02 tr td:nth-child(8)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+/*03*/
+
+.freegolf_detail .booker03
+{width: 1340px;
+margin-bottom: 50px;}
+
+.booker03 .booker_tit03
+{width: 1340px; height: 50px;
+line-height: 50px; font-size: 22px; font-weight: bold;
+margin-bottom: 10px;}
+
+.booker03 .booker_table03
+{width: 1340px; height: 50px;
+overflow: hidden;}
+
+.booker_table03 tr td
+{border: 1px solid #ccc;
+border-top: none;
+box-sizing: border-box;}
+
+.booker_table03 tr td:nth-child(1),.booker_table03 td:nth-child(3),.booker_table03 td:nth-child(5),.booker_table03 td:nth-child(7)
+{width: 125px; height: 50px;
+background-color: #f3f3f3;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.booker_table03 tr td span {color: red;}
+
+.booker_table03 tr td:nth-child(2)
+{width: 190px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table03 tr td:nth-child(4)
+{width: 150px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+
+.booker_table03 tr td:nth-child(6)
+{width: 300px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+border-right: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+.booker_table03 tr td:nth-child(8)
+{width: 280px; height: 50px;
+border-top: 2px solid #333;
+border-left: none;
+box-sizing: border-box;
+font-size: 14px; text-align: left; text-indent: 14px;
+color: #595757; font-weight: normal;}
+
+
+.freegolf_detail .booker_line02
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+/*취소/개인정보*/
+.freegolf_detail .notice
+{width: 1240px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 50px;}
+
+.notice .notice_left
+{width: 600px;
+float: left;
+margin-right: 40px;}
+
+.notice_left>p
+{width: 600px; height: 30px;
+text-align: center; line-height: 30px;
+font-weight: bold;
+margin-bottom: 10px;}
+
+.notice_left .cancellation
+{width: 600px; height: 250px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.cancellation p
+{font-size: 14px; line-height: 30px;
+text-indent: 14px;}
+
+.notice_left .agree01
+{width: 600px; height: 20px;
+overflow: hidden;}
+
+.agree01 p
+{width: 80px; height: 20px;
+float: left; color: red;
+margin-left: 505px; line-height: 20px;
+font-size: 14px;}
+
+#cancellation_chk
+{width: 15px; height: 15px;
+margin-top: 2.5px;
+float: right;}
+
+.notice .notice_right
+{width: 600px; height: 300px;
+float: left;}
+
+.notice_right>p
+{width: 600px; height: 30px;
+text-align: center; line-height: 30px;
+font-weight: bold;
+margin-bottom: 10px;}
+
+.notice_right .privacy
+{width: 600px; height: 250px;
+overflow-y: scroll;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.privacy p
+{font-size: 14px; line-height: 30px;
+text-indent: 14px;}
+
+.notice_right .agree02
+{width: 600px; height: 20px;
+overflow: hidden;}
+
+.agree02 p
+{width: 80px; height: 20px;
+float: left; color: red;
+margin-left: 505px; line-height: 20px;
+font-size: 14px;}
+
+.freegolf_detail .total
+{width: 1340px; height: 50px;
+overflow: hidden;
+margin-bottom: 50px;}
+
+.total p
+{float: left;}
+
+.total p:nth-child(1)
+{width: 200px; height: 50px;
+line-height: 50px;
+font-size: 22px; font-weight: bold; text-align: center;
+border-bottom: 2px solid #f49800;
+box-sizing: border-box;}
+
+.total p:nth-child(2)
+{width: 1140px; height: 50px;
+line-height: 50px;
+font-size: 22px; font-weight: bold; color: red;
+border-bottom: 2px solid #333;
+box-sizing: border-box;
+text-indent: 14px;}
+
+.total span
+{color: #333;
+font-size: 16px;}
+
+.freegolf_detail .btn
+{width: 220px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+#btn01, #btn02
+{width: 100px; height: 40px;
+text-align: center;
+border: none;}
+
+#btn01
+{margin-right: 10px;
+background-color: #3b8aff;
+color: white;}
+
+#btn02
+{background-color: #f6f6f6;
+border: 1px solid #ccc;
+box-sizing: border-box;}

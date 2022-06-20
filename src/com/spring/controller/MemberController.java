@@ -1,6 +1,9 @@
 package com.spring.controller;
 
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -51,6 +54,7 @@ public class MemberController {
 		return null;
 	} // duplCheck
 	
+	
 
 	/* 로그인 동작  */
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
@@ -71,6 +75,7 @@ public class MemberController {
 		return "redirect:../index";
 	} // signIn
 	 
+	
 
 	/* 로그 아웃  */
 	@RequestMapping(value = "/signout", method = RequestMethod.GET)
@@ -91,6 +96,7 @@ public class MemberController {
 	} // logOut
 	
 	
+	
 	/* 아이디 찾기  */
 	@RequestMapping(value = "/findid", method = RequestMethod.POST)
 	public String findId(String phone, HttpServletResponse response) throws Exception {
@@ -101,6 +107,7 @@ public class MemberController {
 	} // findId
 	
 
+	
 	/* 비밀번호 찾기  */
 	@RequestMapping(value = "/findpw", method = RequestMethod.POST)
 	public String findPw(MemberVO vo, HttpServletResponse response) throws Exception {
@@ -163,4 +170,42 @@ public class MemberController {
 		return null;
 	} // findPw
 	
+	
+	/* 카카오 아이디 회원가입 및 로그인 */
+    @RequestMapping(value = "/kakao_signup", method = RequestMethod.GET)
+    public String redirectKakao(String id, String sns, String gender, HttpSession session) throws Exception {
+            
+	    	// 접속자 정보 get
+	    	MemberVO mvo = new MemberVO();
+	    	mvo.setId(id);
+	    	mvo.setSns(sns);
+	    	mvo.setGender(gender);
+	    	
+
+	    	// 이메일이 존재하는지 확인
+//    		int check = 0; 
+//    		check = mservice.duplCheck(id);
+//    		System.out.println(check);
+
+    		// 이메일이 존재할 때
+//    		if(check == 1) {
+    			
+//    			session.setAttribute("kakao_login", mvo);
+    			
+//    			return "redirect:../login";
+    			
+    		// 존재하지 않을 때
+//    		}else {
+    			
+//    			session.setAttribute("kakao_login", mvo);
+//    			return "redirect:../signup_";
+//    		}
+            // 접속 토큰 get
+//            String kakaoToken = mservice.getReturnAccessToken(param);
+            
+            // 로그아웃 처리 시, 사용할 토큰 값
+//            session.setAttribute("kakaoToken", kakaoToken);
+            return "redirect:../signup_";
+    } // redirectKakao
+
 }

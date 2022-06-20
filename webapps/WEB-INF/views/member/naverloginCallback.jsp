@@ -8,7 +8,7 @@
 <body>
 	<script type="text/javascript">
 	
-	  //var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "naverlogin"); // "YOUR_CLIENT_ID", "YOUR_CALLBACK_URL"
+	  var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "naverlogin"); // "YOUR_CLIENT_ID", "YOUR_CALLBACK_URL"
 	   
 	  // 접근 토큰 값 출력
 	  //alert(naver_id_login.oauthParams.access_token);

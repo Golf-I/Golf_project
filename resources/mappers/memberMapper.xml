@@ -11,7 +11,15 @@
 	VALUES (#{name}, #{id}, #{pw}, #{phone}, #{birth}, #{gender}, #{sns}, #{mms}, #{mail}, #{push}, #{icon})
 	]]>
 	</insert>
-	<!-- 회원가입  -->	
+
+	<!-- SNS 회원가입  -->	
+	<!-- <insert id="socialSignup"> 
+	<![CDATA[
+	INSERT INTO users(username, email, nickname,  mobile, create_date)
+	VALUES (#{username}, #{email}, #{nickname}, #{mobile}, NOW())
+	]]>
+	</insert> -->
+	<!-- SNS 회원가입  -->	
 
 
 	<!-- 이메일 중복 체크 -->

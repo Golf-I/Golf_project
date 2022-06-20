@@ -77,6 +77,7 @@ public class HomeController extends HttpServlet {
 			logger.info("@signUp2Page vo : " + vo);;
 			String id = req.getParameter("id");
 			logger.info(":::::::: id = "+id);
+			logger.info(":::::::: req = "+req.getParameter("id"));
 			model.addAttribute("vo", vo);
     		return "member/member_signup2.tiles";
     }
@@ -112,6 +113,12 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "findpw", method = RequestMethod.GET)
     public String findPwPage() {
     		return "member/member_findPw.tiles";
+    }
+	
+	/* 마이페이지  화면 페이지 호출 */
+	@RequestMapping(value = "mypage", method = RequestMethod.GET)
+    public String myPage() {
+    		return "member/member_mypage.tiles";
     }
 	
 	/* 카테고리 목록 화면 페이지 호출 */

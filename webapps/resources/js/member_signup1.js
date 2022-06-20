@@ -105,7 +105,7 @@
 	} // loginWithKakao
 	/* 카카오 로그인  */
 	
-	
+	/* 카카오 로그인 -> 회원가입2 페이지로 이동 */
 	function getInfo(){
 			    	  
     	Kakao.API.request({
@@ -113,34 +113,42 @@
             success: function (res) {
 
 //            	console.log(res);
-            	var vo = {};
-            	vo.id = res.kakao_account.email;
-	          	vo.birth = res.kakao_account.birthday;
-	          	vo.gender = res.kakao_account.gender;
-	          	vo.sns = "kakao";  
+            	var id = res.kakao_account.email;
+//	          	var birth = res.kakao_account.birthday;
+	          	var gender = res.kakao_account.gender;
+	          	var sns = "kakao";  
 	          	
-	          	document.join.submit(vo);
+	          	var kakaoform = document.createElement('form');
 	          	
-/*		    	$.ajax({
-					type:"POST",
-//					url: "member/kakao_signup", 
-					url: "./signup_", 
-					data: { id: id,
-							birth: birth,
-							gender: gender,
-							sns: sns },
-					datatype: "text",
-					success: function(check){
-//						console.log("ㅎㅎ?");
-					}, // success
-					
-					error: function(datastatus){
-						//alert("오류가 발생하였습니다. <br/> 관리자에게 문의해주세요.");
-						console.log(datastatus);
-						console.log("ㅎㅎ?");
-					} // error
-				}); // ajax
-*/		    	
+	          	kakaoform.name = 'kakaoform';
+	          	kakaoform.method = 'POST';
+	          	kakaoform.action = 'signup_';
+	          	
+	          	var input1 = document.createElement('input');
+	          	var input2 = document.createElement('input');
+	          	var input3 = document.createElement('input');
+	          	var input4 = document.createElement('input');
+	          	
+	          	input1.setAttribute("type", "hidden");
+	          	input1.setAttribute("name", "id");
+	          	input1.setAttribute("value", id);
+
+	          	input2.setAttribute("type", "hidden");
+	          	input2.setAttribute("name", "sns");
+	          	input2.setAttribute("value", sns);
+	          	
+	          	input3.setAttribute("type", "hidden");
+	          	input3.setAttribute("name", "gender");
+	          	input3.setAttribute("value", gender);
+	          	
+	          	kakaoform.appendChild(input1);
+	          	kakaoform.appendChild(input2);
+	          	kakaoform.appendChild(input3);
+	          	
+	          	document.body.appendChild(kakaoform);
+	          	
+	          	kakaoform.submit();
+
             }, // success
             
             fail: function (err) {
@@ -149,7 +157,7 @@
           }) // Kakao.API.request
 		
 	} // getInfo
-
+	/* 카카오 로그인 -> 회원가입2 페이지로 이동 */
 	
 	
 	/* 카카오 로그아웃  */

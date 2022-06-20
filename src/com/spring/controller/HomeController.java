@@ -74,10 +74,14 @@ public class HomeController extends HttpServlet {
 	/* 회원가입2 화면 페이지 호출 */
 	@RequestMapping(value = "signup_", method = RequestMethod.POST)
     public String signUp2Page(HttpServletRequest req, MemberVO vo, Model model) {
-			logger.info("@signUp2Page vo : " + vo);;
+//			logger.info("@signUp2Page vo : " + vo);;
 			String id = req.getParameter("id");
-			logger.info(":::::::: id = "+id);
-			logger.info(":::::::: req = "+req.getParameter("id"));
+			String sns = req.getParameter("sns");
+			String gender = req.getParameter("gender");
+			String birth = req.getParameter("birth");
+			
+			logger.info(":::::::: id = "+ id + sns + gender + birth);
+//			logger.info(":::::::: req = "+req.getParameter("id"));
 			model.addAttribute("vo", vo);
     		return "member/member_signup2.tiles";
     }

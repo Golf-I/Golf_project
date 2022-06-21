@@ -52,23 +52,37 @@
 
             <div class="line"></div>
 
-            <a href="#">
-            <div class="naver">
-                    <div class="naver_logo">
-                        <img src="${pageContext.request.contextPath}/resources/img/naver_login.png">
-                    </div>
+			<!-- 네이버 로그인 버튼 노출 영역 -->
+			<div class="naver" id="naver_id_login"></div>
+			<!-- <a href="#">
+                   <div class="naver_logo">
+                       <img src="${pageContext.request.contextPath}/resources/img/naver_login.png">
+                   </div>
                     <p>네이버 로그인</p>
-                </div>
-            </a>
+            </div> 
+            </a> -->
 
-            <a href="#">
-            <div class="kakao_login">
+			<script type="text/javascript">
+			  	var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "http://localhost:8080/Golf_project/naverlogin"); // YOUR_CLIENT_ID, YOUR_CALLBACK_URL
+			  	var state = naver_id_login.getUniqState();
+			  	naver_id_login.setButton("green", 3, 50);
+			  	naver_id_login.setDomain("http://localhost:8080/Golf_project/"); // YOUR_SERVICE_URL
+			  	naver_id_login.setState(state);
+			  	naver_id_login.setPopup();
+				naver_id_login.init_naver_id_login();
+			</script>
+			<!-- 네이버 로그인 버튼 노출 영역 -->
+
+            <!-- 카카오 로그인 버튼 노출 영역 -->
+			<a href="javascript:loginWithKakao()">
+            	<div class="kakao_login">
                     <div class="kakao_logo">
-                        <img src="${pageContext.request.contextPath}/resources/img/kakaotalk_login.png">
+                        <img src="${pageContext.request.contextPath}/resources/img/kakaotalk_login.png" alt="카카오 로그인 버튼">
                     </div>
                     <p>카카오톡 로그인</p>
-            </div>
-            </a>
+            	</div>
+			</a>
+			<!-- 카카오 로그인 버튼 노출 영역 -->
 
         </div><!--login-->
     </div><!--login_ex-->

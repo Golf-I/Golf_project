@@ -114,11 +114,12 @@
 
 //            	console.log(res);
             	var id = res.kakao_account.email;
+            	var name = res.kakao_account.name;
+            	var gender = res.kakao_account.gender;
+            	var sns = "kakao";
 //	          	var birth = res.kakao_account.birthday;
-	          	var gender = res.kakao_account.gender;
-	          	var sns = "kakao";  
-	          	
-	          	var kakaoform = document.createElement('form');
+
+            	var kakaoform = document.createElement('form');
 	          	
 	          	kakaoform.name = 'kakaoform';
 	          	kakaoform.method = 'POST';
@@ -140,6 +141,10 @@
 	          	input3.setAttribute("type", "hidden");
 	          	input3.setAttribute("name", "gender");
 	          	input3.setAttribute("value", gender);
+
+	          	input4.setAttribute("type", "hidden");
+	          	input4.setAttribute("name", "name");
+	          	input4.setAttribute("value", name);
 	          	
 	          	kakaoform.appendChild(input1);
 	          	kakaoform.appendChild(input2);

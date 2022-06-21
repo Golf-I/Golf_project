@@ -21,10 +21,15 @@
 	    //alert(naver_id_login.getProfileData('email'));
 	    //alert(naver_id_login.getProfileData('name'));
 	    //alert(naver_id_login.getProfileData('gender'));
+	    
 		  var id = naver_id_login.getProfileData('email');
 		  var name = naver_id_login.getProfileData('name');
 		  var sns = "naver";
 		  
+		  // 아이디 중복 확인
+		  
+		  
+		  // 회원가입 페이지로 이동
 		  var naverform = document.createElement('form');
         	
         	naverform.name = 'naverform';

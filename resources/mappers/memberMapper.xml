@@ -22,7 +22,7 @@
 	<!-- SNS 회원가입  -->	
 
 
-	<!-- 이메일 중복 체크 -->
+	<!-- 일반회원 이메일 중복 체크 -->
 	<select id="duplCheck" resultType="int">
 	<![CDATA[ 
 	SELECT count(*)
@@ -30,10 +30,22 @@
 	WHERE id = #{id}
 	]]>
 	</select>
-	<!-- 이메일 중복 체크 -->
+	<!-- 일반회원 이메일 중복 체크 -->
+
+
+	<!-- 소셜회원 이메일 중복 체크 -->
+	<select id="snsDuplCheck" resultType="int">
+	<![CDATA[ 
+	SELECT count(*)
+	FROM member
+	WHERE id = #{id}
+	AND sns = #{sns}
+	]]>
+	</select>
+	<!-- 소셜회원 이메일 중복 체크 -->
 	
 	
-	<!-- 로그인 -->
+	<!-- 일반회원 로그인 -->
 	<select id="signIn" resultType="com.spring.domain.MemberVO">
 	<![CDATA[
 	SELECT id, pw
@@ -42,7 +54,19 @@
 	AND pw = #{pw}
 	]]>
 	</select>
-	<!-- 로그인 -->
+	<!-- 일반회원 로그인 -->
+	
+	
+	<!-- 소셜회원 로그인 -->
+	<select id="snsSignIn" resultType="com.spring.domain.MemberVO">
+	<![CDATA[
+	SELECT id, sns
+	FROM member
+	WHERE id = #{id}
+	AND sns = #{sns}
+	]]>
+	</select>
+	<!-- 소셜회원 로그인 -->
 
 
 	<!-- 아이디 찾기 -->

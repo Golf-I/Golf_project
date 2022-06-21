@@ -26,7 +26,7 @@ public class MemberServiceImpl implements MemberService{
 	} // insert
 	
 	
-	/* 이메일 중복 확인  */
+	/* 일반회원 이메일 중복 확인  */
 	@Override
 	public int duplCheck(String id) throws Exception {
 		
@@ -39,7 +39,7 @@ public class MemberServiceImpl implements MemberService{
 	} // duplCheck
 	
 	
-	/* 로그인  */
+	/* 일반회원 로그인  */
 	@Override
 	public MemberVO loginMem(MemberVO vo) throws Exception {
 		
@@ -50,6 +50,19 @@ public class MemberServiceImpl implements MemberService{
 		
 		return mvo;
 	} // loginMem
+	
+	
+	/* 소셜회원 로그인  */
+	@Override
+	public MemberVO snsSignIn(MemberVO vo) throws Exception {
+		
+		// System.out.println("-- ServiceImpl : loginMem() 실행 ");
+		// System.out.println("************* vo : " + vo);
+		MemberVO mvo = mdao.snsSignIn(vo);
+		//System.out.println("-- ServiceImpl : loginMem() 실행 완료 ");
+		
+		return mvo;
+	} // snsSignIn
 	
 	
 	/* 아이디 찾기  */
@@ -75,6 +88,16 @@ public class MemberServiceImpl implements MemberService{
 		
 		return mvo;
 	} // findId
+
+
+	/* 소셜회원 이메일 중복 확인  */
+	@Override
+	public int snsDuplCheck(MemberVO vo) throws Exception {
+		
+		int check = mdao.snsDuplCheck(vo);
+		System.out.println("DAOImpl check : " + check);
+		return check;
+	} // snsDuplCheck
 	
 
 }

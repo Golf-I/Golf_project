@@ -44,7 +44,7 @@ public class MemberController {
 	
 	
 	
-	/* 이메일 중복 확인  */
+	/* 일반회원 이메일 중복 확인  */
 	@RequestMapping(value = "duplCheck", method = RequestMethod.GET)
 	public String duplCheck(@RequestParam("id") String id,
 							HttpServletResponse response) throws Exception{
@@ -55,8 +55,21 @@ public class MemberController {
 	} // duplCheck
 	
 	
-
-	/* 로그인 동작  */
+	
+	/* 소셜아이디 이메일 중복 확인  */
+	@RequestMapping(value = "snsDuplCheck", method = RequestMethod.POST)
+	public int snsDuplCheck(/* @RequestParam("id") String id, @RequestParam("sns") String sns, */
+							MemberVO vo, HttpServletResponse response) throws Exception{
+		logger.info("MemController vo : " + vo);
+		int check = 0;
+		check = mservice.snsDuplCheck(vo);
+		
+		return (Integer)check;
+	} // snsDuplCheck
+	
+	
+	
+	/* 일반회원 로그인 동작  */
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
 	public String signIn(MemberVO vo, HttpSession session) throws Exception{
 		//logger.info("-- 로그인 버튼 작동 ");
@@ -77,7 +90,30 @@ public class MemberController {
 	 
 	
 
-	/* 로그 아웃  */
+	/* 소셜회원 로그인 동작  */
+	@RequestMapping(value = "/snsSignIn", method = RequestMethod.POST)
+	public String snsSignIn(MemberVO vo, HttpSession session) throws Exception{
+		//logger.info("-- 로그인 버튼 작동 ");
+		logger.info("Memcontroller vo : " + vo);
+		MemberVO mvo = mservice.snsSignIn(vo);
+		
+		// 로그인 실패 시
+		if(mvo == null) { 
+			return "redirect:../login";
+			
+		// 로그인 성공 시	
+		}else if(mvo != null) { 
+			session.setAttribute("id", mvo.getId());
+			session.setAttribute("sns", mvo.getSns());
+		}
+		
+		logger.info("-- 로그인 버튼 완료");
+		return "redirect:../index";
+	} // snsSignIn
+	
+	
+	
+	/* 로그아웃  */
 	@RequestMapping(value = "/signout", method = RequestMethod.GET)
 	public String logOut(HttpServletResponse response,
 						 HttpSession session) throws Exception {
@@ -170,42 +206,5 @@ public class MemberController {
 		return null;
 	} // findPw
 	
-	
-	/* 카카오 아이디 회원가입 및 로그인 */
-    @RequestMapping(value = "/kakao_signup", method = RequestMethod.GET)
-    public String redirectKakao(String id, String sns, String gender, HttpSession session) throws Exception {
-            
-	    	// 접속자 정보 get
-	    	MemberVO mvo = new MemberVO();
-	    	mvo.setId(id);
-	    	mvo.setSns(sns);
-	    	mvo.setGender(gender);
-	    	
-
-	    	// 이메일이 존재하는지 확인
-//    		int check = 0; 
-//    		check = mservice.duplCheck(id);
-//    		System.out.println(check);
-
-    		// 이메일이 존재할 때
-//    		if(check == 1) {
-    			
-//    			session.setAttribute("kakao_login", mvo);
-    			
-//    			return "redirect:../login";
-    			
-    		// 존재하지 않을 때
-//    		}else {
-    			
-//    			session.setAttribute("kakao_login", mvo);
-//    			return "redirect:../signup_";
-//    		}
-            // 접속 토큰 get
-//            String kakaoToken = mservice.getReturnAccessToken(param);
-            
-            // 로그아웃 처리 시, 사용할 토큰 값
-//            session.setAttribute("kakaoToken", kakaoToken);
-            return "redirect:../signup_";
-    } // redirectKakao
 
 }

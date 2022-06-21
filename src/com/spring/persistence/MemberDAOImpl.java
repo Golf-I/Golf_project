@@ -31,7 +31,7 @@ public class MemberDAOImpl implements MemberDAO{
 	} // signUp
 	
 	
-	/* 이메일 중복 확인  */
+	/* 일반회원 이메일 중복 확인  */
 	@Override
 	public int duplCheck(String id) throws Exception {
 		
@@ -44,7 +44,7 @@ public class MemberDAOImpl implements MemberDAO{
 	} // duplicate
 	
 	
-	/* 로그인  */
+	/* 일반회원 로그인  */
 	@Override
 	public MemberVO signIn(String id, String pw) throws Exception{
 //		System.out.println("-- DAOImpl : signIn() 실행 ");
@@ -70,7 +70,7 @@ public class MemberDAOImpl implements MemberDAO{
 //		System.out.println("-- DAOImpl : findId() 실행 완료");
 
 		return id;
-	} // findId()
+	} // findId
 	
 	
 	/* 비밀번호 찾기  */
@@ -83,6 +83,27 @@ public class MemberDAOImpl implements MemberDAO{
 //		System.out.println("-- DAOImpl : findPw() 실행 완료");
 		
 		return mvo;
-	} // findId()
+	} // findPw
+
+
+	/* 소셜회원 이메일 중복 확인  */
+	@Override
+	public int snsDuplCheck(MemberVO vo) throws Exception {
+
+		int check;
+		check = sqlSession.selectOne(namespace+".snsDuplCheck", vo);
+		
+		return check;
+	} // snsDuplCheck
+
+
+	/* 소셜회원 로그인  */
+	@Override
+	public MemberVO snsSignIn(MemberVO vo) throws Exception {
+		
+		MemberVO mvo = sqlSession.selectOne(namespace+".snsSignIn", vo); 
+		
+		return mvo;
+	} // snsSignIn
 
 }

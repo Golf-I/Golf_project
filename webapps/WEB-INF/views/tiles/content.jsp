@@ -404,17 +404,17 @@
 
 		<div class="event">
 			<div class="event01">
-				<a href="#"> <img
+				<a href="event"> <img
 					src="${pageContext.request.contextPath}/resources/img/event01.png">
 				</a>
 			</div>
 			<div class="event02">
-				<a href="#"> <img
+				<a href="event"> <img
 					src="${pageContext.request.contextPath}/resources/img/event02.png">
 				</a>
 			</div>
 			<div class="event03">
-				<a href="#"> <img
+				<a href="event"> <img
 					src="${pageContext.request.contextPath}/resources/img/event03.png">
 				</a>
 			</div>
@@ -425,16 +425,16 @@
 	<div class="freedom">
 		<div class="country">
 			<div>
-				<a href="#">일본 자유골프→</a>
+				<a href="freegolf">일본 자유골프→</a>
 			</div>
 			<div>
-				<a href="#">태국 자유골프→</a>
+				<a href="freegolf">태국 자유골프→</a>
 			</div>
 			<div>
-				<a href="#">베트남 자유골프→</a>
+				<a href="freegolf">베트남 자유골프→</a>
 			</div>
 			<div>
-				<a href="#">대만 자유골프→</a>
+				<a href="freegolf">대만 자유골프→</a>
 			</div>
 		</div>
 	</div>

@@ -36,7 +36,7 @@ public class MemberController {
 	/* 회원가입 처리  */
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public String signUp(MemberVO vo) throws Exception {
-	 	//logger.info("-- 회원가입 버튼 작동 / vo : "+ vo);
+	 	logger.info("-- 회원가입 버튼 작동 / vo : "+ vo);
 		mservice.insert(vo);
 		
 		return "redirect:../signup_complete";

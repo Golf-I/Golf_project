@@ -20,29 +20,42 @@
 	  function naverSignInCallback() {
 	    //alert(naver_id_login.getProfileData('email'));
 	    //alert(naver_id_login.getProfileData('name'));
-	    //alert(naver_id_login.getProfileData('birthday'));
 	    //alert(naver_id_login.getProfileData('gender'));
-	    //alert(naver_id_login.getProfileData('phone'));
-		  var email = naver_id_login.getProfileData('email');
-		  var username = naver_id_login.getProfileData('name');
-		  document.join.email.value= email;
-		  document.join.username.value= username;
+		  var id = naver_id_login.getProfileData('email');
+		  var name = naver_id_login.getProfileData('name');
+		  var sns = "naver";
+		  
+		  var naverform = document.createElement('form');
+        	
+        	naverform.name = 'naverform';
+        	naverform.method = 'POST';
+        	naverform.action = 'signup_';
+        	
+        	var input1 = document.createElement('input');
+        	var input2 = document.createElement('input');
+        	var input3 = document.createElement('input');
+        	var input4 = document.createElement('input');
+        	
+        	input1.setAttribute("type", "hidden");
+        	input1.setAttribute("name", "id");
+        	input1.setAttribute("value", id);
+
+        	input2.setAttribute("type", "hidden");
+        	input2.setAttribute("name", "sns");
+        	input2.setAttribute("value", sns);
+        	
+        	input3.setAttribute("type", "hidden");
+        	input3.setAttribute("name", "name");
+        	input3.setAttribute("value", name);
+        	
+        	naverform.appendChild(input1);
+        	naverform.appendChild(input2);
+        	naverform.appendChild(input3);
+        	
+        	document.body.appendChild(naverform);
+        	
+        	naverform.submit();
 	  }
-	  
-	</script>
-
-	<form method="post" action="signup_" name="join">
-
-		<input type="text" value="${email}" name="email" id="email" /> <input
-			type="text" value="${username}" name="username" id="name" />
-
-	</form>
-
-	<script type="text/javascript">  
-	
-		//opener.location.href="signup_";
-		//self.close();
-		document.join.submit();
 	  
 	</script>
 </body>

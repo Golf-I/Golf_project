@@ -183,11 +183,11 @@
 
 					<div class="line06"></div>
 
-					<li><a href="#">회원권/아카데미</a>
+					<li><a href="membership">회원권/아카데미</a>
 						<ul>
 							<div class="sheet_05">
-								<li><a href="#">회원권</a></li>
-								<li><a href="#">아카데미</a></li>
+								<li><a href="membership">회원권</a></li>
+								<li><a href="academy">아카데미</a></li>
 							</div>
 						</ul></li>
 
@@ -280,11 +280,11 @@
 						<div class="menu_line08"></div>
 					</div>
 
-					<li><a href="#">회원권/아카데미</a>
+					<li><a href="membership">회원권/아카데미</a>
 						<ul>
 							<div class="sub_menu05">
-								<li><a href="#">회원권</a></li>
-								<li><a href="#">아카데미</a></li>
+								<li><a href="membership">회원권</a></li>
+								<li><a href="academy">아카데미</a></li>
 							</div>
 						</ul>
 						<!--회원권--></li>

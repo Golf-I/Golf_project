@@ -183,4 +183,22 @@ public class HomeController extends HttpServlet {
     		return "category/event_detail.tiles";
 	}
 	
+	/* 회원권 페이지 호출 */
+	@RequestMapping(value = "membership", method = RequestMethod.GET)
+    public String membership_list() {
+    		return "category/membership_list.tiles";
+	}
+	
+	/* 아카데미 페이지 호출 */
+	@RequestMapping(value = "academy", method = RequestMethod.GET)
+    public String academy_list() {
+    		return "category/academy_list.tiles";
+	}
+	
+	/* 아카데미 상세 페이지 호출 */
+	@RequestMapping(value = "academy_detail", method = RequestMethod.GET)
+    public String academy_detail() {
+    		return "category/academy_detail.tiles";
+	}
+	
 }

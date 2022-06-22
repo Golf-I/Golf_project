@@ -1,0 +1,170 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: yangpyeong;
+    src: url(../font/yangpyeong_B.ttf);
+}
+
+section
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+section .academy
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;
+overflow: hidden;}
+
+.academy .academy_left
+{width: 240px;
+float: left;}
+
+.academy_left .menu_a
+{width: 240px; height: 160px;}
+
+.menu_a>div:nth-child(1)
+{width: 240px; height: 50px;
+margin-bottom: 10px;
+border: 1px solid #0d75bc;
+box-sizing: border-box;
+background-color: white;}
+
+.menu_a>div:nth-child(1) p
+{text-indent: 20px; line-height: 50px;
+font-size: 20px; font-weight: bold;
+color: #0d75bc;
+float: left;}
+
+.menu_a>div:nth-child(1) div
+{width: 20px; height: 20px;
+margin-right: 20px; margin-top: 15px;
+float: right;}
+
+.menu_a ul
+{width: 240px; height: 100px;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.menu_a ul a li 
+{color: #333;
+font-weight: bold;}
+
+.menu_a li
+{width: 240px; height: 50px;
+overflow: hidden;
+line-height: 50px;}
+
+.menu_a a:nth-child(1) li:nth-child(1)
+{border-bottom: 1px solid #ccc;
+box-sizing: border-box;}
+
+.menu_a a:nth-child(2) li:nth-child(1)
+{background-color: #0d75bc;
+color: white;}
+
+
+.menu_a li p:nth-child(1)
+{float: left;
+text-indent: 20px;}
+
+.menu_a li p:nth-child(2)
+{float: right;
+margin-right: 20px;}
+
+
+.academy .academy_right
+{width: 1040px;
+float: left;
+margin-left: 60px;}
+
+.academy_right .rout_a
+{width: 1040px; height: 20px;
+font-size: 14px; line-height: 20px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.rout_a div, .rout_a p
+{float: left;
+margin-right: 5px;}
+
+.rout_a div
+{width: 20px; height: 20px;}
+
+.rout_a p:last-child
+{color: #e5004f;
+margin-right: 0;}
+
+.academy_right>p
+{width: 1040px; height: 30px;
+font-size: 24px; line-height: 30px;
+color: #0d75bc;
+margin-bottom: 10px;
+font-family: yangpyeong;}
+
+.academy_right .line01
+{width: 1040px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.academy_right .product01
+{width: 1040px; height: 305px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.product01 a div
+{width: 333px; height: 305px;
+background-color: #0d75bc;
+float: left;}
+
+.product01 a:nth-child(2) div
+{margin-left: 20.5px;
+margin-right: 20.5px;}
+
+.academy_right .product02
+{width: 1040px; height: 305px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.product02 a div
+{width: 333px; height: 305px;
+float: left;}
+
+.product02 a:nth-child(2) div
+{margin-left: 20.5px;
+margin-right: 20.5px;}
+
+.academy_right .product03
+{width: 1040px; height: 305px;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.product03 a div
+{width: 333px; height: 305px;
+background-color: #0d75bc;
+float: left;}
+
+.product03 a:nth-child(2) div
+{margin-left: 20.5px;
+margin-right: 20.5px;}
+
+.academy_right .num_btn
+{width: 260px; height: 20px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+.num_btn a p 
+{width: 20px; height: 20px;
+line-height: 20px; text-align: center;
+margin-right: 10px; font-weight: bold;
+float: left;
+color: #333;}
+
+.num_btn a:last-child p
+{margin-right: 0;}
+
+.num_btn a:nth-child(2) p
+{color: red;}

@@ -1,0 +1,263 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face{
+    src: url(../font/yangpyeong_B.ttf);
+    font-family: yangpyeong;
+}
+
+@font-face {
+    font-family: gmarket;
+    src: url(../font/GmarketSansTTFMedium.ttf);
+}
+
+@font-face {
+    font-family: gmarket_b;
+    src: url(../font/GmarketSansTTFBold.ttf);
+}
+
+section
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+section .academy_detail
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;}
+
+.academy_detail .rout_ad
+{width: 1340px; height: 20px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.rout_ad a, .rout_ad p
+{float: left;
+margin-right: 5px;
+font-size: 14px; line-height: 20px;}
+
+.rout_ad p:last-child
+{margin-right: 0;}
+
+.rout_ad a
+{width: 20px; height: 20px;}
+
+.academy_detail>p
+{width: 1340px; height: 30px;
+font-size: 24px; font-family: yangpyeong;
+margin-bottom: 10px;}
+
+.academy_detail .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.academy_detail .title_ac
+{width: 1340px; height: 50px;
+border-top: 1px solid #f49800;
+font-size: 14px; line-height: 50px;
+text-indent: 14px; font-weight: bold;}
+
+.title_ac span
+{color: #0d75bc;}
+
+.academy_detail .detail_img
+{width: 1340px; height: 1676px;
+margin: 0 auto;}
+
+.academy_detail .golf_club
+{width: 1340px; height: 1160px;
+background-color: #e3fdcd;
+margin-bottom: 100px;}
+
+.golf_club .golf_club_box
+{width: 1140px; height: 960px;
+margin: 0 auto;
+padding-top: 100px;}
+
+.golf_club .golf_club_box
+{width: 1140px; height: 960px;
+margin: 0 auto;
+padding-top: 100px;}
+
+.golf_club_box .club01
+{width: 1140px; height: 470px;
+overflow: hidden;
+background-color: white;
+margin-bottom: 20px;}
+
+.club01 .golf_img01
+{width: 525px; height: 430px;
+float: left;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 50px;}
+
+.club01 .club_txt_01
+{width: 525px; height: 430px;
+float: left;
+margin-right: 20px;
+font-family: gmarket;
+margin-top: 50px;
+margin-bottom: 20px;}
+
+.club_txt_01>p:nth-child(1)
+{width: 525px; height: 30px;
+line-height: 50px;
+font-size: 24px;
+margin-bottom: 10px;
+font-family: gmarket_b;}
+
+.club_txt_01 .golf_hashtag01
+{width: 525px; height: 30px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.golf_hashtag01 p
+{float: left;
+background-color: #e9e9e9;
+color: #6c6c6c;
+text-align: center; line-height: 25px;
+border-radius: 15px;}
+
+.golf_hashtag01 p:nth-child(1)
+{width: 130px; height: 25px;}
+
+.golf_hashtag01 p:nth-child(2)
+{width: 150px; height: 25px;
+margin-right: 10px;
+margin-left: 10px;}
+
+.golf_hashtag01 p:nth-child(3)
+{width: 120px; height: 25px;}
+
+.club_txt_01>p:nth-child(3)
+{line-height: 25px;
+color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_01 span
+{color: #48ab51;}
+
+.club_txt_01 .golf_line01
+{width: 525px; height: 1px;
+background-color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_01 .golf_detail01
+{width: 525px; height: 125px;
+margin-bottom: 10px;}
+
+.golf_detail01 p
+{width: 525px; height: 25px;
+line-height: 25px;
+color: #6c6c6c;}
+
+.club_txt_01 a p
+{width: 200px; height: 40px;
+background-color: #434343;
+font-size: 18px; line-height: 40px; text-align: center;
+color: white;}
+
+/*02*/
+.golf_club_box .club02
+{width: 1140px; height: 470px;
+overflow: hidden;
+background-color: white;
+margin-bottom: 20px;}
+
+.club02 .golf_img02
+{width: 525px; height: 430px;
+float: left;
+margin-left: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-right: 50px;}
+
+.club02 .club_txt_02
+{width: 525px; height: 430px;
+float: left;
+margin-right: 20px;
+font-family: gmarket;
+margin-top: 50px;
+margin-bottom: 20px;}
+
+.club_txt_02>p:nth-child(1)
+{width: 525px; height: 30px;
+line-height: 50px;
+font-size: 24px;
+margin-bottom: 10px;
+font-family: gmarket_b;}
+
+.club_txt_02 .golf_hashtag02
+{width: 525px; height: 30px;
+overflow: hidden;
+margin-bottom: 10px;}
+
+.golf_hashtag02 p
+{float: left;
+background-color: #e9e9e9;
+color: #6c6c6c;
+text-align: center; line-height: 25px;
+border-radius: 15px;}
+
+.golf_hashtag02 p:nth-child(1)
+{width: 90px; height: 25px;}
+
+.golf_hashtag02 p:nth-child(2)
+{width: 110px; height: 25px;
+margin-right: 10px;
+margin-left: 10px;}
+
+.golf_hashtag02 p:nth-child(3)
+{width: 170px; height: 25px;}
+
+.club_txt_02>p:nth-child(3)
+{line-height: 25px;
+color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_02 span
+{color: #48ab51;}
+
+.club_txt_02 .golf_line02
+{width: 525px; height: 1px;
+background-color: #6c6c6c;
+margin-bottom: 10px;}
+
+.club_txt_02 .golf_detail02
+{width: 525px; height: 125px;
+margin-bottom: 10px;}
+
+.golf_detail02 p
+{width: 525px; height: 25px;
+line-height: 25px;
+color: #6c6c6c;}
+
+.club_txt_02 a p
+{width: 200px; height: 40px;
+background-color: #434343;
+font-size: 18px; line-height: 40px; text-align: center;
+color: white;}
+
+.academy_detail .btn_ad
+{width: 220px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.btn_ad a p 
+{width: 100px; height: 40px;
+font-size: 14px; text-align: center; line-height: 40px;
+float: left;}
+
+.btn_ad a:nth-child(1) p
+{background-color: #ff1626;
+color: white;
+margin-right: 20px;}
+
+.btn_ad a:nth-child(2) p
+{background-color: #3b8aff;
+color: white;}

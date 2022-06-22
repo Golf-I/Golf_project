@@ -1,0 +1,240 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: yangpyeong;
+    src: url(../font/yangpyeong_B.ttf);
+}
+
+section
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+section .membership
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;
+overflow: hidden;}
+
+.membership .membership_left
+{width: 240px;
+float: left;}
+
+.membership_left .menu_m
+{width: 240px; height: 160px;}
+
+.menu_m>div:nth-child(1)
+{width: 240px; height: 50px;
+margin-bottom: 10px;
+border: 1px solid #0d75bc;
+box-sizing: border-box;
+background-color: white;}
+
+.menu_m>div:nth-child(1) p
+{text-indent: 20px; line-height: 50px;
+font-size: 20px; font-weight: bold;
+color: #0d75bc;
+float: left;}
+
+.menu_m>div:nth-child(1) div
+{width: 20px; height: 20px;
+margin-right: 20px; margin-top: 15px;
+float: right;}
+
+.menu_m ul
+{width: 240px; height: 100px;
+border: 1px solid #ccc;
+box-sizing: border-box;}
+
+.menu_m ul a li 
+{color: #333;
+font-weight: bold;}
+
+.menu_m li
+{width: 240px; height: 50px;
+overflow: hidden;
+line-height: 50px;}
+
+.menu_m a:nth-child(1) li:nth-child(1)
+{border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #0d75bc;
+color: white;}
+
+.menu_m li p:nth-child(1)
+{float: left;
+text-indent: 20px;}
+
+.menu_m li p:nth-child(2)
+{float: right;
+margin-right: 20px;}
+
+
+.membership .membership_right
+{width: 1040px;
+float: left;
+margin-left: 60px;}
+
+.membership_right .rout_m
+{width: 1040px; height: 20px;
+font-size: 14px; line-height: 20px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.rout_m div, .rout_m p
+{float: left;
+margin-right: 5px;}
+
+.rout_m div
+{width: 20px; height: 20px;}
+
+.rout_m p:last-child
+{color: #e5004f;
+margin-right: 0;}
+
+.membership_right>p
+{width: 1040px; height: 30px;
+font-size: 24px; line-height: 30px;
+color: #0d75bc;
+margin-bottom: 10px;
+font-family: yangpyeong;}
+
+.membership_right .line01
+{width: 1040px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.membership_right .product01
+{width: 1040px; height: 355px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.product01>a>div
+{width: 333px; height: 355px;
+float: left;}
+
+.product01>a:nth-child(2)>div
+{margin-left: 20.5px;
+margin-right: 20.5px;}
+
+.product01 .box01 div:nth-child(1),.product01 .box02 div:nth-child(1),.product01 .box03 div:nth-child(1)
+{width: 333px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+overflow: hidden;}
+
+.product01 .box01 div:nth-child(1) p,.product01 .box02 div:nth-child(1) p,.product01 .box03 div:nth-child(1) p
+{float: left;}
+
+.product01 .box01 div:nth-child(1) p:nth-child(1),.product01 .box02 div:nth-child(1) p:nth-child(1),.product01 .box03 div:nth-child(1) p:nth-child(1)
+{width: 120px; height: 50px;
+background-color: #d3d3d3;
+text-align: center; line-height: 50px; font-weight: bold;
+color: #333;}
+
+.product01 .box01 div:nth-child(1) p:nth-child(2),.product01 .box02 div:nth-child(1) p:nth-child(2),.product01 .box03 div:nth-child(1) p:nth-child(2)
+{width: 211px; height: 50px;
+line-height: 50px; font-weight: bold; text-indent: 16px;
+color: #e60012;}
+
+.product01 .box01 div:nth-child(2),.product01 .box02 div:nth-child(2),.product01 .box03 div:nth-child(2)
+{width: 333px; height: 305px;}
+
+
+.membership_right .product02
+{width: 1040px; height: 355px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.product02>a>div
+{width: 333px; height: 355px;
+float: left;}
+
+.product02>a:nth-child(2)>div
+{margin-left: 20.5px;
+margin-right: 20.5px;}
+
+.product02 .box04 div:nth-child(1),.product02 .box05 div:nth-child(1),.product02 .box06 div:nth-child(1)
+{width: 333px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+overflow: hidden;}
+
+.product02 .box04 div:nth-child(1) p,.product02 .box05 div:nth-child(1) p,.product02 .box06 div:nth-child(1) p
+{float: left;}
+
+.product02 .box04 div:nth-child(1) p:nth-child(1),.product02 .box05 div:nth-child(1) p:nth-child(1),.product02 .box06 div:nth-child(1) p:nth-child(1)
+{width: 120px; height: 50px;
+background-color: #d3d3d3;
+text-align: center; line-height: 50px; font-weight: bold;
+color: #333;}
+
+.product02 .box04 div:nth-child(1) p:nth-child(2),.product02 .box05 div:nth-child(1) p:nth-child(2),.product02 .box06 div:nth-child(1) p:nth-child(2)
+{width: 211px; height: 50px;
+line-height: 50px; font-weight: bold; text-indent: 16px;
+color: #e60012;}
+
+.product02 .box04 div:nth-child(2),.product02 .box05 div:nth-child(2),.product02 .box06 div:nth-child(2)
+{width: 333px; height: 305px;}
+
+
+.membership_right .product03
+{width: 1040px; height: 355px;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.product03>a>div
+{width: 333px; height: 355px;
+float: left;}
+
+.product03>a:nth-child(2)>div
+{margin-left: 20.5px;
+margin-right: 20.5px;}
+
+.product03 .box07 div:nth-child(1),.product03 .box08 div:nth-child(1),.product03 .box09 div:nth-child(1)
+{width: 333px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+overflow: hidden;}
+
+.product03 .box07 div:nth-child(1) p,.product03 .box08 div:nth-child(1) p,.product03 .box09 div:nth-child(1) p
+{float: left;}
+
+.product03 .box07 div:nth-child(1) p:nth-child(1),.product03 .box08 div:nth-child(1) p:nth-child(1),.product03 .box09 div:nth-child(1) p:nth-child(1)
+{width: 120px; height: 50px;
+background-color: #d3d3d3;
+text-align: center; line-height: 50px; font-weight: bold;
+color: #333;}
+
+.product03 .box07 div:nth-child(1) p:nth-child(2),.product03 .box08 div:nth-child(1) p:nth-child(2),.product03 .box09 div:nth-child(1) p:nth-child(2)
+{width: 211px; height: 50px;
+line-height: 50px; font-weight: bold; text-indent: 16px;
+color: #e60012;}
+
+.product03 .box07 div:nth-child(2),.product03 .box08 div:nth-child(2),.product03 .box09 div:nth-child(2)
+{width: 333px; height: 305px;}
+
+
+
+
+
+.membership_right .num_btn
+{width: 260px; height: 20px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+.num_btn a p 
+{width: 20px; height: 20px;
+line-height: 20px; text-align: center;
+margin-right: 10px; font-weight: bold;
+float: left;
+color: #333;}
+
+.num_btn a:last-child p
+{margin-right: 0;}
+
+.num_btn a:nth-child(2) p
+{color: red;}

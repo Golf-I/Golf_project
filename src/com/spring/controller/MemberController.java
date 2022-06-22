@@ -74,6 +74,7 @@ public class MemberController {
 	public String signIn(MemberVO vo, HttpSession session) throws Exception{
 		//logger.info("-- 로그인 버튼 작동 ");
 		MemberVO mvo = mservice.loginMem(vo);
+//		logger.info("MemberCon mvo : " +  mvo);
 		
 		// 로그인 실패 시
 		if(mvo == null) { 
@@ -84,7 +85,7 @@ public class MemberController {
 			session.setAttribute("id", mvo.getId());
 		}
 		
-		logger.info("-- 로그인 버튼 완료");
+//		logger.info("-- 로그인 버튼 완료");
 		return "redirect:../index";
 	} // signIn
 	 

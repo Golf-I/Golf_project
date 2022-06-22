@@ -117,10 +117,16 @@ public class HomeController extends HttpServlet {
     		return "member/member_findPw.tiles";
     }
 	
-	/* 마이페이지  화면 페이지 호출 */
+	/* 마이페이지 화면 페이지 호출 */
 	@RequestMapping(value = "mypage", method = RequestMethod.GET)
     public String myPage() {
     		return "member/member_mypage.tiles";
+    }
+	
+	/* 마이페이지 화면 페이지 호출 */
+	@RequestMapping(value = "mypage_previous", method = RequestMethod.GET)
+    public String myPage_previous() {
+    		return "member/member_mypagePrevious.tiles";
     }
 	
 	/* 카테고리 목록 화면 페이지 호출 */

@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,64 +23,78 @@
 	<div class="header">
 		<div class="header_top">
 			<div class="button">
+			
 				<div class="favorites">
 					<p>
 						<a href="#">즐겨찾기</a>
 					</p>
-				</div>
-				<!--즐겨찾기-->
+				</div><!--즐겨찾기-->
+				
 				<div class="resercation">
 					<p>
-						<a href="#">예약확인
+						<a href="#">예약확인</a>
 					</p>
-				</div>
-				<!--예약확인-->
-			</div>
-			<!--button-->
-		</div>
-		<!--header_top-->
+				</div><!--예약확인-->
+				
+			</div><!-- class="button" -->
+		</div><!-- class="header_top" -->
 
 		<div class="header_middle">
 			<div class="middle_top">
 				<div class="logo">
-					<a href="index"> <img
-						src="${pageContext.request.contextPath}/resources/img/logo.png">
+					<a href="index">
+						<img src="${pageContext.request.contextPath}/resources/img/logo.png">
 					</a>
-				</div>
-				<!--로고-->
+				</div><!--로고-->
+
 
 				<div class="search">
 					<div class="calendar">
-						<img
-							src="${pageContext.request.contextPath}/resources/img/calendar.png">
+						<img src="${pageContext.request.contextPath}/resources/img/calendar.png">
 					</div>
 
 					<div class="qna_button">
-						<img
-							src="${pageContext.request.contextPath}/resources/img/search_btn.png">
+						<img src="${pageContext.request.contextPath}/resources/img/search_btn.png">
 					</div>
-				</div>
-				<!--검색 박스-->
+				</div><!-- class="search" -->
+
 
 				<div class="call_header">
-					<img
-						src="${pageContext.request.contextPath}/resources/img/call_header.png">
-				</div>
+					<img src="${pageContext.request.contextPath}/resources/img/call_header.png">
+				</div><!-- class="call_header" -->
 
 				<div class="login_btn">
 					<div class="login">
-						<a href="login"> <img
-							src="${pageContext.request.contextPath}/resources/img/login.png">
-						</a>
+
+					<c:choose>
+						<%-- 세션 값이 있을 때 --%>
+						<c:when test="${sessionScope.id != null}">
+							<a href="mypage_previous">
+								<img src="${pageContext.request.contextPath}/resources/img/login.png">
+							</a>
+						</c:when>
+							
+						<%-- 세션 값이 없을 때 --%>
+						<c:otherwise>
+							<a href="login">
+								<img src="${pageContext.request.contextPath}/resources/img/login.png">
+							</a>
+						</c:otherwise>
+					</c:choose>
+
 					</div>
 
-					<label for="menu_btn"> <img
-						src="${pageContext.request.contextPath}/resources/img/menu.png">
-					</label>
-				</div>
+					
 
-			</div>
-			<!--top-->
+
+					<label for="menu_btn">
+						<img src="${pageContext.request.contextPath}/resources/img/menu.png">
+					</label>
+				</div><!-- class="login_btn" -->
+				
+			</div><!-- class="middle_top" -->
+			
+			
 			<div class="middle_bottom">
 				<div>
 					<a href="hashtag">#MD추천</a>
@@ -100,9 +115,8 @@
 					<a href="hashtag">#대구출발</a>
 				</div>
 			</div>
-			<!--해시태그-->
-		</div>
-		<!--header_middle-->
+		</div><!-- class="middle_bottom" -->
+
 
 		<div class="lnb_ex">
 			<div class="lnb">
@@ -122,9 +136,9 @@
 								<li><a href="category">오카야마/츄고쿠</a></li>
 								<li><a href="category">다카마츠/마츠야마</a></li>
 							</div>
-						</ul>
-						<!--소메뉴--></li>
-					<!--일본골프-->
+						</ul><!--소메뉴-->
+					</li><!--일본골프-->
+
 
 					<div class="line01"></div>
 
@@ -136,11 +150,10 @@
 								<li><a href="category">푸켓</a></li>
 								<li><a href="category">칸차나부리/야유타야</a></li>
 								<li><a href="category">후아힌</a></li>
-							</div>
-							<!--sheet02-->
+							</div><!--sheet02-->
 						</ul>
-						<!--소메뉴--></li>
-					<!--태국골프-->
+					</li><!--태국골프-->
+
 
 					<div class="line02"></div>
 
@@ -153,11 +166,10 @@
 								<li><a href="category">하노이</a></li>
 								<li><a href="category">호치민</a></li>
 								<li><a href="category">달랏</a></li>
-							</div>
-							<!--sheet03-->
+							</div><!--sheet03-->
 						</ul>
-						<!--소메뉴--></li>
-					<!--베트남골프-->
+					</li><!--베트남골프-->
+
 
 					<div class="line03"></div>
 
@@ -168,34 +180,45 @@
 								<li><a href="category">카오슝</a></li>
 								<li><a href="category">화련</a></li>
 							</div>
-						</ul>
-						<!--소메뉴--></li>
-					<!--대만-->
+						</ul><!--소메뉴-->
+					</li><!--대만-->
+
 
 					<div class="line04"></div>
+						<li><a href="event">기획전/이벤트</a></li>
 
-					<li><a href="event">기획전/이벤트</a></li>
-					<!--기획전/이벤트-->
+ 					<div class="line05"></div>
 
-					<div class="line05"></div>
 
-					<li><a href="mypage">마이페이지</a></li>
+					<c:choose>
+						<%-- 세션 값이 있을 때 --%>
+						<c:when test="${sessionScope.id != null}">
+							<li><a href="mypage_previous">마이페이지</a></li>
+						</c:when>
+						
+						<%-- 세션 값이 없을 때 --%>
+						<c:otherwise>
+							<li><a href="login">마이페이지</a></li>
+						</c:otherwise>
+					
+					</c:choose>
+				
 
 					<div class="line06"></div>
 
-					<li><a href="membership">회원권/아카데미</a>
-						<ul>
-							<div class="sheet_05">
-								<li><a href="membership">회원권</a></li>
-								<li><a href="academy">아카데미</a></li>
-							</div>
-						</ul></li>
+						<li>
+							<a href="membership">회원권/아카데미</a>
+							<ul>
+								<div class="sheet_05">
+									<li><a href="membership">회원권</a></li>
+									<li><a href="academy">아카데미</a></li>
+								</div>
+							</ul>
+						</li>
 
 				</ul>
-				<!--전체lnb-->
+			</div><!-- class="lnb" -->
 
-			</div>
-			<!--lnb-->
 
 			<div class="btn_sheet">
 				<ul>
@@ -216,13 +239,14 @@
 								<li><a href="category">다카마츠.마츠아마</a></li>
 							</div>
 						</ul>
-						<!--일본--></li>
-					<!--일본-->
+					</li><!--일본-->
+
 
 					<div class="line01">
 						<div class="menu_line01"></div>
 						<div class="menu_line02"></div>
 					</div>
+
 
 					<li><a href="category">태국골프</a>
 						<ul>
@@ -234,8 +258,8 @@
 								<li><a href="category">후아힌</a></li>
 							</div>
 						</ul>
-						<!--태국--></li>
-					<!--태국-->
+					</li><!--태국-->
+
 
 					<div class="line02">
 						<div class="menu_line03"></div>
@@ -253,8 +277,8 @@
 								<li><a href="category">달랏</a></li>
 							</div>
 						</ul>
-						<!--베트남--></li>
-					<!--베트남-->
+					</li><!--베트남-->
+
 
 					<div class="line03">
 						<div class="menu_line05"></div>
@@ -272,8 +296,8 @@
 								<li><a href="category">이란/화련</a></li>
 							</div>
 						</ul>
-						<!--대만--></li>
-					<!--대만-->
+					</li><!--대만-->
+
 
 					<div class="line04">
 						<div class="menu_line07"></div>
@@ -287,24 +311,17 @@
 								<li><a href="academy">아카데미</a></li>
 							</div>
 						</ul>
-						<!--회원권--></li>
-					<!--회원권-->
+					</li><!--회원권-->
 
 					<div class="line05">
 						<div class="menu_line09"></div>
 						<div class="menu_line10"></div>
 					</div>
 
-
 				</ul>
-			</div>
-
-
-		</div>
-		<!--lnb_ex-->
-
-	</div>
-	<!--header-->
+			</div><!-- class="btn_sheet" -->
+		</div><!--lnb_ex-->
+	</div><!--header-->
 
 </body>
 </html>

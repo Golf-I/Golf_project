@@ -88,5 +88,17 @@
 	AND name = #{name}
 	]]>
 	</select>
+	
+	
+	<!-- 마이페이지 이전 비밀번호 확인 -->
+	<select id="mypageCheck" resultType="int">
+	<![CDATA[ 
+	SELECT count(*)
+	FROM member
+	WHERE id = #{id}
+	AND pw = #{pw}
+	]]>
+	</select>
+	<!-- 마이페이지 이전 비밀번호 확인 -->
 
 </mapper>

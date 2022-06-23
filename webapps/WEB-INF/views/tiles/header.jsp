@@ -36,6 +36,22 @@
 					</p>
 				</div><!--예약확인-->
 				
+				<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+						<div class="logout">
+		                    <p>
+		                        <a href="#">로그아웃</a>
+		                    </p>
+                		</div>
+					</c:when>
+						
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+					</c:otherwise>
+				</c:choose>
+				
+
 			</div><!-- class="button" -->
 		</div><!-- class="header_top" -->
 
@@ -67,14 +83,14 @@
 					<div class="login">
 
 					<c:choose>
-						<%-- 세션 값이 있을 때 --%>
+						<%-- 로그인 했을 때 --%>
 						<c:when test="${sessionScope.id != null}">
-							<a href="mypage_previous">
+							<a href="mypage_pre">
 								<img src="${pageContext.request.contextPath}/resources/img/login.png">
 							</a>
 						</c:when>
 							
-						<%-- 세션 값이 없을 때 --%>
+						<%-- 로그인 안했을 때 --%>
 						<c:otherwise>
 							<a href="login">
 								<img src="${pageContext.request.contextPath}/resources/img/login.png">
@@ -193,7 +209,7 @@
 					<c:choose>
 						<%-- 세션 값이 있을 때 --%>
 						<c:when test="${sessionScope.id != null}">
-							<li><a href="mypage_previous">마이페이지</a></li>
+							<li><a href="mypage_pre">마이페이지</a></li>
 						</c:when>
 						
 						<%-- 세션 값이 없을 때 --%>

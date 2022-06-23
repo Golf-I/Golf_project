@@ -1,0 +1,358 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: yangpyeong;
+    src: url(../font/yangpyeong_B.ttf);
+}
+
+section
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+.notic
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;
+overflow: hidden;}
+
+.notic .notic_left
+{width: 240px;
+margin-right: 60px;
+float: left;}
+
+.notic_left ul li
+{width: 240px; height: 50px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+color: #333; font-weight: bold;
+overflow: hidden;}
+
+.notic_left ul>li:nth-child(1)
+{border: 1px solid #0d75bc;
+box-sizing: border-box;
+margin-bottom: 10px;}
+
+.notic_left ul>li:nth-child(1) p
+{float: left;
+text-indent: 20px;
+line-height: 50px; color: #0d75bc; font-weight: bold;}
+
+.notic_left ul>li:nth-child(1) div
+{width: 20px; height: 20px;
+float: right;
+margin-right: 20px; margin-top: 15px;}
+
+.notic_left ul a:nth-child(2) li,.notic_left ul a:nth-child(3) li,.notic_left ul a:nth-child(4) li
+{border-bottom: none;}
+
+.notic_left ul a:nth-child(2) li p:nth-child(1),.notic_left ul a:nth-child(3) li p:nth-child(1),.notic_left ul a:nth-child(4) li p:nth-child(1), .notic_left ul a:nth-child(5) li p:nth-child(1)
+{float: left;
+line-height: 50px; text-indent: 20px;}
+
+.notic_left ul a:nth-child(2) li p:nth-child(2),.notic_left ul a:nth-child(3) li p:nth-child(2),.notic_left ul a:nth-child(4) li p:nth-child(2), .notic_left ul a:nth-child(5) li p:nth-child(2)
+{float: right;
+line-height: 50px; margin-right: 20px;}
+
+.notic_left ul a:nth-child(4) li
+{background-color: #0d75bc;
+color: white;}
+
+
+.notic .notic_right
+{width: 1040px;
+float: left;}
+
+.notic_right .notic_rout
+{width: 1040px; height: 20px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.notic_rout p, .notic_rout div
+{float: left;
+margin-right: 5px;
+font-size: 14px; line-height: 20px; font-weight: bold;}
+
+.notic_rout p:last-child
+{color: #e5004f;}
+
+.notic_rout div
+{width: 20px; height: 20px;}
+
+.notic_right>p:nth-child(2)
+{width: 1040px; height: 30px;
+font-size: 24px; font-family: yangpyeong;
+color: #0d75bc; line-height: 30px;
+margin-bottom: 5px;}
+
+.notic_right .line01
+{width: 1040px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.notic_right table
+{width: 1040px;
+border-top: 2px solid #999999;
+box-sizing: border-box;
+margin-bottom: 100px;}
+
+.notic_right table tr td
+{border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.notic_right table tr:nth-child(1) td:nth-child(1)
+{width: 100px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+background-color: #f7f7f7;}
+
+.notic_right table tr:nth-child(1) td:nth-child(2)
+{width: 100px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+background-color: #f7f7f7;}
+
+.notic_right table tr:nth-child(1) td:nth-child(3)
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+background-color: #f7f7f7;}
+
+.notic_right table tr:nth-child(1) td:nth-child(4)
+{width: 160px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;
+background-color: #f7f7f7;}
+
+.notic_right table tr
+{width: 1040px; height: 50px;}
+
+.notic_right table tr:nth-child(2) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(2) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(2) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(2) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(3) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(3) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(3) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(3) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(4) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(4) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(4) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(4) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(5) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(5) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(5) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(5) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(6) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(6) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(6) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(6) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(7) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(7) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(7) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(7) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(8) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(8) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(8) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(8) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(9) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(9) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(9) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(9) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(10) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(10) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(10) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(10) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(11) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(11) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(11) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(11) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(12) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(12) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(12) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(12) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(13) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(13) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(13) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(13) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(14) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(14) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(14) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(14) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(15) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(15) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(15) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(15) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right table tr:nth-child(16) td:nth-child(1)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(16) td:nth-child(2)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+
+.notic_right table tr:nth-child(16) td:nth-child(3) a
+{width: 680px; height: 50px;
+font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+
+.notic_right table tr:nth-child(16) td:nth-child(4)
+{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+border-right: none;}
+
+.notic_right .num_btn
+{width: 260px; height: 20px;
+overflow: hidden;
+margin: 0 auto;
+margin-bottom: 100px;}
+
+.num_btn a p 
+{width: 20px; height: 20px;
+line-height: 20px; text-align: center;
+margin-right: 10px; font-weight: bold;
+float: left;}
+
+.num_btn a:last-child p
+{margin-right: 0;}
+
+.num_btn a:nth-child(2) p
+{color: red;}
+
+/*자유여행*/

@@ -78,8 +78,7 @@ public class HomeController extends HttpServlet {
 			String sns = req.getParameter("sns");
 			String gender = req.getParameter("gender");
 			String birth = req.getParameter("birth");
-			
-			logger.info(":::::::: id = "+ id + sns + gender + birth);
+//			logger.info(":::::::: id = "+ id + sns + gender + birth);
 			model.addAttribute("vo", vo);
     		return "member/member_signup2.tiles";
     }
@@ -98,86 +97,127 @@ public class HomeController extends HttpServlet {
 	
 	/* 네이버 로그인 콜백 호출 */
 	@RequestMapping(value = "naverlogin", method = RequestMethod.GET)
-    public String naverlogin(HttpSession session, HttpServletRequest req,
-    						 MemberVO vo, Model model) {
+    public String naverlogin(HttpSession session, HttpServletRequest req, MemberVO vo, Model model) {
 			model.addAttribute("vo", vo);
-			logger.info("#naverlogin vo : " + vo);
+//			logger.info("#naverlogin vo : " + vo);
 			return "member/naverloginCallback.tiles";
     }
 	
-	/* 아이디 찾기 화면 페이지 호출 */
+	/* 아이디 찾기 페이지 호출 */
 	@RequestMapping(value = "findid", method = RequestMethod.GET)
     public String findIdPage() {
     		return "member/member_findId.tiles";
     }
 
-	/* 비밀번호 찾기 화면 페이지 호출 */
+	/* 비밀번호 찾기 페이지 호출 */
 	@RequestMapping(value = "findpw", method = RequestMethod.GET)
     public String findPwPage() {
     		return "member/member_findPw.tiles";
     }
 	
-	/* 마이페이지 화면 페이지 호출 */
+	/* 마이페이지 프로필관리 페이지 호출 */
 	@RequestMapping(value = "mypage", method = RequestMethod.GET)
     public String myPage() {
     		return "member/member_mypage.tiles";
     }
 	
-	/* 마이페이지 화면 페이지 호출 */
-	@RequestMapping(value = "mypage_previous", method = RequestMethod.GET)
-    public String myPage_previous() {
+	/* 마이페이지 공지사항 페이지 호출 */
+	@RequestMapping(value = "notice", method = RequestMethod.GET)
+    public String notice() {
+    		return "member/member_notice.tiles";
+    }
+	
+	/* 마이페이지 공지사항 상세 페이지 호출 */
+	@RequestMapping(value = "notice_detail", method = RequestMethod.GET)
+    public String notice_detail() {
+    		return "member/member_notice_detail.tiles";
+    }
+	
+	/* 마이페이지 이전 비밀번호 확인 페이지 호출 */
+	@RequestMapping(value = "mypage_pre", method = RequestMethod.GET)
+    public String myPage_Previous() {
     		return "member/member_mypagePrevious.tiles";
     }
 	
-	/* 카테고리 목록 화면 페이지 호출 */
+	/* 마이페이지 이름 변경 페이지 호출 */
+	@RequestMapping(value = "mypage_name", method = RequestMethod.GET)
+    public String myPage_Namechange() {
+    		return "member/member_nameChange.tiles";
+    }
+	
+	/* 마이페이지 비밀번호 변경 페이지 호출 */
+	@RequestMapping(value = "mypage_phone", method = RequestMethod.GET)
+    public String myPage_Phonechange() {
+    		return "member/member_phoneChange.tiles";
+    }
+	
+	/* 마이페이지 광고성 정보 수신 동의 페이지 호출 */
+	@RequestMapping(value = "mypage_ad", method = RequestMethod.GET)
+    public String myPage_Advertisement() {
+    		return "member/member_advertisementAgree.tiles";
+    }
+	
+	/* 마이페이지 광고성 개인정보 수집 동의 페이지 호출 */
+	@RequestMapping(value = "mypage_info", method = RequestMethod.GET)
+    public String myPage_Information() {
+    		return "member/member_informationAgree.tiles";
+    }
+	
+	/* 마이페이지 회원 탈퇴 페이지 호출 */
+	@RequestMapping(value = "mypage_secede", method = RequestMethod.GET)
+    public String secedePage() {
+    		return "member/member_secede.tiles";
+    }
+	
+	/* 카테고리 목록 페이지 호출 */
 	@RequestMapping(value = "category", method = RequestMethod.GET)
     public String categoryPage() {
     		return "category/category_list.tiles";
     }
 	
-	/* 가격/상품정보 화면 페이지 호출 */
+	/* 가격/상품정보 페이지 호출 */
 	@RequestMapping(value = "detail01", method = RequestMethod.GET)
     public String product_detail01() {
     		return "category/product_detail01.tiles";
     }
 	
-	/* 상품별점/평점 화면 페이지 호출 */
+	/* 상품별점/평점 페이지 호출 */
 	@RequestMapping(value = "detail02", method = RequestMethod.GET)
     public String product_detail02() {
     		return "category/product_detail02.tiles";
     }
 	
-	/* 상품 리뷰 화면 페이지 호출 */
+	/* 상품 리뷰 페이지 호출 */
 	@RequestMapping(value = "detail03", method = RequestMethod.GET)
     public String product_detail03() {
     		return "category/product_detail03.tiles";
     }
 	
-	/* 상품 리뷰 새창  페이지 호출 */
+	/* 상품 리뷰 새창 페이지 호출 */
 	@RequestMapping(value = "detail03_review", method = RequestMethod.GET)
     public String product_detail03_Popup() {
     		return "category/product_review.tiles";
     }
 	
-	/* 해시태그 목록 화면 페이지 호출 */
+	/* 해시태그 목록 페이지 호출 */
 	@RequestMapping(value = "hashtag", method = RequestMethod.GET)
     public String hashtagPage() {
     		return "category/hashtag_list.tiles";
     }
 	
-	/* 자유골프 목록 화면 페이지 호출 */
+	/* 자유골프 목록 페이지 호출 */
 	@RequestMapping(value = "freegolf", method = RequestMethod.GET)
     public String freegolfPage() {
     		return "category/freegolf_list.tiles";
     }
 	
-	/* 자유골프 상세페이지 호출 */
+	/* 자유골프 상세 페이지 호출 */
 	@RequestMapping(value = "freegolf_detail", method = RequestMethod.GET)
     public String freegolf_detail() {
     		return "category/freegolf_detail.tiles";
     }
 	
-	/* 이벤트 목록 화면 페이지 호출 */
+	/* 이벤트 목록 페이지 호출 */
 	@RequestMapping(value = "event", method = RequestMethod.GET)
     public String eventPage() {
     		return "category/event_list.tiles";
@@ -195,6 +235,12 @@ public class HomeController extends HttpServlet {
     		return "category/membership_list.tiles";
 	}
 	
+	/* 회원권 상세 페이지 호출 */
+	@RequestMapping(value = "membership_detail", method = RequestMethod.GET)
+    public String membership_detail() {
+    		return "category/membership_detail.tiles";
+	}
+	
 	/* 아카데미 페이지 호출 */
 	@RequestMapping(value = "academy", method = RequestMethod.GET)
     public String academy_list() {
@@ -205,6 +251,12 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "academy_detail", method = RequestMethod.GET)
     public String academy_detail() {
     		return "category/academy_detail.tiles";
+	}
+	
+	/* 회원권&아카데미 상담 신청 페이지 호출 */
+	@RequestMapping(value = "consulting", method = RequestMethod.GET)
+    public String consultingForm() {
+    		return "category/consulting_form.tiles";
 	}
 	
 }

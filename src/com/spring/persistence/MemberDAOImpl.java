@@ -106,4 +106,14 @@ public class MemberDAOImpl implements MemberDAO{
 		return mvo;
 	} // snsSignIn
 
+
+	/* 마이페이지 이전 비밀번호 확인 */
+	@Override
+	public int mypageCheck(MemberVO vo) throws Exception {
+
+		int check = sqlSession.selectOne(namespace+".mypageCheck", vo);
+		
+		return check;
+	} // mypageCheck
+
 }

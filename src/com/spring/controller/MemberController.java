@@ -208,4 +208,19 @@ public class MemberController {
 	} // findPw
 	
 
+	
+	/* 마이페이지 이전 비밀번호 확인  */
+	@RequestMapping(value = "/mypagePre", method = RequestMethod.POST)
+	public String mypagePre(MemberVO vo) throws Exception{
+//		logger.info("MemberCon mvo : " +  mvo);
+		int count = mservice.mypageCheck(vo); 
+		
+		if(count == 1) {
+			return "redirect:../mypage";
+		}else{ 
+			return "redirect:../mypage_previous";
+		}
+	} // mypagePre
+	
+	
 }

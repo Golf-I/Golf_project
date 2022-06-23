@@ -327,7 +327,7 @@
 
 				<div class="member_review">
 
-					<a href="#" onclick="openwindow()">
+					<a href="javascript:open('detail03_review');">
 						<div class="review_m_01">
 
 							<div class="review_top">

@@ -14,10 +14,10 @@
 
         <div class="password_check">
 
-			<form action="" method="post" >
+			<form action="member/mypagePre" method="post">
 
             <div class="box_pw">
-
+				
                 <p>비밀번호 확인</p>
 
                 <div class="check">
@@ -29,14 +29,14 @@
                     <div class="id">
                         <p>아이디(이메일)</p>
                         <p>
-                        	<input type="email" name="id" id="id" size="12" maxlength="12" value="${sessionScope.id}">
+                        	<input type="email" name="id" size="12" maxlength="12" value="${sessionScope.id}" readonly>
                         </p>
                         
                     </div>
 
                     <div class="password">
                         <p>비밀번호</p>
-                        <input type="password" namd="pw" id="pw01" size="12" maxlength="12">
+                        <input type="password" name="pw" id="pw01" size="12" maxlength="12">
                     </div>
 
                 </div><!-- class="check" -->

@@ -128,7 +128,7 @@
                         <p>이전페이지</p>
                     </a>
 
-                    <a href="#">
+                    <a href="javascript:open('consulting');">
                         <p>상담신청</p>
                     </a>
 

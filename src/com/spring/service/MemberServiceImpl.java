@@ -98,6 +98,17 @@ public class MemberServiceImpl implements MemberService{
 		System.out.println("DAOImpl check : " + check);
 		return check;
 	} // snsDuplCheck
+
+	
+	/* 마이페이지 이전 비밀번호 확인 */
+	@Override
+	public int mypageCheck(MemberVO vo) throws Exception {
+
+		int check = mdao.mypageCheck(vo);
+//		System.out.println("DAOImpl check : " + check);
+		
+		return check;
+	} // mypage_check
 	
 
 }

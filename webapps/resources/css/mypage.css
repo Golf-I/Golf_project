@@ -182,7 +182,8 @@ box-sizing: border-box;}
 {width: 520px; height: 50px;
 overflow: hidden;}
 
-.id p
+/* .id p */
+.id input
 {width: 425px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
@@ -200,7 +201,7 @@ margin-top: 5px; margin-left: 5px; margin-right: 5px;}
 
 .profile_box table tr:nth-child(1) td:nth-child(4) .birthday
 {width: 270px; height: 40px;
-margin-left: 5px;
+margin-left: 5px; font-size: 14px; line-height: 40px;
 overflow: hidden;}
 
 .birthday p
@@ -208,15 +209,23 @@ overflow: hidden;}
 line-height: 50px;
 margin-right: 5px;}
 
-.birthday>p:nth-child(1)
+#birthday01
 {width: 85px; height: 40px;
 border: 1px solid #ccc;
-box-sizing: border-box;}
+box-sizing: border-box;
+float: left;
+margin-right: 5px;
+text-indent: 14px;}
 
-.birthday>p:nth-child(3), .birthday>p:nth-child(5)
+#birthday02, #birthday03
 {width: 40px; height: 40px;
 border: 1px solid #ccc;
-box-sizing: border-box;}
+box-sizing: border-box;
+float: left;
+margin-right: 5px;
+text-indent: 14px;}
+
+
 
 .profile_box table tr:nth-child(2) td:nth-child(2) .name
 {width: 510px; height: 40px;
@@ -239,7 +248,25 @@ margin-left: 5px; text-align: center;
 background-color: #3b8aff; color: white;
 float: right;}
 
-#man, #woman {display: none;}
+#man,#woman {display: none;}
+
+#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+{background-color: #3b8aff;
+color: white;}
+
+#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+{background-color: white;
+color: #333;}
+
+#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+{background-color: white;
+color: #333;}
+
+#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+{background-color: #3b8aff;
+color: white;}
+
+
 
 .profile_box table tr:nth-child(2) td:nth-child(4) .gender
 {width: 270px; height: 40px;
@@ -375,8 +402,7 @@ overflow: hidden;}
 margin: 0 auto;
 overflow: hidden;}
 
-/* .button>a */
-#delete_account
+.button>a
 {width: 100px; height: 40px;
 float: left;
 background-color: red;

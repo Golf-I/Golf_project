@@ -74,7 +74,7 @@
 
                 <div class="product01">
 
-                    <a href="#">
+                    <a href="membership_detail">
 
                             <div class="box01">
 

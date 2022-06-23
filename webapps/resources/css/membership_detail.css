@@ -1,0 +1,379 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+li {list-style: none;}
+img {display: block;}
+
+@font-face {
+    font-family: yangpyeong;
+    src: url(../font/yangpyeong_B.ttf);
+}
+
+section
+{width: 100%; max-width: 1920px;
+margin: 0 auto;}
+
+.membership_detail
+{width: 1340px;
+margin: 0 auto;
+margin-top: 50px;}
+
+.membership_detail .route_md
+{width: 1340px; height: 20px;
+font-size: 14px; line-height: 20px;
+margin-bottom: 50px;
+overflow: hidden;}
+
+.route_md a, .route_md p
+{float: left;}
+
+.route_md a:nth-child(1)
+{width: 20px; height: 20px;
+margin-right: 5px;}
+
+.route_md p {margin-right: 5px;}
+
+.membership_detail>p:nth-child(2)
+{width: 1340px; height: 30px;
+font-size: 24px; font-family: yangpyeong; line-height: 30px;
+margin-bottom: 5px;}
+
+.membership_detail .line01
+{width: 1340px; height: 1px;
+background-color: #ccc;
+margin-bottom: 50px;}
+
+.membership_detail .title_md
+{width: 1340px; height: 50px;
+border-top: 2px solid #f49800;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+margin-bottom: 50px;}
+
+.title_md>p
+{font-size: 14px; line-height: 50px;
+text-indent: 20px; font-weight: bold;}
+
+.title_md span
+{color: #0d75bc;}
+
+.membership_detail .golf_course
+{width: 1340px;
+margin-bottom: 50px;}
+
+.golf_course>p:nth-child(1)
+{width: 1340px; height: 20px;
+font-size: 18px; line-height: 20px; font-weight: bold; margin-bottom: 20px;}
+
+.golf_course table
+{width: 1340px;}
+
+.golf_course table tr:nth-child(1) td
+{width: 555px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;}
+
+.golf_course table tr:nth-child(1) td:nth-child(1), .golf_course table tr:nth-child(1) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(1) td:nth-child(2)
+{border-right: none;
+border-top: 2px solid #333;
+box-sizing: border-box;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(1) td:nth-child(4)
+{text-indent: 20px;
+border-top: 2px solid #333;
+box-sizing: border-box;}
+
+.golf_course table tr:nth-child(2) td:nth-child(1), .golf_course table tr:nth-child(2) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(2) td:nth-child(2)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(2) td:nth-child(4)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+
+.golf_course table tr:nth-child(3) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(3) td:nth-child(2)
+{width: 1110px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+line-height: 50px; font-size: 14px;} 
+
+.golf_course table tr:nth-child(3) td:nth-child(2) .map
+{width: 1070px; height: 50px;
+margin-left: 20px;
+overflow: hidden;}
+
+.map>p, .map>a
+{float: left;}
+
+.map>p {margin-right: 20px;}
+
+.map>a p
+{width: 80px; height: 30px;
+background-color: #999999;
+line-height: 30px; text-align: center;
+border-radius: 40px;
+margin-top: 10px; color: white;}
+
+.golf_course table tr:nth-child(4) td:nth-child(1), .golf_course table tr:nth-child(4) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(4) td:nth-child(2)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(4) td:nth-child(4)
+{width: 555px; height: 50px;
+border-right: none;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 50px;
+text-indent: 20px;}
+
+.golf_course table tr:nth-child(5) td:nth-child(1)
+{width: 115px; 
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(5) td:nth-child(2)
+{width: 1110px; 
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; line-height: 20px;} 
+
+.golf_course table tr:nth-child(5) td:nth-child(2) .introduce
+{width: 1070px;
+margin-left: 20px; margin-top: 20px; margin-bottom: 20px;}
+
+.golf_course table tr:nth-child(6) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(6) td:nth-child(2)
+{width: 1110px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+line-height: 50px; font-size: 14px;} 
+
+.golf_course table tr:nth-child(6) td:nth-child(2) p
+{width: 1070px; height: 40px;
+margin-top: 20px; margin-bottom: 20px; margin-left: 20px;}
+
+.golf_course table tr:nth-child(7) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+background-color: #f3f3f3;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;}
+
+.golf_course table tr:nth-child(7) td:nth-child(2)
+{width: 1110px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+line-height: 50px; font-size: 14px;} 
+
+.golf_course table tr:nth-child(7) td:nth-child(2) .web
+{width: 1070px; height: 50px;
+margin-left: 20px;
+overflow: hidden;}
+
+.web>p, .web>a
+{float: left;}
+
+.web>p {margin-right: 20px;}
+
+.web>a p 
+{width: 80px; height: 30px;
+border-radius: 40px;
+line-height: 30px; text-align: center;
+background-color: #999999; color: white;
+margin-top: 10px;}
+
+.membership_detail .fee
+{width: 1340px;
+margin-bottom: 100px;}
+
+.fee>p:nth-child(1)
+{width: 1340px; height: 20px;
+font-size: 18px; line-height: 20px; font-weight: bold; margin-bottom: 20px;}
+
+.fee table
+{width: 1340px;}
+
+.fee table tr:nth-child(1) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+border-top: 2px solid #f49800;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px; font-weight: bold;
+background-color: #f3f3f3;}
+
+.fee table tr:nth-child(1) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+box-sizing: border-box;}
+
+.fee table tr:nth-child(2) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;}
+
+.fee table tr:nth-child(2) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold;}
+
+.fee table tr:nth-child(3) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;}
+
+.fee table tr:nth-child(3) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold;}
+
+.fee table tr:nth-child(4) td
+{width: 175px; height: 50px;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-align: center; line-height: 50px;}
+
+.fee table tr:nth-child(4) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold;}
+
+
+.fee table tr:nth-child(5) td:nth-child(1)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold; text-align: center; font-size: 14px;}
+
+.fee table tr:nth-child(5) td:nth-child(2)
+{width: 1225px;
+border-bottom: 1px solid #ccc;
+border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.fee table tr:nth-child(5) td:nth-child(2)>div
+{width: 1185px; 
+margin-left: 20px; margin-top: 20px; margin-bottom: 20px;
+font-size: 14px; line-height: 20px;}
+
+.fee table tr:nth-child(6) td:nth-child(1),.fee table tr:nth-child(6) td:nth-child(3)
+{width: 115px; height: 50px;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+background-color: #f3f3f3;
+box-sizing: border-box;
+font-weight: bold; text-align: center; font-size: 14px;}
+
+.fee table tr:nth-child(6) td:nth-child(2),.fee table tr:nth-child(6) td:nth-child(4)
+{width: 535px; height: 50px;
+border-bottom: 1px solid #ccc;
+box-sizing: border-box;
+font-size: 14px; text-indent: 20px; line-height: 50px;}
+
+.fee table tr:nth-child(6) td:nth-child(4)
+{border-right: 1px solid #ccc;
+box-sizing: border-box;}
+
+.membership_detail .btn
+{width: 240px; height: 40px;
+margin: 0 auto;
+margin-bottom: 100px;
+overflow: hidden;}
+
+.btn a {float: left;}
+
+.btn a p 
+{width: 110px; height: 40px;
+background-color: #ff1626;
+color: white; font-size: 14px; line-height: 40px; text-align: center;}
+
+.btn a:nth-child(2) p
+{margin-left: 20px;
+background-color: #3b8aff;} 
+
+

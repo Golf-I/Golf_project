@@ -17,4 +17,6 @@ public interface MemberDAO {
 	public int snsDuplCheck(MemberVO vo) throws Exception; // 소셜회원 이메일 중복 확인
 	
 	public MemberVO snsSignIn(MemberVO vo) throws Exception; // 소셜회원 로그인
+	
+	public int mypageCheck(MemberVO vo) throws Exception; // 마이페이지 이전 비밀번호 확인
 }

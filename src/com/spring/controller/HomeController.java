@@ -181,6 +181,18 @@ public class HomeController extends HttpServlet {
     		return "category/product_detail01.tiles";
     }
 	
+	/* 예약하기 페이지 호출 */
+	@RequestMapping(value = "reservation", method = RequestMethod.GET)
+    public String reservation() {
+    		return "reservation/reservation.tiles";
+    }
+	
+	/* 예약하기 완료 페이지 호출 */
+	@RequestMapping(value = "reservation_complete", method = RequestMethod.GET)
+    public String reservation_complete() {
+    		return "reservation/reservation_complete.tiles";
+    }
+	
 	/* 상품별점/평점 페이지 호출 */
 	@RequestMapping(value = "detail02", method = RequestMethod.GET)
     public String product_detail02() {

@@ -109,6 +109,27 @@ public class MemberServiceImpl implements MemberService{
 		
 		return check;
 	} // mypage_check
+
+	
+	/* 회원정보 가져오기 */
+	@Override
+	public MemberVO memberGetInfo(String id) throws Exception {
+
+		MemberVO mvo = mdao.memberGetInfo(id);
+		
+		return mvo;
+	} // memberGetInfo
+	
+	
+	/* 회원정보 수정하기 */
+	@Override
+	public int memberInfoUpdate(MemberVO vo) throws Exception {
+
+		int result = mdao.memberInfoUpdate(vo);
+		
+		return result;
+	} // memberInfoUpdate
+
 	
 
 }

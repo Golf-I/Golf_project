@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,10 +10,13 @@
 </head>
 <body>
 
-    <input type="radio" name="gender" id="woman">
-    <input type="radio" name="gender" id="man">
-
     <section>
+
+	<form action="member/memInfoUpdate" method="post">
+    
+    <input type="radio" name="gender" id="woman" value="female">
+    <input type="radio" name="gender" id="man" value="male">
+
 
         <div class="name_change">
 
@@ -99,6 +102,8 @@
             <input type="button" id="btn01" value="변경하기">
 
         </div><!--name_change-->
+
+	</form>
 
     </section>
     

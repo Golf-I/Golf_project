@@ -101,4 +101,30 @@
 	</select>
 	<!-- 마이페이지 이전 비밀번호 확인 -->
 
+
+	<!-- 회원정보 가져오기 -->
+	<select id="memberGetInfo" resultType="com.spring.domain.MemberVO">
+	<![CDATA[
+	SELECT *
+	FROM member
+	WHERE id = #{id}
+	]]>
+	</select>
+	<!-- 회원정보 가져오기 -->
+	
+	
+	<!-- 회원정보 수정하기 -->
+	<update id="memberInfoUpdate">
+	<![CDATA[
+	UPDATE member
+	SET name = #{name}, gender = #{gender},
+		phone = #{phone}, pw = #{newPw}, icon = #{icon},
+		mms = #{mms}, mail = #{mail}, push = #{push}
+	WHERE id = #{id}
+	AND pw = #{pw}
+	]]>
+	</update>
+	<!-- 회원정보 수정하기 --> <!-- sms = #{sms},  -->
+	
+	
 </mapper>

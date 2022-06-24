@@ -125,10 +125,11 @@ public class MemberController {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("<script>");
-		out.println("alert('로그아웃 되었습니다.');");
+//		out.println("alert('로그아웃 되었습니다.');");
 		out.println("location.href='../index'");
 		out.println("</script>");
 		out.flush();
+		
 		return null;
 	} // logOut
 	
@@ -211,16 +212,33 @@ public class MemberController {
 	
 	/* 마이페이지 이전 비밀번호 확인  */
 	@RequestMapping(value = "/mypagePre", method = RequestMethod.POST)
-	public String mypagePre(MemberVO vo) throws Exception{
+	public String mypagePre(MemberVO vo, HttpSession session, Model model) throws Exception{
 //		logger.info("MemberCon mvo : " +  mvo);
 		int count = mservice.mypageCheck(vo); 
 		
-		if(count == 1) {
+		if(count == 1) { // 비밀번호 일치할 때
 			return "redirect:../mypage";
-		}else{ 
-			return "redirect:../mypage_previous";
+			
+		}else{ // 비밀번호 일치하지 않을 때
+			return "redirect:../mypage_pre";
 		}
+		
 	} // mypagePre
+	
+	
+	
+	/* 회원 정보 수정하기  */
+	@RequestMapping(value = "/memInfoUpdate", method = RequestMethod.POST)
+	public String memberInfoUpdate(MemberVO vo) throws Exception{
+
+		int result = mservice.memberInfoUpdate(vo);
+		
+		if(result == 1) { // 변경되었을 때
+			return "redirect:../mypage";
+		}else{
+			return "redirect:../mypage";
+		}
+	} // memberInfoUpdate
 	
 	
 }

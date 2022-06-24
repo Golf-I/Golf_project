@@ -1,4 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -72,13 +76,30 @@
                 <p>프로필관리</p>
             </div>
 
+			
             <p>내 프로필 관리</p>
 
+			<form method="post" action="member/memInfoUpdate">
+
             <div class="line01"></div>
+		
+			
+				
+				<c:choose>
+					<%-- 남성일 때  --%>
+	               	<c:when test="${mvo.gender == 'male'}">
+			            <input type="radio" name="gender" id="male" value="male" checked>
+		    	        <input type="radio" name="gender" id="female" value="female">
+	               	</c:when>
+		               
+					<%-- 여성일 때 --%>
+	               	<c:otherwise>
+			            <input type="radio" name="gender" id="male" value="male" >
+		    	        <input type="radio" name="gender" id="female" value="female" checked>
+	               	</c:otherwise>
+               </c:choose>
 
-            <input type="radio" name="gender" id="man">
-
-            <input type="radio" name="gender" id="woman">
+	
 
             <div class="profile_box">
 
@@ -93,15 +114,16 @@
                                 <!-- <a href="#">변경하기</a> -->
                             </div>
                         </td>
-                        <td>생년월일</td>
+                        <td>생년월일 </td>
                         <td>
+                        
                             <div class="birthday">
-                                <input type="text" id="birthday01" size="4" maxlength="4">
-                                <p>년</p>
-                                <input type="text" id="birthday02" size="2" maxlength="2">
-                                <p>월</p>
-                                <input type="text" id="birthday03" size="2" maxlength="2">
-                                <p>일</p>
+                                <!-- <input type="text" id="birthday01" size="4" maxlength="4" readonly> -->
+                                <p id="yyyy"><fmt:formatDate value="${mvo.birth}" pattern="yyyy" />년</p>
+                                <!-- <input type="text" id="birthday02" size="2" maxlength="2"> -->
+                                <p id="MM"><fmt:formatDate value="${mvo.birth}" pattern="MM" />월</p>
+                                <!-- <input type="text" id="birthday03" size="2" maxlength="2"> -->
+                                <p id="dd"><fmt:formatDate value="${mvo.birth}" pattern="dd" />일</p>
                             </div>
                         </td>
                     </tr>
@@ -110,19 +132,20 @@
                         <td>이름</td>
                         <td>
                             <div class="name">
-                                <p>　</p>
-                                <p>※ 개명하셨다면? 이름을 변경해주세요.</p>
+                                <input type="text" value="${mvo.name}" id="name_box" name="name" readonly>
+                                <%-- <p>&nbsp; ${mvo.name}　</p> --%>
+                                <p>※ 개명하셨다면 이름을 변경해주세요.</p>
                                 <a href="javascript:open('mypage_name');">변경하기</a>
                             </div>
                         </td>
                         <td>성별</td>
                         <td>
                             <div class="gender">
-                                <label for="man">
+                                <label for="male">
                                     <p>남자</p>
                                 </label>
 
-                                <label for="woman">
+                                <label for="female">
                                     <p>여자</p>
                                 </label>
                             </div>
@@ -133,7 +156,8 @@
                         <td>휴대폰</td>
                         <td>
                             <div class="phone">
-                                <p>　</p>
+                                <%-- <p> &nbsp; ${mvo.phone}</p> --%>
+                                <input type="text" value="${mvo.phone}" name="phone" readonly>
                                 <a href="javascript:open('mypage_phone');">변경하기</a>
                             </div>
                         </td>
@@ -146,17 +170,17 @@
                             <div class="password">
                                 <div class="password01">
                                     <p>현재 비밀번호</p>
-                                    <input type="password" size="12" maxlength="12" id="pw01">
+                                    <input type="password" size="12" maxlength="12" id="pw01" name="pw" required>
                                 </div>
 
                                 <div class="password02">
                                     <p>새 비밀번호</p>
-                                    <input type="password" size="12" maxlength="12" id="pw02">
+                                    <input type="password" size="12" maxlength="12" id="pw02" name="newPw" required>
                                 </div>
 
                                 <div class="password03">
                                     <p>비밀번호 다시 입력</p>
-                                    <input type="password" size="12" maxlength="12" id="pw03">
+                                    <input type="password" size="12" maxlength="12" id="pw03" name="pwcheck" required>
                                 </div>
                             </div>
                         </td>
@@ -182,23 +206,56 @@
 
                                 <div class="reception02">
                                     <p>광고성 정보 수신 철회함 22.01.15
-                                    ( 
-                                    <label for="sns">
-	                                    <input type="checkbox" id="sns"> SMS, 
-                                    </label>
+                                    (
+	                                    <label for="sms">
+		                                    <input type="checkbox" id="sms" name="sms"> SMS, 
+	                                    </label>
 
-                                    <label for="mms">
-                                    	<input type="checkbox" id="mms"> MMS, 
-                                    </label>
+                                    <c:choose>
+                                    	<c:when test="${mvo.mms == 'on'}">
+		                                    <label for="mms">
+		                                    	<input type="checkbox" id="mms" name="mms" checked> MMS, 
+		                                    </label>
+                                    	</c:when>
                                     
-                                    <label for="email">
-	                                    <input type="checkbox" id="email"> 이메일, 
-                                    </label>
+                                    	<c:otherwise>
+		                                    <label for="mms">
+		                                    	<input type="checkbox" id="mms" name="mms"> MMS, 
+		                                    </label>
+                                    	</c:otherwise>
+                                    </c:choose>
                                     
-                                    <label for="push">
-	                                    <input type="checkbox" id="push"> 푸시알림 ) 
-                                    </label>
+	
+	                                <c:choose>
+                                    	<c:when test="${mvo.mail == 'on'}">
+		                                    <label for="email">
+		                                    	<input type="checkbox" id="email" name="mail" checked> 이메일, 
+	                                    	</label>
+                                    	</c:when>
                                     
+                                    	<c:otherwise>
+		                                    <label for="email">
+			                                    <input type="checkbox" id="email" name="mail"> 이메일, 
+		                                    </label>
+                                    	</c:otherwise>
+                                    </c:choose>
+                                       
+	                                 
+	                               <c:choose>
+                                    	<c:when test="${mvo.push == 'on'}">
+											<label for="push">
+			                                    <input type="checkbox" id="push" name="push" checked> 푸시알림 ) 
+		                                    </label>
+                                    	</c:when>
+                                    
+                                    	<c:otherwise>
+		                                    <label for="push">
+			                                    <input type="checkbox" id="push" name="push" > 푸시알림 ) 
+		                                    </label>
+                                    	</c:otherwise>
+                                   </c:choose>    
+                                    
+
                                     / </p>
                                     
                                     <a href="javascript:open('mypage_ad');">&nbsp;전문보기 ></a>
@@ -243,6 +300,8 @@
                 </a>
 
             </div>
+
+		</form>
 
         </div><!--right-->
 

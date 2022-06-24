@@ -187,7 +187,9 @@ overflow: hidden;}
 {width: 425px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
-font-size: 14px; line-height: 40px; text-indent: 14px;
+font-size: 14px; line-height: 40px; 
+/* text-indent: 14px; */
+text-indent: 8px;
 margin-left: 5px; margin-top: 5px;
 float: left;}
 
@@ -209,21 +211,27 @@ overflow: hidden;}
 line-height: 50px;
 margin-right: 5px;}
 
-#birthday01
-{width: 85px; height: 40px;
+/* #birthday01 */
+#yyyy
+/* {width: 85px; height: 40px; */
+{width: 60px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
 float: left;
 margin-right: 5px;
-text-indent: 14px;}
+text-indent: 8px;}
+/* text-indent: 14px;} */
 
-#birthday02, #birthday03
-{width: 40px; height: 40px;
+/* #birthday02, #birthday03 */
+#MM, #dd
+/* {width: 40px; height: 40px; */
+{width: 48px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
 float: left;
 margin-right: 5px;
-text-indent: 14px;}
+text-indent: 8px;}
+/* text-indent: 14px;} */
 
 
 
@@ -233,36 +241,46 @@ margin-left: 5px;
 overflow: hidden;
 font-size: 14px; line-height: 40px;}
 
-.name p
-{float: left;}
-
-.name>p:nth-child(1)
+/* .name p */
+#name_box
 {width: 160px; height: 40px;
 margin-right: 10px;
 border: 1px solid #ccc;
-box-sizing: border-box;}
+box-sizing: border-box;
+float: left;
+text-indent: 8px;}
 
-.name a 
+.name p
+{font-size:14px; line-height: 40px;
+float: left;
+margin-right:10px;}
+
+.name a
 {width: 80px; height: 40px;
 margin-left: 5px; text-align: center;
 background-color: #3b8aff; color: white;
-float: right;}
+float: right; }
 
-#man,#woman {display: none;}
+/* #man,#woman {display: none;} */
+#male,#female {display: none;}
 
-#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+/* #man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1) */
+#male:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
 {background-color: #3b8aff;
 color: white;}
 
-#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+/* #man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2) */
+#male:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
 {background-color: white;
 color: #333;}
 
-#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+/* #woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1) */
+#female:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
 {background-color: white;
 color: #333;}
 
-#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+/* #woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2) */
+#female:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
 {background-color: #3b8aff;
 color: white;}
 
@@ -295,11 +313,14 @@ background-color: #3b8aff;
 color: white; text-align: center;
 float: right;}
 
-.phone p
+/* .phone p */
+.phone input
 {width: 160px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
-float: left;}
+float: left;
+text-indent: 8px;
+}
 
 
 .profile_box table tr:nth-child(4) td:nth-child(2)

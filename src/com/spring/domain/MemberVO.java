@@ -7,6 +7,7 @@ public class MemberVO {
 
 	private String id; // 아이디
 	private String pw; // 비밀번호
+	private String newPw; // 새 비밀번호
 	private String name; // 이름 
 	private String phone; // 전화번호
 	private Date birth; // 생년월일
@@ -85,12 +86,19 @@ public class MemberVO {
 		this.icon = icon;
 	}
 	
+	public String getNewPw() {
+		return newPw;
+	}
+	public void setNewPw(String newPw) {
+		this.newPw = newPw;
+	}
+	
 	
 	@Override
 	public String toString() {
-		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", birth=" + birth
-				+ ", gender=" + gender + ", sns=" + sns + ", mms=" + mms + ", mail=" + mail + ", push=" + push
-				+ ", icon=" + Arrays.toString(icon) + "]";
+		return "MemberVO [id=" + id + ", pw=" + pw + ", newPw=" + newPw + ", name=" + name + ", phone=" + phone
+				+ ", birth=" + birth + ", gender=" + gender + ", sns=" + sns + ", mms=" + mms + ", mail=" + mail
+				+ ", push=" + push + ", icon=" + Arrays.toString(icon) + "]";
 	}
 	
 }

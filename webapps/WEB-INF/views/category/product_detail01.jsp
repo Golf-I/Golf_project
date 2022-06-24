@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta charset="UTF-8">
@@ -393,7 +392,7 @@
 
 							<div class="txt_week01">
 								<p>1,090,000</p>
-								<a href="#">예약하기</a>
+								<a href="reservation">예약하기</a>
 							</div>
 
 						</div>
@@ -401,7 +400,7 @@
 						<div class="weekday02">
 							<div class="txt_week02">
 								<p>1,090,000</p>
-								<a href="#">예약하기</a>
+								<a href="reservation">예약하기</a>
 							</div>
 						</div>
 

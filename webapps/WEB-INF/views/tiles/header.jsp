@@ -32,11 +32,26 @@
 					</p>
 				</div><!--즐겨찾기-->
 				
-				<div class="resercation">
-					<p>
-						<a href="#">예약확인</a>
-					</p>
-				</div><!--예약확인-->
+				
+				<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+						<div class="resercation">
+							<p>
+								<a href="member_reservation">예약확인</a>
+							</p>
+						</div><!--예약확인-->
+					</c:when>
+						
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+						<div class="resercation">
+							<p>
+								<a href="login">예약확인</a>
+							</p>
+						</div><!--예약확인-->
+					</c:otherwise>
+				</c:choose>
 				
 				<c:choose>
 					<%-- 로그인 했을 때 --%>
@@ -209,12 +224,13 @@
 
 
 					<c:choose>
-						<%-- 세션 값이 있을 때 --%>
+
+						<%-- 로그인 했을 때 --%>
 						<c:when test="${sessionScope.id != null}">
 							<li><a href="mypage_pre">마이페이지</a></li>
 						</c:when>
 						
-						<%-- 세션 값이 없을 때 --%>
+						<%-- 로그인 안했을 때 --%>
 						<c:otherwise>
 							<li><a href="login">마이페이지</a></li>
 						</c:otherwise>

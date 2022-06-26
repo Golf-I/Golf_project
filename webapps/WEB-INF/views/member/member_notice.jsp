@@ -30,7 +30,7 @@
                         </li>
                     </a>
 
-                    <a href="#">
+                    <a href="member_reservation">
                         <li>
                             <p>예약리스트</p>
                             <p>></p>
@@ -44,7 +44,7 @@
                         </li>
                     </a>
 
-                    <a href="#">
+                    <a href="questions">
                         <li>
                             <p>자주묻는질문</p>
                             <p>></p>

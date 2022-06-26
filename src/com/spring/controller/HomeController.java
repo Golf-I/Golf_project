@@ -149,6 +149,18 @@ public class HomeController extends HttpServlet {
 		return "member/member_notice_detail.tiles";
     }
 	
+	/* 마이페이지 자주묻는 질문 페이지 호출 */
+	@RequestMapping(value = "questions", method = RequestMethod.GET)
+    public String questions() {
+		return "member/member_questions.tiles";
+    }
+	
+	/* 마이페이지  예약리스트 페이지 호출 */
+	@RequestMapping(value = "member_reservation", method = RequestMethod.GET)
+    public String member_reservations() {
+		return "member/member_reservationList.tiles";
+    }
+	
 	/* 마이페이지 이전 비밀번호 확인 페이지 호출 */
 	@RequestMapping(value = "mypage_pre", method = RequestMethod.GET)
     public String myPage_Previous() {
@@ -207,6 +219,12 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "reservation_complete", method = RequestMethod.GET)
     public String reservation_complete() {
 		return "reservation/reservation_complete.tiles";
+    }
+	
+	/* 확정서 페이지 호출 */
+	@RequestMapping(value = "reservation_confirmation", method = RequestMethod.GET)
+    public String reservation_confirmation() {
+		return "reservation/reservation_confirmationLetter.tiles";
     }
 	
 	/* 상품별점/평점 페이지 호출 */

@@ -18,11 +18,15 @@
 
             <div class="box_p">
 
+				<form action="member/memberPhoneUpdate" method="POST">
+
+				<input type="hidden" name="id" value="${sessionScope.id}"> 
+
                 <div class="txt01">
 
-                    <p><span>an20o0@naver.com</span> 회원정보 중 전화번호를 수정하기 위해 인증절차가
-                        필요합니다.</p>
+                    <p><span><b><u>${sessionScope.id}</u></b></span> 회원정보 중 전화번호를 수정하기 위해 인증절차가 필요합니다.</p>
 
+					
                     <select id="korea">
                         <option>대한민국 (+82)</option>
                         <option>대만 (+886)</option>
@@ -42,7 +46,7 @@
 
                         <p>전화번호</p>
 
-                        <input type="text" size="11" maxlength="11" id="num_p">
+                        <input type="text" size="11" maxlength="11" id="num_p" name="phone" required>
 
                         <a href="#">
                             <p>인증요청</p>
@@ -50,12 +54,14 @@
 
                     </div>
 
-                    <input type="text" size="12" maxlength="12" placeholder="인증번호 입력" id="certification">
+                    <input type="text" size="12" maxlength="12" placeholder="인증번호 입력" id="certification" name="" required>
 
                 </div>
 
-                <input type="button" value="변경하기" id="btn">
+                <input type="submit" value="변경하기" id="btn">
 
+				</form>
+				
             </div>
 
         </div>

@@ -46,6 +46,9 @@ public class MemberVO {
 	public Date getBirth() {
 		return birth;
 	}
+	public void setBirth(java.util.Date date) {
+		this.birth = (Date) date;
+	}
 	public void setBirth(Date birth) {
 		this.birth = birth;
 	}

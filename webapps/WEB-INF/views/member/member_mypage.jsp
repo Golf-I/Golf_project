@@ -135,7 +135,8 @@
                                 <input type="text" value="${mvo.name}" id="name_box" name="name" readonly>
                                 <%-- <p>&nbsp; ${mvo.name}　</p> --%>
                                 <p>※ 개명하셨다면 이름을 변경해주세요.</p>
-                                <a href="javascript:open('mypage_name');">변경하기</a>
+                                <a href="mypage_name">변경하기</a>
+<!--                            <a href="javascript:open('mypage_name');">변경하기</a> -->
                             </div>
                         </td>
                         <td>성별</td>
@@ -158,7 +159,8 @@
                             <div class="phone">
                                 <%-- <p> &nbsp; ${mvo.phone}</p> --%>
                                 <input type="text" value="${mvo.phone}" name="phone" readonly>
-                                <a href="javascript:open('mypage_phone');">변경하기</a>
+                                <a href="mypage_phone">변경하기</a>
+<!--                            <a href="javascript:open('mypage_phone');">변경하기</a> -->
                             </div>
                         </td>
                         <td colspan="2"></td>
@@ -273,7 +275,8 @@
 
                 <input type="submit" value="변경" id="reservation">
                 <input type="reset" value="취소" id="cancellation">
-                <a href="javascript:open('mypage_secede');"><p>회원탈퇴</p></a>
+<!--                 <a href="javascript:open('mypage_secede');"><p>회원탈퇴</p></a> -->
+                <a href="mypage_secede"><p>회원탈퇴</p></a>
 
                 </div>
 

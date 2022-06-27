@@ -116,6 +116,12 @@ public class HomeController extends HttpServlet {
 	public String findIdPage() {
 		return "member/member_findId.tiles";
     }
+	
+	/* 아이디 찾기 완료 페이지 호출 */
+	@RequestMapping(value = "findid_complete", method = RequestMethod.GET)
+	public String findIdPage_complete() {
+		return "member/member_findId_complete.tiles";
+	}
 
 	/* 비밀번호 찾기 페이지 호출 */
 	@RequestMapping(value = "findpw", method = RequestMethod.GET)

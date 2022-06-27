@@ -70,7 +70,7 @@
 
 
 	<!-- 아이디 찾기 -->
-	<select id="findId" resultType="String">
+	<select id="findId" resultType="com.spring.domain.MemberVO">
 	<![CDATA[
 	SELECT id
 	FROM member
@@ -125,6 +125,39 @@
 	]]>
 	</update>
 	<!-- 회원정보 수정하기 --> <!-- sms = #{sms},  -->
+	
+	
+	<!-- 회원정보 이름 수정하기 -->
+	<update id="memberNameUpdate">
+	<![CDATA[
+	UPDATE member
+	SET name = #{name}, gender = #{gender}, birth = #{birth}, phone = #{phone}
+	WHERE id = #{id}
+	]]>
+	</update>
+	<!-- 회원정보 이름 수정하기 -->
+	
+	
+	<!-- 회원정보 전화번호 수정하기 -->
+	<update id="memberPhoneUpdate">
+	<![CDATA[
+	UPDATE member
+	SET phone = #{phone}
+	WHERE id = #{id}
+	]]>
+	</update>
+	<!-- 회원정보 전화번호 수정하기 -->
+	
+	
+	<!-- 회원 탈퇴하기 -->
+	<delete flushCache="true" id="memberSecede">
+	<![CDATA[
+	DELETE FROM member
+	WHERE id = #{id}
+	AND pw = #{pw}
+	]]>
+	</delete>
+	<!-- 회원 탈퇴하기 -->
 	
 	
 </mapper>

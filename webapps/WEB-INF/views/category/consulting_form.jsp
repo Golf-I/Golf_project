@@ -2,24 +2,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>consulting</title>
 	<link href="${pageContext.request.contextPath}/resources/css/consulting.css" rel="stylesheet">
 </head>
 <body>
 
-	    <section>
+    <section>
         <div class="consulting">
 
             <p>상담신청</p>
 
             <div class="consulting_box">
 
-                <p>㈜골프아이는 해외 골프장과 회원권 제휴되어 더 좋은 조건으로 골프 회원권을
-                    구입하실 수 있습니다.<br>
-                    회원권에 대한 궁금한 사항이 있으시면 언제라도 문의 주시기 바랍니다.
+                <p>㈜골프아이는 해외 골프장과 회원권 제휴되어 더 좋은 조건으로 골프 회원권을 구입하실 수 있습니다.<br>
+                	회원권에 대한 궁금한 사항이 있으시면 언제라도 문의 주시기 바랍니다.
                 </p>
 
                 <div class="agree_ex">
@@ -31,8 +30,7 @@
                             <p>개인정보 수집 및 이용에 대한 안내</p>
                             <p>- 수집항목 : 이름, 회사명, 부서명, 직책, 이메일, 전화번호, 그외 개인이 직접 등록한 문의 내용</p>
                             <p>- 수집목적 : 문의 결과 회신</p>
-                            <p>- 이용기간 : 개인정보 수집 및 이용에 대한 목적이 달성된 후에는 
-                                해당 정보를 파기함</p>
+                            <p>- 이용기간 : 개인정보 수집 및 이용에 대한 목적이 달성된 후에는 해당 정보를 파기함</p>
                         </div>
                     </div>
 

@@ -10,7 +10,7 @@ public interface MemberDAO {
 	
 	public MemberVO signIn(String id, String pw) throws Exception; // 일반회원 로그인
 
-	public String findId(String phone) throws Exception; // 아이디 찾기
+	public MemberVO findId(String phone) throws Exception; // 아이디 찾기
 	
 	public MemberVO findPw(MemberVO vo) throws Exception; // 비밀번호 찾기
 	
@@ -23,4 +23,10 @@ public interface MemberDAO {
 	public MemberVO memberGetInfo(String id) throws Exception; // 회원정보 가져오기
 
 	public int memberInfoUpdate(MemberVO vo) throws Exception; // 회원정보 수정하기
+	
+	public int memberNameUpdate(MemberVO vo) throws Exception; // 회원정보 이름 수정하기
+	
+	public int memberPhoneUpdate(MemberVO vo) throws Exception; // 회원정보 전화번호 수정하기
+	
+	public int memberSecede(MemberVO vo) throws Exception; // 회원 탈퇴하기
 }

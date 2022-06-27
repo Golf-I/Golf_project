@@ -62,14 +62,14 @@ public class MemberDAOImpl implements MemberDAO{
 	
 	/* 아이디 찾기  */
 	@Override
-	public String findId(String phone) throws Exception {
+	public MemberVO findId(String phone) throws Exception {
 		
 //		System.out.println("-- DAOImpl : findId() 실행");
-		String id = sqlSession.selectOne(namespace+".findId", phone);
+		MemberVO vo = sqlSession.selectOne(namespace+".findId", phone);
 //		System.out.println("-- DAOImpl : id = " + id);
 //		System.out.println("-- DAOImpl : findId() 실행 완료");
 
-		return id;
+		return vo;
 	} // findId
 	
 	
@@ -136,4 +136,35 @@ public class MemberDAOImpl implements MemberDAO{
 		return result;
 	} // memberInfoUpdate
 
+
+	/* 회원정보 이름 수정하기 */
+	@Override
+	public int memberNameUpdate(MemberVO vo) throws Exception {
+
+		int result = sqlSession.update(namespace+".memberNameUpdate", vo);
+		
+		return result;
+	} // memberNameUpdate
+
+
+	/* 회원정보 전화번호 수정하기 */
+	@Override
+	public int memberPhoneUpdate(MemberVO vo) throws Exception {
+
+		int result = sqlSession.update(namespace+".memberPhoneUpdate", vo);
+		
+		return result;
+	} // memberPhoneUpdate
+
+
+	/* 회원 탈퇴하기 */
+	@Override
+	public int memberSecede(MemberVO vo) throws Exception {
+		
+		int result = sqlSession.delete(namespace+".memberSecede", vo);
+//		System.out.println("DAOImpl result : " + result);
+//		System.out.println("DAOImpl vo : " + vo);
+		
+		return result;
+	} // memberSecede
 }

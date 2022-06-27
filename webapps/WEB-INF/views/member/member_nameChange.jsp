@@ -12,7 +12,9 @@
 
     <section>
 
-	<form action="member/memInfoUpdate" method="post">
+	<form action="member/memberNameUpdate" method="post">
+    
+    <input type="hidden" name="id" value="${sessionScope.id}">
     
     <input type="radio" name="gender" id="woman" value="female">
     <input type="radio" name="gender" id="man" value="male">
@@ -26,7 +28,7 @@
 
                 <p>인증받은 휴대전화 번호는 내 회원정보에 등록하겠습니다.</p>
 
-                <input type="text" placeholder="이름" size="12" maxlength="12" id="name">
+                <input type="text" placeholder="이름" size="12" maxlength="12" id="name" name="name" required>
 
                 <div class="gender">
 
@@ -60,15 +62,15 @@
 
                     <div class="birthday_box">
 
-                        <input type="text" size="4" maxlength="4" id="day01">
+                        <input type="text" size="4" maxlength="4" id="day01" name="birth1" required>
 
                         <p>년</p>
 
-                        <input type="text" size="2" maxlength="2" id="day02">
+                        <input type="text" size="2" maxlength="2" id="day02" name="birth2" required>
 
                         <p>월</p>
 
-                        <input type="text" size="2" maxlength="2" id="day03">
+                        <input type="text" size="2" maxlength="2" id="day03" name="birth3" required>
 
                         <p>일</p>
 
@@ -86,7 +88,7 @@
 
                     </select>
 
-                    <input type="text" size="11" maxlength="11" id="phone_num" placeholder="전화번호">
+                    <input type="text" size="11" maxlength="11" id="phone_num" placeholder="전화번호" name="phone" required>
 
                     <a href="#">
                         <p>인증요청</p>
@@ -95,11 +97,11 @@
 
                 </div>
 
-                <input type="text" size="6" maxlength="6" id="certification_number" placeholder="인증번호 입력">
+                <input type="text" size="6" maxlength="6" id="certification_number" placeholder="인증번호 입력" required>
 
             </div>
 
-            <input type="button" id="btn01" value="변경하기">
+            <input type="submit" id="btn01" value="변경하기">
 
         </div><!--name_change-->
 

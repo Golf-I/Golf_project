@@ -67,13 +67,13 @@ public class MemberServiceImpl implements MemberService{
 	
 	/* 아이디 찾기  */
 	@Override
-	public String findId(String phone) throws Exception {
+	public MemberVO findId(String phone) throws Exception {
 		
 //		System.out.println("-- ServiceImpl : findId() 실행");
-		String id = mdao.findId(phone);
+		MemberVO vo = mdao.findId(phone);
 //		System.out.println("-- ServiceImpl : findId() 실행 완료");
 		
-		return id;
+		return vo;
 	} // findId
 	
 	
@@ -129,6 +129,36 @@ public class MemberServiceImpl implements MemberService{
 		
 		return result;
 	} // memberInfoUpdate
+
+
+	/* 회원정보 이름 수정하기 */
+	@Override
+	public int memberNameUpdate(MemberVO vo) throws Exception {
+
+		int result = mdao.memberNameUpdate(vo);
+		
+		return result;
+	} // memberNameUpdate
+	
+	
+	/* 회원정보 전화번호 수정하기 */
+	@Override
+	public int memberPhoneUpdate(MemberVO vo) throws Exception {
+
+		int result = mdao.memberPhoneUpdate(vo);
+		
+		return result;
+	} // memberPhoneUpdate
+
+
+	/* 회원 탈퇴하기 */
+	@Override
+	public int memberSecede(MemberVO vo) throws Exception {
+
+		int result = mdao.memberSecede(vo);
+		
+		return result;
+	} // memberSecede
 
 	
 

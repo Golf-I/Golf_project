@@ -1,11 +1,13 @@
 package com.spring.controller;
 
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 import javax.inject.Inject;
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -14,7 +16,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -137,14 +138,17 @@ public class MemberController {
 	
 	/* 아이디 찾기  */
 	@RequestMapping(value = "/findid", method = RequestMethod.POST)
-	public String findId(String phone, HttpServletResponse response) throws Exception {
-//		logger.info("*** phone : " + phone);
-		String id = mservice.findId(phone);
-	    
-		return "redirect:../findid";
+	public String findId(String phone, MemberVO vo, Model model) throws Exception {
+		
+		MemberVO mvo = mservice.findId(phone);
+//		logger.info("*** mvo : " + mvo);
+		
+		model.addAttribute("mvo", mvo.getId());
+		
+		return "redirect:../findid_complete";
 	} // findId
-	
 
+	
 	
 	/* 비밀번호 찾기  */
 	@RequestMapping(value = "/findpw", method = RequestMethod.POST)
@@ -212,7 +216,7 @@ public class MemberController {
 	
 	/* 마이페이지 이전 비밀번호 확인  */
 	@RequestMapping(value = "/mypagePre", method = RequestMethod.POST)
-	public String mypagePre(MemberVO vo, HttpSession session, Model model) throws Exception{
+	public String mypagePre(MemberVO vo, HttpSession session) throws Exception{
 //		logger.info("MemberCon mvo : " +  mvo);
 		int count = mservice.mypageCheck(vo); 
 		
@@ -227,11 +231,13 @@ public class MemberController {
 	
 	
 	
-	/* 회원 정보 수정하기  */
+	/* 회원정보 수정하기  */
 	@RequestMapping(value = "/memInfoUpdate", method = RequestMethod.POST)
 	public String memberInfoUpdate(MemberVO vo) throws Exception{
-
+		
+//		logger.info("컨트롤러 : " + vo);
 		int result = mservice.memberInfoUpdate(vo);
+//		logger.info("result : " + result);
 		
 		if(result == 1) { // 변경되었을 때
 			return "redirect:../mypage";
@@ -239,6 +245,69 @@ public class MemberController {
 			return "redirect:../mypage";
 		}
 	} // memberInfoUpdate
+	
+	
+	
+	/* 회원정보 이름 수정하기  */
+	@RequestMapping(value = "/memberNameUpdate", method = RequestMethod.POST)
+	public String memberNameUpdate(MemberVO vo, @RequestParam("birth1") String birth1,
+									@RequestParam("birth2") String birth2, 
+									@RequestParam("birth3") String birth3,
+									HttpServletResponse res) throws Exception{
+		
+//		logger.info("컨트롤러 : " + vo);
+		String text = birth1+"-"+birth2+"-"+birth3;
+		
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		Date date = Date.valueOf(text);
+		vo.setBirth(date);
+//		logger.info("getBirth: " + vo.getBirth());
+		
+		int result = mservice.memberNameUpdate(vo);
+//		logger.info("result : " + result);
+		
+		if(result == 1) { // 변경되었을 때
+			return "redirect:../mypage";
+		}else{
+			return "redirect:../mypage";
+		}
+	} // memberNameUpdate
+	
+	
+	
+	/* 회원정보 전화번호 수정하기  */
+	@RequestMapping(value = "/memberPhoneUpdate", method = RequestMethod.POST)
+	public String memberPhoneUpdate(MemberVO vo, HttpServletResponse res) throws Exception{
+		
+		int result = mservice.memberPhoneUpdate(vo);
+		
+		if(result == 1) { // 변경되었을 때
+			return "redirect:../mypage";
+		}else{
+			return "redirect:../mypage";
+		}
+		
+	} // memberPhoneUpdate
+	
+	
+	/* 회원 탈퇴하기  */
+	@RequestMapping(value = "/memberSecede", method = RequestMethod.POST)
+	public String memberSecede(MemberVO vo, HttpServletResponse res, HttpSession session) throws Exception{
+		
+		int result = mservice.memberSecede(vo);
+		
+		logger.info("result : " + result);
+		
+		if(result == 1) { // 탈퇴했을 때
+			session.invalidate();
+			return "redirect:../login";
+		}else{
+			return "redirect:../mypage";
+		}
+//		return "redirect:../index";
+	} // memberSecede
+	
+	
 	
 	
 }

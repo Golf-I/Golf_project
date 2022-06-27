@@ -31,14 +31,14 @@
             </div><!--title01-->
 
             <ul class="mypage_menu">
-                <a href="#">
+                <a href="mypage">
                     <li>
                         <p>프로필관리</p>
                         <p>></p>
                     </li>
                 </a>
 
-                <a href="#">
+                <a href="member_reservation">
                     <li>
                         <p>예약리스트</p>
                         <p>></p>
@@ -52,7 +52,7 @@
                     </li>
                 </a>
 
-                <a href="#">
+                <a href="questions">
                     <li>
                         <p>자주묻는질문</p>
                         <p>></p>

@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>consulting</title>
 	<link href="${pageContext.request.contextPath}/resources/css/consulting.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/consulting_form.js"></script>
 </head>
 <body>
 
     <section>
+    
         <div class="consulting">
 
             <p>상담신청</p>
+
+			<form method="POST"	action="category/inquire" onsubmit="return formCheck();">
 
             <div class="consulting_box">
 
@@ -35,13 +39,27 @@
                     </div>
 
                     <div class="agree_chk">
-                        <input type="checkbox" id="agree">
-                        <p>동의합니다.</p>
+                        	<input type="checkbox" id="agree">
+						
+						<label for="agree">
+		                    <p id="agree_check">동의합니다.</p>
+						</label>
                     </div>
 
                 </div>
 
             </div><!--consulting_box-->
+
+           	<div class="select_box">
+                <p>※ 원하시는 상담 카테고리를 선택해주세요.</p>
+
+                <select name="category" id="product">
+                    <option value="">카테고리를 선택해주세요.</option>
+                    <option value="회원권">회원권</option>
+                    <option value="아카데미">아카데미</option>
+                </select>
+
+            </div>
 
 
             <div class="information">
@@ -52,34 +70,35 @@
 
                     <div class="name">
                         <p><span>*</span> 기업명/고객명</p>
-                        <input type="text" size="12" maxlength="12" id="name_i">
+                        <input type="text" name="companyName" size="12" maxlength="12" id="name_i" required>
                     </div>
 
                     <div class="manager">
                         <p><span>*</span> 담당자</p>
-                        <input type="text" size="12" maxlength="12" id="manager_i">
+                        <input type="text" name="manager" size="12" maxlength="12" id="manager_i" required>
                     </div>
 
                     <div class="phone">
                         <p><span>*</span> 연락처</p>
-                        <input type="text" size="12" maxlength="12" id="phone_i">
+                        <input type="text" name="contactNumber" size="12" maxlength="12" id="phone_i" required>
                     </div>
 
                     <div class="day">
                         <p><span>*</span> 상담일/시간</p>
-                        <input type="text" size="12" maxlength="12" id="day_i">
+                        <input type="text" name="contactDate" size="12" maxlength="12" id="day_i" required>
                     </div>
 
                     <div class="contents">
                         <p><span>*</span> 상담내용</p>
-                        <textarea id="contents_i"></textarea>
+                        <textarea name="content" id="contents_i" required></textarea>
                     </div>
                 </div>
 
             </div><!--information-->
+	
+            <input type="submit" id="send" value="상담신청">
 
-            <input type="button" id="send" value="상담신청 보내기">
-
+			</form>
 
         </div><!--consulting-->
     </section>

@@ -4,7 +4,6 @@
 
 	// 체크박스 필수 체크
 	$(document).ready(function(){
-//	$(function secedeCheck(){
 		$("#btn_wi").click(function(){
 		
 			if( !($("#chk01").is(":checked")) ){
@@ -13,5 +12,4 @@
 			} // if
 		
 		}); // click
-//	});
 	}); // ready

@@ -9,6 +9,14 @@ img {display: block;}
     src: url(../font/yangpyeong_B.ttf);
 }
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
 
 /*헤더*/
 

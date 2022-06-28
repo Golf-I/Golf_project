@@ -10,7 +10,6 @@ import org.springframework.stereotype.Repository;
 
 import com.spring.domain.MemberVO;
 
-// 1. 해당 클래스를 DAO로 사용하겠다. 
 // 스프링에게 등록하는 어노테이션(root-context.xml파일)
 @Repository
 public class MemberDAOImpl implements MemberDAO{

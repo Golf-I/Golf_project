@@ -1,12 +1,8 @@
 package com.spring.controller;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import javax.inject.Inject;
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.domain.MemberVO;
+import com.spring.service.CategoryService;
 import com.spring.service.MemberService;
 
 /**
@@ -59,10 +56,13 @@ public class HomeController extends HttpServlet {
 	*/
 	
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class); // 콘솔에 Log 찍기 
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Inject 
 	private MemberService mservice;
+
+	@Inject 
+	private CategoryService iservice;
 	
 	
     /* 메인 화면 페이지 호출 */
@@ -309,6 +309,54 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "consulting", method = RequestMethod.GET)
     public String consultingForm() {
 		return "category/consulting_form.tiles";
+	}
+	
+	/* 회사소개 페이지 호출 */
+	@RequestMapping(value = "company", method = RequestMethod.GET)
+    public String company() {
+		return "bottomNavigation/company.tiles";
+	}
+	
+	/* 이용약관 페이지 호출 */
+	@RequestMapping(value = "terms-of-service", method = RequestMethod.GET)
+    public String term_of_service() {
+		return "bottomNavigation/terms_of_service.tiles";
+	}
+	
+	/* 개인정보처리방침 페이지 호출 */
+	@RequestMapping(value = "privacy_policy", method = RequestMethod.GET)
+    public String privacy_policy() {
+		return "bottomNavigation/privacy_policy.tiles";
+	}
+	
+	/* 여행약관 페이지 호출 */
+	@RequestMapping(value = "travel-terms-and-conditions", method = RequestMethod.GET)
+    public String travel_terms_and_conditions() {
+		return "bottomNavigation/travel_terms_and_conditions.tiles";
+	}
+	
+	/* 이메일무단수집 페이지 호출 */
+	@RequestMapping(value = "unauthorized-email-collection", method = RequestMethod.GET)
+	public String unauthorized_email_collection() {
+		return "bottomNavigation/unauthorized_email_collection.tiles";
+	}
+	
+	/* 입점 문의 페이지 호출 */
+	@RequestMapping(value = "store", method = RequestMethod.GET)
+    public String entering_the_store() {
+		return "bottomNavigation/entering_the_store.tiles";
+	}
+	
+	/* 제휴/홍보문의 페이지 호출 */
+	@RequestMapping(value = "promotion", method = RequestMethod.GET)
+	public String promotion() {
+		return "bottomNavigation/promotion.tiles";
+	}
+
+	/* 홀세일문의 페이지 호출 */
+	@RequestMapping(value = "wholesale", method = RequestMethod.GET)
+    public String wholesale() {
+		return "bottomNavigation/wholesale.tiles";
 	}
 	
 }

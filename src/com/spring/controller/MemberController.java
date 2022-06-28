@@ -5,10 +5,6 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import javax.inject.Inject;
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -37,7 +33,7 @@ public class MemberController {
 	/* 회원가입 처리  */
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public String signUp(MemberVO vo) throws Exception {
-	 	logger.info("-- 회원가입 버튼 작동 / vo : "+ vo);
+//	 	logger.info("-- 회원가입 버튼 작동 / vo : "+ vo);
 		mservice.insert(vo);
 		
 		return "redirect:../signup_complete";

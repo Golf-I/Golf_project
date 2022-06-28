@@ -12,41 +12,29 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
 
 
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
-		<property name="driverClassName"
-			value="org.mariadb.jdbc.Driver" />
-		<property name="url"
-			value="jdbc:mariadb://localhost:3306/test" />
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
+		<property name="url" value="jdbc:mariadb://localhost:3306/test" />
 		<property name="username" value="admin" />
 		<property name="password" value="1234" />
 	</bean>
 
 
-	<bean id="sqlSessionFactory"
-		class="org.mybatis.spring.SqlSessionFactoryBean">
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation"
-			value="classpath:mybatis-config.xml" />
-		<property name="mapperLocations"
-			value="classpath:mappers/**/*Mapper.xml" />
+		<property name="configLocation"	value="classpath:mybatis-config.xml" />
+		<property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml" />
 	</bean>
 
-	<!-- DB연결, 자원 해제를 처리하는 객체 (SqlSession인터페이스를 구현하고 있다) mybatis-spring라이브러리안에 
-		포함되어있음 -->
-	<bean id="sqlSession"
-		class="org.mybatis.spring.SqlSessionTemplate"
-		destroy-method="clearCache">
-		<constructor-arg name="sqlSessionFactory"
-			ref="sqlSessionFactory"></constructor-arg>
+	<!-- DB연결, 자원 해제를 처리하는 객체 (SqlSession인터페이스를 구현하고 있다) mybatis-spring라이브러리안에 	포함되어있음 -->
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 
 	<!-- DAO와 DB를 연결 -->
-	<context:component-scan
-		base-package="com.spring.persistence" />
+	<context:component-scan	base-package="com.spring.persistence" />
 
 	<!-- Service와 연결 -->
-	<context:component-scan
-		base-package="com.spring.service" />
-
+	<context:component-scan	base-package="com.spring.service" />
+	
 </beans>

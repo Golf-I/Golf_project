@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.CategoryMapper">
+
+
+	<!-- 상담신청 등록  -->	
+	<insert id="register"> 
+	<![CDATA[
+	INSERT INTO inquire(category, companyName, manager, contactNumber, contactDate, content, regDate)
+	VALUES (#{category}, #{companyName}, #{manager}, #{contactNumber}, #{contactDate}, #{content}, NOW())
+	]]>
+	</insert>
+	<!-- 상담신청 등록  -->	
+	
+	
+	<!-- 제휴/홍보 문의  -->	
+	<insert id="promotion"> 
+	<![CDATA[
+	INSERT INTO promotion(suggestions, company, address, web, manager, department, contact,
+							phone, introduce, contents, filename, filetype, regDate)
+	VALUES (#{suggestions}, #{company}, #{address}, #{web}, #{manager}, #{department},
+			#{contact}, #{phone}, #{introduce}, #{contents}, #{filename}, #{filetype}, NOW())
+	]]>
+	</insert>
+	<!-- 제휴/홍보 문의  -->	
+	
+	
+	<!-- 홀세일 문의  -->	
+	<insert id="wholesale"> 
+	<![CDATA[
+	INSERT INTO wholesale(company, address, web, manager, department, contact,
+							phone, introduce, contents, filename, filetype, regDate)
+	VALUES (#{company}, #{address}, #{web}, #{manager}, #{department},
+			#{contact}, #{phone}, #{introduce}, #{contents}, #{filename}, #{filetype}, NOW())
+	]]>
+	</insert>
+	<!-- 홀세일 문의  -->	
+
+
+	<!-- 입점 문의  -->	
+	<insert id="store"> 
+	<![CDATA[
+	INSERT INTO entering_the_store(company, address, web, manager, department, contact,
+							phone, brand, introduce, filename, filetype, regDate)
+	VALUES (#{company}, #{address}, #{web}, #{manager}, #{department},
+			#{contact}, #{phone}, #{brand}, #{introduce}, #{filename}, #{filetype}, NOW())
+	]]>
+	</insert>
+	<!-- 입점 문의  -->	
+	
+</mapper>

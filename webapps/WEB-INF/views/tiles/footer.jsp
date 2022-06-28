@@ -2,24 +2,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>main</title>
-<link href="${pageContext.request.contextPath}/resources/css/index.css"
-	rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>main</title>
+	<link href="${pageContext.request.contextPath}/resources/css/index.css" rel="stylesheet">
 </head>
 <body>
 	<footer class="footer_ex">
 	<div class="footer_top">
 		<ul>
-			<li><a href="#">회사소개</a></li>
-			<li><a href="#">이용약관</a></li>
-			<li><a href="#">여행약관</a></li>
-			<li><a href="#">개인정보처리방침</a></li>
-			<li><a href="#">이메일무단수집거부</a></li>
-			<li><a href="#">홈세일문의</a></li>
-			<li><a href="#">제휴/홍보문의</a></li>
+			<li><a href="company">회사소개</a></li>
+			<li><a href="terms-of-service">이용약관</a></li>
+			<li><a href="travel-terms-and-conditions">여행약관</a></li>
+			<li><a href="privacy_policy">개인정보처리방침</a></li>
+			<li><a href="unauthorized-email-collection">이메일무단수집거부</a></li>
+			<li><a href="promotion">제휴/홍보문의</a></li>
+			<li><a href="wholesale">홀세일문의</a></li>
 		</ul>
 	</div>
 	<!--top-->

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>company</title>
     <link href="${pageContext.request.contextPath}/resources/css/company.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/company.js"></script>
 </head>
 <body>
 
@@ -149,9 +150,11 @@
 
             </div>
 
-            <div class="map">
-                <img src="${pageContext.request.contextPath}/resources/img/company/map.png">
-            </div>
+            <div id="map_canvas" class="map">
+<!--             <div id="map_canvas" class="mapheight"> -->
+<%--             <img src="${pageContext.request.contextPath}/resources/img/company/map.png"> --%>
+				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvyMtPQMvAEecQKPi4LaKF5M7-DRIjWNs&callback=showmap"></script>
+			</div>
 
         </div><!--introduce-->
     </section>

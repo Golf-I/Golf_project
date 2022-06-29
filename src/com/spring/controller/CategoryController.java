@@ -1,6 +1,9 @@
 package com.spring.controller;
 
+import java.io.File;
+
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
+import org.springframework.web.util.WebUtils;
 
 import com.spring.domain.InquireVO;
 import com.spring.domain.PromotionVO;
@@ -40,17 +44,21 @@ public class CategoryController {
 	
 	/* 제휴/홍보 문의  */
 	@RequestMapping(value = "/promotion", method = RequestMethod.POST)
-	public String promotion(PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
+	public String promotion(HttpServletRequest request,
+							PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
 		logger.info("-- 버튼 작동 / file : "+ file);
-		logger.info("-- file.getContentType : "+ file.getContentType());
-		logger.info("-- file.getSize : "+ file.getSize());
-		logger.info("-- file.getBytes : "+ file.getBytes());
-		logger.info("-- file.getInputStream : "+ file.getInputStream());
+//		logger.info("-- file.getContentType : "+ file.getContentType());
+//		logger.info("-- file.getSize : "+ file.getSize());
+//		logger.info("-- file.getBytes : "+ file.getBytes());
+//		logger.info("-- file.getInputStream : "+ file.getInputStream());
 //		logger.info("-- 버튼 작동 / vo : "+ vo); 
 		
-//		vo.setFilename(file.getName());
-		vo.setFilename(file.getOriginalFilename());
+		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/promotion/");
 		
+		File f = new File(storagePath+file.getOriginalFilename());
+		file.transferTo(f);
+		
+		vo.setFilename(file.getOriginalFilename());
 		iservice.promotion(vo);
 		
 		return "redirect:../promotion";
@@ -60,9 +68,15 @@ public class CategoryController {
 	
 	/* 홀세일 문의  */
 	@RequestMapping(value = "/wholesale", method = RequestMethod.POST)
-	public String wholesale(PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
-		logger.info("-- 버튼 작동 / vo : "+ vo);
-		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
+	public String wholesale(HttpServletRequest request,
+							PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
+//		logger.info("-- 버튼 작동 / vo : "+ vo);
+//		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
+		
+		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/wholesale/");
+		
+		File f = new File(storagePath+file.getOriginalFilename());
+		file.transferTo(f);
 		
 		vo.setFilename(file.getOriginalFilename());
 		iservice.wholesale(vo);
@@ -74,9 +88,15 @@ public class CategoryController {
 	
 	/* 입점 문의  */
 	@RequestMapping(value = "/store", method = RequestMethod.POST)
-	public String store(PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
+	public String store(HttpServletRequest request,
+						PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
 		logger.info("-- 버튼 작동 / vo : "+ vo);
 		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
+		
+		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/entering_the_store/");
+		
+		File f = new File(storagePath+file.getOriginalFilename());
+		file.transferTo(f);
 		
 		vo.setFilename(file.getOriginalFilename());
 		iservice.store(vo);

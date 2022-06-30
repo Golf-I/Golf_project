@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -98,32 +100,29 @@
                         </td>
 
                     </tr>
-
-                   
+	
+			
+            	   <%-- 게시판 내용 --%>       
+                   <c:forEach items="${bbsList}" var="bbsList">
                     <tr>
-                        
-                            <td>
-                                <p>15</p>
-                            </td>
-
-                            <td>
-                                <p>서비스</p>
-                            </td>
-
-                
-                            <td>
-                                <a href="notice_detail">
-                                    <p>베트남 5월달 요금표 입니다.</p>
-                                </a>
-                            </td>
-
-                            <td>
-                                <p>2021.05.01</p>
-                            </td>
-
-
-                    </tr>
-
+	                    <td>
+	                        <p><a href="notice_detail?no=${bbsList.no}&title=${bbsList.title}">${bbsList.no}</a></p>
+	                    </td>
+	                    <td>
+	                        <p>${bbsList.category}</p>
+	                    </td>
+	                    <td>
+	                        <a href="notice_detail">
+	                            <p><a href="notice_detail?no=${bbsList.no}&title=${bbsList.title}">${bbsList.title}</a></p>
+	                        </a>
+	                    </td>
+	                    <td>
+	                        <p><fmt:formatDate value="${bbsList.date}" /></p>
+	                    </td>
+                   </tr>
+                   </c:forEach>
+            	   <%-- 게시판 내용 --%>       
+<!--
                     <tr>
                         
                         <td>
@@ -458,55 +457,67 @@
                         </td>
 
 
-                    </tr>
+                    </tr> -->
 
 
                 </table>
 
                 <div class="num_btn">
 
-                    <a href="#">
-                        <p><</p>
-                    </a>
+					<c:if test="${paging.startPage != 1 }">
+						<a href="notice?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}"><p>&lt;</p></a>
+					</c:if>
+					
+					<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+						<c:choose>
+							<c:when test="${p == paging.nowPage }">
+								<b>${p }</b>
+							</c:when>
+							<c:when test="${p != paging.nowPage }">
+								<a href="notice?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+							</c:when>
+						</c:choose>
+					</c:forEach>
+					
+					<c:if test="${paging.endPage != paging.lastPage}">
+						<a href="notice?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+					</c:if>
 
-                    <a href="#">
+<!--                
+					<a href="#">
+                    	<p><</p>
+                    </a>
+                     <a href="#">
                         <p>1</p>
                     </a>
-
                     <a href="#">
                         <p>2</p>
                     </a>
-
                     <a href="#">
                         <p>3</p>
                     </a>
-
                     <a href="#">
                         <p>4</p>
                     </a>
-
                     <a href="#">
                         <p>5</p>
                     </a>
-
                     <a href="#">
                         <p>6</p>
                     </a>
-
                     <a href="#">
                         <p>7</p>
                     </a>
-
                     <a href="#">
                         <p>></p>
-                    </a>
+                    </a> 
+-->
 
-                </div>
+                </div><!-- class="num_btn" -->
 
             </div><!--right-->
 
         </div><!--notic-->
-
 
     </section>
 

@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -32,25 +34,30 @@
 
             <table class="box01" cellpadding="0" cellspacing="0">
 
+
+				<%-- 게시판 내용 --%>       
+				<c:forEach items="${bbsList}" var="bbsList">
                 <tr>
                     <td>
                         <div class="title_nd">
-                            <p>
+<!--                        <p>
                                 <span><이벤트></span>&nbsp;5월 18일 방송 이벤트 당첨자 안내 (스타벅스 기프티콘)
+                            </p> -->
+                            <p>
+                                ${bbsList.title}
                             </p>
-
-                            <p>2021.05.01</p>
+                            <!-- <p>2021.05.01</p> -->
+                            <p><fmt:formatDate value="${bbsList.date}" /></p>
                         </div>
-                        
                     </td>
                 </tr>
 
-                <tr>
+           		<tr>
                     <td>
-
                         <div class="txt_box">
 
-                            <p>안녕하세요 골프아이 이벤트 담당자 입니다.<br><br>
+                            <p>${bbsList.contents}</p>
+                               <!--  안녕하세요 골프아이 이벤트 담당자 입니다.<br><br>
 
                                 골프아이의 새로운 골프 라이브 이벤트에 참여해 주신 모든 고객님들께 감사의 말씀을 드립니다.<br>
                                 5월 19일 오후에 진행한 이벤트 당첨자 고지 내역 중 총 43 건의 중복 추첨 사례가 뒤늦게 발견되었습니다.<br>
@@ -66,15 +73,14 @@
                                 ※ 경품은 6월 초 발송 예정이며, 당사 사정에 따라 다소 지연될 수 있습니다.<br>
                                 ※ 경품으로 지급된 제품은 교환 및 환불이 불가합니다.<br>
                                 ※ 경품 발송은 주식회사 카카오에서 진행됩니다.<br>
-                                ※ 경품 발송 이후 분실, 삭제에 대해서는 당사는 책임지지 않습니다.<br>
-                                ※ 당사는 잘못된 정보 입력으로 인한 경품 미수령 및 당첨 취소에 대해 책임지지 않습니다.<br>
-                                </p>
+                                ※ 경품 발송 이후 분실, 삭제에 대해서는 당사는 책임지지 않습니다.<br> 
+                                ※ 당사는 잘못된 정보 입력으로 인한 경품 미수령 및 당첨 취소에 대해 책임지지 않습니다.<br> 
+                           </p> -->
                         
-
+<!-- 
                         <table class="box02" cellpadding="0" cellspacing="0">
 
                             <tr>
-
                                 <td>
                                     <p>번호</p>
                                 </td>
@@ -90,11 +96,9 @@
                                 <td>
                                     <p>비고</p>
                                 </td>
-
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>1</p>
                                 </td>
@@ -110,11 +114,9 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>2</p>
                                 </td>
@@ -130,11 +132,9 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>3</p>
                                 </td>
@@ -150,11 +150,9 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>4</p>
                                 </td>
@@ -170,11 +168,9 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>5</p>
                                 </td>
@@ -190,11 +186,9 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>6</p>
                                 </td>
@@ -210,11 +204,9 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>7</p>
                                 </td>
@@ -230,329 +222,244 @@
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>8</p>
                                 </td>
-
                                 <td>
                                     <p>man*****</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>9</p>
                                 </td>
-
                                 <td>
                                     <p>하나로떠나요</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
-
                             <tr>
-
                                 <td>
                                     <p>10</p>
                                 </td>
-
                                 <td>
                                     <p>몽</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
-
                             <tr>
-
                                 <td>
                                     <p>11</p>
                                 </td>
-
                                 <td>
                                     <p>whn908</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
-
                             <tr>
-
                                 <td>
                                     <p>12</p>
                                 </td>
-
                                 <td>
                                     <p>pas*******</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>13</p>
                                 </td>
-
                                 <td>
                                     <p>고마워유</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>14</p>
                                 </td>
-
                                 <td>
                                     <p>여행행</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>15</p>
                                 </td>
-
                                 <td>
                                     <p>당당</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>16</p>
                                 </td>
-
                                 <td>
                                     <p>신라라</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>17</p>
                                 </td>
-
                                 <td>
                                     <p>동글이</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
-
                             <tr>
-
                                 <td>
                                     <p>18</p>
                                 </td>
-
                                 <td>
                                     <p>새롭다낭</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>19</p>
                                 </td>
-
                                 <td>
                                     <p>sbn****</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
-
                             <tr>
-
                                 <td>
                                     <p>20</p>
                                 </td>
-
                                 <td>
                                     <p>엑스레이티드빵야빵야</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
                             <tr>
-
                                 <td>
                                     <p>21</p>
                                 </td>
-
                                 <td>
                                     <p>nhi******</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
-
                             <tr>
-
                                 <td>
                                     <p>22</p>
                                 </td>
-
                                 <td>
                                     <p>사랑여행</p>
                                 </td>
-
                                 <td>
                                     <p></p>
                                 </td>
-
                                 <td>
                                     <p>기존 당첨자</p>
                                 </td>
-                                
                             </tr>
 
-                        </table>
+                        </table> 
+-->
 
                         </div>
 
                     </td>
                 </tr>
+               </c:forEach>
+           	   <%-- 게시판 내용 --%> 
 
             </table>
 
             <a href="notice">
-
                 <div class="reset">
-
                     <p>목록으로</p>
-
                 </div>
-                
             </a>
-
-
 
         </div><!--notice_detail-->
 

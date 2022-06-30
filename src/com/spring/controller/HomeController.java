@@ -1,5 +1,7 @@
 package com.spring.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -15,8 +17,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.domain.BoardVO;
+import com.spring.domain.CriteriaVO;
 import com.spring.domain.MemberVO;
+import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
 import com.spring.service.MemberService;
 
@@ -63,6 +69,9 @@ public class HomeController extends HttpServlet {
 
 	@Inject 
 	private CategoryService iservice;
+	
+	@Inject
+	private BoardService bservice;
 	
 	
     /* 메인 화면 페이지 호출 */
@@ -145,13 +154,47 @@ public class HomeController extends HttpServlet {
 	
 	/* 마이페이지 공지사항 페이지 호출 */
 	@RequestMapping(value = "notice", method = RequestMethod.GET)
-    public String notice() {
+    public String notice(CriteriaVO vo, Model model, 
+			@RequestParam(value="nowPage", required=false) String nowPage, 
+			@RequestParam(value="cntPerPage", required=false)String cntPerPage) throws Exception {
+		
+		int total = bservice.countBoard();
+		
+		List<BoardVO> bbsList = new ArrayList<BoardVO>();
+
+//		bbsList = bservice.selectBoard(vo);
+		logger.info("위 vo : " + vo);
+		
+		if (nowPage == null && cntPerPage == null) {
+			nowPage = "1";
+			cntPerPage = "10";
+		} else if (nowPage == null) {
+			nowPage = "1";
+		} else if (cntPerPage == null) { 
+			cntPerPage = "10";
+		}
+		
+		vo = new CriteriaVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+		List<BoardVO> listCri = bservice.listCri(vo);
+		logger.info("listCri : " + listCri);
+		
+		model.addAttribute("paging", vo);
+		model.addAttribute("bbsList", bservice.selectBoard(vo));
+		model.addAttribute("total", total);
+		model.addAttribute("listCri", listCri);
+		
+		logger.info("아래 vo : " + vo);
+		
 		return "member/member_notice.tiles";
     }
 	
 	/* 마이페이지 공지사항 상세 페이지 호출 */
 	@RequestMapping(value = "notice_detail", method = RequestMethod.GET)
-    public String notice_detail() {
+    public String notice_detail(BoardVO vo, Model model) throws Exception {
+		
+		model.addAttribute("bbsList", bservice.lookup(vo));
+		logger.info("ddd : " + vo);
+		
 		return "member/member_notice_detail.tiles";
     }
 	

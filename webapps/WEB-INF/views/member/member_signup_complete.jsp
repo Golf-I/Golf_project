@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	<link href="${pageContext.request.contextPath}/resources/css/join03.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/member_notice.js"></script>
 </head>
 <body>
 

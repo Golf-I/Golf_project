@@ -1,6 +1,6 @@
 package com.spring.domain;
 
-public class CriteriaVO {
+public class Criteria {
 
 	private int nowPage; // 현재 페이지
 	private int startPage; // 시작 페이지
@@ -10,13 +10,14 @@ public class CriteriaVO {
 	private int lastPage; // 마지막 페이지
 	private int start; // SQL쿼리에 쓸 start, end
 	private int end; // SQL쿼리에 쓸 end
-	private int cntPage = 10;
+	private int cntPage; // 블록
 	
-	public CriteriaVO() {
-		
+	public Criteria() {
+		this.startPage = 1; // 1페이지부터 시작
+		this.cntPerPage = 10; // 10블록 
 	}
 	
-	public CriteriaVO(int total, int nowPage, int cntPerPage) {
+	public Criteria(int total, int nowPage, int cntPerPage) {
 		setNowPage(nowPage);
 		setCntPerPage(cntPerPage);
 		setTotal(total);

@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.domain.BoardVO;
-import com.spring.domain.CriteriaVO;
+import com.spring.domain.Criteria;
 import com.spring.domain.MemberVO;
 import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
@@ -154,17 +154,12 @@ public class HomeController extends HttpServlet {
 	
 	/* 마이페이지 공지사항 페이지 호출 */
 	@RequestMapping(value = "notice", method = RequestMethod.GET)
-    public String notice(CriteriaVO vo, Model model, 
+    public String notice(Criteria vo, Model model, 
 			@RequestParam(value="nowPage", required=false) String nowPage, 
 			@RequestParam(value="cntPerPage", required=false)String cntPerPage) throws Exception {
 		
 		int total = bservice.countBoard();
-		
-		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 
-//		bbsList = bservice.selectBoard(vo);
-		logger.info("위 vo : " + vo);
-		
 		if (nowPage == null && cntPerPage == null) {
 			nowPage = "1";
 			cntPerPage = "10";
@@ -174,14 +169,12 @@ public class HomeController extends HttpServlet {
 			cntPerPage = "10";
 		}
 		
-		vo = new CriteriaVO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
-		List<BoardVO> listCri = bservice.listCri(vo);
-		logger.info("listCri : " + listCri);
+		vo = new Criteria(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
 		
 		model.addAttribute("paging", vo);
 		model.addAttribute("bbsList", bservice.selectBoard(vo));
-		model.addAttribute("total", total);
-		model.addAttribute("listCri", listCri);
+//		model.addAttribute("total", total);
+//		model.addAttribute("listCri", listCri);
 		
 		logger.info("아래 vo : " + vo);
 		

@@ -12,28 +12,16 @@
 	<!-- 전체 게시글 갯수 출력 -->
 	
 	
-	<!-- 전체 게시글 조회 -->
+	<!-- 전체 게시글 조회 + 페이징 처리 -->
 	<select id="selectBoard" resultType="com.spring.domain.BoardVO">
 	<![CDATA[
-	SELECT *
+	SELECT * 
 	FROM notice_board
-	WHERE no > 0
-	ORDER BY no DESC, date DESC
+	ORDER BY no DESC
+	LIMIT #{start}, #{end}
 	]]>
 	</select>
-	<!-- 전체 게시글 조회 -->
-	
-	
-	<!-- 페이징 처리 -->
-	<select id="listCri" resultType="com.spring.domain.BoardVO">
-	<![CDATA[
-	SELECT *
-	FROM notice_board
-	ORDER BY no DESC, date DESC
-	LIMIT #{startPage}, #{endPage}
-	]]>
-	</select>
-	<!-- 페이징 처리 -->
+	<!-- 전체 게시글 조회 + 페이징 처리 LIMIT , #{end} -->
 	
 	
 	<!-- 게시물 조회 -->

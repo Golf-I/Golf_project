@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.spring.domain.BoardVO;
-import com.spring.domain.CriteriaVO;
+import com.spring.domain.Criteria;
 import com.spring.domain.InquireVO;
 import com.spring.domain.PromotionVO;
 
@@ -35,7 +35,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	/* 전체 게시글 조회 */
 	@Override
-	public List<BoardVO> selectBoard(CriteriaVO vo) throws Exception {
+	public List<BoardVO> selectBoard(Criteria vo) throws Exception {
 
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 		
@@ -47,7 +47,7 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	/* 페이징 처리 */
 	@Override
-	public List<BoardVO> listPage(CriteriaVO vo) throws Exception {
+	public List<BoardVO> listPage(Criteria vo) throws Exception {
 		System.out.println("-- DAOImpl : listPage(Criteria cri) 실행");
 		return sqlSession.selectList(namespace+".listCri", vo);
 	} // listPage

@@ -8,7 +8,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.spring.domain.BoardVO;
-import com.spring.domain.CriteriaVO;
+import com.spring.domain.Criteria;
 import com.spring.persistence.BoardDAO;
 
 @Service
@@ -30,7 +30,7 @@ public class BoardServiceImpl implements BoardService{
 	
 	/* 전체 게시글 조회 */
 	@Override
-	public List<BoardVO> selectBoard(CriteriaVO vo) throws Exception {
+	public List<BoardVO> selectBoard(Criteria vo) throws Exception {
 		
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 		bbsList = bdao.selectBoard(vo);
@@ -41,7 +41,7 @@ public class BoardServiceImpl implements BoardService{
 
 	/* 페이징 처리 */
 	@Override
-	public List<BoardVO> listCri(CriteriaVO vo) throws Exception {
+	public List<BoardVO> listCri(Criteria vo) throws Exception {
 		
 //		System.out.println("-- ServiceImpl : listCri() 실행");
 		

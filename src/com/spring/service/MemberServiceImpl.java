@@ -43,7 +43,7 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public MemberVO loginMem(MemberVO vo) throws Exception {
 		
-		// System.out.println("-- ServiceImpl : loginMem() 실행 ");
+//		System.out.println("-- ServiceImpl : loginMem() 실행 ");
 		// System.out.println("************* vo : " + vo);
 		MemberVO mvo = mdao.signIn(vo.getId(), vo.getPw());
 		//System.out.println("-- ServiceImpl : loginMem() 실행 완료 ");

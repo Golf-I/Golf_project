@@ -125,6 +125,7 @@
 
                 </table>
 
+           	    <%-- 페이징  --%>    
                 <div class="num_btn">
 				
 					<a href="notice?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
@@ -136,6 +137,7 @@
 					<a href="notice?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
 
                 </div><!-- class="num_btn" -->
+           	   <%-- 페이징  --%>
 
             </div><!--right-->
 

@@ -47,13 +47,14 @@ public class MemberDAOImpl implements MemberDAO{
 	@Override
 	public MemberVO signIn(String id, String pw) throws Exception{
 //		System.out.println("-- DAOImpl : signIn() 실행 ");
+//		System.out.println("******** id : " + id);
+//		System.out.println("******** pw : " + pw);
 		Map<String, Object> paramMap = new HashMap<String, Object>();
 		paramMap.put("id", id);
 		paramMap.put("pw", pw);
 		
 		MemberVO vo = sqlSession.selectOne(namespace+".signIn", paramMap); 
-		//System.out.println("********************************************* vo : " + vo);
-		//System.out.println("-- DAOImpl : signIn() 실행 완료 ");
+//		System.out.println("-- DAOImpl : signIn() 실행 완료 ");
 		
 		return vo;
 	} // signIn

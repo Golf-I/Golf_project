@@ -156,6 +156,7 @@ public class HomeController extends HttpServlet {
 	
 	/* 마이페이지 공지사항 페이지 호출 */
 	@RequestMapping(value = "notice", method = RequestMethod.GET)
+
     public String notice(Criteria cri, Model model) throws Exception {
 
 		int total = bservice.countBoard();

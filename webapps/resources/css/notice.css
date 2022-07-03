@@ -338,12 +338,12 @@ font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color:
 border-right: none;}
 
 .notic_right .num_btn
-{width: 260px; height: 20px;
-overflow: hidden;
+{width: 400px; height: 20px;
+/* overflow: hidden; */
 margin: 0 auto;
 margin-bottom: 100px;}
 
-.num_btn a p 
+.num_btn a p
 {width: 20px; height: 20px;
 line-height: 20px; text-align: center;
 margin-right: 10px; font-weight: bold;

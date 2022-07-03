@@ -122,25 +122,20 @@
                    </tr>
                    </c:forEach>
             	   <%-- 게시판 내용 --%>       
-                
+
                 </table>
 
            	    <%-- 페이징  --%>    
                 <div class="num_btn">
-					<a href="notice?nowPage=${paging.startPage}&cntPerPage=10"><p>&lt;&lt;</p></a>
-                
-				<c:forEach begin="${paging.startPage}" end="5" var="p"> <%-- end="${paging.endPage}" --%>
-					<c:choose>
-						<c:when test="${p == paging.nowPage}">
-							<a href="notice?nowPage=${p}&cntPerPage=10"><p>${p}</p></a>
-						</c:when>
-						<c:when test="${p != paging.nowPage}">
-							<a href="notice?nowPage=${p}&cntPerPage=10"><p>${p}</p></a>
-						</c:when>
-					</c:choose>
-				</c:forEach>
+				
+					<a href="notice?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+					
+                    <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+                   		<a href="notice?page=${p}"><p>${p}</p></a>    
+                    </c:forEach>
+					
+					<a href="notice?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
 
-					<a href="notice?nowPage=${paging.lastPage}&cntPerPage=10"><p>&gt;&gt;</p></a>
                 </div><!-- class="num_btn" -->
            	   <%-- 페이징  --%>
 

@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>detail03</title>
 	<link href="${pageContext.request.contextPath}/resources/css/detail03.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/product_detail.js"></script>
 </head>
 <body>
 
@@ -108,9 +109,13 @@
 						src="${pageContext.request.contextPath}/resources/img/detail03/map_detail.png">
 					</label>
 
-					<div class="map_sheet">
-						<label for="map" class="close"><img
-							src="${pageContext.request.contextPath}/resources/img/detail03/close.png"></label>
+					<div class="map_sheet" id="map_canvas">
+<%--					
+						<label for="map" class="close">
+ 						<img src="${pageContext.request.contextPath}/resources/img/detail01/close.png"> 
+						</label>
+--%>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvyMtPQMvAEecQKPi4LaKF5M7-DRIjWNs&callback=showmap"></script>
 					</div>
 
 				</div>

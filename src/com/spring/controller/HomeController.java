@@ -18,10 +18,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.domain.BoardVO;
 import com.spring.domain.Criteria;
 import com.spring.domain.MemberVO;
+import com.spring.domain.PageMaker;
 import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
 import com.spring.service.MemberService;
@@ -154,29 +156,21 @@ public class HomeController extends HttpServlet {
 	
 	/* 마이페이지 공지사항 페이지 호출 */
 	@RequestMapping(value = "notice", method = RequestMethod.GET)
-    public String notice(Criteria vo, Model model, 
-			@RequestParam(value="nowPage", required=false) String nowPage, 
-			@RequestParam(value="cntPerPage", required=false)String cntPerPage) throws Exception {
-		
-		int total = bservice.countBoard();
 
-		if (nowPage == null && cntPerPage == null) {
-			nowPage = "1";
-			cntPerPage = "10";
-		} else if (nowPage == null) {
-			nowPage = "1";
-		} else if (cntPerPage == null) { 
-			cntPerPage = "10";
-		}
+    public String notice(Criteria cri, Model model) throws Exception {
+
+		int total = bservice.countBoard();
 		
-		vo = new Criteria(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
 		
-		model.addAttribute("paging", vo);
-		model.addAttribute("bbsList", bservice.selectBoard(vo));
-//		model.addAttribute("total", total);
-//		model.addAttribute("listCri", listCri);
-		
-		logger.info("아래 vo : " + vo);
+		List<BoardVO> bbsList = new ArrayList<BoardVO>();
+		bbsList = bservice.selectBoard(cri);
+		logger.info("pageMaker : " + pageMaker);
+
+		model.addAttribute("bbsList", bbsList);
+		model.addAttribute("pageMaker", pageMaker);
 		
 		return "member/member_notice.tiles";
     }

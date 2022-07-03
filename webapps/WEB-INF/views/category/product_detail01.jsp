@@ -2,12 +2,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>detail01</title>
-<link href="${pageContext.request.contextPath}/resources/css/detail.css"
-	rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>detail01</title>
+	<link href="${pageContext.request.contextPath}/resources/css/detail.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/product_detail.js"></script>
 </head>
 <body>
 
@@ -109,9 +109,13 @@
 						src="${pageContext.request.contextPath}/resources/img/detail01/map_detail.png">
 					</label>
 
-					<div class="map_sheet">
-						<label for="map" class="close"><img
-							src="${pageContext.request.contextPath}/resources/img/detail01/close.png"></label>
+					<div class="map_sheet" id="map_canvas">
+<%--					
+						<label for="map" class="close">
+ 						<img src="${pageContext.request.contextPath}/resources/img/detail01/close.png"> 
+						</label>
+--%>
+						<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvyMtPQMvAEecQKPi4LaKF5M7-DRIjWNs&callback=showmap"></script>
 					</div>
 
 				</div>

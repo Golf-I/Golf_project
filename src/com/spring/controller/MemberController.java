@@ -69,7 +69,7 @@ public class MemberController {
 	/* 일반회원 로그인 동작  */
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
 	public String signIn(MemberVO vo, HttpSession session) throws Exception{
-		//logger.info("-- 로그인 버튼 작동 ");
+//		logger.info("-- 로그인 버튼 작동 ");
 		MemberVO mvo = mservice.loginMem(vo);
 //		logger.info("MemberCon mvo : " +  mvo);
 		

@@ -3,16 +3,22 @@ a {text-decoration: none;}
 li {list-style: none;}
 img {display: block;}
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
 section
-{width: 100%; max-width: 1920px; height: 500px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: center;}
+{width: 100%; min-width: 1195px; max-width: 1920px;
+margin: 0 auto;}
 
 .id_box
 {width: 540px; height: 400px;
-background-color: white;}
+background-color: white;
+margin: 0 auto;}
 
 .id_box>p:nth-child(1)
 {width: 540px; height: 100px;

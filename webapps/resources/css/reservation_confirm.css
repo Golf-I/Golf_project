@@ -3,6 +3,14 @@ li {list-style: none;}
 a {text-decoration: none;}
 img {display: block;}
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
 section
 {width: 540px; height: 400px;
 margin: 0 auto;}
@@ -31,5 +39,5 @@ font-size: 14px; line-height: 20px; text-align: center;}
 #confirm_btn
 {width: 440px; height: 60px;
 background-color: #444444;
-border: none;
+border: none; font-family: SpoqaHanSansNeo;
 color: white; text-align: center; line-height: 60px; font-size: 16px; font-weight: bold;}

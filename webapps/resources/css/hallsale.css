@@ -4,9 +4,12 @@ a {text-decoration: none;}
 img {display: block;}
 
 @font-face {
-    font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
+
+body 
+{font-family: SpoqaHanSansNeo;}
 
 section
 {width: 100%; max-width: 1920px;
@@ -43,7 +46,7 @@ margin: 0 auto;}
 .hallsale>p:nth-child(1)
 {width: 1200px; height: 40px;
 font-size: 32px; text-align: center; line-height: 40px;
-font-family: yangpyeong;
+font-weight: bold;
 margin-top: 80px; margin-bottom: 50px;}
 
 .hallsale .information
@@ -311,7 +314,7 @@ float: left;}
 {width: 320px; height: 60px;
 background-color: #eb3544;
 font-size: 16px; color: white; line-height: 60px;
-border: none;
+border: none; font-family: SpoqaHanSansNeo;
 margin-left: 440px; margin-top: 50px; margin-bottom: 100px;}
 
 

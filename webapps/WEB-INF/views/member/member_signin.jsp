@@ -52,14 +52,16 @@
             <div class="line"></div>
 
 			<!-- 네이버 로그인 버튼 노출 영역 -->
+            <a href="#">
 			<div class="naver" id="naver_id_login"></div>
 			<!-- <a href="#">
                    <div class="naver_logo">
                        <img src="${pageContext.request.contextPath}/resources/img/naver_login.png">
                    </div>
                     <p>네이버 로그인</p>
-            </div> 
+            </div>
             </a> -->
+            </a>
 
 			<script type="text/javascript">
 			  	var naver_id_login = new naver_id_login("YisyoxafjYVqvrj6lctE", "http://localhost:8080/Golf_project/naverlogin"); // YOUR_CLIENT_ID, YOUR_CALLBACK_URL

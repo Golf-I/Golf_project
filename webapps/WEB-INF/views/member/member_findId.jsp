@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>find_id</title>
 	<link href="${pageContext.request.contextPath}/resources/css/find_id.css" rel="stylesheet">
 </head>
 <body>
@@ -60,7 +60,6 @@
             </div><!--number_box-->
 
 			</form>
-
 
         </div>
     </div>

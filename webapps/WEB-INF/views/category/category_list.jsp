@@ -12,6 +12,7 @@
 <body>
 
 	<section class="sub">
+	
 	<div class="japen01"> 
 
 		<div class="japen_menu">
@@ -19,8 +20,7 @@
 			<div class="japen_title">
 				<p>일본골프</p>
 				<div>
-					<img
-						src="${pageContext.request.contextPath}/resources/img/category/location.png">
+					<img src="${pageContext.request.contextPath}/resources/img/category/location.png">
 				</div>
 			</div>
 
@@ -102,20 +102,18 @@
 			</div>
 
 			<div class="japen_free">
-				<a href="freegolf"> <img
-					src="${pageContext.request.contextPath}/resources/img/category/free_japen.png">
+				<a href="freegolf">
+					<img src="${pageContext.request.contextPath}/resources/img/category/free_japen.png">
 				</a>
 			</div>
 
-		</div>
-		<!--left-->
+		</div><!--left-->
 
 		<div class="right">
 
 			<div class="location">
 				<div>
-					<img
-						src="${pageContext.request.contextPath}/resources/img/category/find.png">
+					<img src="${pageContext.request.contextPath}/resources/img/category/find.png">
 				</div>
 
 				<p>></p>
@@ -136,9 +134,7 @@
 
 				<div class="right_title">
 					<p>도쿄/간도</p>
-				</div>
-				<!--타이틀-->
-
+				</div><!--타이틀-->
 
 				<div class="button_menu">
 					<div class="all">
@@ -171,20 +167,17 @@
 						<option>낮은가격순</option>
 					</select>
 				</div>
-			</div>
-			<!--title_box-->
+			</div><!--title_box-->
 
 
 			<div class="line"></div>
 
-
 			<div class="all_box">
 				<div class="product_zon01">
 					<div class="product01">
-						<a href="detail01">
+						<a href="product_detail">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product01.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
 							</div>
 
 							<div class="product_text_01">
@@ -197,8 +190,7 @@
 							<div class="review_box_01">
 								<div class="star01">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -210,8 +202,7 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
 								</div>
 								<!--star-->
@@ -220,33 +211,28 @@
 
 									<div class="talk01">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like01">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review01-->
+								</div><!--review01-->
 							</div> <!--review_box_01-->
 						</a>
-					</div>
-					<!--product_01-->
+					</div><!--product_01-->
 
 					<div class="product02">
 
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product02.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product02.png">
 							</div>
 
 							<div class="product_text_02">
@@ -259,8 +245,7 @@
 							<div class="review_box_02">
 								<div class="star02">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!--    <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -272,42 +257,35 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review02">
 
 									<div class="talk02">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like02">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review02-->
+								</div><!--review02-->
 							</div> <!--review_box_02-->
 						</a>
-					</div>
-					<!--product_02-->
+					</div><!--product_02-->
 
 					<div class="product03">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product03.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product03.png">
 							</div>
 
 							<div class="product_text_03">
@@ -320,8 +298,7 @@
 							<div class="review_box_03">
 								<div class="star03">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -333,8 +310,7 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
 								</div>
 								<!--star-->
@@ -343,35 +319,29 @@
 
 									<div class="talk03">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like03">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review03-->
-							</div> <!--review_box_03-->
+								</div><!--review03-->
+							</div><!--review_box_03-->
 						</a>
-					</div>
-					<!--product_03-->
-				</div>
-				<!--zon01-->
+					</div><!--product_03-->
+				</div><!--zon01-->
 
 				<div class="product_zon02">
 					<div class="product04">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product04.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product04.png">
 							</div>
 
 							<div class="product_text_04">
@@ -384,8 +354,7 @@
 							<div class="review_box_04">
 								<div class="star04">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -397,43 +366,36 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review04">
 
 									<div class="talk04">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like04">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review04-->
-							</div> <!--review_box_04-->
+								</div><!--review04-->
+							</div><!--review_box_04-->
 						</a>
-					</div>
-					<!--product_04-->
+					</div><!--product_04-->
 
 					<div class="product05">
 
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product05.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product05.png">
 							</div>
 
 							<div class="product_text_05">
@@ -446,8 +408,7 @@
 							<div class="review_box_05">
 								<div class="star05">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -459,42 +420,35 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review05">
 
 									<div class="talk05">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like05">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review05-->
+								</div><!--review05-->
 							</div> <!--review_box_05-->
 						</a>
-					</div>
-					<!--product_05-->
+					</div><!--product_05-->
 
 					<div class="product06">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product06.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product06.png">
 							</div>
 
 							<div class="product_text_06">
@@ -507,8 +461,7 @@
 							<div class="review_box_06">
 								<div class="star06">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -520,45 +473,37 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review06">
 
 									<div class="talk06">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like06">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review06-->
+								</div><!--review06-->
 							</div> <!--review_box_06-->
 						</a>
-					</div>
-					<!--product_06-->
-				</div>
-				<!--zon02-->
+					</div><!--product_06-->
+				</div><!--zon02-->
 
 				<div class="product_zon03">
 					<div class="product07">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product07.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product07.png">
 							</div>
 
 							<div class="product_text_07">
@@ -571,8 +516,7 @@
 							<div class="review_box_07">
 								<div class="star07">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -584,43 +528,36 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review07">
 
 									<div class="talk07">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like07">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review07-->
+								</div><!--review07-->
 							</div> <!--review_box_07-->
 						</a>
-					</div>
-					<!--product_07-->
+					</div><!--product_07-->
 
 					<div class="product08">
 
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product08.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product08.png">
 							</div>
 
 							<div class="product_text_08">
@@ -633,8 +570,7 @@
 							<div class="review_box_08">
 								<div class="star08">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -646,42 +582,35 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review08">
 
 									<div class="talk08">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like08">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review08-->
+								</div><!--review08-->
 							</div> <!--review_box_08-->
 						</a>
-					</div>
-					<!--product_08-->
+					</div><!--product_08-->
 
 					<div class="product09">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product09.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product09.png">
 							</div>
 
 							<div class="product_text_09">
@@ -694,8 +623,7 @@
 							<div class="review_box_09">
 								<div class="star09">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -707,45 +635,37 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review09">
 
 									<div class="talk09">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like09">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review09-->
+								</div><!--review09-->
 							</div> <!--review_box_09-->
 						</a>
-					</div>
-					<!--product_09-->
-				</div>
-				<!--zon03-->
+					</div><!--product_09-->
+				</div><!--zon03-->
 
 				<div class="product_zon04">
 					<div class="product10">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product04.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product04.png">
 							</div>
 
 							<div class="product_text_10">
@@ -758,8 +678,7 @@
 							<div class="review_box_10">
 								<div class="star10">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -771,43 +690,36 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review10">
 
 									<div class="talk10">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like10">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review10-->
+								</div><!--review10-->
 							</div> <!--review_box_10-->
 						</a>
-					</div>
-					<!--product_10-->
+					</div><!--product_10-->
 
 					<div class="product11">
 
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product05.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product05.png">
 							</div>
 
 							<div class="product_text_11">
@@ -820,8 +732,7 @@
 							<div class="review_box_11">
 								<div class="star11">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -833,42 +744,35 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div><!--star-->
 
 								<div class="review11">
 
 									<div class="talk11">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like11">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review11-->
+								</div><!--review11-->
 							</div> <!--review_box_11-->
 						</a>
-					</div>
-					<!--product_11-->
+					</div><!--product_11-->
 
 					<div class="product12">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product06.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product06.png">
 							</div>
 
 							<div class="product_text_12">
@@ -881,8 +785,7 @@
 							<div class="review_box_12">
 								<div class="star12">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -894,8 +797,7 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
 								</div>
 								<!--star-->
@@ -904,35 +806,29 @@
 
 									<div class="talk12">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like12">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review12-->
+								</div><!--review12-->
 							</div> <!--review_box_12-->
 						</a>
-					</div>
-					<!--product_12-->
-				</div>
-				<!--zon04-->
+					</div><!--product_12-->
+				</div><!--zon04-->
 
 				<div class="product_zon05">
 					<div class="product13">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product07.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product07.png">
 							</div>
 
 							<div class="product_text_13">
@@ -945,8 +841,7 @@
 							<div class="review_box_13">
 								<div class="star13">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -958,8 +853,7 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
 								</div>
 								<!--star-->
@@ -968,33 +862,28 @@
 
 									<div class="talk13">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like13">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review13-->
+								</div><!--review13-->
 							</div> <!--review_box_13-->
 						</a>
-					</div>
-					<!--product_13-->
+					</div><!--product_13-->
 
 					<div class="product14">
 
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product08.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product08.png">
 							</div>
 
 							<div class="product_text_14">
@@ -1007,8 +896,7 @@
 							<div class="review_box_14">
 								<div class="star14">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -1020,8 +908,7 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
 								</div>
 								<!--star-->
@@ -1030,32 +917,27 @@
 
 									<div class="talk14">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like14">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review14-->
+								</div> <!--review14-->
 							</div> <!--review_box_14-->
 						</a>
-					</div>
-					<!--product_14-->
+					</div> <!--product_14-->
 
 					<div class="product15">
 						<a href="#">
 							<div>
-								<img
-									src="${pageContext.request.contextPath}/resources/img/category/product09.png">
+								<img src="${pageContext.request.contextPath}/resources/img/category/product09.png">
 							</div>
 
 							<div class="product_text_15">
@@ -1068,8 +950,7 @@
 							<div class="review_box_15">
 								<div class="star15">
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 									</div>
 									<!-- <div>
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
@@ -1081,65 +962,56 @@
 	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                                </div> -->
 									<div>
-										<img
-											src="${pageContext.request.contextPath}/resources/img/category/02star.png">
+										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
 									</div>
-								</div>
-								<!--star-->
+								</div> <!--star-->
 
 								<div class="review15">
 
 									<div class="talk09">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/talk.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 										</div>
 										<p>203</p>
 									</div>
 
 									<div class="like15">
 										<div>
-											<img
-												src="${pageContext.request.contextPath}/resources/img/category/good.png">
+											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 										</div>
 										<p>8.5</p>
 									</div>
 
-								</div>
-								<!--review15-->
+								</div> <!--review15-->
 							</div> <!--review_box_15-->
 						</a>
-					</div>
-					<!--product_15-->
-				</div>
-				<!--zon05-->
-			</div>
-			<!--all_box-->
+					</div> <!--product_15-->
+				</div> <!--zon05-->
+			</div> <!--all_box-->
 
-			<div class="number_btn">
-				<a href="#">
-					<p><</p>
-				</a> <a href="#">
-					<p>1</p>
-				</a> <a href="#">
-					<p>2</p>
-				</a> <a href="#">
-					<p>3</p>
-				</a> <a href="#">
-					<p>4</p>
-				</a> <a href="#">
-					<p>5</p>
-				</a> <a href="#">
-					<p>6</p>
-				</a> <a href="#">
-					<p>7</p>
-				</a> <a href="#">
-					<p>></p>
-				</a>
-			</div>
+				<div class="number_btn">
+					<a href="#">
+						<p><</p>
+					</a> <a href="#">
+						<p>1</p>
+					</a> <a href="#">
+						<p>2</p>
+					</a> <a href="#">
+						<p>3</p>
+					</a> <a href="#">
+						<p>4</p>
+					</a> <a href="#">
+						<p>5</p>
+					</a> <a href="#">
+						<p>6</p>
+					</a> <a href="#">
+						<p>7</p>
+					</a> <a href="#">
+						<p>></p>
+					</a>
+				</div>
+			</div><!--right-->
 		</div>
-		<!--right-->
-	</div>
 	</section>
 
 </body>

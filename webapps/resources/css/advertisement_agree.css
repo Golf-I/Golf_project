@@ -3,6 +3,14 @@ li {list-style: none;}
 a {text-decoration: none;}
 img {display: block;}
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
 
 section
 {width: 550px; height: 670px;
@@ -75,5 +83,5 @@ font-weight: bold;}
 #close
 {width: 450px; height: 60px;
 background-color: #444444;
-color: white; font-size: 18px;
+color: white; font-size: 18px; font-family: SpoqaHanSansNeo;
 color: white;}

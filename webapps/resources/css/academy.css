@@ -4,9 +4,12 @@ li {list-style: none;}
 img {display: block;}
 
 @font-face {
-    font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
+
+body 
+{font-family: SpoqaHanSansNeo;}
 
 section
 {width: 100%; max-width: 1920px;
@@ -88,7 +91,8 @@ overflow: hidden;}
 
 .rout_a div, .rout_a p
 {float: left;
-margin-right: 5px;}
+margin-right: 5px;
+font-weight: bold;}
 
 .rout_a div
 {width: 20px; height: 20px;}
@@ -102,7 +106,7 @@ margin-right: 0;}
 font-size: 24px; line-height: 30px;
 color: #0d75bc;
 margin-bottom: 10px;
-font-family: yangpyeong;}
+font-weight: bold;}
 
 .academy_right .line01
 {width: 1040px; height: 1px;

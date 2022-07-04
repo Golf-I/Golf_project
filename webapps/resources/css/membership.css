@@ -3,13 +3,16 @@ a {text-decoration: none;}
 li {list-style: none;}
 img {display: block;}
 
+
 @font-face {
-    font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
+body {font-family: SpoqaHanSansNeo;}
+
 section
-{width: 100%; max-width: 1920px;
+{width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
 section .membership
@@ -85,7 +88,8 @@ overflow: hidden;}
 
 .rout_m div, .rout_m p
 {float: left;
-margin-right: 5px;}
+margin-right: 5px;
+font-weight: bold;}
 
 .rout_m div
 {width: 20px; height: 20px;}
@@ -99,7 +103,7 @@ margin-right: 0;}
 font-size: 24px; line-height: 30px;
 color: #0d75bc;
 margin-bottom: 10px;
-font-family: yangpyeong;}
+font-weight: bold;}
 
 .membership_right .line01
 {width: 1040px; height: 1px;

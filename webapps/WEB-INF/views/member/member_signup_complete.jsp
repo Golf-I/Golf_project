@@ -12,6 +12,7 @@
 <body>
 
 	<section class="join">
+	
 	<div class="join_ex">
 
 		<p>회원가입</p>
@@ -21,14 +22,12 @@
 			<div class="join_logo">
 
 				<div>
-					<img
-						src="${pageContext.request.contextPath}/resources/img/join_logo.png">
+					<img src="${pageContext.request.contextPath}/resources/img/join_logo.png">
 				</div>
 
 				<p>회원가입이 완료되었습니다.</p>
 
-			</div>
-			<!--로고-->
+			</div><!--로고-->
 
 
 			<div class="join_bottom">
@@ -38,13 +37,21 @@
 				</div>
 			</div>
 
-		</div>
-		<!--밑-->
+		</div><!--밑-->
 
-		<a href="login">
-			<p>확인</p>
-		</a>
+        <div class="button">
+
+             <a href="index">
+                 <p>정보등록 다음에 하기</p>
+             </a>
+
+             <a href="login">
+                 <p>상세 정보 등록</p>
+             </a>
+        </div>
+           
 	</div>
+	
 	</section>
 
 </body>

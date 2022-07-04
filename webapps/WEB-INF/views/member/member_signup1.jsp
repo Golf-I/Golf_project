@@ -11,8 +11,6 @@
 </head>
 <body>
 
-	<input type="checkbox" id="character">
-
 	<section class="join">
 
 	<div class="join_box">
@@ -38,7 +36,7 @@
 			<div class="line01"></div>
 
 			<div class="join_btn">
-				<label for="character"><p>캐릭터선택</p></label> 
+				<label for="character"><a href="#"><p>캐릭터선택</p></a></label> 
 				<input type="submit" value="회원가입" id="join" class="join_Btn">
 			</div>
 
@@ -77,100 +75,11 @@
 			</a>
 			<!-- 카카오 로그인 버튼 노출 영역 -->
 
-
-			<input type="checkbox" id="btn01" name="icon1"> 
-			<input type="checkbox" id="btn02" name="icon2"> 
-			<input type="checkbox" id="btn03" name="icon3"> 
-			<input type="checkbox" id="btn04" name="icon4"> 
-			<input type="checkbox" id="btn05" name="icon5"> 
-			<input type="checkbox" id="btn06" name="icon6"> 
-			<input type="checkbox" id="btn07" name="icon7"> 
-			<input type="checkbox" id="btn08" name="icon8"> 
-			<input type="checkbox" id="btn09" name="icon9"> 
-			<input type="checkbox" id="btn10" name="icon10"> 
-			<input type="checkbox" id="btn11" name="icon11"> 
-			<input type="checkbox" id="btn12" name="icon12"> 
-			<input type="checkbox" id="btn13" name="icon13"> 
-			<input type="checkbox" id="btn14" name="icon14"> 
-			<input type="checkbox" id="btn15" name="icon15"> 
-			<input type="checkbox" id="btn16" name="icon16"> 
-
-			<div class="pop_up_ex">
-				<div class="pop_up">
-					<p>캐릭터선택</p>
-					<p>원하시는 캐릭터를 선택해 주세요.</p>
-
-					<div class="line03"></div>
-
-					<div class="character_box">
-
-						<div class="line_c_01">
-							<label for="btn01"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn02"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn03"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn04"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label>
-						</div>
-						<!--01-->
-
-						<div class="line_c_02">
-							<label for="btn05"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn06"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn07"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn08"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label>
-						</div>
-						<!--02-->
-
-						<div class="line_c_03">
-							<label for="btn09"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn10"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn11"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn12"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label>
-						</div>
-						<!--03-->
-
-						<div class="line_c_04">
-							<label for="btn13"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn14"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn15"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label> <label for="btn16"> <img
-								src="${pageContext.request.contextPath}/resources/img/signup/character.png">
-							</label>
-						</div>
-						<!--04-->
-
-					</div>
-
-					<div class="line04"></div>
-
-					<label for="character" class="character_btn">
-						<p>캐릭터선택</p>
-					</label>
-
-				</div>
-
-			</div>
-
 		</form>
-	</div>
-	<!--join_box--> </section>
+		
+	</div><!--join_box-->
+	
+	</section>
 	
 </body>
 </html>

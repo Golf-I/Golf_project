@@ -1,106 +1,79 @@
-* {
-	margin: 0;
-	padding: 0;
+* {margin: 0; padding: 0;}
+a {text-decoration: none;}
+img {display: block;}
+
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
-a {
-	text-decoration: none;
-}
+body {font-family: SpoqaHanSansNeo;}
 
-img {
-	display: block;
-}
- 
-.review {
-	width: 900px;
-	margin: 0 auto;
-}
+.review
+{width: 900px; 
+margin: 0 auto;}
 
-.review>p:first-child {
-	width: 900px;
-	height: 50px;
-	font-size: 22px;
-	font-weight: bold;
-	line-height: 50px;
-}
+.review>p:first-child
+{width: 900px; height: 50px;
+font-size: 22px; font-weight: bold;
+line-height: 50px;}
 
-.review .line01 {
-	width: 900px;
-	height: 1px;
-	background-color: #ccc;
-	margin-bottom: 5px;
-}
+.review .line01
+{width: 900px; height: 1px;
+background-color: #ccc;
+margin-bottom: 5px;}
 
-.review .title {
-	width: 900px;
-	height: 50px;
-	overflow: hidden;
-}
+.review .title
+{width: 900px; height: 50px;
+overflow: hidden;}
 
-.title p {
-	float: left;
-	line-height: 50px;
-}
+.title p
+{float: left;
+line-height: 50px;}
 
-.title p:nth-child(2) {
-	float: right;
-	font-size: 22px;
-	font-weight: bold;
-}
+.title p:nth-child(2)
+{float: right;
+font-size: 22px; font-weight: bold;}
 
-.title span {
-	font-size: 14px;
-	font-weight: normal;
-}
+.title span
+{font-size: 14px; font-weight: normal;}
 
-.review .line02 {
-	width: 900px;
-	height: 1px;
-	background-color: #ccc;
-	margin-top: 5px;
-	margin-bottom: 30px;
-}
+.review .line02
+{width: 900px; height: 1px;
+background-color: #ccc;
+margin-top: 5px;
+margin-bottom: 30px;}
 
-.review .golf_img {
-	width: 700px;
-	height: 470px;
-	margin: 0 auto;
-	margin-bottom: 30px;
-}
+.review .golf_img
+{width: 700px; height: 470px;
+margin: 0 auto;
+margin-bottom: 30px;}
 
-.review .review_box {
-	font-size: 14px;
-	line-height: 20px;
-	margin-bottom: 50px;
-}
+.review .review_box
+{font-size: 14px;
+line-height: 20px;
+margin-bottom: 50px;}
 
-.review .line03 {
-	width: 900px;
-	height: 1px;
-	background-color: #ccc;
-	margin-bottom: 5px;
-}
+.review .line03
+{width: 900px; height: 1px;
+background-color: #ccc;
+margin-bottom: 5px;}
 
-.review .review_txt {
-	width: 900px;
-	height: 50px;
-	overflow: hidden;
-}
+.review .review_txt
+{width: 900px; height: 50px;
+overflow: hidden;}
 
-.review_txt div, .review_txt p {
-	float: left;
-}
+.review_txt div, .review_txt p
+{float: left;}
 
-.review_txt div {
-	width: 15px;
-	height: 16px;
-	float: left;
-	margin-top: 18px;
-	margin-right: 10px;
-}
+.review_txt div
+{width: 15px; height: 16px;
+float: left;
+margin-top: 18px;
+margin-right: 10px;}
 
-.review_txt p {
-	float: left;
-	line-height: 50px;
-	font-size: 14px;
-}
+.review_txt p
+{float: left;
+line-height: 50px;
+font-size: 14px;}
+

@@ -3,12 +3,20 @@ li {list-style: none;}
 a {text-decoration: none;}
 img {display: block;}
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body {font-family: SpoqaHanSansNeo;}
+
 section
 {width: 540px; height: 630px;
 margin: 0 auto;}
 
 .name_change
-{width: 440px; height: 630px;}
+{width: 440px; height: 630px;
+margin: 0 auto;}
 
 .name_change>p
 {width: 440px; height: 100px;
@@ -73,19 +81,19 @@ margin-right: 4px;}
 
 #man, #woman {display: none;}
 
-#man:checked ~ .name_change .box_name .gender .box_gender label:nth-child(1)
+#man:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(1)
 {background-color: #3b8aff;
 color: white;}
 
-#man:checked ~ .name_change .box_name .gender .box_gender label:nth-child(2)
+#man:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(2)
 {background-color: white;
 color: #333;}
 
-#woman:checked ~ .name_change .box_name .gender .box_gender label:nth-child(1)
+#woman:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(1)
 {background-color: white;
 color: #333;}
 
-#woman:checked ~ .name_change .box_name .gender .box_gender label:nth-child(2)
+#woman:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(2)
 {background-color: #3b8aff;
 color: white;}
 
@@ -182,7 +190,7 @@ text-indent: 14px; font-size: 14px;}
 
 #btn01
 {width: 440px; height: 60px;
-background-color: #444444;
+background-color: #444444; font-family: SpoqaHanSansNeo;
 color: white; font-size: 16px; font-weight: bold;
 text-align: center;}
 

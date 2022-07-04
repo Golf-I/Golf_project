@@ -3,6 +3,15 @@ li {list-style: none;}
 a {text-decoration: none;}
 img {display: block;}
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+
 #link {display: none;}
 
 #link:checked ~ .confirmation_box .title_top .link_sheet {display: block;}

@@ -28,10 +28,7 @@
 
                     <div class="id">
                         <p>아이디(이메일)</p>
-                        <p>
-                        	<input type="email" name="id" size="12" maxlength="12" value="${sessionScope.id}" readonly>
-                        </p>
-                        
+                        <input type="email" name="id" size="12" maxlength="12" value="${sessionScope.id}" readonly />
                     </div>
 
                     <div class="password">
@@ -42,10 +39,10 @@
                 </div><!-- class="check" -->
 
 
-            </div><!-- class="box_pw" -->
-
            	<input type="submit" id="btn_pw" value="확인">
 			
+            </div><!-- class="box_pw" -->
+
 			</form>
 			
         </div><!-- class="password_check" -->

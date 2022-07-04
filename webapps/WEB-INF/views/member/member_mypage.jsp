@@ -83,21 +83,23 @@
 
             <div class="line01"></div>
 		
-			
+            <input type="radio" name="gender" id="man">
+
+            <input type="radio" name="gender" id="woman">
 				
-				<c:choose>
-					<%-- 남성일 때  --%>
-	               	<c:when test="${mvo.gender == 'male'}">
-			            <input type="radio" name="gender" id="male" value="male" checked>
-		    	        <input type="radio" name="gender" id="female" value="female">
-	               	</c:when>
-		               
-					<%-- 여성일 때 --%>
-	               	<c:otherwise>
-			            <input type="radio" name="gender" id="male" value="male" >
-		    	        <input type="radio" name="gender" id="female" value="female" checked>
-	               	</c:otherwise>
-               </c:choose>
+			<c:choose>
+			<%-- 남성일 때  --%>
+             	<c:when test="${mvo.gender == 'male'}">
+	            	<input type="radio" name="gender" id="man" value="male" checked>
+	   	        	<input type="radio" name="gender" id="woman" value="female">
+             	</c:when>
+	              
+			<%-- 여성일 때 --%>
+            	<c:otherwise>
+	            	<input type="radio" name="gender" id="man" value="male" >
+	   	        	<input type="radio" name="gender" id="woman" value="female" checked>
+            	</c:otherwise>
+           </c:choose>
 
 	
 
@@ -110,7 +112,7 @@
                         <td>
                             <div class="id">
                                 <!-- <p>an20o0@naver.com</p> -->
-                                <input type="text" value="${sessionScope.id}" name="id" readonly>
+                                <input type="text" value="${sessionScope.id}" name="id" readonly />
                                 <!-- <a href="#">변경하기</a> -->
                             </div>
                         </td>
@@ -305,8 +307,6 @@
             </div>
 
 		</form>
-
-        </div><!--right-->
 
     </div>
 

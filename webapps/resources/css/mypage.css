@@ -2,13 +2,17 @@
 li {list-style: none;}
 a {text-decoration: none;}
 img {display: block;}
+
+
 @font-face {
-    font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
+body {font-family: SpoqaHanSansNeo;}
+
 section
-{width: 100%; max-width: 1920px;
+{width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
 section .mypage
@@ -94,8 +98,8 @@ margin-right: 5px; font-weight: bold;}
 {color: #e5004f;}
 
 .mypage_right>p
-{font-size: 32px;
-font-family: yangpyeong;
+{font-size: 24px;
+font-weight: bold;
 color: #0d75bc;
 margin-bottom: 10px;}
 
@@ -178,7 +182,8 @@ box-sizing: border-box;}
 border-top: 2px solid #333;
 box-sizing: border-box;}
 
-.profile_box table tr:nth-child(1) td:nth-child(2) .id
+/* .profile_box table tr:nth-child(1) td:nth-child(2) .id */
+input[type=email]
 {width: 520px; height: 50px;
 overflow: hidden;}
 
@@ -187,12 +192,11 @@ overflow: hidden;}
 {width: 425px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
-font-size: 14px; line-height: 40px; 
-/* text-indent: 14px; */
-text-indent: 8px;
+font-size: 14px; line-height: 40px; text-indent: 14px;
 margin-left: 5px; margin-top: 5px;
 float: left;}
 
+/* .id a */
 .id a
 {width: 80px; height: 40px;
 float: right;
@@ -213,25 +217,21 @@ margin-right: 5px;}
 
 /* #birthday01 */
 #yyyy
-/* {width: 85px; height: 40px; */
+{width: 75px; height: 40px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+float: left;
+margin-right: 5px;
+text-indent: 14px;}
+
+/* #birthday02, #birthday03 */
+#MM, #dd
 {width: 60px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
 float: left;
 margin-right: 5px;
-text-indent: 8px;}
-/* text-indent: 14px;} */
-
-/* #birthday02, #birthday03 */
-#MM, #dd
-/* {width: 40px; height: 40px; */
-{width: 48px; height: 40px;
-border: 1px solid #ccc;
-box-sizing: border-box;
-float: left;
-margin-right: 5px;
-text-indent: 8px;}
-/* text-indent: 14px;} */
+text-indent: 14px;}
 
 
 
@@ -241,7 +241,6 @@ margin-left: 5px;
 overflow: hidden;
 font-size: 14px; line-height: 40px;}
 
-/* .name p */
 #name_box
 {width: 160px; height: 40px;
 margin-right: 10px;
@@ -250,37 +249,42 @@ box-sizing: border-box;
 float: left;
 text-indent: 8px;}
 
+/* .name p 
+{float: left;} */
+
 .name p
 {font-size:14px; line-height: 40px;
 float: left;
 margin-right:10px;}
 
-.name a
+/* .name>input:nth-child(1)
+{width: 90px; height: 40px;
+margin-right: 10px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+text-align: center;} */
+
+.name a 
 {width: 80px; height: 40px;
 margin-left: 5px; text-align: center;
 background-color: #3b8aff; color: white;
-float: right; }
+float: right;}
 
-/* #man,#woman {display: none;} */
-#male,#female {display: none;}
+#man,#woman {display: none;}
 
-/* #man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1) */
-#male:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
 {background-color: #3b8aff;
 color: white;}
 
-/* #man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2) */
-#male:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+#man:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
 {background-color: white;
 color: #333;}
 
-/* #woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1) */
-#female:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
+#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(1)
 {background-color: white;
 color: #333;}
 
-/* #woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2) */
-#female:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
+#woman:checked ~ .profile_box table tr:nth-child(2) .gender label:nth-child(2)
 {background-color: #3b8aff;
 color: white;}
 
@@ -315,12 +319,11 @@ float: right;}
 
 /* .phone p */
 .phone input
-{width: 160px; height: 40px;
+{width: 130px; height: 40px;
 border: 1px solid #ccc;
 box-sizing: border-box;
 float: left;
-text-indent: 8px;
-}
+text-align: center;}
 
 
 .profile_box table tr:nth-child(4) td:nth-child(2)
@@ -337,8 +340,9 @@ font-size: 14px; line-height: 30px;}
 
 .password01 p
 {float: left;
-margin-right: 10px;
-margin-left: 33px;}
+width: 120px; height: 30px;
+text-align: right;
+margin-right: 10px;}
 
 #pw01
 {width: 160px; height: 30px;
@@ -353,8 +357,8 @@ font-size: 14px; line-height: 30px;}
 
 .password02 p
 {float: left;
-margin-right: 10px;
-margin-left: 47px;}
+width: 120px; height: 30px;
+text-align: right; margin-right: 10px;}
 
 #pw02
 {width: 160px; height: 30px;
@@ -368,7 +372,8 @@ font-size: 14px; line-height: 30px;}
 
 .password03 p
 {float: left;
-margin-right: 10px;}
+width: 120px; height: 30px;
+text-align: right; margin-right: 10px;}
 
 #pw03
 {width: 160px; height: 30px;
@@ -407,7 +412,8 @@ overflow: hidden;}
 {float: left;
 line-height: 20px;}
 
-.reception a {font-weight: bold;}
+.reception a
+{font-weight: bold;}
 
 .reception .reception02
 {width: 910px; height: 20px;
@@ -425,7 +431,7 @@ overflow: hidden;}
 
 .button>a
 {width: 100px; height: 40px;
-float: left;
+float: left; 
 background-color: red;
 color: white;
 text-align: center; font-size: 14px; line-height: 40px;}
@@ -437,12 +443,12 @@ text-align: center; font-size: 14px; line-height: 40px;}
 
 #reservation
 {background-color: #3b8aff;
-color: white;
+color: white; font-family: SpoqaHanSansNeo;
 border: none; margin-right: 10px;}
 
 #cancellation
 {border: 1px solid #ccc;
-box-sizing: border-box;
+box-sizing: border-box; font-family: SpoqaHanSansNeo;
 background-color: #f6f6f6;
 margin-right: 10px;}
 
@@ -456,7 +462,7 @@ margin-bottom: 30px;
 text-align: center;}
 
 .course_title>p:nth-child(1)
-{font-family: yangpyeong;
+{font-weight: bold;
 font-size: 28px;
 color: #333;
 margin-bottom: 10px;}

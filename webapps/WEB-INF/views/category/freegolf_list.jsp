@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<section class="freegolf">
+ <section class="freegolf">
 
 	<div class="japen01"> 
 
@@ -102,21 +102,19 @@
 			</div>
 
 			<div class="japen_free">
-				<a href="freegolf"> <img
-					src="${pageContext.request.contextPath}/resources/img/freegolf/free_japen.png">
+				<a href="freegolf">
+					<img src="${pageContext.request.contextPath}/resources/img/freegolf/free_japen.png">
 				</a>
 			</div>
 
-		</div>
-		<!--left-->
+		</div><!--left-->
 
 		<div class="right">
 
 			<div class="title">
 
 				<div>
-					<img
-						src="${pageContext.request.contextPath}/resources/img/freegolf/find.png">
+					<img src="${pageContext.request.contextPath}/resources/img/freegolf/find.png">
 				</div>
 
 				<p>></p>
@@ -132,12 +130,13 @@
 
 				<p>14개 상품</p>
 
-			</div>
-			<!--title-->
+			</div><!--title-->
 
 			<div class="all_btn_box">
 
-				<a href="#"> 전체 </a> <select id="japan_menu">
+				<a href="#"> 전체 </a>
+				
+				<select id="japan_menu">
 					<option>도쿄/간도</option>
 					<option>오사카/간사이</option>
 					<option>홋카이도/삿포로</option>
@@ -163,8 +162,7 @@
 					<div class="product01">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
 						</div>
 
 						<div class="pro_box_01">
@@ -184,14 +182,12 @@
 
 						</div>
 
-					</div>
-					<!--01-->
+					</div><!--01-->
 
 					<div class="product02">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
 						</div>
 
 						<div class="pro_box_02">
@@ -208,17 +204,14 @@
 								<a href="#">상세보기</a>
 							</div>
 
-
 						</div>
 
-					</div>
-					<!--02-->
+					</div><!--02-->
 
 					<div class="product03">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
 						</div>
 
 						<div class="pro_box_03">
@@ -238,19 +231,16 @@
 
 						</div>
 
-					</div>
-					<!--03-->
+					</div><!--03-->
 
-				</div>
-				<!--1줄-->
+				</div><!--1줄-->
 
 				<div class="free_pro_02">
 
 					<div class="product04">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
 						</div>
 
 						<div class="pro_box_04">
@@ -270,14 +260,12 @@
 
 						</div>
 
-					</div>
-					<!--04-->
+					</div><!--04-->
 
 					<div class="product05">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
 						</div>
 
 						<div class="pro_box_05">
@@ -297,14 +285,12 @@
 
 						</div>
 
-					</div>
-					<!--05-->
+					</div><!--05-->
 
 					<div class="product06">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
 						</div>
 
 						<div class="pro_box_06">
@@ -324,19 +310,16 @@
 
 						</div>
 
-					</div>
-					<!--06-->
+					</div><!--06-->
 
-				</div>
-				<!--2줄-->
+				</div><!--2줄-->
 
 				<div class="free_pro_03">
 
 					<div class="product07">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
 						</div>
 
 						<div class="pro_box_07">
@@ -353,17 +336,14 @@
 								<a href="#">상세보기</a>
 							</div>
 
-
 						</div>
 
-					</div>
-					<!--07-->
+					</div><!--07-->
 
 					<div class="product08">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
 						</div>
 
 						<div class="pro_box_08">
@@ -383,14 +363,12 @@
 
 						</div>
 
-					</div>
-					<!--08-->
+					</div><!--08-->
 
 					<div class="product09">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
 						</div>
 
 						<div class="pro_box_09">
@@ -410,19 +388,16 @@
 
 						</div>
 
-					</div>
-					<!--09-->
+					</div><!--09-->
 
-				</div>
-				<!--3줄-->
+				</div><!--3줄-->
 
 				<div class="free_pro_04">
 
 					<div class="product10">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
 						</div>
 
 						<div class="pro_box_10">
@@ -442,14 +417,12 @@
 
 						</div>
 
-					</div>
-					<!--10-->
+					</div><!--10-->
 
 					<div class="product11">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
 						</div>
 
 						<div class="pro_box_11">
@@ -469,14 +442,12 @@
 
 						</div>
 
-					</div>
-					<!--11-->
+					</div><!--11-->
 
 					<div class="product12">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
 						</div>
 
 						<div class="pro_box_12">
@@ -496,19 +467,16 @@
 
 						</div>
 
-					</div>
-					<!--12-->
+					</div><!--12-->
 
-				</div>
-				<!--4줄-->
+				</div><!--4줄-->
 
 				<div class="free_pro_05">
 
 					<div class="product13">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
 						</div>
 
 						<div class="pro_box_13">
@@ -525,17 +493,14 @@
 								<a href="#">상세보기</a>
 							</div>
 
-
 						</div>
 
-					</div>
-					<!--13-->
+					</div><!--13-->
 
 					<div class="product14">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
 						</div>
 
 						<div class="pro_box_14">
@@ -555,14 +520,12 @@
 
 						</div>
 
-					</div>
-					<!--14-->
+					</div><!--14-->
 
 					<div class="product15">
 
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
 						</div>
 
 						<div class="pro_box_15">
@@ -579,14 +542,11 @@
 								<a href="#">상세보기</a>
 							</div>
 
-
 						</div>
 
-					</div>
-					<!--15-->
+					</div><!--15-->
 
-				</div>
-				<!--5줄-->
+				</div><!--5줄-->
 
 			</div>
 
@@ -610,8 +570,7 @@
 				</a> <a href="#">
 					<p>></p>
 				</a>
-			</div>
-			<!--btn-->
+			</div><!--btn-->
 
 
 			<div class="golf_course">
@@ -627,18 +586,17 @@
 
 					<a href="#">
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/01golfccourse.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/01golfccourse.png">
 						</div>
-					</a> <a href="#">
+					</a>
+					<a href="#">
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/02golfccourse.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/02golfccourse.png">
 						</div>
-					</a> <a href="#">
+					</a>
+					<a href="#">
 						<div>
-							<img
-								src="${pageContext.request.contextPath}/resources/img/freegolf/03golfccourse.png">
+							<img src="${pageContext.request.contextPath}/resources/img/freegolf/03golfccourse.png">
 						</div>
 					</a>
 
@@ -646,28 +604,27 @@
 
 			</div>
 
-
-		</div>
-		<!--right-->
+		</div><!--right-->
+		
 	</section>
 
-	<div class="freedom">
-		<div class="country">
-			<div>
-				<a href="freegolf">일본 자유골프→</a>
-			</div>
-			<div>
-				<a href="freegolf">태국 자유골프→</a>
-			</div>
-			<div>
-				<a href="freegolf">베트남 자유골프→</a>
-			</div>
-			<div>
-				<a href="freegolf">대만 자유골프→</a>
-			</div>
-		</div>
-	</div>
-	<!--자유골프-->
+    <div class="freedom">
+
+        <div class="title_freegolf">
+
+            <p><span>지</span>역별 자유골프 만들기</p>
+            <p>고객이 직접 골프장, 호텔, 렌터카, 기타 등등을<br>만들어 보세요.</p>
+
+        </div>
+
+        <div class="country">
+            <div><a href="freegolf">일본 자유골프→</a></div>
+            <div><a href="freegolf">태국 자유골프→</a></div>
+            <div><a href="freegolf">베트남 자유골프→</a></div>
+            <div><a href="freegolf">대만 자유골프→</a></div>
+        </div>
+        
+    </div> <!--자유골프-->
 
 </body>
 </html>

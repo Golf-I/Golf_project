@@ -116,7 +116,18 @@
 
                 <div class="line01"></div>
 
-
+                <input type="checkbox" id="question01">
+                <input type="checkbox" id="question02">
+                <input type="checkbox" id="question03">
+                <input type="checkbox" id="question04">
+                <input type="checkbox" id="question05">
+                <input type="checkbox" id="question06">
+                <input type="checkbox" id="question07">
+                <input type="checkbox" id="question08">
+                <input type="checkbox" id="question09">
+                <input type="checkbox" id="question10">
+                <input type="checkbox" id="question11">
+                <input type="checkbox" id="question12">
 
                 <div class="question_box">
 
@@ -124,13 +135,11 @@
 
 						<c:forEach items="${bbsList}" var="bbsList">
                         <li>
-                            <div class="question01">
-                               
+                            <label for="question01" class="question01">
                                 <p>Q</p>
                                 
                                 <p>${bbsList.title}</p>
-
-                            </div>
+							</label>
 
                             <div class="answer01">
 
@@ -145,272 +154,7 @@
                         </li>
 						</c:forEach>
 
-                        <!-- <li>
-                            <div class="question02">
-                               
-                                <p>Q</p>
-
-                                <p>5월 20일 베트남 하노이 썬라이즈CC 급모객</p>
-
-                            </div>
-
-                            <div class="answer02">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question03">
-                               
-                                <p>Q</p>
-
-                                <p>4월 제주도 하드블럭 요금표 입니다.</p>
-
-                            </div>
-
-                            <div class="answer03">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question04">
-                               
-                                <p>Q</p>
-
-                                <p>3월 필리핀 골프 하드블럭 요금표 공유합니다.</p>
-
-                            </div>
-
-                            <div class="answer04">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question05">
-                               
-                                <p>Q</p>
-
-                                <p>원하는 티오프 시간을 지정할 수 있나요?</p>
-
-                            </div>
-
-                            <div class="answer05">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question06">
-                               
-                                <p>Q</p>
-
-                                <p>4월 제주도 하드블럭 요금표 입니다.</p>
-
-                            </div>
-
-                            <div class="answer06">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question07">
-                               
-                                <p>Q</p>
-
-                                <p>3월 필리핀 골프 하드블럭 요금표 공유합니다.</p>
-
-                            </div>
-
-                            <div class="answer07">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question08">
-                               
-                                <p>Q</p>
-
-                                <p>5월 8일 제주 오라CC 급모객</p>
-
-                            </div>
-
-                            <div class="answer08">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question09">
-                               
-                                <p>Q</p>
-
-                                <p>4월 제주도 하드블럭 요금표 입니다.</p>
-
-                            </div>
-
-                            <div class="answer09">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question10">
-                               
-                                <p>Q</p>
-
-                                <p>3월 필리핀 골프 하드블럭 요금표 공유합니다.</p>
-
-                            </div>
-
-                            <div class="answer10">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question11">
-                               
-                                <p>Q</p>
-
-                                <p>5월 8일 제주 오라CC 급모객</p>
-
-                            </div>
-
-                            <div class="answer11">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li>
-                            <div class="question12">
-                               
-                                <p>Q</p>
-
-                                <p>3월 필리핀 골프 하드블럭 요금표 공유합니다.</p>
-
-                            </div>
-
-                            <div class="answer12">
-
-                                <p>A</p>
-
-                                <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
-                                </div>
-
-                            </div>
-
-                        </li> -->
-                    
                     </ul>
-
 
                 </div>
 
@@ -424,45 +168,7 @@
 					
 					<a href="questions?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
 
-<!--	
-                    <a href="#">
-                        <p><</p>
-                    </a>
-
-					 <a href="#">
-                        <p>1</p>
-                    </a>
-
-                    <a href="#">
-                        <p>2</p>
-                    </a>
-
-                    <a href="#">
-                        <p>3</p>
-                    </a>
-
-                    <a href="#">
-                        <p>4</p>
-                    </a>
-
-                    <a href="#">
-                        <p>5</p>
-                    </a>
-
-                    <a href="#">
-                        <p>6</p>
-                    </a>
-
-                    <a href="#">
-                        <p>7</p>
-                    </a>
-
-                    <a href="#">
-                        <p>></p>
-                    </a> -->
-
                 </div>
-
 
 
             </div><!--right-->

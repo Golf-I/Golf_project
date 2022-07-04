@@ -1,7 +1,8 @@
 /**
  * 상품 상세페이지
  */
-
+	
+	// 구글 지도 API
 	function showmap() {
 		var mapOptions = {
 			zoom: 18,
@@ -16,3 +17,10 @@
 		$('.map_sheet').css('height', '500');
 		$('.maps_text h3').hide();
 	}
+	
+	
+	// 후기 팝업창
+    function openwindow(){
+        window.open("detail_review", "_blank",
+        "width=990 ,height=910 ,scrollbars=yes,resizable=no ,location=no")
+    }

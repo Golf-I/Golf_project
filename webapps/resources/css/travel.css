@@ -16,7 +16,7 @@ img {display: block;}
 body {font-family: SpoqaHanSansNeo;}
 
 section
-{width: 100%; max-width: 1920px;
+{width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
 .menu
@@ -51,7 +51,7 @@ margin-bottom: 100px;}
 
 .travel .title
 {width: 1200px; height: 40px;
-font-size: 32px; font-family: yangpyeong;
+font-size: 32px; font-weight: bold;
 line-height: 40px; text-align: center;
 margin-bottom: 50px;}
 

@@ -18,6 +18,15 @@ img {display: block;}
     src: url(../font/GmarketSansTTFBold.ttf);
 }
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body 
+{font-family: SpoqaHanSansNeo;}
+
+
 section
 {width: 100%; max-width: 1920px;
 margin: 0 auto;}
@@ -40,7 +49,7 @@ font-size: 14px; line-height: 20px;}
 .rout_ad p:last-child
 {margin-right: 0;}
 
-.rout_ad a
+.rout_ad>a:nth-child(1)
 {width: 20px; height: 20px;}
 
 .academy_detail>p

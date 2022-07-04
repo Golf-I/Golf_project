@@ -3,13 +3,17 @@ a {text-decoration: none;}
 li {list-style: none;}
 img {display: block;}
 
+
 @font-face {
-    font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
+body 
+{font-family: SpoqaHanSansNeo;}
+
 section 
-{width: 100%; max-width: 1920px;
+{width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
 .reservation
@@ -19,6 +23,7 @@ margin-top: 50px;}
 
 .reservation .rout_re
 {width: 1340px; height: 20px;
+font-weight: bold;
 margin-bottom: 50px;}
 
 .rout_re a, .rout_re p 
@@ -39,7 +44,7 @@ margin-right: 5px;}
 {width: 1340px; height: 30px;
 font-size: 24px; line-height: 30px;
 margin-bottom: 5px;
-font-family: yangpyeong;
+font-weight: bold;
 color: #3e3a39;}
 
 .reservation .line01
@@ -74,7 +79,8 @@ margin-bottom: 100px;}
 {width: 320px; height: 30px;
 margin: 0 auto;
 margin-bottom: 30px;
-font-size: 22px; font-family: yangpyeong; line-height: 30px;
+font-size: 22px; font-weight: bold;
+line-height: 30px;
 overflow: hidden;}
 
 .calendar_txt label, .calendar_txt p {float: left;}
@@ -102,7 +108,7 @@ margin-right: 46px;}
 .calendar_left>p:nth-child(1)
 {width: 595px; height: 30px;
 font-size: 18px; line-height: 30px;
-font-family: yangpyeong; text-align: center;
+font-weight: bold; text-align: center;
 margin-bottom: 10px;}
 
 .calendar_left table
@@ -114,7 +120,7 @@ margin-bottom: 10px;}
 .calendar_left table tr:nth-child(1) td
 {width: 85px; height: 40px;
 background-color: #0d75bc;
-font-family: yangpyeong; text-align: center; line-height: 40px;
+font-weight: bold; text-align: center; line-height: 40px;
 color: white;
 border-right: 1px solid white;
 box-sizing: border-box;}
@@ -192,7 +198,7 @@ box-sizing: border-box;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_left table tr:nth-child(2)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -202,7 +208,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_left table tr:nth-child(3)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -212,7 +218,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_left table tr:nth-child(4)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -222,7 +228,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_left table tr:nth-child(5)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -232,7 +238,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_left table tr:nth-child(6)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -253,7 +259,7 @@ float: left;}
 .calendar_right>p:nth-child(1)
 {width: 595px; height: 30px;
 font-size: 18px; line-height: 30px;
-font-family: yangpyeong; text-align: center;
+font-weight: bold; text-align: center;
 margin-bottom: 10px;}
 
 .calendar_left table
@@ -265,7 +271,7 @@ margin-bottom: 10px;}
 .calendar_right table tr:nth-child(1) td
 {width: 85px; height: 40px;
 background-color: #0d75bc;
-font-family: yangpyeong; text-align: center; line-height: 40px;
+font-weight: bold; text-align: center; line-height: 40px;
 color: white;
 border-right: 1px solid white;
 box-sizing: border-box;}
@@ -343,7 +349,7 @@ box-sizing: border-box;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_right table tr:nth-child(2)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -353,7 +359,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_right table tr:nth-child(3)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -363,7 +369,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_right table tr:nth-child(4)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -373,7 +379,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_right table tr:nth-child(5)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -383,7 +389,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_right table tr:nth-child(6)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -393,7 +399,7 @@ color: red;}
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
-color: #333; font-family: yangpyeong; font-weight: bold;}
+color: #333; font-weight: bold; font-weight: bold;}
 
 .calendar_right table tr:nth-child(7)>td>a>p:nth-child(2)
 {text-align: center; font-size: 14px;
@@ -589,13 +595,6 @@ font-size: 14px; line-height: 50px;}
 {width: 12px; height: 12px;
 float: left;
 margin-left: 14px; margin-top: 19px;}
-
-
-
-
-
-
-
 
 
 /*여행자정보*/
@@ -954,7 +953,7 @@ margin-bottom: 100px;}
 
 #btn01, #btn02
 {width: 100px; height: 40px;
-text-align: center;
+text-align: center; font-family: SpoqaHanSansNeo;
 border: none;}
 
 #btn01

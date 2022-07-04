@@ -54,6 +54,10 @@
             <img src="${pageContext.request.contextPath}/resources/img/company/visual.png">
         </div>
 
+        <div class="visual_mini">
+          <img src="${pageContext.request.contextPath}/resources/img/company/visual02.png">
+        </div>
+
         <div class="introduce">
 
             <div class="title_01">
@@ -151,7 +155,6 @@
             </div>
 
             <div id="map_canvas" class="map">
-<!--             <div id="map_canvas" class="mapheight"> -->
 <%--             <img src="${pageContext.request.contextPath}/resources/img/company/map.png"> --%>
 				<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvyMtPQMvAEecQKPi4LaKF5M7-DRIjWNs&callback=showmap"></script>
 			</div>

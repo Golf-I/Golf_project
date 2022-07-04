@@ -3,6 +3,13 @@ li {list-style: none;}
 a {text-decoration: none;}
 img {display: block;}
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body {font-family: SpoqaHanSansNeo;}
+
 section
 {width: 540px; height: 980px;
 margin: 0 auto;}
@@ -112,6 +119,6 @@ float: left;}
 #btn_wi
 {width: 440px; height: 60px;
 background-color: #ff0000;
-font-size: 16px; font-weight: bold;
+font-size: 16px; font-weight: bold; font-family: SpoqaHanSansNeo;
 text-align: center; line-height: 60px; color: white;
 border: none;}

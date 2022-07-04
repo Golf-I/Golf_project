@@ -8,8 +8,15 @@ img {display: block;}
     src: url(../font/yangpyeong_B.ttf);
 }
 
+@font-face {
+    font-family: SpoqaHanSansNeo;
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+}
+
+body {font-family: SpoqaHanSansNeo;}
+
 section
-{width: 100%; max-width: 1920px;
+{width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
 .notic
@@ -83,7 +90,7 @@ font-size: 14px; line-height: 20px; font-weight: bold;}
 
 .notic_right>p:nth-child(2)
 {width: 1040px; height: 30px;
-font-size: 24px; font-family: yangpyeong;
+font-size: 24px; font-weight: bold;
 color: #0d75bc; line-height: 30px;
 margin-bottom: 5px;}
 
@@ -105,22 +112,22 @@ box-sizing: border-box;}
 
 .notic_right table tr:nth-child(1) td:nth-child(1)
 {width: 100px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+font-size: 14px; line-height: 50px;  text-align: center;
 background-color: #f7f7f7;}
 
 .notic_right table tr:nth-child(1) td:nth-child(2)
 {width: 100px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+font-size: 14px; line-height: 50px;  text-align: center;
 background-color: #f7f7f7;}
 
 .notic_right table tr:nth-child(1) td:nth-child(3)
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+font-size: 14px; line-height: 50px;  text-align: center;
 background-color: #f7f7f7;}
 
 .notic_right table tr:nth-child(1) td:nth-child(4)
 {width: 160px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;
 background-color: #f7f7f7;}
 
@@ -128,226 +135,226 @@ background-color: #f7f7f7;}
 {width: 1040px; height: 50px;}
 
 .notic_right table tr:nth-child(2) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(2) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(2) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(2) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(3) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(3) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(3) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(3) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(4) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(4) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(4) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(4) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(5) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(5) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(5) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(5) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(6) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(6) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(6) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px; text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(6) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(7) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(7) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(7) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(7) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(8) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(8) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(8) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(8) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(9) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(9) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(9) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(9) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(10) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(10) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(10) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(10) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(11) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(11) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(11) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px; text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(11) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(12) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(12) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(12) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(12) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(13) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(13) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(13) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px; text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(13) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(14) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(14) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(14) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px; text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(14) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(15) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(15) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(15) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px;  text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(15) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px;  text-align: center;
 border-right: none;}
 
 .notic_right table tr:nth-child(16) td:nth-child(1)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px; text-align: center;}
 
 .notic_right table tr:nth-child(16) td:nth-child(2)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;}
+{font-size: 14px; line-height: 50px;  text-align: center;}
 
 .notic_right table tr:nth-child(16) td:nth-child(3) a
 {width: 680px; height: 50px;
-font-size: 14px; line-height: 50px; font-weight: bold; text-indent: 20px; color: #333;}
+font-size: 14px; line-height: 50px; text-indent: 20px; color: #333;}
 
 .notic_right table tr:nth-child(16) td:nth-child(4)
-{font-size: 14px; line-height: 50px; font-weight: bold; text-align: center;
+{font-size: 14px; line-height: 50px; text-align: center;
 border-right: none;}
 
 .notic_right .num_btn
-{width: 400px; height: 20px;
-/* overflow: hidden; */
+{width: 260px; height: 20px;
+overflow: hidden;
 margin: 0 auto;
 margin-bottom: 100px;}
 
-.num_btn a p
+.num_btn a p 
 {width: 20px; height: 20px;
 line-height: 20px; text-align: center;
 margin-right: 10px; font-weight: bold;
-float: left;}
+float: left; color: #333;}
 
 .num_btn a:last-child p
 {margin-right: 0;}

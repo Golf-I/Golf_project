@@ -4,11 +4,6 @@ a {text-decoration: none;}
 img {display: block;}
 
 @font-face {
-    font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
-}
-
-@font-face {
     font-family: SpoqaHanSansNeo;
     src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
@@ -16,7 +11,7 @@ img {display: block;}
 body {font-family: SpoqaHanSansNeo;}
 
 section
-{width: 100%; max-width: 1920px;
+{width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
 .menu
@@ -50,7 +45,7 @@ margin: 0 auto;}
 .store_inquiry>p:nth-child(1)
 {width: 1200px; height: 40px;
 font-size: 32px; text-align: center; line-height: 40px;
-font-family: yangpyeong;
+font-weight: bold;
 margin-top: 80px; margin-bottom: 50px;}
 
 .store_inquiry .information

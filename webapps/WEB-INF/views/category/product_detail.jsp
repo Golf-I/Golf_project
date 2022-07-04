@@ -370,7 +370,7 @@
     
                                 <div class="txt_week01">
                                     <p>1,090,000</p>
-                                    <a href="../reservation/reservation.html">예약하기</a>
+                                    <a href="reservation">예약하기</a>
                                 </div>
     
                             </div>
@@ -405,7 +405,7 @@
     
                                 <div class="txt_weekend01">
                                     <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
+                                    <a href="reservation">예약하기</a>
                                 </div>
     
                             </div>

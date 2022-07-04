@@ -21,13 +21,13 @@
 
                 <p>></p>
 
-                <a href="#">
+                <a href="category">
                     <p>일본골프</p>
                 </a>
 
                 <p>></p>
 
-                <a href="#">
+                <a href="category">
                     <p>도쿄/간도</p>
                 </a>
 
@@ -36,6 +36,8 @@
                 <p>도쿄 이타코(水鄕) 골프 2박3일!</p>
 
             </div> <!--rout-->
+
+			<form action="" method="post">
 
             <p>예약하기</p>
 
@@ -642,7 +644,8 @@
                         </td>
 
                         <td>
-                            <p>도쿄 이타코(水鄕) 골프 2박3일!</p>
+                            <!-- <p>도쿄 이타코(水鄕) 골프 2박3일!</p> -->
+                		    <input type="text" name="" value="도쿄 이타코(水鄕) 골프 2박3일!"/>
                         </td>
 
                         <td>
@@ -650,7 +653,8 @@
                         </td>
 
                         <td>
-                            <p>1,090,000 원 (1인 기준)</p>
+                            <!-- <p>1,090,000 원 (1인 기준)</p> -->
+                            <input type="text" name=""/>원 (1인 기준)
                         </td>
                         
                         <td>
@@ -675,19 +679,20 @@
                         <td>
                             <select id="num01">
 
-                                <option>2명</option>
-                                <option>3명</option>
-                                <option>4명</option>
-                                <option>5명</option>
-                                <option>6명</option>
+                                <option value="2명">2명</option>
+                                <option value="3명">3명</option>
+                                <option value="4명">4명</option>
+                                <option value="5명">5명</option>
+                                <option value="6명">6명</option>
 
                             </select>
                         </td>
 
 
                         <td rowspan="6">
-                            <p>2,180,000원</p>
-                            <p>(2인요금)</p>
+                            <!-- <p>2,180,000원</p>
+                            <p>(2인요금)</p> -->
+                            <input type="text" name="" /> 원 (2인요금)
                         </td>
 
                     </tr>
@@ -701,7 +706,9 @@
 
                             <div class="chk01">
                                 <input type="checkbox" id="checkbox01">
+                                <label for="checkbox01">
                                 <p>추가 싱글룸 차지 / 1인(4박) </p>
+                                </label>
                             </div>
 
                         </td>
@@ -711,7 +718,8 @@
                         </td>
 
                         <td>
-                            <p>90,000원</p>
+                            <!-- <p>90,000원</p> -->
+                            <input type="text" name=""/>원
                         </td>
 
                     </tr>
@@ -720,7 +728,9 @@
                         <td>
                             <div class="chk02">
                                 <input type="checkbox" id="checkbox02">
+                                <label for="checkbox02">
                                 <p>2인 단독차량 추가금(2인) </p>
+                                </label>
                             </div>
 
                         </td>
@@ -730,7 +740,8 @@
                         </td>
 
                         <td>
-                            <p>150,000원</p>
+                            <!-- <p>150,000원</p> -->
+                            <input type="text" name=""/>원
                         </td>
 
                     </tr>
@@ -740,7 +751,9 @@
                         <td>
                             <div class="chk03">
                                 <input type="checkbox" id="checkbox03">
+                                <label for="checkbox03">
                                 <p>비지니스 업그레이드(체크필요)</p>
+                                </label>
                             </div>
                         </td>
 
@@ -749,7 +762,8 @@
                         </td>
 
                         <td>
-                            <p>560,000원</p>
+                            <!-- <p>560,000원</p> -->
+                            <input type="text" name=""/>원
                         </td>
 
                     </tr>
@@ -768,8 +782,9 @@
                         <p>예약자정보</p>
 
                         <div class="chk_inf">
-
+							<label for="infor01">
                             <p>※ 예약자도 여행자에 포함</p>
+							</label>
 
                             <input type="checkbox" id="infor01">
 
@@ -787,7 +802,8 @@
 
 
                             <td>
-                                <p>홍길동</p>
+                                <!-- <p>홍길동</p> -->
+                                <input type="text" name=""/>
                             </td>
 
 
@@ -799,8 +815,8 @@
                                 <select id="gender02">
 
                                     <option selected>선택</option>
-                                    <option>남성</option>
-                                    <option>여성</option>
+                                    <option value="남성">남성</option>
+                                    <option value="여성">여성</option>
 
                                 </select>
                             </td>
@@ -811,7 +827,8 @@
                             </td>
 
                             <td>
-                                <p>an20o0@naver.com</p>
+                                <!-- <p>an20o0@naver.com</p> -->
+                                <input type="email" name=""/>
                             </td>
 
 
@@ -821,7 +838,8 @@
 
 
                             <td>
-                                <p>010-1111-1111</p>
+                                <!-- <p>010-1111-1111</p> -->
+                                <input type="text" name=""/>
                             </td>
 
                         </tr>
@@ -845,7 +863,8 @@
 
 
                             <td>
-                                <p>홍길동</p>
+                                <!-- <p>홍길동</p> -->
+                                <input type="text" name=""/>
                             </td>
 
 
@@ -857,8 +876,8 @@
                                 <select id="gender01">
 
                                     <option selected>선택</option>
-                                    <option>남성</option>
-                                    <option>여성</option>
+                                    <option value="남성">남성</option>
+                                    <option value="여성">여성</option>
 
                                 </select>
                             </td>
@@ -880,7 +899,8 @@
 
 
                             <td>
-                                <p>010-1111-1111</p>
+                                <!-- <p>010-1111-1111</p> -->
+                                <input type="text" name=""/>
                             </td>
 
                         </tr>
@@ -904,7 +924,8 @@
 
 
                         <td>
-                            <p>홍길동</p>
+                            <!-- <p>홍길동</p> -->
+                            <input type="text" name=""/>
                         </td>
 
 
@@ -916,8 +937,8 @@
                             <select id="gender03">
 
                                 <option selected>선택</option>
-                                <option>남성</option>
-                                <option>여성</option>
+                                <option value="남성">남성</option>
+                                <option value="여성">여성</option>
 
                             </select>
                         </td>
@@ -939,7 +960,8 @@
 
 
                         <td>
-                            <p>010-1111-1111</p>
+                            <!-- <p>010-1111-1111</p> -->
+                            <input type="text" name=""/>
                         </td>
 
                     </tr>
@@ -965,12 +987,13 @@
                     <p>+ 여권 유효 기간이 최소 6개월 이상 남아 있어야 합니다.</p>
                     <p>+ 숙박은 기본 2인1실 기준으로 홀수 인원 시 싱글룸 사용하셔야 합니다.</p>
                     <p>+ 라운드 미진행 시 별도 그린피 환불은 없습니다.</p>
-                    <p>+ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁
-                        드립니다.</p>
+                    <p>+ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
                 </div>
 
                 <div class="agree01">
+                	<label for="cancellation_chk">
                     <p>동의합니다.</p>
+                	</label>
                     <input type="checkbox" id="cancellation_chk">
                 </div>
 
@@ -994,8 +1017,10 @@
                 </div>
 
                 <div class="agree02">
+                	<label for="term_of_service">
                     <p>동의합니다.</p>
-                    <input type="checkbox" id="cancellation_chk">
+                	</label>
+                    <input type="checkbox" id="term_of_service">
                 </div>
 
 
@@ -1006,7 +1031,9 @@
 
         <div class="total">
             <p>총 결제 금액</p>
-            <p>2,180,000원 <span>(2인 요금)</span></p>
+            <input type="text" name=""/> 원<span>(2인 요금)</span>
+            <!-- <p>2,180,000원 <span>(2인 요금)</span></p> -->
+            
         </div>
 
         <div class="btn">
@@ -1014,6 +1041,7 @@
             <input type="reset" value="취소" id="btn02">
         </div>
 
+		</form>
 
         </div><!--reservation-->
 

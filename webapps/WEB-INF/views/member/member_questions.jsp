@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -121,12 +122,13 @@
 
                     <ul>
 
+						<c:forEach items="${bbsList}" var="bbsList">
                         <li>
                             <div class="question01">
                                
                                 <p>Q</p>
-
-                                <p>베트남 5월달 요금표 입니다.</p>
+                                
+                                <p>${bbsList.title}</p>
 
                             </div>
 
@@ -135,17 +137,15 @@
                                 <p>A</p>
 
                                 <div>
-                                    <p>11월 ~3월까지는 현지 골프장 정책에 따라 출발 2주전 티오프 시간이 배정됩니다.<br>
-					                                    예약시 희망 티오프 시간을 알려주시면, 최대한 배정해 드리고 있습니다.<br>
-					                                    단, 현지 골프장 사정으로 인하여 티업시간 변경이 어려울 수 있습니다.<br>
-                                      (골프장 별로 Break time이 있습니다. FA 코리아, 선밸리 1부 마지막 티오프 시간 08:30. 2부 시작 11:00 이후 )</p>
+                                    <p>${bbsList.contents}</p>
                                 </div>
 
                             </div>
 
                         </li>
+						</c:forEach>
 
-                        <li>
+                        <!-- <li>
                             <div class="question02">
                                
                                 <p>Q</p>
@@ -407,7 +407,7 @@
 
                             </div>
 
-                        </li>
+                        </li> -->
                     
                     </ul>
 
@@ -416,13 +416,13 @@
 
                 <div class="num_chk">
 
-<%-- 					<a href="questions?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+					<a href="questions?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
 					
                     <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">    
                    		<a href="questions?page=${p}"><p>${p}</p></a>    
                     </c:forEach>
 					
-					<a href="questions?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a> --%>
+					<a href="questions?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
 
 <!--	
                     <a href="#">

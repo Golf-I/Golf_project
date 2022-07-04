@@ -41,7 +41,7 @@
 		<suspend_validator>false</suspend_validator>
 		<export_setting>
 			<export_ddl_setting>
-				<output_path>webapps\resources\sql\sql 22_06_30.sql</output_path>
+				<output_path>C:\Users\PC33\Desktop\sql 22_07_04.sql</output_path>
 				<encoding>UTF-8</encoding>
 				<line_feed>CR+LF</line_feed>
 				<is_open_after_saved>true</is_open_after_saved>
@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2022-06-30 09:55:39</creation_date>
-			<updated_date>2022-06-30 13:55:33</updated_date>
+			<updated_date>2022-07-04 09:12:16</updated_date>
 			<model_property>
 				<name>프로젝트명</name>
 				<value></value>
@@ -174,22 +174,6 @@
 	<dictionary>
 		<word>
 			<id>0</id>
-			<length>15</length>
-			<decimal>null</decimal>
-			<array>false</array>
-			<array_dimension>null</array_dimension>
-			<unsigned>false</unsigned>
-			<zerofill>false</zerofill>
-			<binary>false</binary>
-			<args></args>
-			<char_semantics>false</char_semantics>
-			<description></description>
-			<logical_name>category</logical_name>
-			<physical_name>category</physical_name>
-			<type>varchar(n)</type>
-		</word>
-		<word>
-			<id>1</id>
 			<length>255</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -205,7 +189,7 @@
 			<type>varchar(n)</type>
 		</word>
 		<word>
-			<id>2</id>
+			<id>1</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -221,7 +205,7 @@
 			<type>date</type>
 		</word>
 		<word>
-			<id>3</id>
+			<id>2</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -237,7 +221,7 @@
 			<type>integer</type>
 		</word>
 		<word>
-			<id>4</id>
+			<id>3</id>
 			<length>50</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -253,7 +237,7 @@
 			<type>varchar(n)</type>
 		</word>
 		<word>
-			<id>5</id>
+			<id>4</id>
 			<length>null</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -269,7 +253,7 @@
 			<type>integer</type>
 		</word>
 		<word>
-			<id>6</id>
+			<id>5</id>
 			<length>30</length>
 			<decimal>null</decimal>
 			<array>false</array>
@@ -303,15 +287,15 @@
 			</color>
 			<connections>
 			</connections>
-			<physical_name>notice</physical_name>
-			<logical_name>notice</logical_name>
+			<physical_name>questions</physical_name>
+			<logical_name>questions</logical_name>
 			<description></description>
 			<constraint></constraint>
 			<primary_key_name></primary_key_name>
 			<option></option>
 			<columns>
 				<normal_column>
-					<word_id>3</word_id>
+					<word_id>2</word_id>
 					<id>0</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -344,7 +328,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>0</word_id>
+					<word_id>3</word_id>
 					<id>1</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -377,7 +361,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>4</word_id>
+					<word_id>5</word_id>
 					<id>2</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -410,7 +394,7 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>6</word_id>
+					<word_id>0</word_id>
 					<id>3</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
@@ -449,39 +433,6 @@
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>
 					<physical_name></physical_name>
-					<type>varchar(n)</type>
-					<constraint></constraint>
-					<default_value></default_value>
-					<auto_increment>false</auto_increment>
-					<foreign_key>false</foreign_key>
-					<not_null>false</not_null>
-					<primary_key>false</primary_key>
-					<unique_key>false</unique_key>
-					<character_set></character_set>
-					<collation></collation>
-					<sequence>
-						<name></name>
-						<schema></schema>
-						<increment></increment>
-						<min_value></min_value>
-						<max_value></max_value>
-						<start></start>
-						<cache></cache>
-						<nocache>false</nocache>
-						<cycle>false</cycle>
-						<order>false</order>
-						<description></description>
-						<data_type></data_type>
-						<decimal_size>0</decimal_size>
-					</sequence>
-				</normal_column>
-				<normal_column>
-					<word_id>2</word_id>
-					<id>5</id>
-					<description></description>
-					<unique_key_name></unique_key_name>
-					<logical_name></logical_name>
-					<physical_name></physical_name>
 					<type>date</type>
 					<constraint></constraint>
 					<default_value></default_value>
@@ -509,8 +460,8 @@
 					</sequence>
 				</normal_column>
 				<normal_column>
-					<word_id>5</word_id>
-					<id>6</id>
+					<word_id>4</word_id>
+					<id>5</id>
 					<description></description>
 					<unique_key_name></unique_key_name>
 					<logical_name></logical_name>

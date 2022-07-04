@@ -18,35 +18,46 @@ public class BoardServiceImpl implements BoardService{
 	private BoardDAO bdao;
 	
 	 
-	/* 전체 게시글 갯수 조회 */
+	/* 공지사항 전체 게시글 갯수 조회 */
 	@Override
-	public int countBoard() throws Exception {
+	public int countNotice() throws Exception {
 		
-		int count = bdao.countBoard();
+		int count = bdao.countNotice();
 		
 		return count;
 	} // countBoard
 	
 	
-	/* 전체 게시글 조회 */
+	/* 자주묻는 질문 전체 게시글 갯수 조회 */
 	@Override
-	public List<BoardVO> selectBoard(Criteria vo) throws Exception {
+	public int countQnA() throws Exception {
+		
+		int count = bdao.countQnA();
+		
+		return count;
+	} // countQnA
+	
+	
+	/* 공지사항 전체 게시글 조회 */
+	@Override
+	public List<BoardVO> selectNotice(Criteria vo) throws Exception {
 		
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
-		bbsList = bdao.selectBoard(vo);
+		bbsList = bdao.selectNotice(vo);
 		
 		return bbsList;
-	} // selectBoard
-
-
-	/* 페이징 처리 */
+	} // selectNotice
+	
+	
+	/* 자주묻는질문 전체 게시글 조회 */
 	@Override
-	public List<BoardVO> listCri(Criteria vo) throws Exception {
+	public List<BoardVO> selectQnA(Criteria vo) throws Exception {
 		
-//		System.out.println("-- ServiceImpl : listCri() 실행");
+		List<BoardVO> bbsList = new ArrayList<BoardVO>();
+		bbsList = bdao.selectQnA(vo);
 		
-		return bdao.listPage(vo);
-	} // listCri()
+		return bbsList;
+	} // selectQnA
 
 
 	/* 게시물 조회 */
@@ -58,5 +69,6 @@ public class BoardServiceImpl implements BoardService{
 		
 		return bbsList;
 	} // lookup
-	
+
+
 }

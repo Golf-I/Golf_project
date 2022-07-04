@@ -157,16 +157,17 @@ public class HomeController extends HttpServlet {
 	/* 마이페이지 공지사항 페이지 호출 */
 	@RequestMapping(value = "notice", method = RequestMethod.GET)
 
-    public String notice(Criteria cri, Model model) throws Exception {
+    public String notice(BoardVO bvo, Criteria cri, Model model) throws Exception {
 
-		int total = bservice.countBoard();
+		int total = bservice.countNotice();
+		logger.info("bvo : " + bvo);
 		
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
 		
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
-		bbsList = bservice.selectBoard(cri);
+		bbsList = bservice.selectNotice(cri);
 		logger.info("pageMaker : " + pageMaker);
 
 		model.addAttribute("bbsList", bbsList);
@@ -187,7 +188,21 @@ public class HomeController extends HttpServlet {
 	
 	/* 마이페이지 자주묻는 질문 페이지 호출 */
 	@RequestMapping(value = "questions", method = RequestMethod.GET)
-    public String questions() {
+    public String questions(Criteria cri, Model model) throws Exception {
+		
+		int total = bservice.countQnA();
+		
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
+		
+		List<BoardVO> bbsList = new ArrayList<BoardVO>();
+		bbsList = bservice.selectQnA(cri);
+		logger.info("pageMaker : " + pageMaker);
+
+		model.addAttribute("bbsList", bbsList);
+		model.addAttribute("pageMaker", pageMaker);
+		
 		return "member/member_questions.tiles";
     }
 	

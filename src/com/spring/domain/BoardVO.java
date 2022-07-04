@@ -12,6 +12,7 @@ public class BoardVO {
 	private int views; // 조회수
 	private String contents; // 글 내용
 	
+	
 	public int getNo() {
 		return no;
 	}
@@ -55,10 +56,11 @@ public class BoardVO {
 		this.contents = contents;
 	}
 	
+	
 	@Override
 	public String toString() {
-		return "BoardVO [no=" + no + ", category=" + category + ", title=" + title + ", writer=" + writer + ", date="
-				+ date + ", views=" + views + ", contents=" + contents + "]";
+		return "BoardVO [ no=" + no + ", category=" + category + ", title=" + title
+				+ ", writer=" + writer + ", date=" + date + ", views=" + views + ", contents=" + contents + "]";
 	}
 	
 }

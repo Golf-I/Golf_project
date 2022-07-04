@@ -23,36 +23,50 @@ public class BoardDAOImpl implements BoardDAO{
 	private static final String namespace = "com.spring.mapper.BoardMapper";
 
 	
-	/* 전체 게시글 갯수 조회 */
+	/* 공지사항 전체 게시글 갯수 조회 */
 	@Override
-	public int countBoard() throws Exception {
-
-		int count = sqlSession.selectOne(namespace+".countBoard");
+	public int countNotice() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countNotice");
 		
 		return count;
-	} // countBoard
+	} // countNotice
+	
+	
+	/* 자주묻는질문 전체 게시글 갯수 조회 */
+	@Override
+	public int countQnA() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countQnA");
+		
+		return count;
+	} // countQnA
 
 	
-	/* 전체 게시글 조회 */
+	/* 공지사항 전체 게시글 조회 */
 	@Override
-	public List<BoardVO> selectBoard(Criteria vo) throws Exception {
+	public List<BoardVO> selectNotice(Criteria vo) throws Exception {
 
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 		
-		bbsList = sqlSession.selectList(namespace+".selectBoard", vo);
+		bbsList = sqlSession.selectList(namespace+".selectNotice", vo);
 		
 		return bbsList;
-	} // selectBoard
+	} // selectNotice
+	
+	
+	/* 자주묻는질문 전체 게시글 조회 */
+	@Override
+	public List<BoardVO> selectQnA(Criteria vo) throws Exception {
+		
+		List<BoardVO> bbsList = new ArrayList<BoardVO>();
+		
+		bbsList = sqlSession.selectList(namespace+".selectQnA", vo);
+		
+		return bbsList;
+	} // selectQnA
 
 	
-	/* 페이징 처리 */
-	@Override
-	public List<BoardVO> listPage(Criteria vo) throws Exception {
-		System.out.println("-- DAOImpl : listPage(Criteria cri) 실행");
-		return sqlSession.selectList(namespace+".listCri", vo);
-	} // listPage
-
-
 	/* 게시물 조회 */
 	@Override
 	public List<BoardVO> lookup(BoardVO vo) throws Exception {
@@ -63,7 +77,5 @@ public class BoardDAOImpl implements BoardDAO{
 		return bbsList;
 	} // lookup
 
-	
-	
-	
+
 }

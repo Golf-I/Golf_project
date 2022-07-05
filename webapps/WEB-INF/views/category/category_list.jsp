@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -174,17 +176,22 @@
 
 			<div class="all_box">
 				<div class="product_zon01">
+				
+					<%-- 게시물 노출 --%>
+					<c:forEach items="${bbsList}" var="bbsList">
+					
 					<div class="product01">
-						<a href="product_detail">
+						<a href="product_detail?package_product_code=${bbsList.package_product_code}">
 							<div>
 								<img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
 							</div>
 
+					
 							<div class="product_text_01">
-								<p>인천출발 ></p>
-								<p>태국/치앙마이</p>
-								<p>치앙마이 아티타야 3박 5일</p>
-								<p>1,090,000원~</p>
+								<p>${bbsList.package_arrival} 출발 ></p>
+								<p>${bbsList.package_city}</p>
+								<p>${bbsList.package_productName}</p>
+								<p>${bbsList.package_lowestPrice} ~</p>
 							</div>
 
 							<div class="review_box_01">
@@ -227,8 +234,11 @@
 							</div> <!--review_box_01-->
 						</a>
 					</div><!--product_01-->
+ 
+					</c:forEach>
+					<%-- 게시물 노출 --%>
 
-					<div class="product02">
+<%-- 					<div class="product02">
 
 						<a href="#">
 							<div>
@@ -982,34 +992,30 @@
 										<p>8.5</p>
 									</div>
 
-								</div> <!--review15-->
-							</div> <!--review_box_15-->
-						</a>
-					</div> <!--product_15-->
-				</div> <!--zon05-->
+								</div> <!--review15--> 
+							</div> <!--review_box_15--> 
+						</a> 
+					</div> --%> <!--product_15--> 
+					
+					
+				</div> <!--zon05--> 
 			</div> <!--all_box-->
 
+				<%-- 페이징  --%>    
 				<div class="number_btn">
-					<a href="#">
-						<p><</p>
-					</a> <a href="#">
-						<p>1</p>
-					</a> <a href="#">
-						<p>2</p>
-					</a> <a href="#">
-						<p>3</p>
-					</a> <a href="#">
-						<p>4</p>
-					</a> <a href="#">
-						<p>5</p>
-					</a> <a href="#">
-						<p>6</p>
-					</a> <a href="#">
-						<p>7</p>
-					</a> <a href="#">
-						<p>></p>
-					</a>
+
+					<a href="category?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+					
+                    <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+                   		<a href="category?page=${p}"><p>${p}</p></a>    
+                    </c:forEach>
+					
+					<a href="category?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+
 				</div>
+				<%-- 페이징  --%>
+				
+				
 			</div><!--right-->
 		</div>
 	</section>

@@ -24,6 +24,7 @@ import com.spring.domain.BoardVO;
 import com.spring.domain.Criteria;
 import com.spring.domain.MemberVO;
 import com.spring.domain.PageMaker;
+import com.spring.domain.ProductVO;
 import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
 import com.spring.service.MemberService;
@@ -31,6 +32,7 @@ import com.spring.service.MemberService;
 /**
  * Servlet implementation class HomeController
  */
+
 @Controller // 컨트롤러 어노테이션
 @WebServlet("/HomeController")
 public class HomeController extends HttpServlet {
@@ -246,15 +248,35 @@ public class HomeController extends HttpServlet {
 		return "member/member_secede.tiles";
 	}
 
-	/* 카테고리 목록 페이지 호출 */
+	/* 패키지 상품 목록 페이지 호출 */
 	@RequestMapping(value = "category", method = RequestMethod.GET)
-	public String categoryPage() {
+	public String categoryPage(Criteria cri, Model model) throws Exception {
+		
+		int total = bservice.countPackage();
+
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
+
+//		List<ProductVO> bbsList = new ArrayList<ProductVO>();
+//		bbsList = bservice.selectPackages(cri);
+//		logger.info("bbsList : " + bbsList);
+		
+//		model.addAttribute("bbsList", bbsList);
+		model.addAttribute("bbsList", bservice.selectPackages(cri));
+		model.addAttribute("pageMaker", pageMaker);
+		
 		return "category/category_list.tiles";
 	}
 
 	/* 가격/상품정보 페이지 호출 */
 	@RequestMapping(value = "product_detail", method = RequestMethod.GET)
-	public String product_detail01() {
+	public String product_detail(ProductVO vo, Model model) throws Exception {
+
+		List<ProductVO> bbsList = new ArrayList<ProductVO>();
+		model.addAttribute("bbsList", bbsList);
+		model.addAttribute("bbsList", bservice.oneProduct(vo));
+		
 		return "category/product_detail.tiles";
 	}
 

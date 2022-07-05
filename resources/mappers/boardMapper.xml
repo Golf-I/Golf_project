@@ -22,6 +22,15 @@
 	<!-- 자주묻는질문 전체 게시글 갯수 출력 -->
 	
 	
+	<!-- 패키지 상품 전체 게시글 갯수 출력 -->
+	<select id="countPackage" resultType="int">
+	<![CDATA[
+ 	SELECT COUNT(*) FROM package_product
+	]]>
+	</select>
+	<!-- 패키지 상품 전체 게시글 갯수 출력 -->
+	
+	
 	<!-- 공지사항 전체 게시글 조회 -->
 	<select id="selectNotice" resultType="com.spring.domain.BoardVO">
 	<![CDATA[
@@ -46,6 +55,19 @@
 	]]>
 	</select>
 	<!-- 자주묻는질문 전체 게시글 조회 -->
+	
+	
+	<!-- 패키지 상품 전체 게시글 조회 -->
+	<select id="selectPackages" resultType="com.spring.domain.ProductVO">
+	<![CDATA[
+	SELECT *
+	FROM package_product
+	WHERE package_product_code > 0
+	ORDER BY package_product_code DESC
+	LIMIT #{pageStart}, #{perPageNum}
+	]]>
+	</select>
+	<!-- 패키지 상품 전체 게시글 조회 -->
 
 	
 	<!-- 게시물 조회 -->
@@ -58,5 +80,17 @@
 	]]>
 	</select>
 	<!-- 게시물 조회 -->
+	
+	
+	<!-- 상품 게시물 조회 -->
+	<select id="oneProduct" resultType="com.spring.domain.ProductVO">
+	<![CDATA[
+	SELECT A.*, B.*
+	FROM package_product A LEFT OUTER JOIN package_product_review B 
+	ON A.package_product_code = B.package_product_code
+	WHERE A.package_product_code = #{package_product_code}
+	]]>
+	</select>
+	<!-- 상품 게시물 조회 -->
 	
 </mapper>

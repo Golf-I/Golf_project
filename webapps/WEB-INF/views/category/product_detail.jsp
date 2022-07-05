@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -21,6 +23,9 @@
 
         <div class="detail">
 
+		<%-- 상품 내용 노출 --%>
+		<c:forEach items="${bbsList}" var="bbsList">
+		
             <div class="route">
 
                 <a href="index">
@@ -52,12 +57,15 @@
 
                 <p>></p>
 
-                <p>도쿄 이타코(水鄕) 골프 2박 3일!</p>
+<!--            <p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
+
+                <p>${bbsList.package_productName}</p>
 
             </div><!--route-->
 
             <div class="title_detail">
-                <p>도쿄 이타코(水鄕) 골프 2박 3일!</p>
+<!--            <p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
+                <p>${bbsList.package_productName}</p>
 
                 <div class="icon_detail">
                     
@@ -116,9 +124,12 @@
                         </label>
 
                         <div class="map_sheet" id="map_canvas">
-<%--                        <label for="map" class="close">
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/close.png">
-                            </label> --%>
+                        
+<%--                        
+							<label for="map" class="close">
+                            	<img src="${pageContext.request.contextPath}/resources/img/detail01/close.png">
+                            </label> 
+--%>
                             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvyMtPQMvAEecQKPi4LaKF5M7-DRIjWNs&callback=showmap"></script>
                         </div>
               
@@ -143,7 +154,8 @@
                                 <p>골프장</p>
                             </div>
     
-                            <div class="course"><p>센트럴CC, 뉴센트럴CC, 노스쇼어CC</p></div>
+                            <div class="course"><p>${bbsList.package_golfCourse}</p></div>
+<!--                             <div class="course"><p>센트럴CC, 뉴센트럴CC, 노스쇼어CC</p></div> -->
     
                         </div><!--골프장-->
 
@@ -154,7 +166,8 @@
                                 <p>숙박지</p>
                             </div>
     
-                            <div class="hotel_name"><p>후지야 호텔 (2인 1실 기준)</p></div>
+                            <div class="hotel_name"><p>${bbsList.package_hotel}</p></div>
+<!--                             <div class="hotel_name"><p>후지야 호텔 (2인 1실 기준)</p></div> -->
     
                         </div><!--호텔-->
 
@@ -165,7 +178,8 @@
                                 <p>최소인원</p>
                             </div>
     
-                            <div class="people_num"><p>4명</p></div>
+                            <div class="people_num"><p>${bbsList.package_minimum_number_of_people}명</p></div>
+<!--                             <div class="people_num"><p>4명</p></div> -->
     
                         </div><!--최소인원-->
 
@@ -176,7 +190,8 @@
                                 <p>출발지역</p>
                             </div>
     
-                            <div class="region_course"><p>인천공항</p></div>
+                            <div class="region_course"><p>${bbsList.package_arrival}</p></div>
+<!--                             <div class="region_course"><p>인천공항</p></div> -->
     
                         </div><!--출발지역-->
 
@@ -187,7 +202,8 @@
                                 <p>도착지역</p>
                             </div>
     
-                            <div class="arrival_course"><p>고쿄/나리타</p></div>
+                            <div class="arrival_course"><p>${bbsList.package_depart}</p></div>
+<!--                             <div class="arrival_course"><p>고쿄/나리타</p></div> -->
     
                         </div><!--도착지역-->
 
@@ -214,7 +230,8 @@
                                 <p>상품최적가</p>
                             </div>
     
-                            <div class="money_num"><p>1,090,000~</p></div>
+                            <div class="money_num"><p>${bbsList.package_lowestPrice}</p></div>
+<!--                             <div class="money_num"><p>1,090,000~</p></div> -->
     
                         </div><!--골프장-->
 
@@ -249,7 +266,7 @@
                     </label>
 
                     <label for="menu03">
-                        <p>상품별점/평점</p>
+                        <p>상품리뷰</p>
                     </label>
 
                     <div class="line_detail01"></div>
@@ -265,19 +282,23 @@
                     <div class="reservation">
     
                         <div class="title_res">
-                            <p>도쿄 이타코(水鄕) 골프 2박 3일!</p>
+                            <p>${bbsList.package_productName}</p>
+<!--                             <p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
                         </div>
     
                         <div class="period">
                             <p>기간</p>
     
                             <div class="period01">
-                                <p>2022-05-01</p>
+                                <p>${bbsList.package_period_start}</p>
                                 <p>~</p>
-                                <p>2022-05-15</p>
+                                <p>${bbsList.package_period_fin}</p>
+<!--                            <p>2022-05-01</p>
+                                <p>~</p>
+                                <p>2022-05-15</p> -->
                             </div>
     
-                            <div class="period02">
+<!--                        <div class="period02">
                                 <p>2022-05-01</p>
                                 <p>~</p>
                                 <p>2022-05-30</p>
@@ -293,7 +314,7 @@
                                 <p>2022-06-15</p>
                                 <p>~</p>
                                 <p>2022-06-30</p>
-                            </div>
+                            </div> -->
     
                         </div>
     
@@ -302,10 +323,11 @@
                             <p>일수</p>
     
                             <div class="day01">
-                                <p>2박 3일</p>
+                                <p>${bbsList.package_day}일</p>
+<!--                                 <p>2박 3일</p> -->
                             </div>
     
-                            <div class="day02">
+<!--                             <div class="day02">
                                 <p>2박 3일</p>
                             </div>
     
@@ -315,7 +337,7 @@
     
                             <div class="day04">
                                 <p>2박 3일</p>
-                            </div>
+                            </div> -->
     
                         </div>
     
@@ -324,10 +346,11 @@
                             <p>숙소</p>
     
                             <div class="lodging01">
-                                <p>후지야호텔</p>
+                                <p>${bbsList.package_hotel}</p>
+<!--                                 <p>후지야호텔</p> -->
                             </div>
     
-                            <div class="lodging02">
+<!--                             <div class="lodging02">
                                 <p>후지야호텔</p>
                             </div>
     
@@ -337,7 +360,7 @@
     
                             <div class="lodging04">
                                 <p>후지야호텔</p>
-                            </div>
+                            </div> -->
                         </div>
     
                         <div class="airline">
@@ -345,10 +368,11 @@
                             <p>항공</p>
     
                             <div class="airline01">
-                                <p>에어부산</p>
+                                <p>${bbsList.package_airline}</p>
+<!--                                 <p>에어부산</p> -->
                             </div>
     
-                            <div class="airline02">
+<!--                             <div class="airline02">
                                 <p>에어부산</p>
                             </div>
     
@@ -358,7 +382,7 @@
     
                             <div class="airline04">
                                 <p>에어부산</p>
-                            </div>
+                            </div> -->
                         </div>
     
     
@@ -369,13 +393,14 @@
                             <div class="weekday01">
     
                                 <div class="txt_week01">
-                                    <p>1,090,000</p>
+<!--                                     <p>1,090,000</p> -->
+                                    <p>${bbsList.package_weekday_fee}</p>
                                     <a href="reservation">예약하기</a>
                                 </div>
     
                             </div>
     
-                            <div class="weekday02">
+<!--                             <div class="weekday02">
                                 <div class="txt_week02">
                                     <p>1,090,000</p>
                                     <a href="#">예약하기</a>
@@ -394,7 +419,8 @@
                                     <p>1,090,000</p>
                                     <a href="#">예약하기</a>
                                 </div>
-                            </div>
+                            </div> -->
+                            
                         </div>
     
                         <div class="weekend">
@@ -404,13 +430,14 @@
                             <div class="weekend01">
     
                                 <div class="txt_weekend01">
-                                    <p>1,090,000</p>
+<!--                                     <p>1,090,000</p> -->
+                                    <p>${bbsList.package_weekend_fee}</p>
                                     <a href="reservation">예약하기</a>
                                 </div>
     
                             </div>
     
-                            <div class="weekend02">
+<!--                             <div class="weekend02">
                                 <div class="txt_weekend02">
                                     <p>1,090,000</p>
                                     <a href="#">예약하기</a>
@@ -429,8 +456,9 @@
                                     <p>1,090,000</p>
                                     <a href="#">예약하기</a>
                                 </div>
-                            </div>
-                        </div>
+                            </div> -->
+                            
+                        </div> 
     
                     </div><!--right-->
     
@@ -441,15 +469,23 @@
     
                        <div class="no_day">
                            <p>날짜</p>
-                           <p>2022-05-15</p>
-                           <p>2022-06-15</p>
+<!--                       <p>2022-05-15</p>
+                           <p>2022-06-15</p>  -->
+						   <p>${bbsList.package_no_reservation_day1}</p>
+						   <p>${bbsList.package_no_reservation_day2}</p>
+						   <p>${bbsList.package_no_reservation_day3}</p>
+						   <p>${bbsList.package_no_reservation_day4}</p>
                            <div></div>
                        </div>
     
                        <div class="no_txt">
                         <p>내용</p>
-                        <p>현지 독립기념일</p>
-                        <p>골프장 휴장일</p>
+<!--                    <p>현지 독립기념일</p>
+                        <p>골프장 휴장일</p> -->
+						<p>${bbsList.package_no_reservation_memo1}</p>
+						<p>${bbsList.package_no_reservation_memo2}</p>
+						<p>${bbsList.package_no_reservation_memo3}</p>
+						<p>${bbsList.package_no_reservation_memo4}</p>
                         <div></div>
                         </div>
     
@@ -474,10 +510,12 @@
     
                                 </div>
     
-                                <p>+ 왕복항공권(유류세 & TAX 포함)</p>
+<!--                                 <p>+ 왕복항공권(유류세 & TAX 포함)</p>
                                 <p>+ 무제한 그린피</p>
                                 <p>+ 후자야 호텔 (2인 1실)</p>
-                                <p>+ 전일정 식사</p>
+                                <p>+ 전일정 식사</p> -->
+    							<p>${bbsList.package_include}</p>
+    
     
                             </div><!--txt-->
     
@@ -499,13 +537,14 @@
     
                                 </div>
     
-                                <p>+ 카트비 : 2인 1카트 500엔(18홀/1인), 1인 1카트 700엔(18홀/1인)</p>
+<!--                                 <p>+ 카트비 : 2인 1카트 500엔(18홀/1인), 1인 1카트 700엔(18홀/1인)</p>
                                 <p>+ 캐디피 : 350엔(18홀/1인)</p>
                                 <p>+ 캐디팁 : 2인 1캐디 150엔(18홀/1인), 1인 1캐디 300엔(18홀/1인)</p>
                                 <p>+ 미팅 & 샌딩비 : $50 (1인/현장지불)</p>
                                 <p>+ 세탁비(의무) : 1일 100엔(1인)</p>
                                 <p>+ 코로나보험</p>
-                                <p>+ 현지 PCR 추가 비용</p>
+                                <p>+ 현지 PCR 추가 비용</p> -->
+                                <p>${bbsList.package_not_include}</p>
     
                             </div><!--txt-->
                         </div><!--불포함-->
@@ -521,11 +560,11 @@
     
                                     <div><img src="${pageContext.request.contextPath}/resources/img/detail01/square.png"></div>
     
-                                    <p>포함사항</p>
+                                    <p>기타사항</p>
     
                                 </div>
     
-                                <p>+ 계약금 입금 후 환불 불가능합니다.</p>
+<!--                                 <p>+ 계약금 입금 후 환불 불가능합니다.</p>
                                 <p>+ 예약시 제출 서류 : 여권 사본, 백신 접종 증명서(영문본)</p>
                                 <p>+ 출국시 필요서류는 담당자를 통해 전달 드릴 예정입니다.</p>
                                 <p>+ 현지에서 PCR 검사가 추가 될 경우 비용은 본인 부담입니다.</p>
@@ -533,7 +572,8 @@
                                 <p>+ 여권 유효기간이 최소 6개월 이상 남아 있어야 합니다.</p>
                                 <p>+ 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.</p>
                                 <p>+ 라운드 미진행시 별도 그린피 환불은 없습니다.</p>
-                                <p>+ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p>
+                                <p>+ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p> -->
+                                <p>${bbsList.package_etc}</p>
     
                             </div><!--txt-->
     
@@ -553,15 +593,16 @@
     
                                     <div><img src="${pageContext.request.contextPath}/resources/img/detail01/triangle.png"></div>
     
-                                    <p>불포함사항</p>
+                                    <p>주의사항</p>
     
                                 </div>
     
-                                <p>+ 본 상품은 예약과 동시에 전세기 상품이므로 계약금 입금 후 취소 불가능합니다. 계약금 환불 불가입니다.</p>
+<!--                                 <p>+ 본 상품은 예약과 동시에 전세기 상품이므로 계약금 입금 후 취소 불가능합니다. 계약금 환불 불가입니다.</p>
                                 <p>+ 본 상품은 전세기 상품으로 취소시 패널티 1인 600,000원 제외 후 환불됩니다.</p>
                                 <p>+ 본 상품은 전세기 상품으로 출국 후 PCR 검사 결과 양성시 전액 환불되지 않습니다.</p>
                                 <p>+ 국제선 탑승시간 최소 2시간 전 수속 대기해주세요.</p>
-                                <p>+ 아티타야 숙소에는 수영장/헬스장/식당/술집/마사지샵 등 서비스 시설이 구비되어 있습니다.</p>
+                                <p>+ 아티타야 숙소에는 수영장/헬스장/식당/술집/마사지샵 등 서비스 시설이 구비되어 있습니다.</p> -->
+                                <p>${bbsList.package_precaution}</p>
     
                             </div><!--txt-->
                         </div><!--불포함-->
@@ -831,7 +872,8 @@
     
                     <div class="golf_img_detail">
     
-                        <p>골프장명 : 센트럴 CC</p>
+<!--                         <p>골프장명 : 센트럴 CC</p> -->
+                        <p>골프장명 : ${bbsList.package_golfCourse}</p>
     
                         <div class="golf_img_d">
                             <div></div>
@@ -839,10 +881,11 @@
                         </div>
     
                         <div class="golf_detail_txt">
-                            <p>총 36홀 코스로 이루어진 센트럴 골프클럽은 일본 골프코스 디자이너로 유명한 ‘나시노가＇설계해 1974년 정식 개장한 일본의 명문 골프장입니다.<br>
+<!--                             <p>총 36홀 코스로 이루어진 센트럴 골프클럽은 일본 골프코스 디자이너로 유명한 ‘나시노가＇설계해 1974년 정식 개장한 일본의 명문 골프장입니다.<br>
                                 PGA 토너먼트, 관동 오픈 챔피언십, 일본프로오픈, 프로암대회, 각종 아마추어 대회등 공식경기장소로 사랑받고 있는 수준급 토너먼트 골프코스이며, 각 코스마다 등급이 높아 라운드에 재미를 더 해주는 레이아웃이 
                                 특징입니다. 
-                            </p>
+                            </p> -->
+                            <p>${bbsList.package_golfCourse_information}</p>
                         </div>
                     </div>
     
@@ -866,7 +909,8 @@
     
                     <div class="hotel_img_detail">
     
-                        <p>숙박명 : 후지야 호텔</p>
+<!--                         <p>숙박명 : 후지야 호텔</p> -->
+                        <p>숙박명 : ${bbsList.package_hotel}</p>
     
                         <div class="hotel_img_d">
                             <div></div>
@@ -874,15 +918,15 @@
                         </div>
     
                         <div class="hotel_detail_txt">
-                            <p>한국인이 직접 사서 운영하고 있는 호텔 후지야!<br>
+<!--                             <p>한국인이 직접 사서 운영하고 있는 호텔 후지야!<br>
                             이타코 강변에 위치하고 있어서,한적한 분위기가 마음을 사로잡습니다. 4성급 비지니스급의 깔끔한 호텔이라고 보시면 됩니다. 코로나 이후 침체되었던 일본내 한국기업도 응원한다는 점에서 의미가 깊은곳입니다. 
                                 
-                            </p>
+                            </p> -->
+                            <p>${bbsList.package_hotel_information}</p>
                         </div>
                     </div>
     
                 </div><!--호텔 정보-->
-
 
 
             </div><!--page01-->
@@ -901,7 +945,7 @@
                     </label>
 
                     <label for="menu03">
-                        <p>상품별점/평점</p>
+                        <p>상품리뷰</p>
                     </label>
 
                     <div class="line_detail02"></div>
@@ -914,8 +958,11 @@
 
                 <div class="grade01">
 
-                    <p><span>8.9</span>/10</p>
-
+					<%-- 상품 별점 --%>
+					
+                    <p><span>${bbsList.package_review_average_score}</span>/5</p>
+<!--                     <p><span>8.9</span>/10</p>
+ -->
                     <div class="star01">
                         <div>
                             <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
@@ -1173,7 +1220,8 @@
 
                     <div class="name_left01">
                         <p>평균 고객평점</p>
-                        <p>등록자 : 홍길동</p>
+<!--                         <p>등록자 : 홍길동</p> -->
+                        <p>등록자 : ${bbsList.package_reviewer}</p>
                     </div><!--left-->
 
                     <div class="name_right01">
@@ -1181,7 +1229,8 @@
                         <div class="grade_re_box01">
 
                             <div class="grade_num01">
-                                <p><span>8.9</span>/10</p>
+<!--                                 <p><span>8.9</span>5</p> -->
+                                <p><span>${bbsList.package_review_average_score}</span>/5</p>
                             </div>
 
                             <div class="grade_star01">
@@ -1205,7 +1254,8 @@
                         </div><!--grade_re_box01-->
 
                         <div class="bottom_txt01">
-                            <p>등록일 : 2022-05-01</p>
+<!--                             <p>등록일 : 2022-05-01</p> -->
+                            <p>등록일 : ${bbsList.package_reviewer_regdate}</p>
                         </div>
 
                     </div><!--right-->
@@ -1354,13 +1404,20 @@
                 <p>※ 도배 및 악의적인 내용들은 사전 통보없이 삭제될 수 있습니다.</p>
 
                 <div class="text02">
-                    <p>조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요</p>
+<!--                     <p> 조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 
+                    	기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 
+                    	근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 
+                    	그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 
+                    	직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요</p> -->
+                    <p>${bbsList.package_reviewer_contents}</p>
                 </div>
             </div><!--right-->
 
             </div><!--review01-->
 
-            <div class="review_02">
+			<%-- 상품 별점 --%>	
+
+            <%-- <div class="review_02">
 
                 <div class="left_rev_02">
     
@@ -1554,7 +1611,7 @@
 
                 </div><!--right-->
     
-                </div><!--review01-->
+                </div> --%><!--review01-->
 
             </div><!--review_box-->
 
@@ -1614,7 +1671,7 @@
                 </label>
 
                 <label for="menu03">
-                    <p>상품별점/평점</p>
+                    <p>상품리뷰</p>
                 </label>
 
                 <div class="line_detail03"></div>
@@ -1623,7 +1680,7 @@
 
             <div class="review_ex">
 
-                <p>상품리뷰</p>
+            <p>상품리뷰</p>
 
             <div class="review02">
 
@@ -1678,7 +1735,7 @@
 
                 <div class="line_r_01"></div>
 
-                <a href="#">
+<%--                 <a href="#">
 
                 <div class="review_m_02">
 
@@ -1721,13 +1778,13 @@
 			                      인근 스카이벨리cc는 까다롭지만 은근 도전의식을 불러 일으키는 코스 설계로 재미를 더해 주어 2번이나 갔었고요.<br>
 			                      주변 양계장의 문제만 줄여 준다면 더할 나위가 없겠네요.</p>
                 </div>
-                </a>
+                </a> 
 
-                <div class="line_r_03"></div>
+                <div class="line_r_03"></div> --%>
 
             </div><!--리뷰존-->
         </div><!--ex-->
-        
+
         <div class="number_btn02">
             <a href="#">
                 <p><</p>
@@ -1768,6 +1825,9 @@
         </div>
 
         </div>
+
+	</c:forEach>
+	<%-- 상품 내용 노출 --%>	
 
     </div><!--detail-->
 

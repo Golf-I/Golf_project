@@ -92,7 +92,7 @@ border: none;}
 {width: 1040px; height: 20px;
 margin-top: 70px;
 margin-bottom: 70px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 .location div {width: 20px; height: 20px;}
 
@@ -116,7 +116,7 @@ color: #333;}
 
 .right .title_box
 {width: 1040px; height: 30px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 .title_box .right_title
 {font-weight: bold; font-size: 24px;
@@ -162,7 +162,7 @@ margin-bottom: 70px;}
 
 .all_box .product_zon01
 {width: 1040px; height: 347px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product01*/
 .product_zon01 .product01
@@ -201,7 +201,7 @@ font-weight: bold;}
 
 .product01 .review_box_01
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -277,7 +277,7 @@ font-weight: bold;}
 
 .product02 .review_box_02
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -351,7 +351,7 @@ font-weight: bold;}
 
 .product03 .review_box_03
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden ;*/
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -393,7 +393,7 @@ a .talk03 p, a .like03 p {color: #ccc;}
 {width: 1040px; height: 347px;
 margin-top: 50px;
 margin-bottom: 50px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product04*/
 
@@ -433,7 +433,7 @@ font-weight: bold;}
 
 .product04 .review_box_04
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -509,7 +509,7 @@ font-weight: bold;}
 
 .product05 .review_box_05
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -583,7 +583,7 @@ font-weight: bold;}
 
 .product06 .review_box_06
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -625,7 +625,7 @@ a .talk06 p, a .like06 p {color: #ccc;}
 {width: 1040px; height: 347px;
 margin-top: 50px;
 margin-bottom: 50px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product04*/
 
@@ -665,7 +665,7 @@ font-weight: bold;}
 
 .product07 .review_box_07
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -741,7 +741,7 @@ font-weight: bold;}
 
 .product08 .review_box_08
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -815,7 +815,7 @@ font-weight: bold;}
 
 .product09 .review_box_09
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -857,7 +857,7 @@ a .talk09 p, a .like09 p {color: #ccc;}
 {width: 1040px; height: 347px;
 margin-top: 50px;
 margin-bottom: 50px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product10*/
 
@@ -897,7 +897,7 @@ font-weight: bold;}
 
 .product10 .review_box_10
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -973,7 +973,7 @@ font-weight: bold;}
 
 .product11 .review_box_11
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1047,7 +1047,7 @@ font-weight: bold;}
 
 .product12 .review_box_12
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1089,7 +1089,7 @@ a .talk12 p, a .like12 p {color: #ccc;}
 {width: 1040px; height: 347px;
 margin-top: 50px;
 margin-bottom: 50px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product10*/
 
@@ -1129,7 +1129,7 @@ font-weight: bold;}
 
 .product10 .review_box_10
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1205,7 +1205,7 @@ font-weight: bold;}
 
 .product11 .review_box_11
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1279,7 +1279,7 @@ font-weight: bold;}
 
 .product12 .review_box_12
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1319,7 +1319,7 @@ a .talk12 p, a .like12 p {color: #ccc;}
 
 .all_box .product_zon05
 {width: 1040px; height: 347px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product13*/
 
@@ -1359,7 +1359,7 @@ font-weight: bold;}
 
 .product13 .review_box_13
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1435,7 +1435,7 @@ font-weight: bold;}
 
 .product14 .review_box_14
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1509,7 +1509,7 @@ font-weight: bold;}
 
 .product15 .review_box_15
 {width: 300px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin-left: 10px;
 margin-right: 10px;
 margin-bottom: 10px;}
@@ -1547,21 +1547,21 @@ a .talk15 p, a .like15 p {color: #ccc;}
 
 .right .number_btn
 {width: 260px; height: 20px;
-overflow: hidden;
+/* overflow: hidden; */
 margin: 0 auto;
 margin-bottom: 100px;}
 
-.number_btn a p 
+.number_btn a p
 {width: 20px; height: 20px;
 line-height: 20px; text-align: center;
 margin-right: 10px; font-weight: bold;
-float: left;}
+float: left; }
 
 .number_btn a:last-child p
 {margin-right: 0;}
 
-.number_btn a:nth-child(2) p
-{color: red;}
+/* .number_btn a:nth-child(2) p
+{color: red;} */
 
 /*자유여행*/
 
@@ -1571,7 +1571,7 @@ margin: 0 auto;
 background-image:url(../img/background.png);}
 
 .freedom .country
-{overflow: hidden;
+{/* overflow: hidden; */
 margin-left: 235px;}
 
 .freedom .country div

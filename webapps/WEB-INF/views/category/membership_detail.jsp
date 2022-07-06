@@ -384,7 +384,8 @@
                     <p>이전페이지</p>
                 </a>
 
-                <a href="javascript:open('consulting');">
+<!--                 <a href="javascript:open('consulting');"> -->
+                <a href="consulting">
                     <p>상담신청</p>
                 </a>
 

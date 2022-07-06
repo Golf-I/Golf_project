@@ -211,9 +211,9 @@
                                 <div class="reception02">
                                     <p>광고성 정보 수신 철회함 22.01.15
                                     (
-	                                    <label for="sms">
+<!-- 	                                    <label for="sms">
 		                                    <input type="checkbox" id="sms" name="sms"> SMS, 
-	                                    </label>
+	                                    </label> -->
 
                                     <c:choose>
                                     	<c:when test="${mvo.mms == 'on'}">

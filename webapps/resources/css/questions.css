@@ -738,7 +738,7 @@ margin-top: 10px; margin-bottom: 10px;
 font-size: 14px; line-height: 30px;}
 
 .questions_right .num_chk
-{width: 260px; height: 20px;
+{width: 570px; height: 20px;
 overflow: hidden;
 margin: 0 auto;
 margin-bottom: 100px;}
@@ -752,5 +752,5 @@ float: left; color: #333;}
 .num_chk a:last-child p
 {margin-right: 0;}
 
-.num_chk a:nth-child(2) p
-{color: red;}
+/* .num_chk a:nth-child(2) p
+{color: red;} */

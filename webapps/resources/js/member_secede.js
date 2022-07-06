@@ -3,13 +3,11 @@
  */
 
 	// 체크박스 필수 체크
-	$(document).ready(function(){
-		$("#btn_wi").click(function(){
-		
+	function secedeChk(){
+	
 			if( !($("#chk01").is(":checked")) ){
 				$("#secede_check").attr("style", "color:#FF0000");
 				return false;
 			} // if
 		
-		}); // click
-	}); // ready
+	} // secedeChk

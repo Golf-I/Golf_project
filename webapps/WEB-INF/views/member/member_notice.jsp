@@ -130,9 +130,17 @@
 				
 					<a href="notice?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
 					
+					<c:if test="${pageMaker.prev}">
+					<a href="notice?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+					</c:if>
+					
                     <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
-                   		<a href="notice?page=${p}"><p>${p}</p></a>    
+                 		<a href="notice?page=${p}" style="color: red;"><p>${p}</p></a>    
                     </c:forEach>
+
+					<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+					<a href="notice?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+					</c:if>
 					
 					<a href="notice?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
 

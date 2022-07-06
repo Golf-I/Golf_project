@@ -13,7 +13,7 @@
 
 	<section>
 
-		<form action="member/memberSecede" method="POST">
+		<form action="member/memberSecede" method="POST" onsubmit="return secedeChk();">
 
         <div class="withdrawal">
 

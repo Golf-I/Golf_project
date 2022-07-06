@@ -169,7 +169,8 @@ public class HomeController extends HttpServlet {
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
-
+		logger.info("cri : " + cri.getPage() + " " + cri.getPageStart() + " " + cri.getPerPageNum());
+		
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 		bbsList = bservice.selectNotice(cri);
 		logger.info("pageMaker : " + pageMaker);

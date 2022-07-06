@@ -5,11 +5,15 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import javax.inject.Inject;
+import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +28,9 @@ import com.spring.service.MemberService;
 @RequestMapping(value = "/member/*") 
 public class MemberController {
 
+	@Autowired
+	private JavaMailSender mailSender; // 메일 전송을 위한 객체 DI
+	
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 	
 	@Inject 
@@ -176,15 +183,15 @@ public class MemberController {
 			if(vo.getMail() != null) {
 				
 				// --------------------- 메일 발송 --------------------- //
-//				MimeMessage message = mailSender.createMimeMessage();
-//				MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
-//				messageHelper.setFrom("test@gmail.com"); // 보내는 사람 생략 시 작동 X
-//				messageHelper.setTo(mail); // 받는 사람
-//				messageHelper.setSubject("골프아이 임시 비밀번호입니다."); // 메일 제목 (생략 가능)
-//				String content = "< 고객님의 비밀번호는 [ " + pw + " ] 입니다. >";
-//				messageHelper.setText(content); // 메일 내용
-//				mailSender.send(message);
-//				// --------------------- 메일 발송 --------------------- //
+				MimeMessage message = mailSender.createMimeMessage();
+				MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
+				messageHelper.setFrom("gyrud6744@gmail.com"); // 보내는 사람 생략 시 작동 X
+				messageHelper.setTo("gyrud6744@gmail.com"); // 받는 사람
+				messageHelper.setSubject("골프아이 임시 비밀번호입니다."); // 메일 제목 (생략 가능)
+				String content = "< 고객님의 비밀번호는 [ " + mvo.getPw() + " ] 입니다. >";
+				messageHelper.setText(content); // 메일 내용
+				mailSender.send(message);
+				// --------------------- 메일 발송 --------------------- //
 				
 				out.println("<script>");
 				out.println("alert('이메일로 비밀번호를 전송하였습니다.');");
@@ -229,16 +236,28 @@ public class MemberController {
 	
 	/* 회원정보 수정하기  */
 	@RequestMapping(value = "/memInfoUpdate", method = RequestMethod.POST)
-	public String memberInfoUpdate(MemberVO vo) throws Exception{
+	public String memberInfoUpdate(MemberVO vo, HttpServletResponse res) throws Exception{
 		
-//		logger.info("컨트롤러 : " + vo);
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
+
 		int result = mservice.memberInfoUpdate(vo);
 //		logger.info("result : " + result);
-		
+
 		if(result == 1) { // 변경되었을 때
-			return "redirect:../mypage";
-		}else{
-			return "redirect:../mypage";
+			out.println("<script>");
+			out.println("alert('수정되었습니다.');");
+			out.println("location.href='../mypage'");
+			out.println("</script>");
+			out.flush();
+			return null;
+		}else{ // 변경하지 못했을 때
+			out.println("<script>");
+			out.println("alert('오류가 발생했습니다. 관리자에게 문의해주세요.');");
+			out.println("location.href='../mypage'");
+			out.println("</script>");
+			out.flush();
+			return null;
 		}
 	} // memberInfoUpdate
 	
@@ -291,14 +310,28 @@ public class MemberController {
 	public String memberSecede(MemberVO vo, HttpServletResponse res, HttpSession session) throws Exception{
 		
 		int result = mservice.memberSecede(vo);
+//		logger.info("result : " + result);
+
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
 		
-		logger.info("result : " + result);
-		
-		if(result == 1) { // 탈퇴했을 때
+		if(result == 1) { // 탈퇴 성공했을 시
+			out.println("<script>");
+			out.println("alert('탈퇴되었습니다.');");
+			out.println("location.href='../index';");
+			out.println("</script>");
+			out.flush();
 			session.invalidate();
-			return "redirect:../login";
+//			return "redirect:../login";
+			return null;
 		}else{
-			return "redirect:../mypage";
+			out.println("<script>");
+			out.println("alert('오류가 발생하었습니다. 관리자에게 문의해주세요.');");
+			out.println("location.href='../mypage';");
+			out.println("</script>");
+			out.flush();
+//			return "redirect:../mypage";
+			return null;
 		}
 //		return "redirect:../index";
 	} // memberSecede

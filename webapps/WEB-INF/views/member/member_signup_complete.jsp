@@ -42,11 +42,11 @@
         <div class="button">
 
              <a href="index">
-                 <p>정보등록 다음에 하기</p>
+                 <p>메인화면으로 가기</p>
              </a>
 
              <a href="login">
-                 <p>상세 정보 등록</p>
+                 <p>로그인하러 가기</p>
              </a>
         </div>
            

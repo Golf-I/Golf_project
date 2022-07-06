@@ -246,9 +246,17 @@
 
 					<a href="category?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
 					
+					<c:if test="${pageMaker.prev}">
+					<a href="category?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+					</c:if>
+					
                     <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
-                   		<a href="category?page=${p}"><p>${p}</p></a>    
+                 		<a href="category?page=${p}" style="color: red;"><p>${p}</p></a>    
                     </c:forEach>
+
+					<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+					<a href="category?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+					</c:if>
 					
 					<a href="category?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
 

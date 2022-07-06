@@ -18,14 +18,11 @@
     <input type="checkbox" id="link">
     <input type="checkbox" id="map">
 
-    
+
     <section class="detail_box">
 
         <div class="detail">
 
-		<%-- 상품 내용 노출 --%>
-		<c:forEach items="${bbsList}" var="bbsList">
-		
             <div class="route">
 
                 <a href="index">
@@ -57,15 +54,22 @@
 
                 <p>></p>
 
-<!--            <p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
-
-                <p>${bbsList.package_productName}</p>
+<!--           	<p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
+				<%-- 상품 내용 노출 --%>
+				<c:forEach items="${bbsList}" var="bbsList">  
+           		<p>${bbsList.productName}</p>
+	            </c:forEach>
 
             </div><!--route-->
+            
 
             <div class="title_detail">
 <!--            <p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
-                <p>${bbsList.package_productName}</p>
+
+				<%-- 상품 내용 노출 --%>
+				<c:forEach items="${bbsList}" var="bbsList">  
+                <p>${bbsList.productName}</p>
+                </c:forEach>
 
                 <div class="icon_detail">
                     
@@ -124,17 +128,17 @@
                         </label>
 
                         <div class="map_sheet" id="map_canvas">
-                        
 <%--                        
 							<label for="map" class="close">
                             	<img src="${pageContext.request.contextPath}/resources/img/detail01/close.png">
                             </label> 
 --%>
-                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvyMtPQMvAEecQKPi4LaKF5M7-DRIjWNs&callback=showmap"></script>
+                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-nO6U0dVhyavvd3rupiRq7Pvuop9pKb4&callback=showmap"></script>
                         </div>
               
                 </div><!--icon-->
             </div><!--title-->
+
 
             <div class="line01"></div>
 
@@ -143,6 +147,9 @@
                 <div class="detail_left">
 
                 </div>
+                
+                <c:forEach items="${bbsList}" var="bbsList">
+                
                 <div class="detail_right">
 
                     <div class="explanation">
@@ -154,7 +161,7 @@
                                 <p>골프장</p>
                             </div>
     
-                            <div class="course"><p>${bbsList.package_golfCourse}</p></div>
+                            <div class="course"><p>${bbsList.golfCourse}</p></div>
 <!--                             <div class="course"><p>센트럴CC, 뉴센트럴CC, 노스쇼어CC</p></div> -->
     
                         </div><!--골프장-->
@@ -166,7 +173,7 @@
                                 <p>숙박지</p>
                             </div>
     
-                            <div class="hotel_name"><p>${bbsList.package_hotel}</p></div>
+                            <div class="hotel_name"><p>${bbsList.hotel}</p></div>
 <!--                             <div class="hotel_name"><p>후지야 호텔 (2인 1실 기준)</p></div> -->
     
                         </div><!--호텔-->
@@ -178,7 +185,7 @@
                                 <p>최소인원</p>
                             </div>
     
-                            <div class="people_num"><p>${bbsList.package_minimum_number_of_people}명</p></div>
+                            <div class="people_num"><p>${bbsList.minimum_number_of_people}명</p></div>
 <!--                             <div class="people_num"><p>4명</p></div> -->
     
                         </div><!--최소인원-->
@@ -190,7 +197,7 @@
                                 <p>출발지역</p>
                             </div>
     
-                            <div class="region_course"><p>${bbsList.package_arrival}</p></div>
+                            <div class="region_course"><p>${bbsList.arrival}</p></div>
 <!--                             <div class="region_course"><p>인천공항</p></div> -->
     
                         </div><!--출발지역-->
@@ -202,7 +209,7 @@
                                 <p>도착지역</p>
                             </div>
     
-                            <div class="arrival_course"><p>${bbsList.package_depart}</p></div>
+                            <div class="arrival_course"><p>${bbsList.depart}</p></div>
 <!--                             <div class="arrival_course"><p>고쿄/나리타</p></div> -->
     
                         </div><!--도착지역-->
@@ -230,7 +237,7 @@
                                 <p>상품최적가</p>
                             </div>
     
-                            <div class="money_num"><p>${bbsList.package_lowestPrice}</p></div>
+                            <div class="money_num"><p>${bbsList.lowestPrice}</p></div>
 <!--                             <div class="money_num"><p>1,090,000~</p></div> -->
     
                         </div><!--골프장-->
@@ -246,6 +253,7 @@
                     </div><!--작은 이미지-->
 
                 </div><!--right-->
+                </c:forEach>
 
             </div><!--img_box-->
 
@@ -278,11 +286,12 @@
                 </div>
     
                 <div class="reservation_zon">
-    
+                
+				    <c:forEach items="${bbsList}" var="bbsList">
                     <div class="reservation">
     
                         <div class="title_res">
-                            <p>${bbsList.package_productName}</p>
+                            <p>${bbsList.productName}</p>
 <!--                             <p>도쿄 이타코(水鄕) 골프 2박 3일!</p> -->
                         </div>
     
@@ -290,32 +299,10 @@
                             <p>기간</p>
     
                             <div class="period01">
-                                <p>${bbsList.package_period_start}</p>
+                                <p>${bbsList.period_start}</p>
                                 <p>~</p>
-                                <p>${bbsList.package_period_fin}</p>
-<!--                            <p>2022-05-01</p>
-                                <p>~</p>
-                                <p>2022-05-15</p> -->
+                                <p>${bbsList.period_fin}</p>
                             </div>
-    
-<!--                        <div class="period02">
-                                <p>2022-05-01</p>
-                                <p>~</p>
-                                <p>2022-05-30</p>
-                            </div>
-    
-                            <div class="period03">
-                                <p>2022-06-01</p>
-                                <p>~</p>
-                                <p>2022-06-30</p>
-                            </div>
-    
-                            <div class="period04">
-                                <p>2022-06-15</p>
-                                <p>~</p>
-                                <p>2022-06-30</p>
-                            </div> -->
-    
                         </div>
     
                         <div class="day">
@@ -323,21 +310,9 @@
                             <p>일수</p>
     
                             <div class="day01">
-                                <p>${bbsList.package_day}일</p>
-<!--                                 <p>2박 3일</p> -->
+                                <p>${bbsList.day_park}박${bbsList.day_il}일</p>
+<!--                            <p>2박 3일</p> -->
                             </div>
-    
-<!--                             <div class="day02">
-                                <p>2박 3일</p>
-                            </div>
-    
-                            <div class="day03">
-                                <p>2박 3일</p>
-                            </div>
-    
-                            <div class="day04">
-                                <p>2박 3일</p>
-                            </div> -->
     
                         </div>
     
@@ -346,21 +321,10 @@
                             <p>숙소</p>
     
                             <div class="lodging01">
-                                <p>${bbsList.package_hotel}</p>
+                                <p>${bbsList.hotel}</p>
 <!--                                 <p>후지야호텔</p> -->
                             </div>
     
-<!--                             <div class="lodging02">
-                                <p>후지야호텔</p>
-                            </div>
-    
-                            <div class="lodging03">
-                                <p>후지야호텔</p>
-                            </div>
-    
-                            <div class="lodging04">
-                                <p>후지야호텔</p>
-                            </div> -->
                         </div>
     
                         <div class="airline">
@@ -368,21 +332,10 @@
                             <p>항공</p>
     
                             <div class="airline01">
-                                <p>${bbsList.package_airline}</p>
+                                <p>${bbsList.airline}</p>
 <!--                                 <p>에어부산</p> -->
                             </div>
     
-<!--                             <div class="airline02">
-                                <p>에어부산</p>
-                            </div>
-    
-                            <div class="airline03">
-                                <p>에어부산</p>
-                            </div>
-    
-                            <div class="airline04">
-                                <p>에어부산</p>
-                            </div> -->
                         </div>
     
     
@@ -394,32 +347,11 @@
     
                                 <div class="txt_week01">
 <!--                                     <p>1,090,000</p> -->
-                                    <p>${bbsList.package_weekday_fee}</p>
+                                    <p>${bbsList.weekday_fee}</p>
                                     <a href="reservation">예약하기</a>
                                 </div>
     
                             </div>
-    
-<!--                             <div class="weekday02">
-                                <div class="txt_week02">
-                                    <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
-                                </div>
-                            </div>
-    
-                            <div class="weekday03">
-                                <div class="txt_week03">
-                                    <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
-                                </div>
-                            </div>
-    
-                            <div class="weekday04">
-                                <div class="txt_week04">
-                                    <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
-                                </div>
-                            </div> -->
                             
                         </div>
     
@@ -431,38 +363,18 @@
     
                                 <div class="txt_weekend01">
 <!--                                     <p>1,090,000</p> -->
-                                    <p>${bbsList.package_weekend_fee}</p>
+                                    <p>${bbsList.weekend_fee}</p>
                                     <a href="reservation">예약하기</a>
                                 </div>
     
                             </div>
     
-<!--                             <div class="weekend02">
-                                <div class="txt_weekend02">
-                                    <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
-                                </div>
-                            </div>
-    
-                            <div class="weekend03">
-                                <div class="txt_weekend03">
-                                    <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
-                                </div>
-                            </div>
-    
-                            <div class="weekend04">
-                                <div class="txt_weekend04">
-                                    <p>1,090,000</p>
-                                    <a href="#">예약하기</a>
-                                </div>
-                            </div> -->
-                            
                         </div> 
     
                     </div><!--right-->
-    
-    
+                    </c:forEach>
+
+    			
                     <div class="no_reservation">
     
                        <p>예약불가 기간</p>
@@ -471,29 +383,37 @@
                            <p>날짜</p>
 <!--                       <p>2022-05-15</p>
                            <p>2022-06-15</p>  -->
-						   <p>${bbsList.package_no_reservation_day1}</p>
-						   <p>${bbsList.package_no_reservation_day2}</p>
-						   <p>${bbsList.package_no_reservation_day3}</p>
-						   <p>${bbsList.package_no_reservation_day4}</p>
+
+						<%-- 예약불가 기간 --%>
+	    				<c:forEach items="${noResList}" var="noResList">
+                           <p>${noResList.day}</p>
+                        </c:forEach>
+	    				<%-- 예약불가 기간 --%>
+	    				
                            <div></div>
                        </div>
     
                        <div class="no_txt">
-                        <p>내용</p>
-<!--                    <p>현지 독립기념일</p>
-                        <p>골프장 휴장일</p> -->
-						<p>${bbsList.package_no_reservation_memo1}</p>
-						<p>${bbsList.package_no_reservation_memo2}</p>
-						<p>${bbsList.package_no_reservation_memo3}</p>
-						<p>${bbsList.package_no_reservation_memo4}</p>
+	                        <p>내용</p>
+	<!--                    <p>현지 독립기념일</p>
+	                        <p>골프장 휴장일</p> -->
+                        
+                        <%-- 예약불가 기간 --%>
+	    				<c:forEach items="${noResList}" var="noResList">
+                        	<p>${noResList.memo}</p>
+	    				</c:forEach>
+	    				<%-- 예약불가 기간 --%>
+	    				
                         <div></div>
                         </div>
     
-                    </div><!--left-->
+                    </div><!--no_reservation-->
+    				
+                </div><!--reservation_zon-->
     
-                </div><!--예약-->
-    
-    
+    			<%-- 포함, 불포함, 주의, 기타사항 --%>
+    			<c:forEach items="${bbsList}" var="bbsList">
+    			
                 <div class="include_box">
     
                     <div class="include_top">
@@ -510,11 +430,11 @@
     
                                 </div>
     
-<!--                                 <p>+ 왕복항공권(유류세 & TAX 포함)</p>
+<!--                            <p>+ 왕복항공권(유류세 & TAX 포함)</p>
                                 <p>+ 무제한 그린피</p>
                                 <p>+ 후자야 호텔 (2인 1실)</p>
                                 <p>+ 전일정 식사</p> -->
-    							<p>${bbsList.package_include}</p>
+    							<p>${bbsList.include}</p>
     
     
                             </div><!--txt-->
@@ -544,7 +464,7 @@
                                 <p>+ 세탁비(의무) : 1일 100엔(1인)</p>
                                 <p>+ 코로나보험</p>
                                 <p>+ 현지 PCR 추가 비용</p> -->
-                                <p>${bbsList.package_not_include}</p>
+                                <p>${bbsList.not_include}</p>
     
                             </div><!--txt-->
                         </div><!--불포함-->
@@ -573,7 +493,7 @@
                                 <p>+ 숙박은 기본 2인 1실 기준으로 홀수 인원시 싱글룸 사용하셔야 합니다.</p>
                                 <p>+ 라운드 미진행시 별도 그린피 환불은 없습니다.</p>
                                 <p>+ 예약 후 항공 좌석 및 호텔 숙박 가능 여부 담당자에게 재확인 부탁드립니다.</p> -->
-                                <p>${bbsList.package_etc}</p>
+                                <p>${bbsList.etc}</p>
     
                             </div><!--txt-->
     
@@ -602,16 +522,17 @@
                                 <p>+ 본 상품은 전세기 상품으로 출국 후 PCR 검사 결과 양성시 전액 환불되지 않습니다.</p>
                                 <p>+ 국제선 탑승시간 최소 2시간 전 수속 대기해주세요.</p>
                                 <p>+ 아티타야 숙소에는 수영장/헬스장/식당/술집/마사지샵 등 서비스 시설이 구비되어 있습니다.</p> -->
-                                <p>${bbsList.package_precaution}</p>
+                                <p>${bbsList.precaution}</p>
     
                             </div><!--txt-->
                         </div><!--불포함-->
                     </div><!--bottom-->
     
     
-                </div><!--포함/불포함-->
-    
-    
+                </div><!--include_box-->
+    			</c:forEach>
+    			<%-- 포함, 불포함, 주의, 기타사항 --%>
+
     
                 <div class="calendar_box">
 
@@ -637,23 +558,28 @@
     
                     </div><!--참고하세요-->
     
-    
+    				<c:forEach items="${itiList}" var="itiList">
                     <div class="calender_left">
     
                         <div class="calendar_01">
     
                             <div class="one_day">
-                                <p>1일차</p>
+                                <!-- <p>1일차</p> -->
+                                <p>${itiList.day_of_itinerary}일차</p>
                             </div>
     
                             <div class="routine01">
                                 <div class="routin_box01">
-                                <p><span>[08:00]</span> 인천 국제공항 출발 (에어부산)</p>
+                                
+                                <p>${itiList.iti_contents}</p>
+                                
+<!--                                 <p><span>[08:00]</span> 인천 국제공항 출발 (에어부산)</p>
                                 <p><span>[10:30]</span> 일본 나리타 국제공항 도착</p>
                                 <p>직원 미팅 후 중식</p>
                                 <p>중식 식사 후 골프장으로 이동 (약 50분 소요)</p>
                                 <p>센트럴 CC 2부 18홀 라운딩</p>
-                                <p>저녁 식사 후 호텔 투숙 및 휴식</p>
+                                <p>저녁 식사 후 호텔 투숙 및 휴식</p> -->
+                                
                                 </div>
                             </div>
     
@@ -662,108 +588,28 @@
                                 <div class="food01">
     
                                     <div class="food_box01">
-                                    <p>조식 : 불포함</p>
+                                    <p>조식 : ${itiList.morning}</p>
+                                    <p>중식 : ${itiList.lunch}</p>
+                                    <p>석식 : ${itiList.dinner}</p>
+<!--                                     <p>조식 : 불포함</p>
                                     <p>중식 : 일본라면</p>
-                                    <p>석식 : 초밥 디너세트</p>
+                                    <p>석식 : 초밥 디너세트</p> -->
                                     </div>
     
                                 </div>
     
                                 <div class="lodging_box01">
-                                    <p><span>호텔</span>후지야 호텔</p>
+                                    <p><span>호텔</span><%-- ${bbsList.hotel} --%></p>
+<!--                                <p><span>호텔</span>후지야 호텔</p> -->
                                 </div>
                             </div>
     
                         </div><!--1일차-->
-    
-                        <div class="calendar_02">
-    
-                            <div class="two_day">
-                                <p>2일차</p>
-                            </div>
-    
-                            <div class="routine02">
-    
-                                <div class="routin_box02">
-    
-                                <p>호텔 조식 후 골프장으로 이동 (약 50분 소요)</p>
-                                <p>뉴센트럴CC 1부 18홀 라운딩</p>
-                                <p>저녁식사 후 호텔 투숙 및 휴식</p>
-    
-                                <div class="routin_img">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/two_day_01.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/two_day_02.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/two_day_03.png">
-                                    </div>
-                                </div>
-    
-                                </div>
-    
-                            </div>
-    
-                            <div class="food_ex_02">
-                                
-                                <div class="food02">
-    
-                                    <div class="food_box02">
-                                    <p>조식 : 호텔식</p>
-                                    <p>중식 : 클럽식</p>
-                                    <p>석식 : 일식</p>
-                                    </div>
-    
-                                </div>
-    
-                                <div class="lodging_box02">
-                                    <p><span>호텔</span>후지야 호텔</p>
-                                </div>
-                            </div>
-    
-                        </div><!--2일차-->
-    
-                        
-    
-                        <div class="calendar_03">
-    
-                            <div class="three_day">
-                                <p>3일차</p>
-                            </div>
-    
-                            <div class="routine03">
-                                <div class="routin_box03">
-                                <p>호텔 조식 후 골프장으로 이동 (약 50분 소요)</p>
-                                <p>노스쇼어CC 1부 18홀 라운딩 공항으로 이동</p>
-                                <p><span>[19:30]</span> 일본 나리타 국제공항 출발 (에어부산)</p>
-                                <p><span>[21:00]</span> 인천 국제공항 도착</p>
-                                </div>
-                            </div>
-    
-                            <div class="food_ex_03">
-                                
-                                <div class="food03">
-    
-                                    <div class="food_box03">
-                                    <p>조식 : 호텔식</p>
-                                    <p>중식 : 클럽식</p>
-                                    <p>석식 : 불포함</p>
-                                    </div>
-    
-                                </div>
-    
-                                <div class="lodging_box03">
-                                    <p><span>호텔</span>후지야 호텔</p>
-                                </div>
-                            </div>
-    
-                        </div><!--3일차-->
                     </div><!--일정 왼쪽-->
+    				</c:forEach>
     
+                   
                     <div class="calender_right">
-    
     
                         <div class="calender_r_title">
                             <p>다른 인기상품</p>
@@ -806,11 +652,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> <!-- product01 -->
                         </a>
     
                         <a href="#">
+                        
                             <div class="product02">
+                            
                                 <div class="img_pro02">
                                     <img src="${pageContext.request.contextPath}/resources/img/detail01/product01.png">
                                 </div>
@@ -843,16 +691,18 @@
                                                 <div><img src="${pageContext.request.contextPath}/resources/img/detail01/good.png"></div>
                                                 <p>8.5</p>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                        </div><!-- good_icon02 -->
+                                    </div><!-- review02 -->
+                                </div><!-- product02_ex -->
+                                
+							</div><!-- product02 -->
                         </a>
+                        
+                    </div><!--calender_right-->
     
+                </div><!--calendar_box-->
     
-                    </div><!--일정 오른쪽-->
-    
-                </div><!--일정-->
+    			 <c:forEach items="${bbsList}" var="bbsList">
     
                 <div class="golf_detail">
     
@@ -873,7 +723,7 @@
                     <div class="golf_img_detail">
     
 <!--                         <p>골프장명 : 센트럴 CC</p> -->
-                        <p>골프장명 : ${bbsList.package_golfCourse}</p>
+                        <p>골프장명 : ${bbsList.golfCourse}</p>
     
                         <div class="golf_img_d">
                             <div></div>
@@ -885,11 +735,11 @@
                                 PGA 토너먼트, 관동 오픈 챔피언십, 일본프로오픈, 프로암대회, 각종 아마추어 대회등 공식경기장소로 사랑받고 있는 수준급 토너먼트 골프코스이며, 각 코스마다 등급이 높아 라운드에 재미를 더 해주는 레이아웃이 
                                 특징입니다. 
                             </p> -->
-                            <p>${bbsList.package_golfCourse_information}</p>
+                            <p>${bbsList.golfCourse_info}</p>
                         </div>
                     </div>
     
-                </div><!--골프장 정보-->
+                </div><!--golf_detail-->
     
                 <div class="hotel_detail">
     
@@ -910,7 +760,7 @@
                     <div class="hotel_img_detail">
     
 <!--                         <p>숙박명 : 후지야 호텔</p> -->
-                        <p>숙박명 : ${bbsList.package_hotel}</p>
+                        <p>숙박명 : ${bbsList.hotel}</p>
     
                         <div class="hotel_img_d">
                             <div></div>
@@ -922,15 +772,15 @@
                             이타코 강변에 위치하고 있어서,한적한 분위기가 마음을 사로잡습니다. 4성급 비지니스급의 깔끔한 호텔이라고 보시면 됩니다. 코로나 이후 침체되었던 일본내 한국기업도 응원한다는 점에서 의미가 깊은곳입니다. 
                                 
                             </p> -->
-                            <p>${bbsList.package_hotel_information}</p>
+                            <p>${bbsList.hotel_info}</p>
                         </div>
-                    </div>
-    
-                </div><!--호텔 정보-->
-
-
+                    </div><!-- hotel_img_detail -->
+                </div><!--hotel_detail-->
+				
+				</c:forEach>
+                
+                
             </div><!--page01-->
-
 
             <div class="page02">
 
@@ -959,8 +809,7 @@
                 <div class="grade01">
 
 					<%-- 상품 별점 --%>
-					
-                    <p><span>${bbsList.package_review_average_score}</span>/5</p>
+                    <p><span>0.0</span>/5</p>
 <!--                     <p><span>8.9</span>/10</p>
  -->
                     <div class="star01">
@@ -986,28 +835,28 @@
                 </div><!--01-->
 
                 <div class="grade02">
-                    <p>9.2</p>
+                    <p>0.0</p>
                     <p>페이웨이/그린</p>
                 </div>
 
 
                 <div class="grade03">
-                    <p>9.2</p>
+                    <p>0.0</p>
                     <p>플레이 속도</p>
                 </div>
 
                 <div class="grade04">
-                    <p>9.2</p>
+                    <p>0.0</p>
                     <p>캐디</p>
                 </div>
 
                 <div class="grade05">
-                    <p>9.2</p>
+                    <p>0.0</p>
                     <p>부대시설</p>
                 </div>
 
                 <div class="grade06">
-                    <p>9.2</p>
+                    <p>0.0</p>
                     <p>가이드</p>
                 </div>
 
@@ -1022,8 +871,7 @@
                 <div class="type_box">
 
                     <p>◎ 이용한 상품에 대해 "별"을 주세요!</p>
-                    <p>평가해주신 평점은 다른 고객들의 예약에 중요한 기준이 됩니다.<br>
-                    솔직 담백한 평점 부탁드립니다.</p>
+                    <p>평가해주신 평점은 다른 고객들의 예약에 중요한 기준이 됩니다.<br>솔직 담백한 평점 부탁드립니다.</p>
                     <p>※ 도배 및 악의적인 내용들은 사전 통보 없이 삭제될 수 있습니다.</p>
 
                     <div class="typing">
@@ -1060,7 +908,7 @@
                                     
                                  </div>
 
-                                 <p>10</p>
+                                 <p>0</p>
                                 
                                 </div><!--01-->
 
@@ -1092,7 +940,7 @@
                                        
                                     </div>
    
-                                    <p>10</p>
+                                    <p>0</p>
                                    
                                    </div><!--02-->
 
@@ -1124,7 +972,7 @@
                                        
                                     </div>
    
-                                    <p>10</p>
+                                    <p>0</p>
                                    
                                    </div><!--03-->
 
@@ -1156,7 +1004,7 @@
                                        
                                     </div>
    
-                                    <p>10</p>
+                                    <p>0</p>
                                    
                                    </div><!--04-->
 
@@ -1188,7 +1036,7 @@
                                        
                                     </div>
    
-                                    <p>10</p>
+                                    <p>0</p>
                                    
                                    </div><!--05-->
                                 
@@ -1210,8 +1058,11 @@
 
             </div><!--type01-->
 
-    <div class="review_box">
-
+		<%-- 코멘트 --%>
+		<c:forEach items="${commList}" var="commList">
+		
+    	<div class="review_box">
+		
         <div class="review_01">
 
             <div class="left_rev_01">
@@ -1221,7 +1072,7 @@
                     <div class="name_left01">
                         <p>평균 고객평점</p>
 <!--                         <p>등록자 : 홍길동</p> -->
-                        <p>등록자 : ${bbsList.package_reviewer}</p>
+                        <p>등록자 : ${commList.comment_username}</p>
                     </div><!--left-->
 
                     <div class="name_right01">
@@ -1230,7 +1081,7 @@
 
                             <div class="grade_num01">
 <!--                                 <p><span>8.9</span>5</p> -->
-                                <p><span>${bbsList.package_review_average_score}</span>/5</p>
+                                <p><span>${commList.average_score}</span>/5</p>
                             </div>
 
                             <div class="grade_star01">
@@ -1255,7 +1106,7 @@
 
                         <div class="bottom_txt01">
 <!--                             <p>등록일 : 2022-05-01</p> -->
-                            <p>등록일 : ${bbsList.package_reviewer_regdate}</p>
+                            <p>등록일 : ${commList.comment_regdate}</p>
                         </div>
 
                     </div><!--right-->
@@ -1288,7 +1139,7 @@
                                 </div>
                             </div>
 
-                            <p>10</p>
+                            <p>${commList.score_fairways}</p>
 
                         </div><!--01-->
 
@@ -1314,7 +1165,7 @@
                                 </div>
                             </div>
 
-                            <p>10</p>
+                            <p>${commList.score_playSpeed}</</p>
 
                         </div><!--02-->
 
@@ -1340,7 +1191,7 @@
                                 </div>
                             </div>
 
-                            <p>10</p>
+                            <p>${commList.score_caddy}</p>
 
                         </div><!--03-->
 
@@ -1366,7 +1217,7 @@
                                 </div>
                             </div>
 
-                            <p>10</p>
+                            <p>${commList.score_facilities}</p>
 
                         </div><!--04-->
 
@@ -1392,13 +1243,14 @@
                                 </div>
                             </div>
 
-                            <p>10</p>
+                            <p>${commList.score_guide}</p>
 
                         </div><!--05-->
 
-                    </div>
-                </div><!--bot-->
-            </div><!--left-->
+                    </div><!-- golf_grade_box01 -->
+                </div><!--grade_re_bot01-->
+                
+            </div><!--left_rev_01-->
 
             <div class="right_rev_01">
                 <p>※ 도배 및 악의적인 내용들은 사전 통보없이 삭제될 수 있습니다.</p>
@@ -1409,253 +1261,40 @@
                     	근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 
                     	그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 
                     	직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요</p> -->
-                    <p>${bbsList.package_reviewer_contents}</p>
+                    <p>${commList.comment}</p>
                 </div>
             </div><!--right-->
 
-            </div><!--review01-->
+         </div><!--review01-->
 
-			<%-- 상품 별점 --%>	
-
-            <%-- <div class="review_02">
-
-                <div class="left_rev_02">
-    
-                    <div class="grade_re_top02">
-    
-                        <div class="name_left02">
-                            <p>평균 고객평점</p>
-                            <p>등록자 : 홍길동</p>
-                        </div><!--left-->
-    
-                        <div class="name_right02">
-    
-                            <div class="grade_re_box02">
-    
-                                <div class="grade_num02">
-                                    <p><span>8.9</span>/10</p>
-                                </div>
-    
-                                <div class="grade_star02">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/02star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/03star_detail.png">
-                                    </div>
-                                </div>
-    
-                            </div><!--grade_re_box01-->
-    
-                            <div class="bottom_txt02">
-                                <p>등록일 : 2022-05-01</p>
-                            </div>
-    
-                        </div><!--right-->
-    
-                    </div><!--top-->
-    
-                    <div class="grade_re_bot02">
-    
-                        <div class="golf_grade_box02">
-    
-                            <div class="grade_g06">
-    
-                                <p>페이웨이/그린</p>
-    
-                                <div class="golf_star06">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                </div>
-    
-                                <p>10</p>
-    
-                            </div><!--01-->
-    
-                            <div class="grade_g07">
-    
-                                <p>플레이 속도</p>
-    
-                                <div class="golf_star07">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                </div>
-    
-                                <p>10</p>
-    
-                            </div><!--02-->
-    
-                            <div class="grade_g08">
-    
-                                <p>캐디</p>
-    
-                                <div class="golf_star08">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                </div>
-    
-                                <p>10</p>
-    
-                            </div><!--03-->
-    
-                            <div class="grade_g09">
-    
-                                <p>부대시설</p>
-    
-                                <div class="golf_star09">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                </div>
-    
-                                <p>10</p>
-    
-                            </div><!--04-->
-    
-                            <div class="grade_g10">
-    
-                                <p>가이드</p>
-    
-                                <div class="golf_star10">
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-                                </div>
-    
-                                <p>10</p>
-    
-                            </div><!--05-->
-    
-                        </div>
-                    </div><!--bot-->
-                </div><!--left-->
-    
-                <div class="right_rev_02">
-                    <p>※ 도배 및 악의적인 내용들은 사전 통보없이 삭제될 수 있습니다.</p>
-    
-                    <div class="text03">
-                        <p>조식포함 가격 생각하면 가성비 괜찮다고 생각해요. 기대 안 해서 그런지 조식도 괜찮았고 룸도 그냥 괜찮았던 것 같아요. 근처에 좋아하는 곳이 있어서 거기 방문을 위해서라도 재방문 의사 있긴 한데 방콕에 워낙 괜찮은 호텔들이 많아서 다음엔 다른 곳 이용해보고 싶어요. 그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요</p>
-                    </div>
-
-                </div><!--right-->
-    
-                </div> --%><!--review01-->
-
-            </div><!--review_box-->
+      </div><!--review_box-->
+     
+     <%-- 코멘트 --%>
+	 </c:forEach>
+      
 
 
-            <div class="number_btn">
-                <a href="#">
-                    <p><</p>
-                </a>
-    
-                <a href="#">
-                    <p>1</p>
-                </a>
-    
-                <a href="#">
-                    <p>2</p>
-                </a>
-    
-                <a href="#">
-                    <p>3</p>
-                </a>
-    
-                <a href="#">
-                    <p>4</p>
-                </a>
-    
-                <a href="#">
-                    <p>5</p>
-                </a>
-    
-                <a href="#">
-                    <p>6</p>
-                </a>
-    
-                <a href="#">
-                    <p>7</p>
-                </a>
-    
-                <a href="#">
-                    <p>></p>
-                </a>
-    
+         	 <div class="number_btn">
+         
+				<%-- 페이징  --%>    
+				<div class="num_btn">
+				
+				<a href="product_detail?page=${pageMaker_com.startPage}"><p>&lt;&lt;</p></a>
+				
+				<c:forEach begin="${pageMaker_com.startPage}" end="${pageMaker_com.endPage}" var="p">
+				<a href="product_detail?page=${p}"><p>${p}</p></a>    
+				</c:forEach>
+				
+				<a href="product_detail?page=${pageMaker_com.endPage}"><p>&gt;&gt;</p></a>
+				
+				</div><!-- class="num_btn" -->
+				<%-- 페이징  --%>
+               
             </div>
 
+
         </div><!--page02-->
+
 
 
         <div class="page03">
@@ -1678,6 +1317,7 @@
 
             </div><!--menu03-->
 
+		
             <div class="review_ex">
 
             <p>상품리뷰</p>
@@ -1698,7 +1338,7 @@
                         </div>
 
                         <p>상품리뷰는 그 상품을 사용해보신 경험을 바탕으로 적어주세요 또한 골프아이는 가공된 리뷰를 사용하지 않습니다.<br>
-                            본 게시판은 상품리뷰와 관련된 게시판이므로 게시판 성격과 맞지 않는 글은 이동 또는 삭제 될 수 있습니다. 고객님들의 양해 부탁 드립니다. </p>
+                                               본 게시판은 상품리뷰와 관련된 게시판이므로 게시판 성격과 맞지 않는 글은 이동 또는 삭제 될 수 있습니다. 고객님들의 양해 부탁 드립니다. </p>
                      
                     </div><!--left-->
 
@@ -1707,130 +1347,65 @@
                             <p>리뷰작성</p>
                         </div>
                      </a>
-                </div>
+                </div> <!-- review_box02 -->
 
-            </div><!--review-->
+            </div><!--review02-->
+
+            
+            <%-- 상품 리뷰 --%>
+            <c:forEach items="${revList}" var="revList">
 
             <div class="member_review">
 
-                <a href="#" onclick="openwindow();">
+                <a href="javascript:openwindow();" > <!-- onclick="openwindow();" -->
+                
                 <div class="review_m_01">
-
                     <div class="review_top">
                         <div>
                             <img src="${pageContext.request.contextPath}/resources/img/detail01/member.png">
                         </div>
 
-                        <p>홍*동</p>
+                        <p>${revList.review_username}</p>
+<!--                    <p>홍*동</p> -->
 
-                        <p>2022.05.20</p>
+						<p>${revList.review_regdate}</p>
+<!--                    <p>2022.05.20</p> -->
                     </div>
-
-                    <p>이번에 또 한번 갔다왔습니다. 골프장컨디션이 정말 좋아졌네요ㅎ 예전에는 바로옆에 스카이밸리 코스 차량비용받아서 많이 이용은 안했던 기억이납니다. 양쪽골프장 무료로 이용이 가능해져서 
-                        넘좋았구요 직원분들 넘 친절합니다. 대우받는 느낌! 닭똥냄새 못느꼈구요 첫날 미팅시간 지연되서 20분 고생한것 빼고는 만족합니다
-                        5박일정 다녀왔구요 4박은 썬라이즈ㆍ스카이밸리 라운드 마지막 하루일정은 파타야 호텔숙박잡고 즐겁게 호캉스 했네요 마지막날 람차방18홀 라운드후 여정을 마치고 돌아 왔습니다. 
-                        다시한번 즐거운 여행될수있게 리더해주신 직원분들 감사드립니다 가을에 또 뵙겠습니다.</p>
-                </div>
-                </a>
-
-                <div class="line_r_01"></div>
-
-<%--                 <a href="#">
-
-                <div class="review_m_02">
-
-                    <div class="review_mid">
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/member.png">
-                        </div>
-
-                        <p>장*빈</p>
-
-                        <p>2022.05.07</p>
-                    </div>
-
-                    <p>19년 2월에 이용자들의 갑질 후기보고 냉정하게 좋은거 좋고 아쉬운거 적은 후기를 썼는데<br>
-                        이젠 가성비 갑의 스테이골프의 간판 골프장이 되셨군요<br>
-                        축하드립니다.<br><br>
+                    
+						<p>${revList.review_contents}</p>
                         
-                        이후 댓글을 보니 숙소의 수량및 수질 문제, 노후된 카트 문제, 수영장의 수질 문제, 페어웨이 관리 등이 거론되는군요<br>
-                        이런 부분까지 잘 살펴 계속 좋은 골프장으로 유지되길 바랍니다.</p>
-                </div>
+               </div><!-- review_m_01 -->
+               
+               </a>
 
-                </a>
+               <div class="line_r_01"></div>
 
-                <div class="line_r_02"></div>
-
-                <a href="#">
-                <div class="review_m_03">
-
-                    <div class="review_bot">
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/member.png">
-                        </div>
-
-                        <p>이*년</p>
-
-                        <p>2022.04.22</p>
-                    </div>
-
-                    <p>공항과의 짧은 거리로 시간을 절약할 수 있었으며, 음식은 집에서 먹는 것 보다 더 좋은 것 같네요.<br>
-			                      인근 스카이벨리cc는 까다롭지만 은근 도전의식을 불러 일으키는 코스 설계로 재미를 더해 주어 2번이나 갔었고요.<br>
-			                      주변 양계장의 문제만 줄여 준다면 더할 나위가 없겠네요.</p>
-                </div>
-                </a> 
-
-                <div class="line_r_03"></div> --%>
-
-            </div><!--리뷰존-->
-        </div><!--ex-->
-
+            </div><!--member_review-->
+			</c:forEach>
+            <%-- 상품 리뷰 --%>
+		
         <div class="number_btn02">
-            <a href="#">
-                <p><</p>
-            </a>
-
-            <a href="#">
-                <p>1</p>
-            </a>
-
-            <a href="#">
-                <p>2</p>
-            </a>
-
-            <a href="#">
-                <p>3</p>
-            </a>
-
-            <a href="#">
-                <p>4</p>
-            </a>
-
-            <a href="#">
-                <p>5</p>
-            </a>
-
-            <a href="#">
-                <p>6</p>
-            </a>
-
-            <a href="#">
-                <p>7</p>
-            </a>
-
-            <a href="#">
-                <p>></p>
-            </a>
-
-        </div>
-
-        </div>
-
-	</c:forEach>
-	<%-- 상품 내용 노출 --%>	
+        
+			<%-- 페이징  --%>    
+			<div class="num_btn">
+			
+			<a href="product_detail?page=${pageMaker_rev.startPage}"><p>&lt;&lt;</p></a>
+			
+			<c:forEach begin="${pageMaker_rev.startPage}" end="${pageMaker_rev.endPage}" var="p">
+			<a href="product_detail?page=${p}"><p>${p}</p></a>    
+			</c:forEach>
+			
+			<a href="product_detail?page=${pageMaker_rev.endPage}"><p>&gt;&gt;</p></a>
+			
+			</div><!-- class="num_btn" -->
+			<%-- 페이징  --%>
+			
+        </div><!--  -->
+        
+      </div><!--review_ex-->
+	</div>
 
     </div><!--detail-->
-
 
     </section>
 

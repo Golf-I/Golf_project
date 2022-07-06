@@ -21,10 +21,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.domain.BoardVO;
+import com.spring.domain.CommentVO;
 import com.spring.domain.Criteria;
+import com.spring.domain.ItineraryVO;
 import com.spring.domain.MemberVO;
+import com.spring.domain.NoReservationVO;
 import com.spring.domain.PageMaker;
 import com.spring.domain.ProductVO;
+import com.spring.domain.ReviewVO;
 import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
 import com.spring.service.MemberService;
@@ -271,11 +275,37 @@ public class HomeController extends HttpServlet {
 
 	/* 가격/상품정보 페이지 호출 */
 	@RequestMapping(value = "product_detail", method = RequestMethod.GET)
-	public String product_detail(ProductVO vo, Model model) throws Exception {
+	public String product_detail(ProductVO pvo, ReviewVO rvo, CommentVO cvo, ItineraryVO ivo, NoReservationVO nrvo,
+								Criteria cri, Model model) throws Exception {
+//		logger.info("@@@@@@@@@@@@@ vo : " + vo);
+		
+		int commenttotal = bservice.countComment();
+		int reviewtotal = bservice.countReview();
 
+		PageMaker pageMaker_com = new PageMaker();
+		pageMaker_com.setCri(cri);
+		pageMaker_com.setTotalCount(commenttotal);
+		
+		PageMaker pageMaker_rev = new PageMaker();
+		pageMaker_rev.setCri(cri);
+		pageMaker_rev.setTotalCount(reviewtotal);
+		
 		List<ProductVO> bbsList = new ArrayList<ProductVO>();
-		model.addAttribute("bbsList", bbsList);
-		model.addAttribute("bbsList", bservice.oneProduct(vo));
+		List<ItineraryVO> itiList = new ArrayList<ItineraryVO>();
+		List<ReviewVO> revList = new ArrayList<ReviewVO>();
+		List<CommentVO> commList = new ArrayList<CommentVO>();
+		List<NoReservationVO> noResList = new ArrayList<NoReservationVO>();
+//		bbsList = bservice.oneProduct(pvo);
+//		noResList = bservice.oneNoReser(nrvo);
+//		logger.info("@@@@@@@@@ " + noResList);
+		
+		model.addAttribute("bbsList", bservice.oneProduct(pvo));
+		model.addAttribute("itiList", bservice.oneItinerary(ivo));
+		model.addAttribute("revList", bservice.oneReview(rvo));
+		model.addAttribute("commList", bservice.oneComment(cvo));
+		model.addAttribute("noResList", bservice.oneNoReser(nrvo));
+		model.addAttribute("pageMaker_com", pageMaker_com);
+		model.addAttribute("pageMaker_rev", pageMaker_rev);
 		
 		return "category/product_detail.tiles";
 	}

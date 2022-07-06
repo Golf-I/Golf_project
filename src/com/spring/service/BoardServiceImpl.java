@@ -8,8 +8,12 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.spring.domain.BoardVO;
+import com.spring.domain.CommentVO;
 import com.spring.domain.Criteria;
+import com.spring.domain.ItineraryVO;
+import com.spring.domain.NoReservationVO;
 import com.spring.domain.ProductVO;
+import com.spring.domain.ReviewVO;
 import com.spring.persistence.BoardDAO;
 
 @Service
@@ -47,6 +51,26 @@ public class BoardServiceImpl implements BoardService{
 		
 		return count;
 	} // countPackage
+	
+	
+	/* 상품별점/평점 전체 게시글 갯수 조회 */
+	@Override
+	public int countComment() throws Exception {
+		
+		int count = bdao.countPackage();
+		
+		return count;
+	} // countComment
+	
+	
+	/* 상품리뷰 전체 게시글 갯수 조회 */
+	@Override
+	public int countReview() throws Exception {
+		
+		int count = bdao.countPackage();
+		
+		return count;
+	} // countReview
 	
 	
 	/* 공지사항 전체 게시글 조회 */
@@ -103,5 +127,41 @@ public class BoardServiceImpl implements BoardService{
 		return bbsList;
 	} // oneProduct
 
+	
+	@Override
+	public List<ItineraryVO> oneItinerary(ItineraryVO vo) throws Exception {
+		
+		List<ItineraryVO> itiList = new ArrayList<ItineraryVO>();
+		itiList = bdao.oneItinerary(vo);
+		
+		return itiList;
+	} // oneItinerary
+	
+	@Override
+	public List<ReviewVO> oneReview(ReviewVO vo) throws Exception {
+		
+		List<ReviewVO> revList = new ArrayList<ReviewVO>();
+		revList = bdao.oneReview(vo);
+		
+		return revList;
+	} // oneReview
+	
+	@Override
+	public List<CommentVO> oneComment(CommentVO vo) throws Exception {
+		
+		List<CommentVO> commList = new ArrayList<CommentVO>();
+		commList = bdao.oneComment(vo);
+		
+		return commList;
+	} // oneComment
+
+	@Override
+	public List<NoReservationVO> oneNoReser(NoReservationVO vo) throws Exception {
+		
+		List<NoReservationVO> noResList = new ArrayList<NoReservationVO>();
+		noResList = bdao.oneNoReser(vo);
+		
+		return noResList;
+	} // oneNoReser
 
 }

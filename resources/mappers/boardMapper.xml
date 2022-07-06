@@ -31,6 +31,24 @@
 	<!-- 패키지 상품 전체 게시글 갯수 출력 -->
 	
 	
+	<!-- 상품별점/평점 전체 게시글 갯수 출력 -->
+	<select id="countComment" resultType="int">
+	<![CDATA[
+ 	SELECT COUNT(*) FROM package_product_comment
+	]]>
+	</select>
+	<!-- 상품별점/평점 전체 게시글 갯수 출력 -->
+	
+	
+	<!-- 상품리뷰 전체 게시글 갯수 출력 -->
+	<select id="countReview" resultType="int">
+	<![CDATA[
+ 	SELECT COUNT(*) FROM package_product_review
+	]]>
+	</select>
+	<!-- 상품리뷰 전체 게시글 갯수 출력 -->
+	
+	
 	<!-- 공지사항 전체 게시글 조회 -->
 	<select id="selectNotice" resultType="com.spring.domain.BoardVO">
 	<![CDATA[
@@ -62,8 +80,8 @@
 	<![CDATA[
 	SELECT *
 	FROM package_product
-	WHERE package_product_code > 0
-	ORDER BY package_product_code DESC
+	WHERE product_code > 0
+	ORDER BY product_code DESC
 	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
@@ -85,12 +103,62 @@
 	<!-- 상품 게시물 조회 -->
 	<select id="oneProduct" resultType="com.spring.domain.ProductVO">
 	<![CDATA[
-	SELECT A.*, B.*
-	FROM package_product A LEFT OUTER JOIN package_product_review B 
-	ON A.package_product_code = B.package_product_code
-	WHERE A.package_product_code = #{package_product_code}
+	SELECT *
+	FROM package_product
+	WHERE product_code = #{product_code}
 	]]>
 	</select>
+<!-- 	
+	SELECT *
+	FROM package_product, package_product_review, package_itinerary, package_no_reservation, package_product_comment
+	WHERE product_code = #{product_code}
+	
+	SELECT A.*, B.*, C.*, D.*, E.*
+	FROM package_product A
+	LEFT JOIN package_product_review B 
+	ON A.product_code = B.product_code
+	LEFT JOIN package_itinerary C
+	ON A.product_code = C.product_code
+	LEFT JOIN package_no_reservation D
+	ON A.product_code = D.product_code
+	LEFT JOIN package_product_comment E
+	ON A.product_code = E.product_code
+	WHERE A.product_code = #{product_code} 
+-->
+	<select id="oneItinerary" resultType="com.spring.domain.ItineraryVO">
+	<![CDATA[
+	SELECT *
+	FROM package_itinerary
+	WHERE product_code = #{product_code}
+	]]>
+	</select>
+	
+	<select id="oneReview" resultType="com.spring.domain.ReviewVO">
+	<![CDATA[
+	SELECT *
+	FROM package_product_review
+	WHERE product_code = #{product_code}
+	]]>
+	</select>
+
+	<select id="oneComment" resultType="com.spring.domain.CommentVO">
+	<![CDATA[
+	SELECT *
+	FROM package_product_comment
+	WHERE product_code = #{product_code}
+	]]>
+	</select>
+
+	<select id="oneNoReser" resultType="com.spring.domain.NoReservationVO">
+	<![CDATA[
+	SELECT *
+	FROM package_no_reservation
+	WHERE product_code = #{product_code}
+	]]>
+	</select>
+	
 	<!-- 상품 게시물 조회 -->
+
+
 	
 </mapper>

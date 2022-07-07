@@ -200,7 +200,7 @@
                         </li>
                     </a>
 
-                    <a href="category">
+                    <a href="event">
                         <li>
                             <p>기획전/이벤트</p>
                         </li>

@@ -1,9 +1,11 @@
 package com.spring.controller;
 
 import java.io.File;
+import java.io.PrintWriter;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,45 +32,63 @@ public class CategoryController {
 	private CategoryService iservice;
 
 	
-	
 	/* 회원권&아카데미 상담 신청  */
 	@RequestMapping(value = "/inquire", method = RequestMethod.POST)
-	public String inquire(InquireVO vo) throws Exception {
+	public String inquire(InquireVO vo, HttpServletResponse res) throws Exception {
 	 	logger.info("-- 버튼 작동 / vo : "+ vo);
 	 	iservice.register(vo);
-		
-		return "redirect:../consulting";
+	 	
+	 	res.setContentType("text/html; charset=UTF-8"); 
+	 	PrintWriter out = res.getWriter();
+	 	
+	 	out.println("<script>");
+	 	out.println("alert('신청되었습니다.');");
+	 	out.println("location.href='../consulting';");
+	 	out.println("</script>");
+	 	out.flush();
+	 	
+//		return "redirect:../consulting";
+		return null;
 	} // inquire
 	
 	
 	
 	/* 제휴/홍보 문의  */
 	@RequestMapping(value = "/promotion", method = RequestMethod.POST)
-	public String promotion(HttpServletRequest request,
+	public String promotion(HttpServletRequest request, HttpServletResponse res,
 							PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
-		logger.info("-- 버튼 작동 / file : "+ file);
 //		logger.info("-- file.getContentType : "+ file.getContentType());
 //		logger.info("-- file.getSize : "+ file.getSize());
 //		logger.info("-- file.getBytes : "+ file.getBytes());
 //		logger.info("-- file.getInputStream : "+ file.getInputStream());
 //		logger.info("-- 버튼 작동 / vo : "+ vo); 
 		
+//		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/promotion/");
 		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/promotion/");
-		
+		logger.info("-- 버튼 작동 / storagePath : "+ storagePath);
+
 		File f = new File(storagePath+file.getOriginalFilename());
 		file.transferTo(f);
 		
 		vo.setFilename(file.getOriginalFilename());
 		iservice.promotion(vo);
 		
-		return "redirect:../promotion";
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
+		out.println("<script>");
+		out.println("alert('등록되었습니다.');");
+		out.println("location.href='../promotion';");
+		out.println("</script>");
+		out.flush();
+		
+		return null;
 	} // inquire
 	
 	
 	
 	/* 홀세일 문의  */
 	@RequestMapping(value = "/wholesale", method = RequestMethod.POST)
-	public String wholesale(HttpServletRequest request,
+	public String wholesale(HttpServletRequest request, HttpServletResponse res,
 							PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
 //		logger.info("-- 버튼 작동 / vo : "+ vo);
 //		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
@@ -81,14 +101,22 @@ public class CategoryController {
 		vo.setFilename(file.getOriginalFilename());
 		iservice.wholesale(vo);
 		
-		return "redirect:../wholesale";
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
+		out.println("<script>");
+		out.println("alert('등록되었습니다.');");
+		out.println("location.href='../wholesale';");
+		out.println("</script>");
+		out.flush();
+		
+		return null;
 	} // wholesale
 	
 	
 	
 	/* 입점 문의  */
 	@RequestMapping(value = "/store", method = RequestMethod.POST)
-	public String store(HttpServletRequest request,
+	public String store(HttpServletRequest request, HttpServletResponse res,
 						PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
 		logger.info("-- 버튼 작동 / vo : "+ vo);
 		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
@@ -101,7 +129,15 @@ public class CategoryController {
 		vo.setFilename(file.getOriginalFilename());
 		iservice.store(vo);
 		
-		return "redirect:../store";
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
+		out.println("<script>");
+		out.println("alert('등록되었습니다.');");
+		out.println("location.href='../store';");
+		out.println("</script>");
+		out.flush();
+		
+		return null;
 	} // store
 	
 	

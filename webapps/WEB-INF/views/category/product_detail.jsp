@@ -1361,9 +1361,9 @@
          	 
 				<%-- 페이징  --%>    
 				<div class="num_btn">
-				
+<%-- 				
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.startPage}#page_a"><p>&lt;&lt;</p></a>
-					
+ --%>					
 					<c:if test="${pageMaker_com.prev}">
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.startPage-1}#page_a"><p>&lt;</p></a>
 					</c:if>
@@ -1375,9 +1375,9 @@
 					<c:if test="${pageMaker_com.next && pageMaker_com.endPage>0}">
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.endPage+1}#page_a"><p>&gt;</p></a>
 					</c:if>
-					
+<%-- 					
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.endPage}#page_a"><p>&gt;&gt;</p></a>
-				
+ --%>				
 				</div><!-- class="num_btn" -->
 				<%-- 페이징  --%>
                
@@ -1479,9 +1479,9 @@
         
 			<%-- 페이징  --%>    
 			<div class="num_btn">
-			
+<%-- 			
 				<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage}"><p>&lt;&lt;</p></a>
-				
+ --%>				
 				<c:if test="${pageMaker_rev.prev}">
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage-1}"><p>&lt;</p></a>
 				</c:if>
@@ -1493,9 +1493,9 @@
 				<c:if test="${pageMaker_rev.next && pageMaker_rev.endPage>0}">
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage+1}"><p>&gt;</p></a>
 				</c:if>
-				
+<%-- 				
 				<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage}"><p>&gt;&gt;</p></a>
-
+ --%>
 			</div><!-- class="num_btn" -->
 			<%-- 페이징  --%>
 			

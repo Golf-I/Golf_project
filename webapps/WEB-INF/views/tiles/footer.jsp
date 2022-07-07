@@ -23,7 +23,10 @@
 				<a href="terms-of-service"><li><p>이용약관</p></li></a>
 				<a href="travel-terms-and-conditions"><li><p>여행약관</p></li></a>
 				<a href="privacy_policy"><li><p>개인정보처리방침</p></li></a>
-				<a href="unauthorized-email-collection"><li><p>이메일무단수집거부</p></li></a>
+				<a href="javascript:open('unauthorized-email-collection', '이메일무단수집거부', 
+										'width=500, height=275, scrollbars=no, location=no, 
+										 toolbar=no, status=no, resizable=no')">
+				<li><p>이메일무단수집거부</p></li></a>
 				<a href="promotion"><li><p>제휴/홍보문의</p></li></a>
 				<a href="wholesale"><li><p>홀세일문의</p></li></a>
 				
@@ -105,7 +108,6 @@
 	</div><!--bottom_ex--> 
 	
 	</footer>
-
 
 </body>
 </html>

@@ -128,9 +128,9 @@
 
            	    <%-- 페이징  --%>    
                 <div class="num_btn">
-				
+<%-- 				
 					<a href="notice?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
-					
+					 --%>
 					<c:if test="${pageMaker.prev}">
 					<a href="notice?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
 					</c:if>
@@ -142,9 +142,9 @@
 					<c:if test="${pageMaker.next && pageMaker.endPage>0}">
 					<a href="notice?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
 					</c:if>
-					
+<%-- 					
 					<a href="notice?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
-
+ --%>
                 </div><!-- class="num_btn" -->
            	   <%-- 페이징  --%>
 

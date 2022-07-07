@@ -160,9 +160,9 @@
 
            	    <%-- 페이징  --%>    
                 <div class="num_chk">
-
+<%-- 
 					<a href="questions?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
-					
+	 --%>				
 					<c:if test="${pageMaker.prev}">
 					<a href="questions?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
 					</c:if>
@@ -174,8 +174,9 @@
 					<c:if test="${pageMaker.next && pageMaker.endPage>0}">
 					<a href="questions?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
 					</c:if>
-					
+<%-- 					
 					<a href="questions?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+ --%>            
                 </div>
            	   <%-- 페이징  --%>
 

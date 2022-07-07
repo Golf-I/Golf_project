@@ -10,8 +10,6 @@
 </head>
 <body>
 
-	<br/><br/>
-	
     <section>
 
         <div class="title">
@@ -34,6 +32,5 @@
 
     </section>
 
-	<br/><br/>
 </body>
 </html>

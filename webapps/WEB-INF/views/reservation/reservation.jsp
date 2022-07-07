@@ -60,6 +60,93 @@
             <input type="button" id="left_btn">
             <input type="button" id="right_btn">
             
+            <input type="checkbox" id="day01_6">
+            <input type="checkbox" id="day02_6">
+            <input type="checkbox" id="day03_6">
+            <input type="checkbox" id="day04_6">
+            <input type="checkbox" id="day05_6">
+            <input type="checkbox" id="day06_6">
+            <input type="checkbox" id="day07_6">
+            <input type="checkbox" id="day08_6">
+            <input type="checkbox" id="day09_6">
+            <input type="checkbox" id="day10_6">
+            <input type="checkbox" id="day11_6">
+            <input type="checkbox" id="day12_6">
+            <input type="checkbox" id="day13_6">
+            <input type="checkbox" id="day14_6">
+            <input type="checkbox" id="day15_6">
+            <input type="checkbox" id="day16_6">
+            <input type="checkbox" id="day17_6">
+            <input type="checkbox" id="day18_6">
+            <input type="checkbox" id="day19_6">
+            <input type="checkbox" id="day20_6">
+            <input type="checkbox" id="day21_6">
+            <input type="checkbox" id="day22_6">
+            <input type="checkbox" id="day23_6">
+            <input type="checkbox" id="day24_6">
+            <input type="checkbox" id="day25_6">
+            <input type="checkbox" id="day26_6">
+            <input type="checkbox" id="day27_6">
+            <input type="checkbox" id="day28_6">
+            <input type="checkbox" id="day29_6">
+            <input type="checkbox" id="day30_6">
+            <input type="checkbox" id="day31_6">
+            <input type="checkbox" id="day32_6">
+            <input type="checkbox" id="day33_6">
+            <input type="checkbox" id="day34_6">
+            <input type="checkbox" id="day35_6">
+            <input type="checkbox" id="day36_6">
+            <input type="checkbox" id="day37_6">
+            <input type="checkbox" id="day38_6">
+            <input type="checkbox" id="day39_6">
+            <input type="checkbox" id="day40_6">
+            <input type="checkbox" id="day41_6">
+            <input type="checkbox" id="day42_6">
+
+
+            <input type="checkbox" id="day01_7">
+            <input type="checkbox" id="day02_7">
+            <input type="checkbox" id="day03_7">
+            <input type="checkbox" id="day04_7">
+            <input type="checkbox" id="day05_7">
+            <input type="checkbox" id="day06_7">
+            <input type="checkbox" id="day07_7">
+            <input type="checkbox" id="day08_7">
+            <input type="checkbox" id="day09_7">
+            <input type="checkbox" id="day10_7">
+            <input type="checkbox" id="day11_7">
+            <input type="checkbox" id="day12_7">
+            <input type="checkbox" id="day13_7">
+            <input type="checkbox" id="day14_7">
+            <input type="checkbox" id="day15_7">
+            <input type="checkbox" id="day16_7">
+            <input type="checkbox" id="day17_7">
+            <input type="checkbox" id="day18_7">
+            <input type="checkbox" id="day19_7">
+            <input type="checkbox" id="day20_7">
+            <input type="checkbox" id="day21_7">
+            <input type="checkbox" id="day22_7">
+            <input type="checkbox" id="day23_7">
+            <input type="checkbox" id="day24_7">
+            <input type="checkbox" id="day25_7">
+            <input type="checkbox" id="day26_7">
+            <input type="checkbox" id="day27_7">
+            <input type="checkbox" id="day28_7">
+            <input type="checkbox" id="day29_7">
+            <input type="checkbox" id="day30_7">
+            <input type="checkbox" id="day31_7">
+            <input type="checkbox" id="day32_7">
+            <input type="checkbox" id="day33_7">
+            <input type="checkbox" id="day34_7">
+            <input type="checkbox" id="day35_7">
+            <input type="checkbox" id="day36_7">
+            <input type="checkbox" id="day37_7">
+            <input type="checkbox" id="day38_7">
+            <input type="checkbox" id="day39_7">
+            <input type="checkbox" id="day40_7">
+            <input type="checkbox" id="day41_7">
+            <input type="checkbox" id="day42_7">
+            
             <div class="calendar">
 
                 <div class="calendar_txt">
@@ -94,259 +181,248 @@
 
                         <tr>
                             <td>
-                                <a href="#">
-                                
-                                </a>
+                                <label for="day01_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                 
-                                </a>
+                                <label for="day02_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day03_6" class="no_w">
                                   <p>01</p>
                                     <p>예약불가</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day04_6">
                                     <p>02</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day05_6">
                                     <p>03</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day06_6">
                                     <p>04</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day07_6">
                                     <p>05</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day08_6">
                                     <p>06</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day09_6">
                                     <p>07</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day10_6">
                                     <p>08</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day11_6">
                                     <p>09</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day12_6">
                                     <p>10</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day13_6">
                                     <p>11</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day14_6">
                                     <p>12</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day15_6">
                                     <p>13</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day16_6">
                                     <p>14</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day17_6">
                                     <p>15</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day18_6">
                                     <p>16</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day19_6">
                                     <p>17</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day20_6">
                                     <p>18</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day21_6">
                                     <p>19</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day22_6">
                                     <p>20</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day23_6">
                                     <p>21</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day24_6">
                                     <p>22</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day25_6">
                                     <p>23</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day26_6">
                                     <p>24</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day27_6">
                                     <p>25</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day28_6">
                                     <p>26</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day29_6">
                                     <p>27</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day30_6">
                                     <p>28</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day31_6">
                                     <p>29</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day32_6">
                                     <p>30</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day33_6">
                                     <p>31</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                   
-                                </a>
+                                <label for="day34_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                
-                                </a>
+                                <label for="day35_6">
+                                </label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <a href="#">
-                                
-                                </a>
+                                <label for="day36_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                               
-                                </a>
+                                <label for="day37_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                              
-                                </a>
+                                <label for="day38_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                
-                                </a>
+                                <label for="day39_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                              
-                                </a>
+                                <label for="day40_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                 
-                                </a>
+                                <label for="day41_6">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                
-                                </a>
+                                <label for="day42_6">
+                                </label>
                             </td>
                         </tr>
 
@@ -371,260 +447,252 @@
 
                         <tr>
                             <td>
-                                <a href="#">
-                                   
-                                </a>
+                                <label for="day01_7">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day02_7">
+                                </label>
+                            </td>
+                            <td>
+                                <label for="day03_7">
                                   
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                
-                                </a>
+                                <label for="day04_7">
+                                  
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                
-                                </a>
+                                <label for="day05_7">
+                                  
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                   
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#">
+                                <label for="day06_7">
                                     <p>01</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day07_7">
                                     <p>02</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day08_7">
                                     <p>03</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day09_7">
                                     <p>04</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day10_7">
                                     <p>05</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day11_7">
                                     <p>06</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day12_7">
                                     <p>07</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day13_7">
                                     <p>08</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day14_7">
                                     <p>09</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day15_7">
                                     <p>10</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day16_7">
                                     <p>11</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day17_7">
                                     <p>12</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day18_7">
                                     <p>13</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day19_7">
                                     <p>14</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day20_7">
                                     <p>15</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day21_7">
                                     <p>16</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day22_7">
                                     <p>17</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day23_7">
                                     <p>18</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day24_7">
                                     <p>19</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day25_7">
                                     <p>20</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day26_7">
                                     <p>21</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day27_7">
                                     <p>22</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day28_7">
                                     <p>23</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day29_7">
                                     <p>24</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day30_7">
                                     <p>25</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day31_7">
                                     <p>26</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day32_7">
                                     <p>27</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day33_7">
                                     <p>28</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day34_7">
                                     <p>29</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
+                                <label for="day35_7">
                                     <p>30</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <a href="#">
+                                <label for="day36_7">
                                     <p>31</p>
                                     <p>1,099,000</p>
-                                </a>
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                  
-                                </a>
+                                <label for="day37_7">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                  
-                                </a>
+                                <label for="day38_7">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                  
-                                </a>
+                                <label for="day39_7">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                  
-                                </a>
+                                <label for="day40_7">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                  
-                                </a>
+                                <label for="day41_7">
+                                </label>
                             </td>
                             <td>
-                                <a href="#">
-                                  
-                                </a>
+                                <label for="day42_7">
+                                </label>
                             </td>
                         </tr>
 

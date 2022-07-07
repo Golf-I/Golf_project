@@ -24,3 +24,23 @@
         window.open("detail_review", "_blank",
         "width=990 ,height=910 ,scrollbars=yes,resizable=no ,location=no")
     }
+    
+    
+    // 고객평점/별점 입력 시 로그인 유도
+    function login(){
+    	
+    	$("#text01").click(function(){
+
+    		var loginPage = confirm("로그인 상태에서 가능합니다. 로그인 페이지로 이동합니다.");
+    		
+    		if(loginPage == true){
+    			window.location.href="login";
+    			return true;
+    		}else{
+    			return false;
+    		}
+    		
+    	}); // click
+    } // login
+    
+    	

@@ -81,19 +81,19 @@ margin-right: 4px;}
 
 #man, #woman {display: none;}
 
-#man:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(1)
+#man:checked ~  .name_change .box_name .gender .box_gender label:nth-child(1)
 {background-color: #3b8aff;
 color: white;}
 
-#man:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(2)
+#man:checked ~  .name_change .box_name .gender .box_gender label:nth-child(2)
 {background-color: white;
 color: #333;}
 
-#woman:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(1)
+#woman:checked ~ .name_change .box_name .gender .box_gender label:nth-child(1)
 {background-color: white;
 color: #333;}
 
-#woman:checked ~ section .name_change .box_name .gender .box_gender label:nth-child(2)
+#woman:checked ~  .name_change .box_name .gender .box_gender label:nth-child(2)
 {background-color: #3b8aff;
 color: white;}
 

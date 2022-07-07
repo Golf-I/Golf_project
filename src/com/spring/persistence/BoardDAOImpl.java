@@ -1,7 +1,9 @@
 package com.spring.persistence;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -60,9 +62,9 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	/* 상품별점/평점 전체 게시글 갯수 조회 */
 	@Override
-	public int countComment() throws Exception {
+	public int countComment(CommentVO cvo) throws Exception {
 		
-		int count = sqlSession.selectOne(namespace+".countComment");
+		int count = sqlSession.selectOne(namespace+".countComment", cvo);
 		
 		return count;
 	} // countComment
@@ -70,9 +72,9 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	/* 상품리뷰 전체 게시글 갯수 조회 */
 	@Override
-	public int countReview() throws Exception {
+	public int countReview(ReviewVO rvo) throws Exception {
 		
-		int count = sqlSession.selectOne(namespace+".countReview");
+		int count = sqlSession.selectOne(namespace+".countReview", rvo);
 		
 		return count;
 	} // countReview
@@ -135,7 +137,9 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return bbsList;
 	} // oneProduct
+
 	
+	/* 일정표 게시물 조회 */
 	@Override
 	public List<ItineraryVO> oneItinerary(ItineraryVO vo) throws Exception {
 		
@@ -145,27 +149,43 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return itiList;
 	} // oneItinerary
-	@Override
 	
-	public List<ReviewVO> oneReview(ReviewVO vo) throws Exception {
+	
+	/* 상품리뷰 조회 */
+	@Override
+	public List<ReviewVO> oneReview(ReviewVO vo, Criteria cri) throws Exception {
 		
 		List<ReviewVO> revList = new ArrayList<ReviewVO>();
-		revList = sqlSession.selectList(namespace+".oneReview", vo);
-//		System.out.println("DAOImpl : " + bbsList);
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("product_code", vo.getProduct_code());
+		paramMap.put("pageStart", cri.getPageStart());
+		paramMap.put("perPageNum", cri.getPerPageNum());
+		
+		revList = sqlSession.selectList(namespace+".oneReview", paramMap);
+		System.out.println("DAOImpl : " + revList);
 		
 		return revList;
 	} // oneReview
+
 	
+	/* 상품별점/평점 조회 */
 	@Override
-	public List<CommentVO> oneComment(CommentVO vo) throws Exception {
+	public List<CommentVO> oneComment(CommentVO vo, Criteria cri) throws Exception {
 		
 		List<CommentVO> commList = new ArrayList<CommentVO>();
-		commList = sqlSession.selectList(namespace+".oneComment", vo);
-//		System.out.println("DAOImpl : " + bbsList);
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("product_code", vo.getProduct_code());
+		paramMap.put("pageStart", cri.getPageStart());
+		paramMap.put("perPageNum", cri.getPerPageNum());
+		
+		commList = sqlSession.selectList(namespace+".oneComment", paramMap);
+//		System.out.println("DAOImpl : " + commList);
 		
 		return commList;
 	} // oneComment
+
 	
+	/* 예약불가 기간 조회 */
 	@Override
 	public List<NoReservationVO> oneNoReser(NoReservationVO vo) throws Exception {
 		
@@ -175,7 +195,15 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return noResList;
 	} // oneNoReser
-	/* 패키지 상품 게시물 조회 */
+
+
+	/* 상품별점/평점 등록 */
+	@Override
+	public void addComment(CommentVO vo) throws Exception {
+
+		sqlSession.insert(namespace+".addComment", vo);
+		
+	} // addComment
 
 
 }

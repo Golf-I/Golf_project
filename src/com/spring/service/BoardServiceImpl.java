@@ -55,9 +55,9 @@ public class BoardServiceImpl implements BoardService{
 	
 	/* 상품별점/평점 전체 게시글 갯수 조회 */
 	@Override
-	public int countComment() throws Exception {
+	public int countComment(CommentVO cvo) throws Exception {
 		
-		int count = bdao.countPackage();
+		int count = bdao.countComment(cvo);
 		
 		return count;
 	} // countComment
@@ -65,9 +65,9 @@ public class BoardServiceImpl implements BoardService{
 	
 	/* 상품리뷰 전체 게시글 갯수 조회 */
 	@Override
-	public int countReview() throws Exception {
+	public int countReview(ReviewVO rvo) throws Exception {
 		
-		int count = bdao.countPackage();
+		int count = bdao.countReview(rvo);
 		
 		return count;
 	} // countReview
@@ -128,6 +128,7 @@ public class BoardServiceImpl implements BoardService{
 	} // oneProduct
 
 	
+	/* 일정표 게시물 조회 */
 	@Override
 	public List<ItineraryVO> oneItinerary(ItineraryVO vo) throws Exception {
 		
@@ -136,25 +137,31 @@ public class BoardServiceImpl implements BoardService{
 		
 		return itiList;
 	} // oneItinerary
+
 	
+	/* 상품리뷰 조회 */
 	@Override
-	public List<ReviewVO> oneReview(ReviewVO vo) throws Exception {
+	public List<ReviewVO> oneReview(ReviewVO vo, Criteria cri) throws Exception {
 		
 		List<ReviewVO> revList = new ArrayList<ReviewVO>();
-		revList = bdao.oneReview(vo);
+		revList = bdao.oneReview(vo, cri);
 		
 		return revList;
 	} // oneReview
+
 	
+	/* 상품별점/평점 조회 */
 	@Override
-	public List<CommentVO> oneComment(CommentVO vo) throws Exception {
+	public List<CommentVO> oneComment(CommentVO vo, Criteria cri) throws Exception {
 		
 		List<CommentVO> commList = new ArrayList<CommentVO>();
-		commList = bdao.oneComment(vo);
+		commList = bdao.oneComment(vo, cri);
 		
 		return commList;
 	} // oneComment
 
+	
+	/* 예약불가 기간 조회 */
 	@Override
 	public List<NoReservationVO> oneNoReser(NoReservationVO vo) throws Exception {
 		
@@ -163,5 +170,14 @@ public class BoardServiceImpl implements BoardService{
 		
 		return noResList;
 	} // oneNoReser
+
+	
+	/* 상품평점/별점 등록 */
+	@Override
+	public void addComment(CommentVO vo) throws Exception {
+
+		bdao.addComment(vo);
+		
+	} // addComment
 
 }

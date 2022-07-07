@@ -219,15 +219,23 @@ public class MemberController {
 	
 	/* 마이페이지 이전 비밀번호 확인  */
 	@RequestMapping(value = "/mypagePre", method = RequestMethod.POST)
-	public String mypagePre(MemberVO vo, HttpSession session) throws Exception{
-//		logger.info("MemberCon mvo : " +  mvo);
+	public String mypagePre(MemberVO vo, HttpSession session, HttpServletResponse res) throws Exception{
+
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
+		
 		int count = mservice.mypageCheck(vo); 
 		
-		if(count == 1) { // 비밀번호 일치할 때
+		if(count == 1) { // 비밀번호가 일치할 때
 			return "redirect:../mypage";
 			
-		}else{ // 비밀번호 일치하지 않을 때
-			return "redirect:../mypage_pre";
+		}else{ // 일치하지 않을 때
+			out.println("<script>");
+			out.println("alert('비밀번호를 확인하세요.');");
+			out.println("location.href='../mypage_pre'");
+			out.println("</script>");
+			out.flush();
+			return null;
 		}
 		
 	} // mypagePre
@@ -242,7 +250,6 @@ public class MemberController {
 		PrintWriter out = res.getWriter();
 
 		int result = mservice.memberInfoUpdate(vo);
-//		logger.info("result : " + result);
 
 		if(result == 1) { // 변경되었을 때
 			out.println("<script>");
@@ -253,7 +260,7 @@ public class MemberController {
 			return null;
 		}else{ // 변경하지 못했을 때
 			out.println("<script>");
-			out.println("alert('오류가 발생했습니다. 관리자에게 문의해주세요.');");
+			out.println("alert('비밀번호를 확인하세요.');");
 			out.println("location.href='../mypage'");
 			out.println("</script>");
 			out.flush();
@@ -270,21 +277,30 @@ public class MemberController {
 									@RequestParam("birth3") String birth3,
 									HttpServletResponse res) throws Exception{
 		
-//		logger.info("컨트롤러 : " + vo);
 		String text = birth1+"-"+birth2+"-"+birth3;
-		
 		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		Date date = Date.valueOf(text);
 		vo.setBirth(date);
-//		logger.info("getBirth: " + vo.getBirth());
 		
 		int result = mservice.memberNameUpdate(vo);
-//		logger.info("result : " + result);
+		
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
 		
 		if(result == 1) { // 변경되었을 때
-			return "redirect:../mypage";
+			out.println("<script>");
+			out.println("alert('변경되었습니다.');");
+			out.println("location.href='../mypage'");
+			out.println("</script>");
+			out.flush();
+			return null;
 		}else{
-			return "redirect:../mypage";
+			out.println("<script>");
+			out.println("alert('오류가 발생했습니다. 관리자에게 문의해주세요.');");
+			out.println("location.href='../mypage_name'");
+			out.println("</script>");
+			out.flush();
+			return null;
 		}
 	} // memberNameUpdate
 	
@@ -295,11 +311,24 @@ public class MemberController {
 	public String memberPhoneUpdate(MemberVO vo, HttpServletResponse res) throws Exception{
 		
 		int result = mservice.memberPhoneUpdate(vo);
+
+		res.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = res.getWriter();
 		
 		if(result == 1) { // 변경되었을 때
-			return "redirect:../mypage";
+			out.println("<script>");
+			out.println("alert('변경되었습니다.');");
+			out.println("location.href='../mypage'");
+			out.println("</script>");
+			out.flush();
+			return null;
 		}else{
-			return "redirect:../mypage";
+			out.println("<script>");
+			out.println("alert('오류가 발생했습니다. 관리자에게 문의해주세요.');");
+			out.println("location.href='../mypage_phone'");
+			out.println("</script>");
+			out.flush();
+			return null;
 		}
 		
 	} // memberPhoneUpdate
@@ -310,7 +339,6 @@ public class MemberController {
 	public String memberSecede(MemberVO vo, HttpServletResponse res, HttpSession session) throws Exception{
 		
 		int result = mservice.memberSecede(vo);
-//		logger.info("result : " + result);
 
 		res.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = res.getWriter();
@@ -322,7 +350,6 @@ public class MemberController {
 			out.println("</script>");
 			out.flush();
 			session.invalidate();
-//			return "redirect:../login";
 			return null;
 		}else{
 			out.println("<script>");
@@ -330,10 +357,8 @@ public class MemberController {
 			out.println("location.href='../mypage';");
 			out.println("</script>");
 			out.flush();
-//			return "redirect:../mypage";
 			return null;
 		}
-//		return "redirect:../index";
 	} // memberSecede
 	
 	

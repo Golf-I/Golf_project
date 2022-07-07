@@ -6,7 +6,7 @@ img {display: block;}
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
 body 
@@ -96,6 +96,36 @@ margin-top: 5px;}
 {margin-left: 20px;
 margin-top: 5px;}
 
+
+#day01_6, #day02_6, #day03_6, #day04_6, #day05_6, #day06_6, #day07_6, #day08_6, #day09_6, #day10_6
+{display: none;}
+
+#day11_6, #day12_6, #day13_6, #day14_6, #day15_6, #day16_6, #day17_6, #day18_6, #day19_6, #day20_6
+{display: none;}
+
+#day21_6, #day22_6, #day23_6, #day24_6, #day25_6, #day26_6, #day27_6, #day28_6, #day29_6, #day30_6
+{display: none;}
+
+#day31_6, #day32_6, #day33_6, #day34_6, #day35_6, #day36_6, #day37_6, #day38_6, #day39_6, #day40_6
+{display: none;}
+
+#day41_6, #day42_6
+{display: none;}
+
+#day01_7, #day02_7, #day03_7, #day04_7, #day05_7, #day06_7, #day07_7, #day08_7, #day09_7, #day10_7
+{display: none;}
+
+#day11_7, #day12_7, #day13_7, #day14_7, #day15_7, #day16_7, #day17_7, #day18_7, #day19_7, #day20_7
+{display: none;}
+
+#day21_7, #day22_7, #day23_7, #day24_7, #day25_7, #day26_7, #day27_7, #day28_7, #day29_7, #day30_7
+{display: none;}
+
+#day31_7, #day32_7, #day33_7, #day34_7, #day35_7, #day36_7, #day37_7, #day38_7, #day39_7, #day40_7
+{display: none;}
+
+#day41_7, #day42_7
+{display: none;}
 
 
 
@@ -194,60 +224,20 @@ box-sizing: border-box;}
 border-left: 1px solid #ccc;
 box-sizing: border-box;}
 
-.calendar_left table tr:nth-child(2)>td>a>p:nth-child(1)
+.calendar_left table tr>td>label>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_left table tr>td>label>p:nth-child(1)
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
 color: #333; font-weight: bold; font-weight: bold;}
 
-.calendar_left table tr:nth-child(2)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
+.calendar_left table .no_w p:nth-child(2)
+{color: #ccc;
+text-decoration: line-through;}
 
-.calendar_left table tr:nth-child(3)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_left table tr:nth-child(3)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_left table tr:nth-child(4)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_left table tr:nth-child(4)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_left table tr:nth-child(5)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_left table tr:nth-child(5)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_left table tr:nth-child(6)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_left table tr:nth-child(6)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_left table tr:nth-child(2)>td:nth-child(3)>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: #ccc;
-text-decoration : line-through;}
 
 
 /*right*/
@@ -262,7 +252,7 @@ font-size: 18px; line-height: 30px;
 font-weight: bold; text-align: center;
 margin-bottom: 10px;}
 
-.calendar_left table
+.calendar_right table
 {width: 595px;}
 
 .calendar_right table tr td
@@ -345,65 +335,16 @@ box-sizing: border-box;}
 border-left: 1px solid #ccc;
 box-sizing: border-box;}
 
-.calendar_right table tr:nth-child(2)>td>a>p:nth-child(1)
+.calendar_right table tr>td>label>p:nth-child(2)
+{text-align: center; font-size: 14px;
+color: red;}
+
+.calendar_right table tr>td>label>p:nth-child(1)
 {margin-bottom: 20px;
 text-align: right;
 margin-right: 10px;
 color: #333; font-weight: bold; font-weight: bold;}
 
-.calendar_right table tr:nth-child(2)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_right table tr:nth-child(3)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_right table tr:nth-child(3)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_right table tr:nth-child(4)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_right table tr:nth-child(4)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_right table tr:nth-child(5)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_right table tr:nth-child(5)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_right table tr:nth-child(6)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_right table tr:nth-child(6)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
-
-.calendar_right table tr:nth-child(7)>td>a>p:nth-child(1)
-{margin-bottom: 20px;
-text-align: right;
-margin-right: 10px;
-color: #333; font-weight: bold; font-weight: bold;}
-
-.calendar_right table tr:nth-child(7)>td>a>p:nth-child(2)
-{text-align: center; font-size: 14px;
-color: red;}
 
 /*선택항목*/
 
@@ -670,13 +611,6 @@ margin-left: 4px; margin-bottom: 4px;
 box-sizing: border-box;
 text-indent: 14px;}
 
-/* {width: 140px; height: 40px;
-border: 1px solid #ccc;
-margin-left: 4px; margin-bottom: 4px;
-box-sizing: border-box;
-text-indent: 14px;}
- */
- 
 .information01 table td:nth-child(6)
 {width: 300px; height: 50px;
 border-top: 2px solid #333;

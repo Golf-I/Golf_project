@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -348,7 +349,7 @@
                                 <div class="txt_week01">
 <!--                                     <p>1,090,000</p> -->
                                     <p>${bbsList.weekday_fee}</p>
-                                    <a href="reservation">예약하기</a>
+                                    <a href="reservation?product_code=${param.product_code}">예약하기</a>
                                 </div>
     
                             </div>
@@ -558,9 +559,9 @@
     
                     </div><!--참고하세요-->
     
-    				<c:forEach items="${itiList}" var="itiList">
                     <div class="calender_left">
     
+	    				<c:forEach items="${itiList}" var="itiList">
                         <div class="calendar_01">
     
                             <div class="one_day">
@@ -605,8 +606,8 @@
                             </div>
     
                         </div><!--1일차-->
+	    				</c:forEach>
                     </div><!--일정 왼쪽-->
-    				</c:forEach>
     
                    
                     <div class="calender_right">
@@ -632,11 +633,31 @@
     
                                     <div class="review01">
                                         <div class="star01">
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"></div>
+                                            <div>
+                                            	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
+                                            	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
+                                            	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
+                                            </div>
+                                            <div>
+                                            	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
+                                            	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
+                                            	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
+                                            </div>
+                                            <div>
+                                            	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
+                                            	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
+                                            	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
+                                            </div>
+                                            <div>
+                                            	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
+                                            	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
+                                            	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
+                                            </div>
+                                            <div>
+                                            	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
+                                            	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
+                                            	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
+                                            </div>
                                         </div>
     
                                         <div class="good_icon01">
@@ -782,7 +803,7 @@
                 
             </div><!--page01-->
 
-            <div class="page02">
+            <div class="page02" id="page_a">
 
                 <div class="detail_menu02">
 
@@ -862,19 +883,55 @@
 
             </div><!--평점-->
 
+			<input type="checkbox" id="green01">
+            <input type="checkbox" id="green02">
+            <input type="checkbox" id="green03">
+            <input type="checkbox" id="green04">
+            <input type="checkbox" id="green05">
+
+            <input type="checkbox" id="play01">
+            <input type="checkbox" id="play02">
+            <input type="checkbox" id="play03">
+            <input type="checkbox" id="play04">
+            <input type="checkbox" id="play05">
+
+            <input type="checkbox" id="caddy01">
+            <input type="checkbox" id="caddy02">
+            <input type="checkbox" id="caddy03">
+            <input type="checkbox" id="caddy04">
+            <input type="checkbox" id="caddy05">
+
+            <input type="checkbox" id="amenities01">
+            <input type="checkbox" id="amenities02">
+            <input type="checkbox" id="amenities03">
+            <input type="checkbox" id="amenities04">
+            <input type="checkbox" id="amenities05">
+
+            <input type="checkbox" id="guide01">
+            <input type="checkbox" id="guide02">
+            <input type="checkbox" id="guide03">
+            <input type="checkbox" id="guide04">
+            <input type="checkbox" id="guide05">
+
             <div class="type01">
 
                 <p>전체<span> 2개</span></p>
 
                 <div class="line_type"></div>
 
+				<form method="post" action="category/comment" onsubmit=""> 
+
+				<input type="hidden" name="product_code" value="${param.product_code}">
+				<input type="hidden" name="comment_user" value="${sessionScope.id}">
+
                 <div class="type_box">
 
-                    <p>◎ 이용한 상품에 대해 "별"을 주세요!</p>
-                    <p>평가해주신 평점은 다른 고객들의 예약에 중요한 기준이 됩니다.<br>솔직 담백한 평점 부탁드립니다.</p>
-                    <p>※ 도배 및 악의적인 내용들은 사전 통보 없이 삭제될 수 있습니다.</p>
+                    <p id="text01">◎ 이용한 상품에 대해 "별"을 주세요!</p>
+                    <p id="text02">평가해주신 평점은 다른 고객들의 예약에 중요한 기준이 됩니다.<br>솔직 담백한 평점 부탁드립니다.</p>
+                    <p id="text03">※ 도배 및 악의적인 내용들은 사전 통보 없이 삭제될 수 있습니다.</p>
 
                     <div class="typing">
+
 
                         <div class="grade_right01">
 
@@ -886,27 +943,28 @@
 
                                  <div class="typing_st_01">
 
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
-
-                                    <div>
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </div>
                                     
-                                 </div>
+                                     <label for="green01">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="green02">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="green03">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="green04">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="green05">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+                                    
+                                 </div><!-- typing_st_01 -->
 
                                  <p>0</p>
                                 
@@ -917,26 +975,26 @@
                                     <p>플레이속도</p>
    
                                     <div class="typing_st_02">
-   
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
-   
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
-   
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
-   
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
-   
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+		
+									<label for="play01">
+										<img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+									</label>
+
+                                    <label for="play02">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="play03">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="play04">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
+
+                                    <label for="play05">
+                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                    </label>
                                        
                                     </div>
    
@@ -950,25 +1008,25 @@
    
                                     <div class="typing_st_03">
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="caddy01">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="caddy02">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="caddy03">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="caddy04">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="caddy05">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
                                        
                                     </div>
    
@@ -982,25 +1040,25 @@
    
                                     <div class="typing_st_04">
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="amenities01">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="amenities02">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="amenities03">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="amenities04">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="amenities05">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
                                        
                                     </div>
    
@@ -1014,25 +1072,25 @@
    
                                     <div class="typing_st_05">
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="guide01">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="guide02">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="guide03">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="guide04">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
    
-                                       <div>
-                                           <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                       </div>
+                                        <label for="guide05">
+                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
+                                        </label>
                                        
                                     </div>
    
@@ -1045,25 +1103,51 @@
                         </div><!--right-->
 
 
-                        <textarea id="text01"></textarea>
+					<%-- 고객평점/별점 로그인 후 사용 가능 --%>					
+					<c:choose>
+						<c:when test="${sessionScope.id != null}">
+                        	<textarea id="text01" name="comment" style="overflow:hidden;"></textarea>
+						</c:when>
+						<c:otherwise>
+                        	<textarea id="text01" onclick="return login();" style="overflow:hidden;"></textarea>
+						</c:otherwise>
+					</c:choose>
+					<%-- 고객평점/별점 로그인 후 사용 가능 --%>					
 
                     </div><!--typing-->
 
                     <div class="typing_btn">
-                        <input type="submit" id="subnit_t" value="등록">
-                        <input type="reset" id="reset_t" value="취소">
-                    </div>
+						
+						<%-- 고객평점/별점 로그인 후 사용 가능 --%>					
+						<c:choose>
+						
+						<c:when test="${sessionScope.id != null}">
+	                        <input type="submit" id="subnit_t" value="등록">
+	                        <input type="reset" id="reset_t" value="취소">
+						</c:when>
+						
+						<c:otherwise>
+						</c:otherwise>
+						
+						</c:choose>
+						<%-- 고객평점/별점 로그인 후 사용 가능 --%>
+										
+										
+                    </div><!-- typing_btn -->
 
                 </div>
+                
+			</form>
 
-            </div><!--type01-->
+         </div><!--type01-->
 
-		<%-- 코멘트 --%>
-		<c:forEach items="${commList}" var="commList">
 		
     	<div class="review_box">
 		
         <div class="review_01">
+
+		<%-- 코멘트 --%>
+		<c:forEach items="${commList}" var="commList">
 
             <div class="left_rev_01">
 
@@ -1072,7 +1156,7 @@
                     <div class="name_left01">
                         <p>평균 고객평점</p>
 <!--                         <p>등록자 : 홍길동</p> -->
-                        <p>등록자 : ${commList.comment_username}</p>
+                        <p>구매자 : ${fn:substring(commList.comment_user, 0, fn:length(commList.comment_user)-12)}***</p>
                     </div><!--left-->
 
                     <div class="name_right01">
@@ -1262,30 +1346,37 @@
                     	그리고 지하철 타기도 편했고 바로 앞에 편의점이 있어서 편했고 특히 한국 컵라면 판매하고 있어서 좋았어요. 
                     	직원들이 영어를 엄청 잘해서 의사소통 하는 데도 문제 없었어요</p> -->
                     <p>${commList.comment}</p>
+
                 </div>
             </div><!--right-->
 
+	     <%-- 코멘트 --%>
+		 </c:forEach>
          </div><!--review01-->
 
       </div><!--review_box-->
      
-     <%-- 코멘트 --%>
-	 </c:forEach>
-      
-
-
+     
          	 <div class="number_btn">
-         
+         	 
 				<%-- 페이징  --%>    
 				<div class="num_btn">
 				
-				<a href="product_detail?page=${pageMaker_com.startPage}"><p>&lt;&lt;</p></a>
-				
-				<c:forEach begin="${pageMaker_com.startPage}" end="${pageMaker_com.endPage}" var="p">
-				<a href="product_detail?page=${p}"><p>${p}</p></a>    
-				</c:forEach>
-				
-				<a href="product_detail?page=${pageMaker_com.endPage}"><p>&gt;&gt;</p></a>
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.startPage}#page_a"><p>&lt;&lt;</p></a>
+					
+					<c:if test="${pageMaker_com.prev}">
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.startPage-1}#page_a"><p>&lt;</p></a>
+					</c:if>
+					
+                    <c:forEach begin="${pageMaker_com.startPage}" end="${pageMaker_com.endPage}" var="p">
+                 		<a href="product_detail?product_code=${param.product_code}&page=${p}#page_a" style="color: red;"><p>${p}</p></a>    
+                    </c:forEach>
+
+					<c:if test="${pageMaker_com.next && pageMaker_com.endPage>0}">
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.endPage+1}#page_a"><p>&gt;</p></a>
+					</c:if>
+					
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_com.endPage}#page_a"><p>&gt;&gt;</p></a>
 				
 				</div><!-- class="num_btn" -->
 				<%-- 페이징  --%>
@@ -1389,26 +1480,34 @@
 			<%-- 페이징  --%>    
 			<div class="num_btn">
 			
-			<a href="product_detail?page=${pageMaker_rev.startPage}"><p>&lt;&lt;</p></a>
-			
-			<c:forEach begin="${pageMaker_rev.startPage}" end="${pageMaker_rev.endPage}" var="p">
-			<a href="product_detail?page=${p}"><p>${p}</p></a>    
-			</c:forEach>
-			
-			<a href="product_detail?page=${pageMaker_rev.endPage}"><p>&gt;&gt;</p></a>
-			
+				<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage}"><p>&lt;&lt;</p></a>
+				
+				<c:if test="${pageMaker_rev.prev}">
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage-1}"><p>&lt;</p></a>
+				</c:if>
+				
+				<c:forEach begin="${pageMaker_rev.startPage}" end="${pageMaker_rev.endPage}" var="p">
+					<a href="product_detail?product_code=${param.product_code}&page=${p}" style="color: red;"><p>${p}</p></a>    
+				</c:forEach>
+				
+				<c:if test="${pageMaker_rev.next && pageMaker_rev.endPage>0}">
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage+1}"><p>&gt;</p></a>
+				</c:if>
+				
+				<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage}"><p>&gt;&gt;</p></a>
+
 			</div><!-- class="num_btn" -->
 			<%-- 페이징  --%>
 			
-        </div><!--  -->
+        </div><!-- number_btn02 -->
         
       </div><!--review_ex-->
+      
 	</div>
 
     </div><!--detail-->
 
     </section>
-
 
 </body>
 </html>

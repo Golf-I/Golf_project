@@ -137,7 +137,10 @@
                                 <input type="text" value="${mvo.name}" id="name_box" name="name" readonly>
                                 <%-- <p>&nbsp; ${mvo.name}　</p> --%>
                                 <p>※ 개명하셨다면 이름을 변경해주세요.</p>
-                                <a href="mypage_name">변경하기</a>
+<!--                            <a href="mypage_name">변경하기</a> -->
+                                <a href="javascript:open('mypage_name', '개인정보 변경', 
+										'width=550, height=635, scrollbars=no, location=no, 
+										 toolbar=no, status=no, resizable=no')">변경하기</a>
 <!--                            <a href="javascript:open('mypage_name');">변경하기</a> -->
                             </div>
                         </td>
@@ -161,7 +164,10 @@
                             <div class="phone">
                                 <%-- <p> &nbsp; ${mvo.phone}</p> --%>
                                 <input type="text" value="${mvo.phone}" name="phone" readonly>
-                                <a href="mypage_phone">변경하기</a>
+                                <a href="javascript:open('mypage_phone', '개인정보 변경', 
+										'width=540, height=500, scrollbars=no, location=no, 
+										 toolbar=no, status=no, resizable=no')">변경하기</a>
+<!--                            <a href="mypage_phone">변경하기</a> -->
 <!--                            <a href="javascript:open('mypage_phone');">변경하기</a> -->
                             </div>
                         </td>
@@ -205,7 +211,10 @@
 
                                 <div class="reception01">
                                     <p>마케팅 및 이벤트 목적의 개인정보 수집 및 이용 동의함 22.01.16 /</p>
-                                    <a href="javascript:open('mypage_info');">&nbsp;전문보기 ></a>
+                                    <a href="javascript:open('mypage_info','개인정보 수집 및 이용 동의', 
+										'width=560, height=670, scrollbars=no, location=no, 
+										 toolbar=no, status=no, resizable=no')
+                                    ;">&nbsp;전문보기 ></a>
                                 </div>
 
                                 <div class="reception02">
@@ -272,7 +281,10 @@
 
                                     / </p>
                                     
-                                    <a href="javascript:open('mypage_ad');">&nbsp;전문보기 ></a>
+                                    <a href="javascript:open('mypage_ad', '광고성 정보 수신', 
+										'width=550, height=680, scrollbars=no, location=no, 
+										 toolbar=no, status=no, resizable=no');">
+                                    &nbsp;전문보기 ></a>
                                 </div>
 
                             </div>

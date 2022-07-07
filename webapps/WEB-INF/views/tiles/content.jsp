@@ -10,9 +10,9 @@
 </head>
 <body>
 
-	<div class="visual_banner">
-	
-	</div>
+    <div class="visual_banner">
+        <img src="${pageContext.request.contextPath}/resources/img/visual02.png">
+    </div>
 	<!--visual_banner-->
 
 	<div class="recommend_zon">

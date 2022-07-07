@@ -54,7 +54,6 @@
             </div><!--box01-->
 
             <input type="button" id="btn_pr" value="확인" onclick="window.close();">
-
             
         </div>
 

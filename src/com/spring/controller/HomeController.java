@@ -86,6 +86,12 @@ public class HomeController extends HttpServlet {
 		// logger.info("-- test");
 		return "main.tiles"; // tiles.xml의 <definition name="main" extends="base">을 리턴시킨다
 	}
+	
+	/* 타일즈 포함하지 않는 화면 페이지 호출 */
+	@RequestMapping(value = "empty", method = RequestMethod.GET)
+	public String notLayoutPage() {
+		return "empty"; 
+	}
 
 	/* 회원가입1 화면 페이지 호출 */
 	@RequestMapping(value = "signup", method = RequestMethod.GET)
@@ -226,25 +232,29 @@ public class HomeController extends HttpServlet {
 	/* 마이페이지 이름 변경 페이지 호출 */
 	@RequestMapping(value = "mypage_name", method = RequestMethod.GET)
 	public String myPage_Namechange() {
-		return "member/member_nameChange.tiles";
+//		return "member/member_nameChange.tiles";
+		return "member/member_nameChange.jsp";
 	}
 
 	/* 마이페이지 비밀번호 변경 페이지 호출 */
 	@RequestMapping(value = "mypage_phone", method = RequestMethod.GET)
 	public String myPage_Phonechange() {
-		return "member/member_phoneChange.tiles";
+//		return "member/member_phoneChange.tiles";
+		return "member/member_phoneChange.jsp";
 	}
 
 	/* 마이페이지 광고성 정보 수신 동의 페이지 호출 */
 	@RequestMapping(value = "mypage_ad", method = RequestMethod.GET)
 	public String myPage_Advertisement() {
-		return "member/member_advertisementAgree.tiles";
+//		return "member/member_advertisementAgree.tiles";
+		return "member/member_advertisementAgree.jsp";
 	}
 
 	/* 마이페이지 광고성 개인정보 수집 동의 페이지 호출 */
 	@RequestMapping(value = "mypage_info", method = RequestMethod.GET)
 	public String myPage_Information() {
-		return "member/member_informationAgree.tiles";
+//		return "member/member_informationAgree.tiles";
+		return "member/member_informationAgree.jsp";
 	}
 
 	/* 마이페이지 회원 탈퇴 페이지 호출 */
@@ -333,7 +343,8 @@ public class HomeController extends HttpServlet {
 	/* 상품 리뷰 새창 페이지 호출 */
 	@RequestMapping(value = "detail_review", method = RequestMethod.GET)
 	public String product_detail_Popup() {
-		return "category/product_review.tiles";
+//		return "category/product_review.tiles";
+		return "category/product_review.jsp";
 	}
 
 	/* 해시태그 목록 페이지 호출 */
@@ -423,7 +434,8 @@ public class HomeController extends HttpServlet {
 	/* 이메일무단수집 페이지 호출 */
 	@RequestMapping(value = "unauthorized-email-collection", method = RequestMethod.GET)
 	public String unauthorized_email_collection() {
-		return "bottomNavigation/unauthorized_email_collection.tiles";
+//		return "bottomNavigation/unauthorized_email_collection.tiles";
+		return "bottomNavigation/unauthorized_email_collection.jsp";
 	}
 
 	/* 입점 문의 페이지 호출 */

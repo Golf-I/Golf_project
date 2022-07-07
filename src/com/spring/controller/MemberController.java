@@ -290,7 +290,9 @@ public class MemberController {
 		if(result == 1) { // 변경되었을 때
 			out.println("<script>");
 			out.println("alert('변경되었습니다.');");
-			out.println("location.href='../mypage'");
+			out.println("self.close();");
+			out.println("window.opener.location.reload(true);");
+//			out.println("location.href='../mypage'");
 			out.println("</script>");
 			out.flush();
 			return null;
@@ -318,7 +320,8 @@ public class MemberController {
 		if(result == 1) { // 변경되었을 때
 			out.println("<script>");
 			out.println("alert('변경되었습니다.');");
-			out.println("location.href='../mypage'");
+			out.println("self.close();");
+			out.println("window.opener.location.reload(true);");
 			out.println("</script>");
 			out.flush();
 			return null;

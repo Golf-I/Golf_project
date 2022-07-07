@@ -11,7 +11,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mypage</title>
     <link href="${pageContext.request.contextPath}/resources/css/mypage.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
+<script>
+
+// https://sweetalert2.github.io/
+/* 
+	(async () => {
+	    const { value: getName } = await Swal.fire({
+	        title: '비밀번호 확인',
+	        text: '비밀번호를 입력하세요.',
+	        input: 'text'
+	    })
+	
+	    if (getName) {
+//	        Swal.fire(`당신의 이름은 : ${getName}`)
+
+			// 틀렸을 때
+	    	Swal.fire({
+	    		  title:'비밀번호 오류',
+	    		  text: '비밀번호가 틀립니다.',
+	    		  icon: 'error',
+	    		  confirmButtonText: 'ok'
+	    	})
+	    }
+	    
+	})()
+*/	
+
+</script>
 <body>
 
    <section>

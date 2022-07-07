@@ -44,7 +44,8 @@
 					<c:when test="${sessionScope.id != null}">
 						<div class="resercation">
 							<p>
-								<a href="member_reservation">예약확인</a>
+								<a href="mypage_pre">예약확인</a>
+<!-- 								<a href="member_reservation">예약확인</a> -->
 							</p>
 						</div><!--예약확인-->
 					</c:when>

@@ -13,7 +13,8 @@ public class MemberVO {
 	private Date birth; // 생년월일
 	private	String gender; // 성별
 	private	String sns;	// sns 아이디
-	private	String mms; // 문자 수신
+	private	String sms;	// sms 문자
+	private	String mms; // mms 문자
 	private	String mail; // 메일 수신
 	private	String push; // 푸쉬 수신
 	private byte[] icon; // 캐릭터 이미지  BLOB
@@ -21,6 +22,12 @@ public class MemberVO {
 	// getter/setter
 	public String getId() {
 		return id;
+	}
+	public String getSms() {
+		return sms;
+	}
+	public void setSms(String sms) {
+		this.sms = sms;
 	}
 	public void setId(String id) {
 		this.id = id;
@@ -96,12 +103,11 @@ public class MemberVO {
 		this.newPw = newPw;
 	}
 	
-	
 	@Override
 	public String toString() {
 		return "MemberVO [id=" + id + ", pw=" + pw + ", newPw=" + newPw + ", name=" + name + ", phone=" + phone
-				+ ", birth=" + birth + ", gender=" + gender + ", sns=" + sns + ", mms=" + mms + ", mail=" + mail
-				+ ", push=" + push + ", icon=" + Arrays.toString(icon) + "]";
+				+ ", birth=" + birth + ", gender=" + gender + ", sns=" + sns + ", sms=" + sms + ", mms=" + mms
+				+ ", mail=" + mail + ", push=" + push + ", icon=" + Arrays.toString(icon) + "]";
 	}
 	
 }

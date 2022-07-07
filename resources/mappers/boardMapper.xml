@@ -35,6 +35,7 @@
 	<select id="countComment" resultType="int">
 	<![CDATA[
  	SELECT COUNT(*) FROM package_product_comment
+ 	WHERE product_code = #{product_code}
 	]]>
 	</select>
 	<!-- 상품별점/평점 전체 게시글 갯수 출력 -->
@@ -44,6 +45,7 @@
 	<select id="countReview" resultType="int">
 	<![CDATA[
  	SELECT COUNT(*) FROM package_product_review
+ 	WHERE product_code = #{product_code}
 	]]>
 	</select>
 	<!-- 상품리뷰 전체 게시글 갯수 출력 -->
@@ -108,23 +110,10 @@
 	WHERE product_code = #{product_code}
 	]]>
 	</select>
-<!-- 	
-	SELECT *
-	FROM package_product, package_product_review, package_itinerary, package_no_reservation, package_product_comment
-	WHERE product_code = #{product_code}
-	
-	SELECT A.*, B.*, C.*, D.*, E.*
-	FROM package_product A
-	LEFT JOIN package_product_review B 
-	ON A.product_code = B.product_code
-	LEFT JOIN package_itinerary C
-	ON A.product_code = C.product_code
-	LEFT JOIN package_no_reservation D
-	ON A.product_code = D.product_code
-	LEFT JOIN package_product_comment E
-	ON A.product_code = E.product_code
-	WHERE A.product_code = #{product_code} 
--->
+	<!-- 상품 게시물 조회 -->
+
+
+	<!-- 일정표 게시물 조회 -->
 	<select id="oneItinerary" resultType="com.spring.domain.ItineraryVO">
 	<![CDATA[
 	SELECT *
@@ -132,23 +121,36 @@
 	WHERE product_code = #{product_code}
 	]]>
 	</select>
-	
+	<!-- 일정표 게시물 조회 -->
+
+
+	<!-- 상품 리뷰 조회 -->
 	<select id="oneReview" resultType="com.spring.domain.ReviewVO">
 	<![CDATA[
 	SELECT *
 	FROM package_product_review
 	WHERE product_code = #{product_code}
+	ORDER BY review_regdate DESC
+	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
+	<!-- 상품 리뷰 조회 -->
 
+
+	<!-- 상품볋점/평점 조회 -->
 	<select id="oneComment" resultType="com.spring.domain.CommentVO">
 	<![CDATA[
 	SELECT *
 	FROM package_product_comment
 	WHERE product_code = #{product_code}
+	ORDER BY comment_regdate DESC
+	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
+	<!-- 상품볋점/평점 조회 -->
 
+
+	<!-- 예약불가 기간 조회 -->
 	<select id="oneNoReser" resultType="com.spring.domain.NoReservationVO">
 	<![CDATA[
 	SELECT *
@@ -156,8 +158,21 @@
 	WHERE product_code = #{product_code}
 	]]>
 	</select>
+	<!-- 예약불가 기간 조회 -->
+
 	
-	<!-- 상품 게시물 조회 -->
+	<!-- 상품별점/평점 등록 -->
+	<insert id="addComment">
+	<![CDATA[
+	INSERT INTO package_product_comment(product_code, comment_user, comment_user_profile, 
+									comment, comment_regdate, score_fairways, score_playSpeed,
+									score_caddy, score_facilities, score_guide, average_score)
+	VALUES (#{product_code}, #{comment_user}, #{comment_user_profile}, #{comment}, 
+		NOW(), #{score_fairways}, #{score_playSpeed}, #{score_caddy}, #{score_facilities}, 
+		#{score_guide}, #{average_score})
+	]]>
+	</insert>
+	<!-- 상품별점/평점 등록 -->
 
 
 	

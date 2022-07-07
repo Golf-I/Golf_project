@@ -17,8 +17,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartRequest;
 import org.springframework.web.util.WebUtils;
 
+import com.spring.domain.CommentVO;
 import com.spring.domain.InquireVO;
 import com.spring.domain.PromotionVO;
+import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
 
 
@@ -30,6 +32,9 @@ public class CategoryController {
 	
 	@Inject
 	private CategoryService iservice;
+	
+	@Inject
+	private BoardService bservice;
 
 	
 	/* 회원권&아카데미 상담 신청  */
@@ -63,7 +68,6 @@ public class CategoryController {
 //		logger.info("-- file.getInputStream : "+ file.getInputStream());
 //		logger.info("-- 버튼 작동 / vo : "+ vo); 
 		
-//		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/promotion/");
 		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/promotion/");
 		logger.info("-- 버튼 작동 / storagePath : "+ storagePath);
 
@@ -118,8 +122,8 @@ public class CategoryController {
 	@RequestMapping(value = "/store", method = RequestMethod.POST)
 	public String store(HttpServletRequest request, HttpServletResponse res,
 						PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
-		logger.info("-- 버튼 작동 / vo : "+ vo);
-		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
+//		logger.info("-- 버튼 작동 / vo : "+ vo);
+//		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
 		
 		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/entering_the_store/");
 		
@@ -139,6 +143,16 @@ public class CategoryController {
 		
 		return null;
 	} // store
+	
+	
+	/* 상품별점/평점 등록 */
+	@RequestMapping(value = "comment", method = RequestMethod.POST)
+	public String comment(CommentVO vo) throws Exception{
+		
+		bservice.addComment(vo);
+		
+		return "redirect:../product_detail?product_code="+vo.getProduct_code();
+	} // comment
 	
 	
 }

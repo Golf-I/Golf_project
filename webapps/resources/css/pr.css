@@ -112,7 +112,8 @@ margin-top: 5px; margin-right: 5px;}
 float: left;
 font-weight: bold;}
 
-.pr>p:nth-child(3)
+/* .pr>p:nth-child(3) */
+.pr>form>p:nth-child(2)
 {width: 1200px; height: 20px; line-height: 20px;
 margin-bottom: 10px;
 font-size: 14px; color: red;
@@ -334,12 +335,12 @@ background-color: #efefef;
 border: 1px solid #ccc; box-sizing: border-box; color: #333;
 float: left;}
 
-.pr table tr:nth-child(9) td:nth-child(1) p:nth-child(3)
+.pr table tr:nth-child(9) td:nth-child(1) input /*p:nth-child(3) */
 {font-size: 14px; line-height: 40px;
-margin-right: 20px;
+/* margin-right: 20px; */
 float: left;}
 
-.pr table tr:nth-child(9) td:nth-child(1) p:nth-child(4)
+.pr table tr:nth-child(9) td:nth-child(1) p:nth-child(3)
 {font-size: 14px; line-height: 40px;
 color: red;
 float: left;}

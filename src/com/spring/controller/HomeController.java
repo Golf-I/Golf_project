@@ -169,11 +169,11 @@ public class HomeController extends HttpServlet {
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
-		logger.info("cri : " + cri.getPage() + " " + cri.getPageStart() + " " + cri.getPerPageNum());
+//		logger.info("cri : " + cri.getPage() + " " + cri.getPageStart() + " " + cri.getPerPageNum());
 		
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 		bbsList = bservice.selectNotice(cri);
-		logger.info("pageMaker : " + pageMaker);
+//		logger.info("pageMaker : " + pageMaker);
 
 		model.addAttribute("bbsList", bbsList);
 		model.addAttribute("pageMaker", pageMaker);
@@ -270,6 +270,7 @@ public class HomeController extends HttpServlet {
 //		model.addAttribute("bbsList", bbsList);
 		model.addAttribute("bbsList", bservice.selectPackages(cri));
 		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("total", total);
 		
 		return "category/category_list.tiles";
 	}
@@ -280,9 +281,9 @@ public class HomeController extends HttpServlet {
 								Criteria cri, Model model) throws Exception {
 //		logger.info("@@@@@@@@@@@@@ vo : " + vo);
 		
-		int commenttotal = bservice.countComment();
-		int reviewtotal = bservice.countReview();
-
+		int commenttotal = bservice.countComment(cvo);
+		int reviewtotal = bservice.countReview(rvo);
+		logger.info("commenttotal : " + commenttotal + " / reviewtotal : " + reviewtotal + " / cri : " + cri.getPage());
 		PageMaker pageMaker_com = new PageMaker();
 		pageMaker_com.setCri(cri);
 		pageMaker_com.setTotalCount(commenttotal);
@@ -302,8 +303,8 @@ public class HomeController extends HttpServlet {
 		
 		model.addAttribute("bbsList", bservice.oneProduct(pvo));
 		model.addAttribute("itiList", bservice.oneItinerary(ivo));
-		model.addAttribute("revList", bservice.oneReview(rvo));
-		model.addAttribute("commList", bservice.oneComment(cvo));
+		model.addAttribute("revList", bservice.oneReview(rvo, cri));
+		model.addAttribute("commList", bservice.oneComment(cvo, cri));
 		model.addAttribute("noResList", bservice.oneNoReser(nrvo));
 		model.addAttribute("pageMaker_com", pageMaker_com);
 		model.addAttribute("pageMaker_rev", pageMaker_rev);

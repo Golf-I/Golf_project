@@ -93,12 +93,12 @@
                         	</label>
                         </div>
 
-                    </div>
+                    </div><!-- box02 -->
 
                     
-                </div>
+                </div><!-- right_inf -->
                 
-            </div>
+            </div><!-- information -->
 
             <p>* 필수 입력 항목입니다.</p>
 

@@ -8,7 +8,7 @@ public class CommentVO {
 	/* 상품별점/평점 테이블 */
 	private int product_code;            	// 상품코드
 	private int comment_no; 				// 상품별점/평점 등록번호
-	private String comment_username;		// 상품별점/평점 작성 회원
+	private String comment_user;		// 상품별점/평점 작성 회원
 	private	byte[] comment_user_profile;	// 상품별점/평점 작성 프로필 blob
 	private	String comment;					// 상품별점/평점 코멘트
 	private	Date comment_regdate;			// 코멘트 등록일자
@@ -32,11 +32,11 @@ public class CommentVO {
 	public void setComment_no(int comment_no) {
 		this.comment_no = comment_no;
 	}
-	public String getComment_username() {
-		return comment_username;
+	public String getComment_user() {
+		return comment_user;
 	}
-	public void setComment_username(String comment_username) {
-		this.comment_username = comment_username;
+	public void setComment_user(String comment_user) {
+		this.comment_user = comment_user;
 	}
 	public byte[] getComment_user_profile() {
 		return comment_user_profile;
@@ -96,13 +96,13 @@ public class CommentVO {
 	
 	@Override
 	public String toString() {
-		return "CommentVO [product_code=" + product_code + ", comment_no=" + comment_no + ", comment_username="
-				+ comment_username + ", comment_user_profile=" + Arrays.toString(comment_user_profile) + ", comment="
+		return "CommentVO [product_code=" + product_code + ", comment_no=" + comment_no + ", comment_user="
+				+ comment_user + ", comment_user_profile=" + Arrays.toString(comment_user_profile) + ", comment="
 				+ comment + ", comment_regdate=" + comment_regdate + ", score_fairways=" + score_fairways
 				+ ", score_playSpeed=" + score_playSpeed + ", score_caddy=" + score_caddy + ", score_facilities="
 				+ score_facilities + ", score_guide=" + score_guide + ", average_score=" + average_score
 				+ ", getProduct_code()=" + getProduct_code() + ", getComment_no()=" + getComment_no()
-				+ ", getComment_username()=" + getComment_username() + ", getComment_user_profile()="
+				+ ", getComment_user()=" + getComment_user() + ", getComment_user_profile()="
 				+ Arrays.toString(getComment_user_profile()) + ", getComment()=" + getComment()
 				+ ", getComment_regdate()=" + getComment_regdate() + ", getScore_fairways()=" + getScore_fairways()
 				+ ", getScore_playSpeed()=" + getScore_playSpeed() + ", getScore_caddy()=" + getScore_caddy()

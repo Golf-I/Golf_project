@@ -5,12 +5,12 @@ img {display: block;}
 
 @font-face {
     font-family: yangpyeong;
-    src: url(../font/yangpyeong_B.ttf);
+    src: url(../../font/yangpyeong_B.ttf);
 }
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
 body 
@@ -1813,6 +1813,12 @@ border-radius: 10px;}
 
 /*상품 리뷰 등록*/
 
+#green01, #green02, #green03, #green04, #green05 {display: none;}
+#play01, #play02, #play03, #play04, #play05 {display: none;}
+#caddy01, #caddy02, #caddy03, #caddy04, #caddy05 {display: none;}
+#amenities01, #amenities02, #amenities03, #amenities04, #amenities05 {display: none;}
+#guide01, #guide02, #guide03, #guide04, #guide05 {display: none;}
+
 .page02 .type01
 {width: 1340px;
 margin-bottom: 80px;}
@@ -1900,7 +1906,7 @@ overflow: hidden;
 margin: 0 auto;
 margin-bottom: 10px;}
 
-.typing_st_01 div
+.typing_st_01 label
 {width: 20px; height: 20px;
 float: left;}
 
@@ -1929,7 +1935,7 @@ overflow: hidden;
 margin: 0 auto;
 margin-bottom: 10px;}
 
-.typing_st_02 div
+.typing_st_02 label
 {width: 20px; height: 20px;
 float: left;}
 
@@ -1958,7 +1964,7 @@ overflow: hidden;
 margin: 0 auto;
 margin-bottom: 10px;}
 
-.typing_st_03 div
+.typing_st_03 label
 {width: 20px; height: 20px;
 float: left;}
 
@@ -1987,7 +1993,7 @@ overflow: hidden;
 margin: 0 auto;
 margin-bottom: 10px;}
 
-.typing_st_04 div
+.typing_st_04 label
 {width: 20px; height: 20px;
 float: left;}
 
@@ -2015,7 +2021,7 @@ overflow: hidden;
 margin: 0 auto;
 margin-bottom: 10px;}
 
-.typing_st_05 div
+.typing_st_05 label
 {width: 20px; height: 20px;
 float: left;}
 

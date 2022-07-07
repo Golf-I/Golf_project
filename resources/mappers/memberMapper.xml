@@ -120,7 +120,7 @@
 	UPDATE member
 	SET name = #{name}, gender = #{gender},
 		phone = #{phone}, pw = #{newPw}, icon = #{icon},
-		mms = #{mms}, mail = #{mail}, push = #{push}
+		sms = #{sms}, mms = #{mms}, mail = #{mail}, push = #{push}
 	WHERE id = #{id}
 	AND pw = #{pw}
 	]]>

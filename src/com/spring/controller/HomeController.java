@@ -17,8 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.domain.BoardVO;
 import com.spring.domain.CommentVO;
@@ -330,7 +328,11 @@ public class HomeController extends HttpServlet {
 
 	/* 예약하기 페이지 호출 */
 	@RequestMapping(value = "reservation", method = RequestMethod.GET)
-	public String reservation() {
+	public String reservation(ProductVO pvo, Model model) throws Exception {
+		
+		List<ProductVO> bbsList = new ArrayList<ProductVO>();
+		model.addAttribute("", bbsList);
+		
 		return "reservation/reservation.tiles";
 	}
 

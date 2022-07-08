@@ -27,77 +27,77 @@
 			</div>
 
 			<div class="menu01">
-				<a href="#">
+				<a href="category?region=japan&city=도쿄/간도">
 					<p>도쿄/간도</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu02">
-				<a href="#">
+				<a href="category?region=japan&city=오사카/간사이">
 					<p>오사카/간사이</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu03">
-				<a href="#">
+				<a href="category?region=japan&city=오키나와/나하">
 					<p>오키나와/나하</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu04">
-				<a href="#">
+				<a href="category?region=japan&city=후쿠오카/야마구치">
 					<p>후쿠오카/야마구치</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu05">
-				<a href="#">
+				<a href="category?region=japan&city=가고시마/미야자키">
 					<p>가고시마/미야자키</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu06">
-				<a href="#">
+				<a href="category?region=japan&city=구마모토/오이타">
 					<p>구마모토/오이타</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu07">
-				<a href="#">
+				<a href="category?region=japan&city=나카사키/사가">
 					<p>나카사키/사가</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu08">
-				<a href="#">
+				<a href="category?region=japan&city=아오모리/니카타">
 					<p>아오모리/니카타</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu09">
-				<a href="#">
+				<a href="category?region=japan&city=나고야/도카이">
 					<p>나고야/도카이</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu10">
-				<a href="#">
+				<a href="category?region=japan&city=오카야마/츄고쿠">
 					<p>오카야마/츄고쿠</p>
 					<p>></p>
 				</a>
 			</div>
 
 			<div class="menu11">
-				<a href="#">
+				<a href="category?region=japan&city=다카마츠/마츠야마">
 					<p>다카마츠/마츠야마</p>
 					<p>></p>
 				</a>
@@ -182,7 +182,7 @@
 					<c:forEach items="${bbsList}" var="bbsList">
 					
 					<div class="product01">
-						<a href="product_detail?product_code=${bbsList.product_code}">
+						<a href="product_detail?region=${param.region}&city=${param.city}&product_code=${bbsList.product_code}&productName=${bbsList.productName}">
 							<div>
 								<img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
 							</div>
@@ -244,9 +244,9 @@
 
 				<%-- 페이징  --%>    
 				<div class="number_btn">
-
+<%-- 
 					<a href="category?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
-					
+ --%>					
 					<c:if test="${pageMaker.prev}">
 					<a href="category?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
 					</c:if>
@@ -258,9 +258,9 @@
 					<c:if test="${pageMaker.next && pageMaker.endPage>0}">
 					<a href="category?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
 					</c:if>
-					
+<%-- 					
 					<a href="category?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
-
+ --%>
 				</div>
 				<%-- 페이징  --%>
 				

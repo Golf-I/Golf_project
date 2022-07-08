@@ -349,7 +349,7 @@
                                 <div class="txt_week01">
 <!--                                     <p>1,090,000</p> -->
                                     <p>${bbsList.weekday_fee}</p>
-                                    <a href="reservation?product_code=${param.product_code}">예약하기</a>
+                                    <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekday_fee=${bbsList.weekday_fee}">예약하기</a>
                                 </div>
     
                             </div>
@@ -358,14 +358,14 @@
     
                         <div class="weekend">
     
-                            <p>주중요금</p>
+                            <p>주말요금</p>
     
                             <div class="weekend01">
     
                                 <div class="txt_weekend01">
 <!--                                     <p>1,090,000</p> -->
                                     <p>${bbsList.weekend_fee}</p>
-                                    <a href="reservation">예약하기</a>
+                                    <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekend_fee=${bbsList.weekend_fee}">예약하기</a>
                                 </div>
     
                             </div>
@@ -919,7 +919,7 @@
 
                 <div class="line_type"></div>
 
-				<form method="post" action="category/comment" onsubmit=""> 
+				<form method="post" action="category/comment"> <!--  onsubmit="" --> 
 
 				<input type="hidden" name="product_code" value="${param.product_code}">
 				<input type="hidden" name="comment_user" value="${sessionScope.id}">

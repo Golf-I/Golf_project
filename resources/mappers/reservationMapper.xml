@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mapper.ReservationMapper">
+
+	<!-- 상품 예약 -->
+	<insert id="memberReservation">
+	<![CDATA[
+	INSERT INTO reservation (sortation, id, productName, region, 
+							city,  personnel, 
+							booker, booker_phone, booker_email, booker_gender, 
+							product_price, memo, 
+							option_singleRoom, option_addVehicle, option_businessUpgrade, 
+							total_price, regDate)
+	VALUES (#{sortation}, #{id}, #{productName}, #{region}, 
+			#{city},  #{personnel},
+			#{booker}, #{booker_phone}, #{booker_email}, #{booker_gender},
+			#{product_price}, #{memo},
+			#{option_singleRoom}, #{option_addVehicle}, #{option_businessUpgrade},
+			#{total_price}, NOW())
+	]]>
+	</insert>
+<!-- 	
+	departure_date, arrival_date,
+	#{departure_date}, #{arrival_date},
+-->
+	<!-- 상품 예약 -->
+
+
+
+</mapper>

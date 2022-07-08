@@ -177,25 +177,25 @@
 			
 				<ul>
 
-                    <a href="category">
+                    <a href="category?region=japan&city=도쿄/간도">
                         <li>
                             <p>일본골프</p>
                         </li>
                     </a>
 
-                    <a href="category">
+                    <a href="category?region=thailand&city=방콕/파타야">
                         <li>
                             <p>태국골프</p>
                         </li>
                     </a>
 
-                    <a href="category">
+                    <a href="category?region=bietnam&ciry=나트랑">
                         <li>
                             <p>베트남골프</p>
                         </li>
                     </a>
 
-                    <a href="category">
+                    <a href="category?region=taiwan&city=가오슝">
                         <li>
                             <p>대만골프</p>
                         </li>
@@ -243,21 +243,21 @@
 
             <ul>
                 <li>
-                    <a href="category">일본골프</a>
+                    <a href="category?region=japan">일본골프</a>
                     <ul>
                         <div class="sub_menu01">
-                        <li><a href="category">도쿄/간도</a></li>
-                        <li><a href="category">오사카/간사이</a></li>
-                        <li><a href="category">홋카이도/삿포로</a></li>
-                        <li><a href="category">오키나와/나하</a></li>
-                        <li><a href="category">후쿠오카/야마구치</a></li>
-                        <li><a href="category">가고시마/미야자키</a></li>
-                        <li><a href="category">구마모토/오이타</a></li>
-                        <li><a href="category">나카사키/사가</a></li>
-                        <li><a href="category">아오모리/니카타</a></li>
-                        <li><a href="category">나고야/도카이</a></li>
-                        <li><a href="category">오카야마/츄고쿠</a></li>
-                        <li><a href="category">다카마츠/마츠야마</a></li>
+                        <li><a href="category?region=japan&city=도쿄/간도">도쿄/간도</a></li>
+                        <li><a href="category?region=japan&city=오사카/간사이">오사카/간사이</a></li>
+                        <li><a href="category?region=japan&city=홋카이도/삿포로">홋카이도/삿포로</a></li>
+                        <li><a href="category?region=japan&city=오키나와/나하">오키나와/나하</a></li>
+                        <li><a href="category?region=japan&city=후쿠오카/야마구치">후쿠오카/야마구치</a></li>
+                        <li><a href="category?region=japan&city=가고시마/미야자키">가고시마/미야자키</a></li>
+                        <li><a href="category?region=japan&city=구마모토/오이타">구마모토/오이타</a></li>
+                        <li><a href="category?region=japan&city=나카사키/사가">나카사키/사가</a></li>
+                        <li><a href="category?region=japan&city=아오모리/니카타">아오모리/니카타</a></li>
+                        <li><a href="category?region=japan&city=나고야/도카이">나고야/도카이</a></li>
+                        <li><a href="category?region=japan&city=오카야마/츄고크">오카야마/츄고쿠</a></li>
+                        <li><a href="category?region=japan&city=다카마츠/마츠야마">다카마츠/마츠야마</a></li>
                         </div>
                     </ul><!--일본-->
                 </li><!--일본-->
@@ -268,14 +268,14 @@
                 </div>
 
                 <li>
-                    <a href="#">태국골프</a>
+                    <a href="category?region=thailand">태국골프</a>
                     <ul>
                         <div class="sub_menu02">
-                        <li><a href="category">방콕/파타야</a></li>
-                        <li><a href="category">치앙마이/치앙라이</a></li>
-                        <li><a href="category">푸켓</a></li>
-                        <li><a href="category">칸차나부리/아유타야</a></li>
-                        <li><a href="category">후아힌</a></li>
+                        <li><a href="category?region=thailand&city=방콕/파타야">방콕/파타야</a></li>
+                        <li><a href="category?region=thailand&city=치앙마이/치앙라이">치앙마이/치앙라이</a></li>
+                        <li><a href="category?region=thailand&city=푸켓">푸켓</a></li>
+                        <li><a href="category?region=thailand&city=칸차나부리/아유타야">칸차나부리/아유타야</a></li>
+                        <li><a href="category?region=thailand&city=후아힌">후아힌</a></li>
                         </div>
                     </ul><!--태국-->
                 </li><!--태국-->
@@ -286,15 +286,15 @@
                 </div>
 
                 <li>
-                    <a href="#">베트남골프</a>
+                    <a href="category?region=bietnam">베트남골프</a>
                     <ul>
                         <div class="sub_menu03">
-                        <li><a href="category">나트랑</a></li>
-                        <li><a href="category">푸꾸옥</a></li>
-                        <li><a href="category">다낭</a></li>
-                        <li><a href="category">하노이</a></li>
-                        <li><a href="category">호치민</a></li>
-                        <li><a href="category">달랏</a></li>
+                        <li><a href="category?region=bietnam&ciry=나트랑">나트랑</a></li>
+                        <li><a href="category?region=bietnam&ciry=푸꾸옥">푸꾸옥</a></li>
+                        <li><a href="category?region=bietnam&ciry=다낭">다낭</a></li>
+                        <li><a href="category?region=bietnam&ciry=하노이">하노이</a></li>
+                        <li><a href="category?region=bietnam&ciry=호치민">호치민</a></li>
+                        <li><a href="category?region=bietnam&ciry=달랏">달랏</a></li>
                         </div>
                     </ul><!--베트남-->
                 </li><!--베트남-->
@@ -305,15 +305,15 @@
                 </div>
 
                 <li>
-                    <a href="#">대만골프</a>
+                    <a href="category?region=taiwan">대만골프</a>
                     <ul>
                         <div class="sub_menu04">
-                        <li><a href="category">가오슝</a></li>
-                        <li><a href="category">타이중</a></li>
-                        <li><a href="category">타이페이</a></li>
-                        <li><a href="category">신죽</a></li>
-                        <li><a href="category">타오위안</a></li>
-                        <li><a href="category">이란/화련</a></li>
+                        <li><a href="category?region=taiwan&city=가오슝">가오슝</a></li>
+                        <li><a href="category?region=taiwan&city=타이중">타이중</a></li>
+                        <li><a href="category?region=taiwan&city=타이페이">타이페이</a></li>
+                        <li><a href="category?region=taiwan&city=신축">신죽</a></li>
+                        <li><a href="category?region=taiwan&city=타오위안">타오위안</a></li>
+                        <li><a href="category?region=taiwan&city=이란/화련">이란/화련</a></li>
                         </div>
                     </ul><!--대만-->
                 </li><!--대만-->

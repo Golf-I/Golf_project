@@ -21,7 +21,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.domain.MemberVO;
+import com.spring.domain.ProductVO;
+import com.spring.domain.ReservationVO;
 import com.spring.service.MemberService;
+import com.spring.service.ReservationService;
 
 
 @Controller
@@ -36,8 +39,10 @@ public class MemberController {
 	@Inject 
 	private MemberService mservice;
 	
+	@Inject 
+	private ReservationService rservice;
 	
-	/* 회원가입 처리  */
+	/* 회원가입  */
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public String signUp(MemberVO vo) throws Exception {
 //	 	logger.info("-- 회원가입 버튼 작동 / vo : "+ vo);
@@ -73,7 +78,7 @@ public class MemberController {
 	
 	
 	
-	/* 일반회원 로그인 동작  */
+	/* 일반회원 로그인  */
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
 	public String signIn(MemberVO vo, HttpSession session) throws Exception{
 //		logger.info("-- 로그인 버튼 작동 ");
@@ -95,7 +100,7 @@ public class MemberController {
 	 
 	
 
-	/* 소셜회원 로그인 동작  */
+	/* 소셜회원 로그인  */
 	@RequestMapping(value = "/snsSignIn", method = RequestMethod.POST)
 	public String snsSignIn(MemberVO vo, HttpSession session) throws Exception{
 		//logger.info("-- 로그인 버튼 작동 ");
@@ -242,7 +247,7 @@ public class MemberController {
 	
 	
 	
-	/* 회원정보 수정하기  */
+	/* 회원정보 수정  */
 	@RequestMapping(value = "/memInfoUpdate", method = RequestMethod.POST)
 	public String memberInfoUpdate(MemberVO vo, HttpServletResponse res) throws Exception{
 		
@@ -270,7 +275,7 @@ public class MemberController {
 	
 	
 	
-	/* 회원정보 이름 수정하기  */
+	/* 회원정보 이름 수정  */
 	@RequestMapping(value = "/memberNameUpdate", method = RequestMethod.POST)
 	public String memberNameUpdate(MemberVO vo, @RequestParam("birth1") String birth1,
 									@RequestParam("birth2") String birth2, 
@@ -308,7 +313,7 @@ public class MemberController {
 	
 	
 	
-	/* 회원정보 전화번호 수정하기  */
+	/* 회원정보 전화번호 수정  */
 	@RequestMapping(value = "/memberPhoneUpdate", method = RequestMethod.POST)
 	public String memberPhoneUpdate(MemberVO vo, HttpServletResponse res) throws Exception{
 		
@@ -337,7 +342,7 @@ public class MemberController {
 	} // memberPhoneUpdate
 	
 	
-	/* 회원 탈퇴하기  */
+	/* 회원 탈퇴  */
 	@RequestMapping(value = "/memberSecede", method = RequestMethod.POST)
 	public String memberSecede(MemberVO vo, HttpServletResponse res, HttpSession session) throws Exception{
 		
@@ -364,6 +369,16 @@ public class MemberController {
 		}
 	} // memberSecede
 	
+	
+	/* 상품 예약 */
+	@RequestMapping(value = "/reservation", method = RequestMethod.POST)
+	public String memberReservation(ReservationVO rvo) throws Exception{
+		
+		rservice.memberReservation(rvo);
+		logger.info("pvo : " + rvo);
+		
+		return "redirect:../reservation_complete";
+	} // memberReservation
 	
 	
 	

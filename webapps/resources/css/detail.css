@@ -5,12 +5,12 @@ img {display: block;}
 
 @font-face {
     font-family: yangpyeong;
-    src: url(../../font/yangpyeong_B.ttf);
+    src: url(../font/yangpyeong_B.ttf);
 }
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
 body 

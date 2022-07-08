@@ -39,7 +39,15 @@
 
             </div> <!--rout-->
 
-			<form action="" method="post">
+			<form action="member/reservation" method="post">
+
+			<input type="hidden" name="sortation" value="패키지">
+			<input type="hidden" name="region" value="${param.region}">
+			<input type="hidden" name="city" value="${param.city}">
+			<input type="hidden" name="product_code" value="${param.product_code}">
+			<input type="hidden" name="weekday_fee" value="${param.weekday_fee}">
+			<input type="hidden" name="weekend_fee" value="${param.weekend_fee}">
+			<input type="hidden" name="id" value="${sessionScope.id}">
 
             <p>예약하기</p>
 
@@ -715,7 +723,7 @@
 
                         <td>
                             <!-- <p>도쿄 이타코(水鄕) 골프 2박3일!</p> -->
-                		    <input type="text" name="" value="도쿄 이타코(水鄕) 골프 2박3일!"/>
+                		    <input type="text" name="productName" value="${param.productName}" readonly/>
                         </td>
 
                         <td>
@@ -724,7 +732,7 @@
 
                         <td>
                             <!-- <p>1,090,000 원 (1인 기준)</p> -->
-                            <input type="text" name=""/>원 (1인 기준)
+                            <input type="text" name="lowestPrice" value="${param.weekday_fee}" readonly/>원 (1인 기준)
                         </td>
                         
                         <td>
@@ -747,13 +755,12 @@
                         </td>
 
                         <td>
-                            <select id="num01">
-
-                                <option value="2명">2명</option>
-                                <option value="3명">3명</option>
-                                <option value="4명">4명</option>
-                                <option value="5명">5명</option>
-                                <option value="6명">6명</option>
+                            <select id="num01" name="personnel">
+                                <option value="2">2명</option>
+                                <option value="3">3명</option>
+                                <option value="4">4명</option>
+                                <option value="5">5명</option>
+                                <option value="6">6명</option>
 
                             </select>
                         </td>
@@ -762,7 +769,7 @@
                         <td rowspan="6">
                             <!-- <p>2,180,000원</p>
                             <p>(2인요금)</p> -->
-                            <input type="text" name="" /> 원 (2인요금)
+                            <input type="text"  /> 원 (2인요금) <!-- name="" -->
                         </td>
 
                     </tr>
@@ -789,7 +796,7 @@
 
                         <td>
                             <!-- <p>90,000원</p> -->
-                            <input type="text" name=""/>원
+                            <input type="text" name="option_singleRoom" value="20000" readonly/>원
                         </td>
 
                     </tr>
@@ -811,7 +818,7 @@
 
                         <td>
                             <!-- <p>150,000원</p> -->
-                            <input type="text" name=""/>원
+                            <input type="text" name="option_addVehicle" value="20000" readonly/>원
                         </td>
 
                     </tr>
@@ -833,7 +840,7 @@
 
                         <td>
                             <!-- <p>560,000원</p> -->
-                            <input type="text" name=""/>원
+                            <input type="text" name="option_businessUpgrade" value="20000" readonly/>원
                         </td>
 
                     </tr>
@@ -873,7 +880,7 @@
 
                             <td>
                                 <!-- <p>홍길동</p> -->
-                                <input type="text" name=""/>
+                                <input type="text" name="booker" required/>
                             </td>
 
 
@@ -882,9 +889,9 @@
                             </td>
 
                             <td>
-                                <select id="gender02">
+                                <select id="gender02" name="booker_gender">
 
-                                    <option selected>선택</option>
+                                    <option>선택</option>
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
 
@@ -898,7 +905,7 @@
 
                             <td>
                                 <!-- <p>an20o0@naver.com</p> -->
-                                <input type="email" name=""/>
+                                <input type="email" name="booker_email" required/>
                             </td>
 
 
@@ -909,7 +916,7 @@
 
                             <td>
                                 <!-- <p>010-1111-1111</p> -->
-                                <input type="text" name=""/>
+                                <input type="text" name="booker_phone" required/>
                             </td>
 
                         </tr>
@@ -934,7 +941,7 @@
 
                             <td>
                                 <!-- <p>홍길동</p> -->
-                                <input type="text" name=""/>
+                                <input type="text"  required/> <!-- name="traveler" -->
                             </td>
 
 
@@ -943,9 +950,9 @@
                             </td>
 
                             <td>
-                                <select id="gender01">
+                                <select id="gender01" > <!-- name="travler_gender" -->
 
-                                    <option selected>선택</option>
+                                    <option >선택</option>
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
 
@@ -958,8 +965,11 @@
                             </td>
 
                             <td>
-                                <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01">
-                                <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01">
+                                <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
+                                 required> <!-- name="traveler_firstname" -->
+                                <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
+                                 required> <!-- name="traveler_lastname" -->
+                                
                             </td>
 
 
@@ -970,7 +980,7 @@
 
                             <td>
                                 <!-- <p>010-1111-1111</p> -->
-                                <input type="text" name=""/>
+                                <input type="text" required/> <!-- name="traveler_phone" -->
                             </td>
 
                         </tr>
@@ -995,7 +1005,7 @@
 
                         <td>
                             <!-- <p>홍길동</p> -->
-                            <input type="text" name=""/>
+                            <input type="text"  required/> <!-- name="" -->
                         </td>
 
 
@@ -1006,7 +1016,7 @@
                         <td>
                             <select id="gender03">
 
-                                <option selected>선택</option>
+                                <option>선택</option>
                                 <option value="남성">남성</option>
                                 <option value="여성">여성</option>
 
@@ -1019,8 +1029,8 @@
                         </td>
 
                         <td>
-                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02">
-                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02">
+                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
                         </td>
 
 
@@ -1031,7 +1041,7 @@
 
                         <td>
                             <!-- <p>010-1111-1111</p> -->
-                            <input type="text" name=""/>
+                            <input type="text"  required/> <!-- name="" -->
                         </td>
 
                     </tr>
@@ -1101,13 +1111,13 @@
 
         <div class="total">
             <p>총 결제 금액</p>
-            <input type="text" name=""/> 원<span>(2인 요금)</span>
+            <input type="text" name="totalPrice" value="1" readonly /> 원<span>(2인 요금)</span>
             <!-- <p>2,180,000원 <span>(2인 요금)</span></p> -->
             
         </div>
 
         <div class="btn">
-            <input type="submit" value="예약" id="btn01" onclick="javascript:location.href='reservation_complete';">
+            <input type="submit" value="예약" id="btn01">
             <input type="reset" value="취소" id="btn02">
         </div>
 

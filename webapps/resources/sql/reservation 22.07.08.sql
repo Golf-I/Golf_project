@@ -70,7 +70,6 @@ CREATE TABLE reservation_hotel
 	day_park int,
 	day_il int,
 	roomtype varchar(50),
-	tee_off_time int,
 	personnel int,
 	remarks varchar(255),
 	PRIMARY KEY (no)
@@ -87,7 +86,7 @@ CREATE TABLE reservation_rentacar
 	checkin date,
 	checkout date,
 	cartype varchar(50),
-	tee_off_time int,
+	rentaltime int,
 	remarks varchar(255),
 	PRIMARY KEY (no)
 );

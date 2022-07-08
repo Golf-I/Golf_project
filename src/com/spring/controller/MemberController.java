@@ -380,6 +380,4 @@ public class MemberController {
 		return "redirect:../reservation_complete";
 	} // memberReservation
 	
-	
-	
 }

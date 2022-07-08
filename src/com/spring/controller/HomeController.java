@@ -222,6 +222,12 @@ public class HomeController extends HttpServlet {
 	public String member_reservations() {
 		return "member/member_reservationList.tiles";
 	}
+	
+	/* 마이페이지 예약리스트-확정서 페이지 호출 */
+	@RequestMapping(value = "member_confirmation", method = RequestMethod.GET)
+	public String member_reservations_confirmation() {
+		return "member/member_confirmationLetter.jsp";
+	}
 
 	/* 마이페이지 이전 비밀번호 확인 페이지 호출 */
 	@RequestMapping(value = "mypage_pre", method = RequestMethod.GET)

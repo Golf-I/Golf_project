@@ -206,7 +206,7 @@
                                             <p>결제하기</p>
                                         </a>
             
-                                        <a href="#">
+                                        <a href="javascript:open('member_confirmation', '확정서', 'width=1200, height=1000');">
                                             <p>확정서</p>
                                         </a>
             

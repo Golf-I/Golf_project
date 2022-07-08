@@ -177,11 +177,11 @@
                         <td>
                             <div class="gender">
                                 <label for="male">
-                                    <p>남자</p>
+                                    <p>남성</p>
                                 </label>
 
                                 <label for="female">
-                                    <p>여자</p>
+                                    <p>여성</p>
                                 </label>
                             </div>
                         </td>
@@ -251,7 +251,7 @@
                                     (
                                     	
                                     <c:choose>
-                                    	<c:when test="${mvo.mms == 'on'}">
+                                    	<c:when test="${mvo.sms == 'on'}">
 		                                    <label for="sms">
 			                                    <input type="checkbox" id="sms" name="sms" checked> SMS, 
 		                                    </label>

@@ -424,11 +424,23 @@ public class HomeController extends HttpServlet {
 	public String term_of_service() {
 		return "bottomNavigation/terms_of_service.tiles";
 	}
+	
+	/* 회원가입 이용약관 페이지 호출 */
+	@RequestMapping(value = "member_term_of_service", method = RequestMethod.GET)
+	public String member_term_of_service() {
+		return "bottomNavigation/terms_of_service.jsp";
+	}
 
 	/* 개인정보처리방침 페이지 호출 */
 	@RequestMapping(value = "privacy_policy", method = RequestMethod.GET)
 	public String privacy_policy() {
 		return "bottomNavigation/privacy_policy.tiles";
+	}
+	
+	/* 개인정보처리방침 페이지 호출 */
+	@RequestMapping(value = "member_privacy_policy", method = RequestMethod.GET)
+	public String member_privacy_policy() {
+		return "bottomNavigation/privacy_policy.jsp";
 	}
 
 	/* 여행약관 페이지 호출 */

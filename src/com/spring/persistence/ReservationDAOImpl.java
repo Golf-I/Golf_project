@@ -1,5 +1,9 @@
 package com.spring.persistence;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
@@ -22,6 +26,31 @@ public class ReservationDAOImpl implements ReservationDAO{
 		sqlSession.insert(namespace+".memberReservation", vo);
 		
 	} // memberReservation
+
+	
+	/* 예약 내역 가져오기 */
+	@Override
+	public List<ReservationVO> getReservation(String id) throws Exception {
+
+		List<ReservationVO> reserList = sqlSession.selectList(namespace+".getReservation", id);
+		
+		return reserList;
+	} // getReservation
+
+
+	/* 예약 내역 1개 가져오기 */
+	@Override
+	public List<ReservationVO> oneReservation(String id, int idx) throws Exception {
+		
+		Map<String, Object> paramMap = new HashMap<String, Object>();
+		paramMap.put("id", id);
+		paramMap.put("idx", idx);
+		
+		List<ReservationVO> reserList = sqlSession.selectList(namespace+".oneReservation", paramMap);
+		
+		return reserList;
+//		return null;
+	} // oneReservation
 	
 	
 	

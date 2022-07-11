@@ -100,7 +100,7 @@
                             <div class="name">
 
                                 <p>골프치기 좋은 날이에요!</p>
-                                <p><span>홍길동</span> 님</p>
+                                <p><span>${sessionScope.id}</span>님</p>
 
                             </div>
 
@@ -113,10 +113,9 @@
                     <div class="pers_right">
 
                         <div class="txt02">
-                            <p>※ 회원 가입하고 다양한 골프정보와 기획전/이벤트 소식을<br>
-                                받아 보실 수 있습니다.</p>
+                            <p>※ 회원 가입하고 다양한 골프정보와 기획전/이벤트 소식을<br>받아 보실 수 있습니다.</p>
                             <p>계좌정보 : 111-111-111111 신한은행</p>
-                            <p>예금주 : 골드아이㈜</p>
+                            <p>예금주 : 골프아이㈜</p>
                         </div>
 
                     </div>
@@ -145,17 +144,20 @@
 
                 </div>
 
+
                 <div class="product">
 
+        			<c:forEach var="reserList" items="${reserList}">
+
                     <div class="product01_ex">
+					
+                        <p>예약일 : ${reserList.regDate}</p>
+<!--                         <p>예약일 : 2022.05.16</p> -->
             
-                        <p>예약일 : 2022.05.16</p>
-            
-                        
                             <div class="product01">
             
-                                
                             <a href="#">
+<!--                             <a href="#"> -->
             
                                 <div class="left_pro01">
             
@@ -167,22 +169,36 @@
             
                                         <div class="txt_box01">
             
-                                            <p>이용일 : 2022.05.16</p>
+                                            <p>이용일 : ${reserList.departure_date}</p>
+<!--                                             <p>이용일 : 2022.05.16</p> -->
             
                                             <div class="country01">
             
-                                                <p>자유골프</p>
+            								<c:choose>
+            								
+	            								<c:when test="${reserList.sortation == '패키지'}">
+	                                                <p>패키지</p>
+	            								</c:when>
+	            								
+	            								<c:otherwise>
+	                                                <p>자유골프</p>
+	            								</c:otherwise>
             
-                                                <p>일본/도쿄</p>
+            								</c:choose>
+            								
+                                                <p>${reserList.city}</p>
+<!--                                                 <p>일본/도쿄</p> -->
             
                                             </div>
             
             
                                             <div class="golf01">
             
-                                                <p>썬라이즈 골프장 18홀</p>
+                                                <p>${reserList.productName}</p>
+<!--                                                 <p>썬라이즈 골프장 18홀</p> -->
             
-                                                <p>1,090,000 원~</p>
+                                                <p><fmt:formatNumber value="${reserList.total_price}" pattern="#,###" /> 원</p>
+<!--                                                 <p>1,090,000 원~</p> -->
             
                                             </div>
             
@@ -198,27 +214,30 @@
             
                                     <div class="right_box01">
             
-                                        <a href="#">
+                                        <a href="product_detail?region=${reserList.region}&city=${reserList.city}&product_code=${reserList.product_code}&productName=${reserList.productName}">
                                             <p>상세조회</p>
                                         </a>
             
-                                        <a href="#">
+                                        <a href="javascript:open('?idx=${reserList.idx}', '결제하기', 'width=1200, height=1000')">
                                             <p>결제하기</p>
                                         </a>
             
-                                        <a href="javascript:open('member_confirmation', '확정서', 'width=1200, height=1000');">
+                                        <a href="javascript:open('member_confirmation?product_code=${reserList.product_code}&idx=${reserList.idx}', '확정서', 'width=1200, height=1000');">
                                             <p>확정서</p>
                                         </a>
             
                                     </div>
             
-                                </div><!--right-->
+                              </div><!--right-->
             
-                            </div><!--01-->
+                    </div><!--01-->
+
+					</c:forEach>
+                    
+                </div>
             
-                    </div>
-            
-                    <div class="product02_ex">
+<%--                
+					<div class="product02_ex">
             
                         <p>예약일 : 2022.05.16</p>
             
@@ -362,7 +381,7 @@
             
                             </div><!--03-->
             
-                    </div>
+                    </div> --%>
             
             
                 </div>

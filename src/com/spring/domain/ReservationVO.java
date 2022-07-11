@@ -4,6 +4,8 @@ import java.sql.Date;
 
 public class ReservationVO {
 
+	private int product_code;
+	private int idx;
 	private String sortation;
 	private	String id;
 	private	String productName;
@@ -17,7 +19,7 @@ public class ReservationVO {
 	 */	
 	private	int personnel;
 	private	String booker;
-	private	int booker_phone;
+	private	String booker_phone;
 	private	String booker_email;
 	private	String booker_gender;
 	private	int product_price;
@@ -30,6 +32,19 @@ public class ReservationVO {
 	private	int total_price;
 	private	Date regDate;
 	
+	
+	public int getProduct_code() {
+		return product_code;
+	}
+	public void setProduct_code(int product_code) {
+		this.product_code = product_code;
+	}
+	public int getIdx() {
+		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
+	}
 	public String getSortation() {
 		return sortation;
 	}
@@ -84,10 +99,10 @@ public class ReservationVO {
 	public void setBooker(String booker) {
 		this.booker = booker;
 	}
-	public int getBooker_phone() {
+	public String getBooker_phone() {
 		return booker_phone;
 	}
-	public void setBooker_phone(int booker_phone) {
+	public void setBooker_phone(String booker_phone) {
 		this.booker_phone = booker_phone;
 	}
 	public String getBooker_email() {
@@ -157,16 +172,17 @@ public class ReservationVO {
 		this.regDate = regDate;
 	}
 	
+	
 	@Override
 	public String toString() {
-		return "ReservationVO [sortation=" + sortation + ", id=" + id + ", productName=" + productName + ", region="
-				+ region + ", city=" + city + ", departure_date=" + departure_date + ", arrival_date=" + arrival_date
-				+ ", personnel=" + personnel + ", booker=" + booker + ", booker_phone=" + booker_phone
-				+ ", booker_email=" + booker_email + ", booker_gender=" + booker_gender + ", product_price="
-				+ product_price + ", day_park=" + day_park + ", day_il=" + day_il + ", memo=" + memo
-				+ ", option_singleRoom=" + option_singleRoom + ", option_addVehicle=" + option_addVehicle
-				+ ", option_businessUpgrade=" + option_businessUpgrade + ", total_price=" + total_price + ", regDate="
-				+ regDate + "]";
+		return "ReservationVO [product_code=" + product_code + ", idx=" + idx + ", sortation=" + sortation + ", id="
+				+ id + ", productName=" + productName + ", region=" + region + ", city=" + city + ", departure_date="
+				+ departure_date + ", arrival_date=" + arrival_date + ", personnel=" + personnel + ", booker=" + booker
+				+ ", booker_phone=" + booker_phone + ", booker_email=" + booker_email + ", booker_gender="
+				+ booker_gender + ", product_price=" + product_price + ", day_park=" + day_park + ", day_il=" + day_il
+				+ ", memo=" + memo + ", option_singleRoom=" + option_singleRoom + ", option_addVehicle="
+				+ option_addVehicle + ", option_businessUpgrade=" + option_businessUpgrade + ", total_price="
+				+ total_price + ", regDate=" + regDate + "]";
 	}
 	
 }

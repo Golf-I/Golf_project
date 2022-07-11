@@ -27,5 +27,28 @@
 	<!-- 상품 예약 -->
 
 
+	<!-- 예약 내역 가져오기 -->
+	<select id="getReservation" resultType="com.spring.domain.ReservationVO">
+	<![CDATA[
+	SELECT *
+	FROM reservation
+	WHERE id = #{id}
+	ORDER BY regDate DESC
+	]]>
+	</select>
+	<!-- 예약 내역 가져오기 -->
+
+
+	<!-- 예약 내역 1개 가져오기 -->
+	<select id="oneReservation" resultType="com.spring.domain.ReservationVO">
+	<![CDATA[
+	SELECT *
+	FROM reservation
+	WHERE id = #{id}
+	AND idx = #{idx}
+	]]>
+	</select>
+	<!-- 예약 내역 1개 가져오기 -->
+
 
 </mapper>

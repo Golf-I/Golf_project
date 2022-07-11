@@ -107,19 +107,19 @@
                         </label>
 
                         <div class="link_sheet">
-                            <a href="#">
+                            <a href="javascript:shareBand();">
                                 <img src="${pageContext.request.contextPath}/resources/img/detail01/band_link.png">
                             </a>
-                            <a href="#">
+                            <a href="javascript:shareFacebook();">
                                 <img src="${pageContext.request.contextPath}/resources/img/detail01/facebook_link.png">
                             </a>
-                            <a href="#">
+                            <a id="kakaotalk-sharing-btn" href="javascript:shareKakao();">
                                 <img src="${pageContext.request.contextPath}/resources/img/detail01/kakao_link.png">
                             </a>
-                            <a href="#">
+                            <a href="javascript:shareTwitter();">
                                 <img src="${pageContext.request.contextPath}/resources/img/detail01/twiter_link.png">
                             </a>
-                            <a href="#">
+                            <a href="javascript:shareLine();">
                                 <img src="${pageContext.request.contextPath}/resources/img/detail01/line_link.png">
                             </a>
                         </div>
@@ -238,7 +238,7 @@
                                 <p>상품최적가</p>
                             </div>
     
-                            <div class="money_num"><p>${bbsList.lowestPrice}</p></div>
+                            <div class="money_num"><p><fmt:formatNumber value="${bbsList.lowestPrice}" pattern="#,###" /> 원 ~ </p></div>
 <!--                             <div class="money_num"><p>1,090,000~</p></div> -->
     
                         </div><!--골프장-->
@@ -348,7 +348,7 @@
     
                                 <div class="txt_week01">
 <!--                                     <p>1,090,000</p> -->
-                                    <p>${bbsList.weekday_fee}</p>
+                                    <p><fmt:formatNumber value="${bbsList.weekday_fee}" pattern="#,###" />원</p>
                                     <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekday_fee=${bbsList.weekday_fee}">예약하기</a>
                                 </div>
     
@@ -364,7 +364,7 @@
     
                                 <div class="txt_weekend01">
 <!--                                     <p>1,090,000</p> -->
-                                    <p>${bbsList.weekend_fee}</p>
+                                    <p><fmt:formatNumber value="${bbsList.weekend_fee}" pattern="#,###" />원</p>
                                     <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekend_fee=${bbsList.weekend_fee}">예약하기</a>
                                 </div>
     
@@ -401,7 +401,7 @@
                         
                         <%-- 예약불가 기간 --%>
 	    				<c:forEach items="${noResList}" var="noResList">
-                        	<p>${noResList.memo}</p>
+                        	<p>${noResList.remarks}</p>
 	    				</c:forEach>
 	    				<%-- 예약불가 기간 --%>
 	    				

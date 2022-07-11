@@ -9,6 +9,7 @@ import com.spring.domain.ItineraryVO;
 import com.spring.domain.NoReservationVO;
 import com.spring.domain.ProductVO;
 import com.spring.domain.ReviewVO;
+import com.spring.domain.TravelerVO;
 
 public interface BoardDAO {
 
@@ -41,5 +42,7 @@ public interface BoardDAO {
 	public List<NoReservationVO> oneNoReser(NoReservationVO vo) throws Exception; // 예약불가 기간 조회
 	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
+	
+	public List<TravelerVO> getTraveler(TravelerVO vo) throws Exception; // 여행자 내역 등록
 
 }

@@ -216,7 +216,8 @@ margin-bottom: 5px;}
 {width: 1040px; height: 180px;
 border: 1px solid #ccc;
 box-sizing: border-box;
-overflow: hidden;}
+margin-bottom: 20px;
+/* overflow: hidden; */}
 
 .product01 .left_pro01
 {width: 800px; height: 180px;

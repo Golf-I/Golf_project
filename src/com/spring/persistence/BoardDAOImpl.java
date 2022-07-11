@@ -19,6 +19,7 @@ import com.spring.domain.NoReservationVO;
 import com.spring.domain.ProductVO;
 import com.spring.domain.PromotionVO;
 import com.spring.domain.ReviewVO;
+import com.spring.domain.TravelerVO;
 
 
 @Repository
@@ -162,7 +163,7 @@ public class BoardDAOImpl implements BoardDAO{
 		paramMap.put("perPageNum", cri.getPerPageNum());
 		
 		revList = sqlSession.selectList(namespace+".oneReview", paramMap);
-		System.out.println("DAOImpl : " + revList);
+//		System.out.println("DAOImpl : " + revList);
 		
 		return revList;
 	} // oneReview
@@ -204,6 +205,17 @@ public class BoardDAOImpl implements BoardDAO{
 		sqlSession.insert(namespace+".addComment", vo);
 		
 	} // addComment
+
+
+	/* 여행자 내역 가져오기 */
+	@Override
+	public List<TravelerVO> getTraveler(TravelerVO vo) throws Exception {
+
+		List<TravelerVO> travelList = new ArrayList<TravelerVO>();
+		travelList = sqlSession.selectList(namespace+".getTraveler", vo);
+		
+		return travelList;
+	} // getTraveler
 
 
 }

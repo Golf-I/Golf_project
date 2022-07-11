@@ -1,5 +1,9 @@
 package com.spring.service;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
@@ -20,8 +24,25 @@ public class ReservationServiceImpl implements ReservationService{
 		rdao.memberReservation(vo);
 		
 	} // memberReservation
+
+	/* 예약 내역 가져오기 */
+	@Override
+	public List<ReservationVO> getReservation(String id) throws Exception {
+
+		List<ReservationVO> reserList = rdao.getReservation(id);
+		
+		return reserList;
+	} // ReservationVO vo
 	
-	 
+	
+	/* 예약 내역 1개 가져오기 */
+	@Override
+	public List<ReservationVO> oneReservation(String id, int idx) throws Exception {
+		
+		List<ReservationVO> reserList = rdao.oneReservation(id, idx);
+		
+		return reserList;
+	} // oneReservation
 	
 	
 

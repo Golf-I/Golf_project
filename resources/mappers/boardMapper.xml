@@ -57,7 +57,7 @@
 	SELECT *
 	FROM notice_board
 	WHERE no > 0
-	ORDER BY no DESC, date DESC
+	ORDER BY no DESC, regDate DESC
 	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
@@ -70,7 +70,7 @@
 	SELECT *
 	FROM qna_board
 	WHERE no > 0
-	ORDER BY no DESC, date DESC
+	ORDER BY no DESC, regDate DESC
 	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
@@ -175,5 +175,14 @@
 	<!-- 상품별점/평점 등록 -->
 
 
+	<!-- 예약불가 기간 조회 -->
+	<select id="getTraveler" resultType="com.spring.domain.TravelerVO">
+	<![CDATA[
+	SELECT *
+	FROM traveler
+	WHERE idx = #{idx}
+	]]>
+	</select>
+	<!-- 예약불가 기간 조회 -->
 	
 </mapper>

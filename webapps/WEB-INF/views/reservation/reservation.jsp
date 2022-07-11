@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>detail03</title>
 	<link href="${pageContext.request.contextPath}/resources/css/reservation.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/reservation.js"></script>
 </head>
 <body>
     <section>
@@ -68,7 +69,7 @@
             <input type="button" id="left_btn">
             <input type="button" id="right_btn">
             
-            <input type="checkbox" id="day01_6">
+<!--             <input type="checkbox" id="day01_6">
             <input type="checkbox" id="day02_6">
             <input type="checkbox" id="day03_6">
             <input type="checkbox" id="day04_6">
@@ -153,29 +154,35 @@
             <input type="checkbox" id="day39_7">
             <input type="checkbox" id="day40_7">
             <input type="checkbox" id="day41_7">
-            <input type="checkbox" id="day42_7">
+            <input type="checkbox" id="day42_7"> -->
+            
             
             <div class="calendar">
 
                 <div class="calendar_txt">
 
-                    <label for="left_btn">
-                        <img src="${pageContext.request.contextPath}/resources/img/reservation/left.png">
+                    <label for="left_btn" >
+						<button class="nav-btn go-next" onclick="prevCalendar()">
+				    		<img src="${pageContext.request.contextPath}/resources/img/reservation/left.png">
+						</button>
                     </label>
 
-                    <p>2022-06 ~ 2022-07</p>
+                    <p id="tbCalendarYM"></p>
 
                     <label for="right_btn">
-                        <img src="${pageContext.request.contextPath}/resources/img/reservation/right.png">
+                    	<button class="nav-btn go-next" onclick="nextCalendar()">
+	                        <img src="${pageContext.request.contextPath}/resources/img/reservation/right.png">
+                    	</button>
                     </label>
 
                 </div>
+                
 
                 <div class="calendar_left">
 
-                    <p>2022-06</p>
+<!--            	<p>2022-06</p> -->
 
-                    <table cellpadding="0" cellspacing="0">
+                    <table cellpadding="0" cellspacing="0" id="calendar">
 
                         <tr>
                             <td>월</td>
@@ -187,7 +194,7 @@
                             <td>일</td>
                         </tr>
 
-                        <tr>
+                        <!-- <tr>
                             <td>
                                 <label for="day01_6">
                                 </label>
@@ -431,17 +438,21 @@
                             <td>
                                 <label for="day42_6">
                                 </label>
-                            </td>
-                        </tr>
+                            </td> 
+                        </tr> -->
 
                     </table>
+
+					<script language="javascript" type="text/javascript">
+						buildCalendar();
+					</script>
 
                 </div><!--left-->
 
                 <div class="calendar_right">
 
-                    <p>2022-07</p>
-
+<!--                     <p>2022-07</p> -->
+<!--
                     <table cellpadding="0" cellspacing="0">
                         <tr>
                             <td>월</td>
@@ -453,7 +464,7 @@
                             <td>일</td>
                         </tr>
 
-                        <tr>
+                         <tr>
                             <td>
                                 <label for="day01_7">
                                 </label>
@@ -702,9 +713,9 @@
                                 <label for="day42_7">
                                 </label>
                             </td>
-                        </tr>
+                        </tr> 
 
-                    </table>
+                    </table> -->
                 </div><!--right-->
 
             </div><!--calendar-->
@@ -925,130 +936,470 @@
 
                 </div><!--information01-->
 
+
                 <div class="information02">
     
-                        <p>여행자정보01</p>
-
+                    <p>여행자정보01</p>
 
                     <table cellpadding="0" cellspacing="0">
-
                         <tr>
-
                             <td>
                                 <p><span>*</span> 이름</p>
                             </td>
-
-
                             <td>
                                 <!-- <p>홍길동</p> -->
-                                <input type="text"  required/> <!-- name="traveler" -->
+                                <input type="text" name="traveler" required/>
                             </td>
-
-
                             <td>
                                 <p><span>*</span> 성별</p>
                             </td>
-
                             <td>
-                                <select id="gender01" > <!-- name="travler_gender" -->
-
-                                    <option >선택</option>
+                                <select id="gender01" name="travler_gender" >
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
-
                                 </select>
                             </td>
-
-
                             <td>
                                 <p>영문명</p>
                             </td>
-
                             <td>
                                 <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
-                                 required> <!-- name="traveler_firstname" -->
+                                 name="traveler_firstname" required>
                                 <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
-                                 required> <!-- name="traveler_lastname" -->
-                                
+                                 name="traveler_lastname" required>
                             </td>
-
-
                             <td>
                                 <p>연락처</p>
                             </td>
-
-
                             <td>
                                 <!-- <p>010-1111-1111</p> -->
-                                <input type="text" required/> <!-- name="traveler_phone" -->
+                                <input type="text" name="traveler_phone" required/>
                             </td>
-
                         </tr>
-
                     </table>
 
                 </div><!--information02-->
 
-                <div class="information03">
+                <div class="information03" id="travel02">
     
-                    <p>여행자정보02</p>
-
+                <p>여행자정보02</p>
 
                 <table cellpadding="0" cellspacing="0">
-
                     <tr>
-
                         <td>
                             <p><span>*</span> 이름</p>
                         </td>
-
-
                         <td>
-                            <!-- <p>홍길동</p> -->
-                            <input type="text"  required/> <!-- name="" -->
+<!--                             <p>홍길동</p> -->
+                            <input type="text" name="traveler" required/> 
                         </td>
-
 
                         <td>
                             <p><span>*</span> 성별</p>
                         </td>
-
                         <td>
-                            <select id="gender03">
-
-                                <option>선택</option>
+                            <select id="gender03" name="travler_gender">
                                 <option value="남성">남성</option>
                                 <option value="여성">여성</option>
-
                             </select>
                         </td>
-
-
                         <td>
                             <p>영문명</p>
                         </td>
+                        <td>
+                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
+                            name="traveler_firstname" required>
+                           <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
+                            name="traveler_lastname" required>
+                        </td>
+                        <td>
+                            <p>연락처</p>
+                        </td>
+                        <td>
+<!--                             <p>010-1111-1111</p> -->
+                            <input type="text" name="traveler_phone" required />
+                        </td>
+                    </tr>
+                </table>
+                
+               	<br/><br/>
 
+	            </div>
+	            <!--information03-->
+            
+                <div class="information03" id="travel03" style="display:none;">
+    
+                <p>여행자정보03</p>
+
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이름</p>
+                        </td>
+                        <td>
+<!--                             <p>홍길동</p> -->
+                            <input type="text" name="" required/> 
+                        </td>
+
+                        <td>
+                            <p><span>*</span> 성별</p>
+                        </td>
+                        <td>
+                            <select id="gender03">
+                                <option>선택</option>
+                                <option value="남성">남성</option>
+                                <option value="여성">여성</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p>영문명</p>
+                        </td>
                         <td>
                             <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
                             <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
                         </td>
-
-
                         <td>
                             <p>연락처</p>
                         </td>
-
-
                         <td>
-                            <!-- <p>010-1111-1111</p> -->
-                            <input type="text"  required/> <!-- name="" -->
+<!--                             <p>010-1111-1111</p> -->
+                            <input type="text"  required  name=""/>
+                        </td>
+                    </tr>
+                </table>
+                
+               	<br/><br/>
+
+	            </div>
+	            <!--information03-->
+            
+            
+                <div class="information03" id="travel04" style="display:none;">
+    
+                <p>여행자정보04</p>
+
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이름</p>
+                        </td>
+                        <td>
+<!--                             <p>홍길동</p> -->
+                            <input type="text" name="" required/> 
                         </td>
 
+                        <td>
+                            <p><span>*</span> 성별</p>
+                        </td>
+                        <td>
+                            <select id="gender03">
+                                <option>선택</option>
+                                <option value="남성">남성</option>
+                                <option value="여성">여성</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p>영문명</p>
+                        </td>
+                        <td>
+                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+                        </td>
+                        <td>
+                            <p>연락처</p>
+                        </td>
+                        <td>
+<!--                             <p>010-1111-1111</p> -->
+                            <input type="text"  required  name=""/>
+                        </td>
                     </tr>
+                </table>
+                
+               	<br/><br/>
 
+	            </div>
+	            <!--information03-->
+            
+            
+                <div class="information03" id="travel05" style="display:none;">
+    
+                <p>여행자정보05</p>
+
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이름</p>
+                        </td>
+                        <td>
+<!--                             <p>홍길동</p> -->
+                            <input type="text" name="" required/> 
+                        </td>
+
+                        <td>
+                            <p><span>*</span> 성별</p>
+                        </td>
+                        <td>
+                            <select id="gender03">
+                                <option>선택</option>
+                                <option value="남성">남성</option>
+                                <option value="여성">여성</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p>영문명</p>
+                        </td>
+                        <td>
+                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+                        </td>
+                        <td>
+                            <p>연락처</p>
+                        </td>
+                        <td>
+<!--                             <p>010-1111-1111</p> -->
+                            <input type="text"  required  name=""/>
+                        </td>
+                    </tr>
                 </table>
 
-            </div><!--information03-->
+        		<br/><br/>
+
+	            </div>
+	            <!--information03-->
+            
+            
+                <div class="information03" id="travel06" style="display:none;">
+    
+                <p>여행자정보06</p>
+
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <p><span>*</span> 이름</p>
+                        </td>
+                        <td>
+<!--                             <p>홍길동</p> -->
+                            <input type="text" name="" required/> 
+                        </td>
+
+                        <td>
+                            <p><span>*</span> 성별</p>
+                        </td>
+                        <td>
+                            <select id="gender03">
+                                <option>선택</option>
+                                <option value="남성">남성</option>
+                                <option value="여성">여성</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p>영문명</p>
+                        </td>
+                        <td>
+                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+                        </td>
+                        <td>
+                            <p>연락처</p>
+                        </td>
+                        <td>
+<!--                             <p>010-1111-1111</p> -->
+                            <input type="text"  required  name=""/>
+                        </td>
+                    </tr>
+                </table>
+
+	        	<br/><br/>
+	
+	            </div>
+	            <!--information03-->
+            
+            
+	            <div class="information03" id="travel07" style="display:none;">
+	
+	            <p>여행자정보07</p>
+	
+	            <table cellpadding="0" cellspacing="0">
+	                <tr>
+	                    <td>
+	                        <p><span>*</span> 이름</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>홍길동</p> -->
+	                        <input type="text" name="" required/> 
+	                    </td>
+	
+	                    <td>
+	                        <p><span>*</span> 성별</p>
+	                    </td>
+	                    <td>
+	                        <select id="gender03">
+	                            <option>선택</option>
+	                            <option value="남성">남성</option>
+	                            <option value="여성">여성</option>
+	                        </select>
+	                    </td>
+	                    <td>
+	                        <p>영문명</p>
+	                    </td>
+	                    <td>
+	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+	                    </td>
+	                    <td>
+	                        <p>연락처</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>010-1111-1111</p> -->
+	                        <input type="text"  required  name=""/>
+	                    </td>
+	                </tr>
+	            </table>
+	            
+	           	<br/><br/>
+	
+		        </div>
+		        <!--information03-->
+        
+        
+	            <div class="information03" id="travel08" style="display:none;">
+	
+	            <p>여행자정보08</p>
+	
+	            <table cellpadding="0" cellspacing="0">
+	                <tr>
+	                    <td>
+	                        <p><span>*</span> 이름</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>홍길동</p> -->
+	                        <input type="text" name="" required/> 
+	                    </td>
+	
+	                    <td>
+	                        <p><span>*</span> 성별</p>
+	                    </td>
+	                    <td>
+	                        <select id="gender03">
+	                            <option>선택</option>
+	                            <option value="남성">남성</option>
+	                            <option value="여성">여성</option>
+	                        </select>
+	                    </td>
+	                    <td>
+	                        <p>영문명</p>
+	                    </td>
+	                    <td>
+	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+	                    </td>
+	                    <td>
+	                        <p>연락처</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>010-1111-1111</p> -->
+	                        <input type="text"  required  name=""/>
+	                    </td>
+	                </tr>
+	            </table>
+	
+	        	<br/><br/>
+	
+		        </div>
+		        <!--information03-->
+        
+        
+	            <div class="information03" id="travel09" style="display:none;">
+	
+	            <p>여행자정보09</p>
+	
+	            <table cellpadding="0" cellspacing="0">
+	                <tr>
+	                    <td>
+	                        <p><span>*</span> 이름</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>홍길동</p> -->
+	                        <input type="text" name="" required/> 
+	                    </td>
+	
+	                    <td>
+	                        <p><span>*</span> 성별</p>
+	                    </td>
+	                    <td>
+	                        <select id="gender03">
+	                            <option>선택</option>
+	                            <option value="남성">남성</option>
+	                            <option value="여성">여성</option>
+	                        </select>
+	                    </td>
+	                    <td>
+	                        <p>영문명</p>
+	                    </td>
+	                    <td>
+	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+	                    </td>
+	                    <td>
+	                        <p>연락처</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>010-1111-1111</p> -->
+	                        <input type="text"  required  name=""/>
+	                    </td>
+	                </tr>
+	            </table>
+	
+	        	<br/><br/>
+	
+		        </div>
+		        <!--information03-->
+	        
+	            <div class="information03" id="travel10" style="display:none;">
+	
+	            <p>여행자정보10</p>
+	
+	            <table cellpadding="0" cellspacing="0">
+	                <tr>
+	                    <td>
+	                        <p><span>*</span> 이름</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>홍길동</p> -->
+	                        <input type="text" name="" required/> 
+	                    </td>
+	
+	                    <td>
+	                        <p><span>*</span> 성별</p>
+	                    </td>
+	                    <td>
+	                        <select id="gender03">
+	                            <option>선택</option>
+	                            <option value="남성">남성</option>
+	                            <option value="여성">여성</option>
+	                        </select>
+	                    </td>
+	                    <td>
+	                        <p>영문명</p>
+	                    </td>
+	                    <td>
+	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
+	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
+	                    </td>
+	                    <td>
+	                        <p>연락처</p>
+	                    </td>
+	                    <td>
+	<!--                             <p>010-1111-1111</p> -->
+	                        <input type="text"  required  name=""/>
+	                    </td>
+	                </tr>
+	            </table>
+	
+		        </div>
+		        <!--information03-->
+            
+            
 
         </div><!--information-->
 
@@ -1098,8 +1449,9 @@
 
                 <div class="agree02">
                 	<label for="term_of_service">
-                    <p>동의합니다.</p>
+                    	<p>동의합니다.</p>
                 	</label>
+                	
                     <input type="checkbox" id="term_of_service">
                 </div>
 

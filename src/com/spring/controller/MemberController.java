@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.spring.domain.MemberVO;
 import com.spring.domain.ProductVO;
 import com.spring.domain.ReservationVO;
+import com.spring.domain.TravelerVO;
 import com.spring.service.MemberService;
 import com.spring.service.ReservationService;
 
@@ -372,9 +373,10 @@ public class MemberController {
 	
 	/* 상품 예약 */
 	@RequestMapping(value = "/reservation", method = RequestMethod.POST)
-	public String memberReservation(ReservationVO rvo) throws Exception{
+	public String memberReservation(ReservationVO rvo, TravelerVO tvo) throws Exception{
 		
 		rservice.memberReservation(rvo);
+//		rservice.travelerReservation(tvo);
 		logger.info("pvo : " + rvo);
 		
 		return "redirect:../reservation_complete";

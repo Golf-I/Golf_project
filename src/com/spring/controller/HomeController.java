@@ -26,10 +26,16 @@ import com.spring.domain.MemberVO;
 import com.spring.domain.NoReservationVO;
 import com.spring.domain.PageMaker;
 import com.spring.domain.ProductVO;
+import com.spring.domain.ReservationGolfVO;
+import com.spring.domain.ReservationHotelVO;
+import com.spring.domain.ReservationRentacarVO;
+import com.spring.domain.ReservationVO;
 import com.spring.domain.ReviewVO;
+import com.spring.domain.TravelerVO;
 import com.spring.service.BoardService;
 import com.spring.service.CategoryService;
 import com.spring.service.MemberService;
+import com.spring.service.ReservationService;
 
 /**
  * Servlet implementation class HomeController
@@ -69,6 +75,7 @@ public class HomeController extends HttpServlet {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
+	
 	@Inject
 	private MemberService mservice;
 
@@ -77,7 +84,11 @@ public class HomeController extends HttpServlet {
 
 	@Inject
 	private BoardService bservice;
+	
+	@Inject
+	private ReservationService rservice;
 
+	
 	/* 메인 화면 페이지 호출 */
 	@RequestMapping(value = "index", method = RequestMethod.GET)
 	public String mainPage(Locale locale, Model model) {
@@ -100,6 +111,7 @@ public class HomeController extends HttpServlet {
 	/* 회원가입2 화면 페이지 호출 */
 	@RequestMapping(value = "signup_", method = RequestMethod.POST)
 	public String signUp2Page(HttpServletRequest req, MemberVO vo, Model model) {
+		
 		String id = req.getParameter("id");
 		String sns = req.getParameter("sns");
 		String gender = req.getParameter("gender");
@@ -153,11 +165,9 @@ public class HomeController extends HttpServlet {
 	public String myPage(Model model, HttpSession session) throws Exception {
 
 		String id = (String) session.getAttribute("id");
-//		logger.info("memcont id : " + id);
 
 		// 회원정보 가져오기
-		MemberVO mvo = mservice.memberGetInfo(id);
-		model.addAttribute("mvo", mvo);
+		model.addAttribute("mvo", mservice.memberGetInfo(id));
 
 		return "member/member_mypage.tiles";
 	}
@@ -173,11 +183,9 @@ public class HomeController extends HttpServlet {
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
-//		logger.info("cri : " + cri.getPage() + " " + cri.getPageStart() + " " + cri.getPerPageNum());
 		
 		List<BoardVO> bbsList = new ArrayList<BoardVO>();
 		bbsList = bservice.selectNotice(cri);
-//		logger.info("pageMaker : " + pageMaker);
 
 		model.addAttribute("bbsList", bbsList);
 		model.addAttribute("pageMaker", pageMaker);
@@ -190,7 +198,6 @@ public class HomeController extends HttpServlet {
 	public String notice_detail(BoardVO vo, Model model) throws Exception {
 
 		model.addAttribute("bbsList", bservice.lookup(vo));
-		logger.info("ddd : " + vo);
 
 		return "member/member_notice_detail.tiles";
 	}
@@ -217,13 +224,29 @@ public class HomeController extends HttpServlet {
 
 	/* 마이페이지 예약리스트 페이지 호출 */
 	@RequestMapping(value = "member_reservation", method = RequestMethod.GET)
-	public String member_reservations() {
+	public String member_reservations(Model model, HttpSession session) throws Exception {
+		
+		String id = (String) session.getAttribute("id");
+		
+		model.addAttribute("reserList", rservice.getReservation(id));
+		
 		return "member/member_reservationList.tiles";
 	}
 	
 	/* 마이페이지 예약리스트-확정서 페이지 호출 */
 	@RequestMapping(value = "member_confirmation", method = RequestMethod.GET)
-	public String member_reservations_confirmation() {
+	public String member_reservation_confirmation(ProductVO pvo, ItineraryVO ivo, TravelerVO tvo,
+												HttpSession session, 
+												Model model, HttpServletRequest req) throws Exception {
+		
+		String id = (String) session.getAttribute("id");
+		int idx = Integer.parseInt(req.getParameter("idx"));
+		
+		model.addAttribute("reserList", rservice.oneReservation(id, idx));
+		model.addAttribute("pdList", bservice.oneProduct(pvo));
+		model.addAttribute("itiList", bservice.oneItinerary(ivo));
+		model.addAttribute("traList", bservice.getTraveler(tvo));
+		
 		return "member/member_confirmationLetter.jsp";
 	}
 
@@ -236,28 +259,24 @@ public class HomeController extends HttpServlet {
 	/* 마이페이지 이름 변경 페이지 호출 */
 	@RequestMapping(value = "mypage_name", method = RequestMethod.GET)
 	public String myPage_Namechange() {
-//		return "member/member_nameChange.tiles";
 		return "member/member_nameChange.jsp";
 	}
 
 	/* 마이페이지 비밀번호 변경 페이지 호출 */
 	@RequestMapping(value = "mypage_phone", method = RequestMethod.GET)
 	public String myPage_Phonechange() {
-//		return "member/member_phoneChange.tiles";
 		return "member/member_phoneChange.jsp";
 	}
 
 	/* 마이페이지 광고성 정보 수신 동의 페이지 호출 */
 	@RequestMapping(value = "mypage_ad", method = RequestMethod.GET)
 	public String myPage_Advertisement() {
-//		return "member/member_advertisementAgree.tiles";
 		return "member/member_advertisementAgree.jsp";
 	}
 
 	/* 마이페이지 광고성 개인정보 수집 동의 페이지 호출 */
 	@RequestMapping(value = "mypage_info", method = RequestMethod.GET)
 	public String myPage_Information() {
-//		return "member/member_informationAgree.tiles";
 		return "member/member_informationAgree.jsp";
 	}
 
@@ -277,11 +296,6 @@ public class HomeController extends HttpServlet {
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
 
-//		List<ProductVO> bbsList = new ArrayList<ProductVO>();
-//		bbsList = bservice.selectPackages(cri);
-//		logger.info("bbsList : " + bbsList);
-		
-//		model.addAttribute("bbsList", bbsList);
 		model.addAttribute("bbsList", bservice.selectPackages(cri));
 		model.addAttribute("pageMaker", pageMaker);
 		model.addAttribute("total", total);
@@ -293,11 +307,10 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "product_detail", method = RequestMethod.GET)
 	public String product_detail(ProductVO pvo, ReviewVO rvo, CommentVO cvo, ItineraryVO ivo, NoReservationVO nrvo,
 								Criteria cri, Model model) throws Exception {
-//		logger.info("@@@@@@@@@@@@@ vo : " + vo);
 		
 		int commenttotal = bservice.countComment(cvo);
 		int reviewtotal = bservice.countReview(rvo);
-		logger.info("commenttotal : " + commenttotal + " / reviewtotal : " + reviewtotal + " / cri : " + cri.getPage());
+
 		PageMaker pageMaker_com = new PageMaker();
 		pageMaker_com.setCri(cri);
 		pageMaker_com.setTotalCount(commenttotal);
@@ -311,9 +324,6 @@ public class HomeController extends HttpServlet {
 		List<ReviewVO> revList = new ArrayList<ReviewVO>();
 		List<CommentVO> commList = new ArrayList<CommentVO>();
 		List<NoReservationVO> noResList = new ArrayList<NoReservationVO>();
-//		bbsList = bservice.oneProduct(pvo);
-//		noResList = bservice.oneNoReser(nrvo);
-//		logger.info("@@@@@@@@@ " + noResList);
 		
 		model.addAttribute("bbsList", bservice.oneProduct(pvo));
 		model.addAttribute("itiList", bservice.oneItinerary(ivo));
@@ -330,8 +340,8 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "reservation", method = RequestMethod.GET)
 	public String reservation(ProductVO pvo, Model model) throws Exception {
 		
-		List<ProductVO> bbsList = new ArrayList<ProductVO>();
-		model.addAttribute("", bbsList);
+//		List<ProductVO> bbsList = new ArrayList<ProductVO>();
+//		model.addAttribute("", bbsList);
 		
 		return "reservation/reservation.tiles";
 	}
@@ -340,12 +350,6 @@ public class HomeController extends HttpServlet {
 	@RequestMapping(value = "reservation_complete", method = RequestMethod.GET)
 	public String reservation_complete() {
 		return "reservation/reservation_complete.tiles";
-	}
-
-	/* 확정서 페이지 호출 */
-	@RequestMapping(value = "reservation_confirmation", method = RequestMethod.GET)
-	public String reservation_confirmation() {
-		return "reservation/reservation_confirmationLetter.tiles";
 	}
 
 	/* 상품 리뷰 새창 페이지 호출 */
@@ -454,7 +458,6 @@ public class HomeController extends HttpServlet {
 	/* 이메일무단수집 페이지 호출 */
 	@RequestMapping(value = "unauthorized-email-collection", method = RequestMethod.GET)
 	public String unauthorized_email_collection() {
-//		return "bottomNavigation/unauthorized_email_collection.tiles";
 		return "bottomNavigation/unauthorized_email_collection.jsp";
 	}
 

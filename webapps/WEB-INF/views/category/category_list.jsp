@@ -4,12 +4,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>sub</title>
-<link href="${pageContext.request.contextPath}/resources/css/sub.css"
-	rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>sub</title>
+	<link href="${pageContext.request.contextPath}/resources/css/sub.css" rel="stylesheet">
 </head>
 <body>
 
@@ -192,7 +191,7 @@
 								<p>${bbsList.arrival} 출발 ></p>
 								<p>${bbsList.city}</p>
 								<p>${bbsList.productName}</p>
-								<p>${bbsList.lowestPrice} ~</p>
+								<p><fmt:formatNumber value="${bbsList.lowestPrice}" pattern="#,###" />원 ~ </p>
 							</div>
 
 							<div class="review_box_01">

@@ -14,6 +14,7 @@ import com.spring.domain.ItineraryVO;
 import com.spring.domain.NoReservationVO;
 import com.spring.domain.ProductVO;
 import com.spring.domain.ReviewVO;
+import com.spring.domain.TravelerVO;
 import com.spring.persistence.BoardDAO;
 
 @Service
@@ -179,5 +180,16 @@ public class BoardServiceImpl implements BoardService{
 		bdao.addComment(vo);
 		
 	} // addComment
+
+
+	/* 여행자 내역 가져오기 */
+	@Override
+	public List<TravelerVO> getTraveler(TravelerVO vo) throws Exception {
+
+		List<TravelerVO> travelList = new ArrayList<TravelerVO>();
+		travelList = bdao.getTraveler(vo);
+		
+		return travelList;
+	} // getTraveler
 
 }

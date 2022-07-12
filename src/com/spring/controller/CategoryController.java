@@ -48,11 +48,10 @@ public class CategoryController {
 	 	
 	 	out.println("<script>");
 	 	out.println("alert('신청되었습니다.');");
-	 	out.println("location.href='../consulting';");
+		out.println("self.close();");
 	 	out.println("</script>");
 	 	out.flush();
 	 	
-//		return "redirect:../consulting";
 		return null;
 	} // inquire
 	
@@ -62,12 +61,7 @@ public class CategoryController {
 	@RequestMapping(value = "/promotion", method = RequestMethod.POST)
 	public String promotion(HttpServletRequest request, HttpServletResponse res,
 							PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
-//		logger.info("-- file.getContentType : "+ file.getContentType());
-//		logger.info("-- file.getSize : "+ file.getSize());
-//		logger.info("-- file.getBytes : "+ file.getBytes());
-//		logger.info("-- file.getInputStream : "+ file.getInputStream());
-//		logger.info("-- 버튼 작동 / vo : "+ vo); 
-		
+
 		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/promotion/");
 		logger.info("-- 버튼 작동 / storagePath : "+ storagePath);
 
@@ -94,8 +88,6 @@ public class CategoryController {
 	@RequestMapping(value = "/wholesale", method = RequestMethod.POST)
 	public String wholesale(HttpServletRequest request, HttpServletResponse res,
 							PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
-//		logger.info("-- 버튼 작동 / vo : "+ vo);
-//		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
 		
 		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/wholesale/");
 		
@@ -122,8 +114,6 @@ public class CategoryController {
 	@RequestMapping(value = "/store", method = RequestMethod.POST)
 	public String store(HttpServletRequest request, HttpServletResponse res,
 						PromotionVO vo, @RequestParam(value="file", required = false) MultipartFile file) throws Exception {
-//		logger.info("-- 버튼 작동 / vo : "+ vo);
-//		logger.info("-- file.getContentType : "+ file.getOriginalFilename());
 		
 		String storagePath = WebUtils.getRealPath(request.getSession().getServletContext(), "/WEB-INF/views/upload/entering_the_store/");
 		

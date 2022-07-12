@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -32,8 +34,12 @@
 
             <div class="line01"></div>
 
+
+			<c:forEach items="${academyList}" var="academyList">
+			
             <div class="title_ac">
-                <p><span>[베트남 > 하노이]</span> 치린스타 컨트리 클럽 CHI LINH STAR GOLF & COUNTRY CLUB </p>
+                <p><span>&lt; ${academyList.title} &gt;</span></p>
+<!--                 <p><span>[베트남 > 하노이]</span> 치린스타 컨트리 클럽 CHI LINH STAR GOLF & COUNTRY CLUB </p> -->
             </div>
 
             <div class="detail_img">
@@ -129,12 +135,14 @@
                         <p>이전페이지</p>
                     </a>
 
-                    <a href="javascript:open('consulting');">
+                    <a href="javascript:open('consulting?no=${academyList.no}&title=${academyList.title}', 
+                    '상담신청', 'width=570, height=1000');">
                         <p>상담신청</p>
                     </a>
 
-
                 </div>
+
+			</c:forEach>
 
         </div>
 

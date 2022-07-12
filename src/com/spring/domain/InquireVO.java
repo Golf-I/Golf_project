@@ -4,15 +4,23 @@ import java.sql.Timestamp;
 
 public class InquireVO {
 
-	private int no; // 글번호
-	private	String category; // 카테고리
-	private	String companyName; // 회사명
-	private	String manager; // 담당자
-	private	String contactNumber; // 연락처
-	private	String contactDate; // 상담일자
-	private	String content;	// 상담내용
-	private	Timestamp regDate; // 글 등록일자
+	private int no; 				// 글번호
+	private	String category; 		// 카테고리
+	private String title;			// 아카데미/회원권 제목
+	private	String companyName; 	// 회사명
+	private	String manager; 		// 담당자
+	private	String contactNumber;	// 연락처
+	private	String contactDate; 	// 상담일자
+	private	String content;			// 상담내용
+	private	Timestamp regDate; 		// 글 등록일자
 	
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public int getNo() {
 		return no;
 	}
@@ -64,9 +72,9 @@ public class InquireVO {
 	
 	@Override
 	public String toString() {
-		return "InquireVO [no=" + no + ", category=" + category + ", companyName=" + companyName + ", manager="
-				+ manager + ", contactNumber=" + contactNumber + ", contactDate=" + contactDate + ", content=" + content
-				+ ", regDate=" + regDate + "]";
+		return "InquireVO [no=" + no + ", category=" + category + ", title=" + title + ", companyName=" + companyName
+				+ ", manager=" + manager + ", contactNumber=" + contactNumber + ", contactDate=" + contactDate
+				+ ", content=" + content + ", regDate=" + regDate + "]";
 	}
 	
 }

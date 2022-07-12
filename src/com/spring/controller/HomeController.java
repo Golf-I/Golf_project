@@ -18,18 +18,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.spring.domain.AcademyVO;
 import com.spring.domain.BoardVO;
 import com.spring.domain.CommentVO;
 import com.spring.domain.Criteria;
+import com.spring.domain.EventVO;
 import com.spring.domain.ItineraryVO;
 import com.spring.domain.MemberVO;
+import com.spring.domain.MembershipVO;
 import com.spring.domain.NoReservationVO;
 import com.spring.domain.PageMaker;
 import com.spring.domain.ProductVO;
-import com.spring.domain.ReservationGolfVO;
-import com.spring.domain.ReservationHotelVO;
-import com.spring.domain.ReservationRentacarVO;
-import com.spring.domain.ReservationVO;
 import com.spring.domain.ReviewVO;
 import com.spring.domain.TravelerVO;
 import com.spring.service.BoardService;
@@ -80,7 +79,7 @@ public class HomeController extends HttpServlet {
 	private MemberService mservice;
 
 	@Inject
-	private CategoryService iservice;
+	private CategoryService cservice;
 
 	@Inject
 	private BoardService bservice;
@@ -92,7 +91,6 @@ public class HomeController extends HttpServlet {
 	/* 메인 화면 페이지 호출 */
 	@RequestMapping(value = "index", method = RequestMethod.GET)
 	public String mainPage(Locale locale, Model model) {
-		// logger.info("-- test");
 		return "main.tiles"; // tiles.xml의 <definition name="main" extends="base">을 리턴시킨다
 	}
 	
@@ -116,7 +114,7 @@ public class HomeController extends HttpServlet {
 		String sns = req.getParameter("sns");
 		String gender = req.getParameter("gender");
 		String birth = req.getParameter("birth");
-//		logger.info(":::::::: id = "+ id + sns + gender + birth);
+
 		model.addAttribute("vo", vo);
 
 		return "member/member_signup2.tiles";
@@ -137,8 +135,9 @@ public class HomeController extends HttpServlet {
 	/* 네이버 로그인 콜백 호출 */
 	@RequestMapping(value = "naverlogin", method = RequestMethod.GET)
 	public String naverlogin(HttpSession session, HttpServletRequest req, MemberVO vo, Model model) {
+		
 		model.addAttribute("vo", vo);
-//		logger.info("#naverlogin vo : " + vo);
+
 		return "member/naverloginCallback.tiles";
 	}
 
@@ -227,7 +226,6 @@ public class HomeController extends HttpServlet {
 	public String member_reservations(Model model, HttpSession session) throws Exception {
 		
 		String id = (String) session.getAttribute("id");
-		
 		model.addAttribute("reserList", rservice.getReservation(id));
 		
 		return "member/member_reservationList.tiles";
@@ -339,10 +337,6 @@ public class HomeController extends HttpServlet {
 	/* 예약하기 페이지 호출 */
 	@RequestMapping(value = "reservation", method = RequestMethod.GET)
 	public String reservation(ProductVO pvo, Model model) throws Exception {
-		
-//		List<ProductVO> bbsList = new ArrayList<ProductVO>();
-//		model.addAttribute("", bbsList);
-		
 		return "reservation/reservation.tiles";
 	}
 
@@ -379,44 +373,86 @@ public class HomeController extends HttpServlet {
 
 	/* 이벤트 목록 페이지 호출 */
 	@RequestMapping(value = "event", method = RequestMethod.GET)
-	public String eventPage() {
+	public String eventPage(Criteria cri, Model model) throws Exception {
+		
+		int total = bservice.countEvent();
+
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
+
+		model.addAttribute("eventList", bservice.selectEvent(cri));
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("total", total);
+		
 		return "category/event_list.tiles";
 	}
 
 	/* 이벤트 상세 페이지 호출 */
 	@RequestMapping(value = "event_detail", method = RequestMethod.GET)
-	public String event_detail() {
+	public String event_detail(Model model, EventVO vo) throws Exception{
+		
+		model.addAttribute("eventList", bservice.oneEvent(vo));
+		
 		return "category/event_detail.tiles";
 	}
 
 	/* 회원권 페이지 호출 */
 	@RequestMapping(value = "membership", method = RequestMethod.GET)
-	public String membership_list() {
+	public String membership_list(Model model, Criteria cri) throws Exception {
+
+		int total = bservice.countMembership();
+
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
+
+		model.addAttribute("membershipList", bservice.selectMembership(cri));
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("total", total);
+
 		return "category/membership_list.tiles";
 	}
 
 	/* 회원권 상세 페이지 호출 */
 	@RequestMapping(value = "membership_detail", method = RequestMethod.GET)
-	public String membership_detail() {
+	public String membership_detail(MembershipVO vo, Model model) throws Exception {
+		
+		model.addAttribute("membershipList", bservice.oneMembership(vo));
+		
 		return "category/membership_detail.tiles";
 	}
 
 	/* 아카데미 페이지 호출 */
 	@RequestMapping(value = "academy", method = RequestMethod.GET)
-	public String academy_list() {
+	public String academy_list(Criteria cri, Model model) throws Exception{
+		
+		int total = bservice.countAcademy();
+
+		PageMaker pageMaker = new PageMaker();
+		pageMaker.setCri(cri);
+		pageMaker.setTotalCount(total);
+
+		model.addAttribute("academyList", bservice.selectAcademy(cri));
+		model.addAttribute("pageMaker", pageMaker);
+		model.addAttribute("total", total);
+		
 		return "category/academy_list.tiles";
 	}
 
 	/* 아카데미 상세 페이지 호출 */
 	@RequestMapping(value = "academy_detail", method = RequestMethod.GET)
-	public String academy_detail() {
+	public String academy_detail(Model model, AcademyVO vo) throws Exception {
+		
+		model.addAttribute("academyList", bservice.oneAcademy(vo));
+		
 		return "category/academy_detail.tiles";
 	}
 
 	/* 회원권&아카데미 상담 신청 페이지 호출 */
 	@RequestMapping(value = "consulting", method = RequestMethod.GET)
 	public String consultingForm() {
-		return "category/consulting_form.tiles";
+		return "category/consulting_form.jsp";
 	}
 
 	/* 회사소개 페이지 호출 */

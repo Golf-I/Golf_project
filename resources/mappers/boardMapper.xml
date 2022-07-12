@@ -50,6 +50,33 @@
 	</select>
 	<!-- 상품리뷰 전체 게시글 갯수 출력 -->
 	
+			
+	<!-- 회원권 전체 게시글 갯수 조회 -->
+	<select id="countMembership" resultType="int">
+	<![CDATA[
+	SELECT COUNT(*)	FROM membership
+	]]>
+	</select>
+	<!-- 회원권 전체 게시글 갯수 조회 -->	
+	
+	
+	<!-- 아카데미 전체 게시글 갯수 조회 -->
+	<select id="countAcademy" resultType="int">
+	<![CDATA[
+	SELECT COUNT(*)	FROM academy
+	]]>
+	</select>
+	<!-- 아카데미 전체 게시글 갯수 조회 -->
+	
+	
+	<!-- 이벤트 전체 게시글 갯수 조회 -->
+	<select id="countEvent" resultType="int">
+	<![CDATA[
+	SELECT COUNT(*)	FROM event
+	]]>
+	</select>
+	<!-- 이벤트 전체 게시글 갯수 조회 -->
+	
 	
 	<!-- 공지사항 전체 게시글 조회 -->
 	<select id="selectNotice" resultType="com.spring.domain.BoardVO">
@@ -88,6 +115,45 @@
 	]]>
 	</select>
 	<!-- 패키지 상품 전체 게시글 조회 -->
+
+
+	<!-- 회원권 전체 게시글 조회 -->
+	<select id="selectMembership" resultType="com.spring.domain.MembershipVO">
+	<![CDATA[
+	SELECT *
+	FROM membership
+	WHERE no > 0
+	ORDER BY no DESC
+	LIMIT #{pageStart}, #{perPageNum}
+	]]>
+	</select>
+	<!-- 회원권 전체 게시글 조회 -->
+	
+	
+	<!-- 아카데미 전체 게시글 조회 -->
+	<select id="selectAcademy" resultType="com.spring.domain.AcademyVO">
+	<![CDATA[
+	SELECT *
+	FROM academy
+	WHERE no > 0
+	ORDER BY no DESC
+	LIMIT #{pageStart}, #{perPageNum}
+	]]>
+	</select>
+	<!-- 아카데미 전체 게시글 조회 -->
+	
+	
+	<!-- 이벤트 전체 게시글 조회 -->
+	<select id="selectEvent" resultType="com.spring.domain.EventVO">
+	<![CDATA[
+	SELECT *
+	FROM event
+	WHERE no > 0
+	ORDER BY no DESC
+	LIMIT #{pageStart}, #{perPageNum}
+	]]>
+	</select>
+	<!-- 이벤트 전체 게시글 조회 -->
 
 	
 	<!-- 게시물 조회 -->
@@ -159,6 +225,39 @@
 	]]>
 	</select>
 	<!-- 예약불가 기간 조회 -->
+	
+	
+	<!-- 회원권 조회 -->
+	<select id="oneMembership" resultType="com.spring.domain.MembershipVO">
+	<![CDATA[
+	SELECT *
+	FROM membership
+	WHERE no = #{no}
+	]]>
+	</select>
+	<!-- 회원권 조회 -->
+	
+	
+	<!-- 아카데미 조회 -->
+	<select id="oneAcademy" resultType="com.spring.domain.AcademyVO">
+	<![CDATA[
+	SELECT *
+	FROM academy
+	WHERE no = #{no}
+	]]>
+	</select>
+	<!-- 아카데미 조회 -->
+	
+	
+	<!-- 이벤트 조회 -->
+	<select id="oneEvent" resultType="com.spring.domain.EventVO">
+	<![CDATA[
+	SELECT *
+	FROM event
+	WHERE no = #{no}
+	]]>
+	</select>
+	<!-- 이벤트 조회 -->
 
 	
 	<!-- 상품별점/평점 등록 -->
@@ -184,5 +283,6 @@
 	]]>
 	</select>
 	<!-- 예약불가 기간 조회 -->
+	
 	
 </mapper>

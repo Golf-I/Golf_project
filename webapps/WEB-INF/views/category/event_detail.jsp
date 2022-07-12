@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -27,7 +28,11 @@
         </div>
 
         <div class="title">
-            <p>떠나자, 골프투어 1회 기획전!</p>
+        	
+        	<c:forEach items="${eventList}" var="eventList">
+	            <p>${eventList.title}</p>
+<!-- 	            <p>떠나자, 골프투어 1회 기획전!</p> -->
+        	</c:forEach>
         </div>
 
         <div class="line01"></div>
@@ -133,10 +138,10 @@
         </div>
 
         <div class="country">
-            <div><a href="freegolf">일본 자유골프→</a></div>
-            <div><a href="freegolf">태국 자유골프→</a></div>
-            <div><a href="freegolf">베트남 자유골프→</a></div>
-            <div><a href="freegolf">대만 자유골프→</a></div>
+            <div><a href="freegolf?region=일본">일본 자유골프→</a></div>
+            <div><a href="freegolf?region=태국">태국 자유골프→</a></div>
+            <div><a href="freegolf?region=베트남">베트남 자유골프→</a></div>
+            <div><a href="freegolf?region=대만">대만 자유골프→</a></div>
         </div>
         
     </div> <!--자유골프-->

@@ -194,252 +194,6 @@
                             <td>일</td>
                         </tr>
 
-                        <!-- <tr>
-                            <td>
-                                <label for="day01_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day02_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day03_6" class="no_w">
-                                  <p>01</p>
-                                    <p>예약불가</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day04_6">
-                                    <p>02</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day05_6">
-                                    <p>03</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day06_6">
-                                    <p>04</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day07_6">
-                                    <p>05</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day08_6">
-                                    <p>06</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day09_6">
-                                    <p>07</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day10_6">
-                                    <p>08</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day11_6">
-                                    <p>09</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day12_6">
-                                    <p>10</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day13_6">
-                                    <p>11</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day14_6">
-                                    <p>12</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day15_6">
-                                    <p>13</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day16_6">
-                                    <p>14</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day17_6">
-                                    <p>15</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day18_6">
-                                    <p>16</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day19_6">
-                                    <p>17</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day20_6">
-                                    <p>18</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day21_6">
-                                    <p>19</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day22_6">
-                                    <p>20</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day23_6">
-                                    <p>21</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day24_6">
-                                    <p>22</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day25_6">
-                                    <p>23</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day26_6">
-                                    <p>24</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day27_6">
-                                    <p>25</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day28_6">
-                                    <p>26</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day29_6">
-                                    <p>27</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day30_6">
-                                    <p>28</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day31_6">
-                                    <p>29</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day32_6">
-                                    <p>30</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day33_6">
-                                    <p>31</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day34_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day35_6">
-                                </label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="day36_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day37_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day38_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day39_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day40_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day41_6">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day42_6">
-                                </label>
-                            </td> 
-                        </tr> -->
 
                     </table>
 
@@ -462,224 +216,6 @@
                             <td>금</td>
                             <td>토</td>
                             <td>일</td>
-                        </tr>
-
-                         <tr>
-                            <td>
-                                <label for="day01_7">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day02_7">
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day03_7">
-                                  
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day04_7">
-                                  
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day05_7">
-                                  
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day06_7">
-                                    <p>01</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day07_7">
-                                    <p>02</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day08_7">
-                                    <p>03</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day09_7">
-                                    <p>04</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day10_7">
-                                    <p>05</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day11_7">
-                                    <p>06</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day12_7">
-                                    <p>07</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day13_7">
-                                    <p>08</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day14_7">
-                                    <p>09</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day15_7">
-                                    <p>10</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day16_7">
-                                    <p>11</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day17_7">
-                                    <p>12</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day18_7">
-                                    <p>13</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day19_7">
-                                    <p>14</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day20_7">
-                                    <p>15</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day21_7">
-                                    <p>16</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day22_7">
-                                    <p>17</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day23_7">
-                                    <p>18</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day24_7">
-                                    <p>19</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day25_7">
-                                    <p>20</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day26_7">
-                                    <p>21</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day27_7">
-                                    <p>22</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day28_7">
-                                    <p>23</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="day29_7">
-                                    <p>24</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day30_7">
-                                    <p>25</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day31_7">
-                                    <p>26</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day32_7">
-                                    <p>27</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day33_7">
-                                    <p>28</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day34_7">
-                                    <p>29</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
-                            <td>
-                                <label for="day35_7">
-                                    <p>30</p>
-                                    <p>1,099,000</p>
-                                </label>
-                            </td>
                         </tr>
 
                         <tr>
@@ -901,8 +437,6 @@
 
                             <td>
                                 <select id="gender02" name="booker_gender">
-
-                                    <option>선택</option>
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
 
@@ -948,13 +482,13 @@
                             </td>
                             <td>
                                 <!-- <p>홍길동</p> -->
-                                <input type="text" name="traveler" required/>
+                                <input type="text" name="reserList.traveler" required/>
                             </td>
                             <td>
                                 <p><span>*</span> 성별</p>
                             </td>
                             <td>
-                                <select id="gender01" name="travler_gender" >
+                                <select id="gender01" name="travelList.traveler_gender">
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
                                 </select>
@@ -964,16 +498,16 @@
                             </td>
                             <td>
                                 <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
-                                 name="traveler_firstname" required>
+                                 name="travelList[0].traveler_firstname" required>
                                 <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
-                                 name="traveler_lastname" required>
+                                 name="travelList[0].traveler_lastname" required>
                             </td>
                             <td>
                                 <p>연락처</p>
                             </td>
                             <td>
                                 <!-- <p>010-1111-1111</p> -->
-                                <input type="text" name="traveler_phone" required/>
+                                <input type="text" name="travelList[0].traveler_phone" required/>
                             </td>
                         </tr>
                     </table>
@@ -982,423 +516,50 @@
 
                 <div class="information03" id="travel02">
     
-                <p>여행자정보02</p>
-
-                <table cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
-                            <p><span>*</span> 이름</p>
-                        </td>
-                        <td>
-<!--                             <p>홍길동</p> -->
-                            <input type="text" name="traveler" required/> 
-                        </td>
-
-                        <td>
-                            <p><span>*</span> 성별</p>
-                        </td>
-                        <td>
-                            <select id="gender03" name="travler_gender">
-                                <option value="남성">남성</option>
-                                <option value="여성">여성</option>
-                            </select>
-                        </td>
-                        <td>
-                            <p>영문명</p>
-                        </td>
-                        <td>
-                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
-                            name="traveler_firstname" required>
-                           <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
-                            name="traveler_lastname" required>
-                        </td>
-                        <td>
-                            <p>연락처</p>
-                        </td>
-                        <td>
-<!--                             <p>010-1111-1111</p> -->
-                            <input type="text" name="traveler_phone" required />
-                        </td>
-                    </tr>
-                </table>
+	                <p>여행자정보02</p>
+	
+	                <table cellpadding="0" cellspacing="0">
+	                    <tr>
+	                        <td>
+	                            <p><span>*</span> 이름</p>
+	                        </td>
+	                        <td>
+	<!--                             <p>홍길동</p> -->
+	                            <input type="text" name="travelList[1].traveler" required/> 
+	                        </td>
+	
+	                        <td>
+	                            <p><span>*</span> 성별</p>
+	                        </td>
+	                        <td>
+	                            <select id="gender03" name="travelList[1].travler_gender">
+	                                <option value="남성">남성</option>
+	                                <option value="여성">여성</option>
+	                            </select>
+	                        </td>
+	                        <td>
+	                            <p>영문명</p>
+	                        </td>
+	                        <td>
+	                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
+	                            name="travelList[1].traveler_firstname" required>
+	                           <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
+	                            name="travelList[1].traveler_lastname" required>
+	                        </td>
+	                        <td>
+	                            <p>연락처</p>
+	                        </td>
+	                        <td>
+	<!--                             <p>010-1111-1111</p> -->
+	                            <input type="text" name="travelList[1].traveler_phone" required />
+	                        </td>
+	                    </tr>
+	                </table>
                 
                	<br/><br/>
 
 	            </div>
 	            <!--information03-->
-            
-                <div class="information03" id="travel03" style="display:none;">
-    
-                <p>여행자정보03</p>
-
-                <table cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
-                            <p><span>*</span> 이름</p>
-                        </td>
-                        <td>
-<!--                             <p>홍길동</p> -->
-                            <input type="text" name="" required/> 
-                        </td>
-
-                        <td>
-                            <p><span>*</span> 성별</p>
-                        </td>
-                        <td>
-                            <select id="gender03">
-                                <option>선택</option>
-                                <option value="남성">남성</option>
-                                <option value="여성">여성</option>
-                            </select>
-                        </td>
-                        <td>
-                            <p>영문명</p>
-                        </td>
-                        <td>
-                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-                        </td>
-                        <td>
-                            <p>연락처</p>
-                        </td>
-                        <td>
-<!--                             <p>010-1111-1111</p> -->
-                            <input type="text"  required  name=""/>
-                        </td>
-                    </tr>
-                </table>
-                
-               	<br/><br/>
-
-	            </div>
-	            <!--information03-->
-            
-            
-                <div class="information03" id="travel04" style="display:none;">
-    
-                <p>여행자정보04</p>
-
-                <table cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
-                            <p><span>*</span> 이름</p>
-                        </td>
-                        <td>
-<!--                             <p>홍길동</p> -->
-                            <input type="text" name="" required/> 
-                        </td>
-
-                        <td>
-                            <p><span>*</span> 성별</p>
-                        </td>
-                        <td>
-                            <select id="gender03">
-                                <option>선택</option>
-                                <option value="남성">남성</option>
-                                <option value="여성">여성</option>
-                            </select>
-                        </td>
-                        <td>
-                            <p>영문명</p>
-                        </td>
-                        <td>
-                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-                        </td>
-                        <td>
-                            <p>연락처</p>
-                        </td>
-                        <td>
-<!--                             <p>010-1111-1111</p> -->
-                            <input type="text"  required  name=""/>
-                        </td>
-                    </tr>
-                </table>
-                
-               	<br/><br/>
-
-	            </div>
-	            <!--information03-->
-            
-            
-                <div class="information03" id="travel05" style="display:none;">
-    
-                <p>여행자정보05</p>
-
-                <table cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
-                            <p><span>*</span> 이름</p>
-                        </td>
-                        <td>
-<!--                             <p>홍길동</p> -->
-                            <input type="text" name="" required/> 
-                        </td>
-
-                        <td>
-                            <p><span>*</span> 성별</p>
-                        </td>
-                        <td>
-                            <select id="gender03">
-                                <option>선택</option>
-                                <option value="남성">남성</option>
-                                <option value="여성">여성</option>
-                            </select>
-                        </td>
-                        <td>
-                            <p>영문명</p>
-                        </td>
-                        <td>
-                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-                        </td>
-                        <td>
-                            <p>연락처</p>
-                        </td>
-                        <td>
-<!--                             <p>010-1111-1111</p> -->
-                            <input type="text"  required  name=""/>
-                        </td>
-                    </tr>
-                </table>
-
-        		<br/><br/>
-
-	            </div>
-	            <!--information03-->
-            
-            
-                <div class="information03" id="travel06" style="display:none;">
-    
-                <p>여행자정보06</p>
-
-                <table cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
-                            <p><span>*</span> 이름</p>
-                        </td>
-                        <td>
-<!--                             <p>홍길동</p> -->
-                            <input type="text" name="" required/> 
-                        </td>
-
-                        <td>
-                            <p><span>*</span> 성별</p>
-                        </td>
-                        <td>
-                            <select id="gender03">
-                                <option>선택</option>
-                                <option value="남성">남성</option>
-                                <option value="여성">여성</option>
-                            </select>
-                        </td>
-                        <td>
-                            <p>영문명</p>
-                        </td>
-                        <td>
-                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-                            <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-                        </td>
-                        <td>
-                            <p>연락처</p>
-                        </td>
-                        <td>
-<!--                             <p>010-1111-1111</p> -->
-                            <input type="text"  required  name=""/>
-                        </td>
-                    </tr>
-                </table>
-
-	        	<br/><br/>
-	
-	            </div>
-	            <!--information03-->
-            
-            
-	            <div class="information03" id="travel07" style="display:none;">
-	
-	            <p>여행자정보07</p>
-	
-	            <table cellpadding="0" cellspacing="0">
-	                <tr>
-	                    <td>
-	                        <p><span>*</span> 이름</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>홍길동</p> -->
-	                        <input type="text" name="" required/> 
-	                    </td>
-	
-	                    <td>
-	                        <p><span>*</span> 성별</p>
-	                    </td>
-	                    <td>
-	                        <select id="gender03">
-	                            <option>선택</option>
-	                            <option value="남성">남성</option>
-	                            <option value="여성">여성</option>
-	                        </select>
-	                    </td>
-	                    <td>
-	                        <p>영문명</p>
-	                    </td>
-	                    <td>
-	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-	                    </td>
-	                    <td>
-	                        <p>연락처</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>010-1111-1111</p> -->
-	                        <input type="text"  required  name=""/>
-	                    </td>
-	                </tr>
-	            </table>
-	            
-	           	<br/><br/>
-	
-		        </div>
-		        <!--information03-->
-        
-        
-	            <div class="information03" id="travel08" style="display:none;">
-	
-	            <p>여행자정보08</p>
-	
-	            <table cellpadding="0" cellspacing="0">
-	                <tr>
-	                    <td>
-	                        <p><span>*</span> 이름</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>홍길동</p> -->
-	                        <input type="text" name="" required/> 
-	                    </td>
-	
-	                    <td>
-	                        <p><span>*</span> 성별</p>
-	                    </td>
-	                    <td>
-	                        <select id="gender03">
-	                            <option>선택</option>
-	                            <option value="남성">남성</option>
-	                            <option value="여성">여성</option>
-	                        </select>
-	                    </td>
-	                    <td>
-	                        <p>영문명</p>
-	                    </td>
-	                    <td>
-	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-	                    </td>
-	                    <td>
-	                        <p>연락처</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>010-1111-1111</p> -->
-	                        <input type="text"  required  name=""/>
-	                    </td>
-	                </tr>
-	            </table>
-	
-	        	<br/><br/>
-	
-		        </div>
-		        <!--information03-->
-        
-        
-	            <div class="information03" id="travel09" style="display:none;">
-	
-	            <p>여행자정보09</p>
-	
-	            <table cellpadding="0" cellspacing="0">
-	                <tr>
-	                    <td>
-	                        <p><span>*</span> 이름</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>홍길동</p> -->
-	                        <input type="text" name="" required/> 
-	                    </td>
-	
-	                    <td>
-	                        <p><span>*</span> 성별</p>
-	                    </td>
-	                    <td>
-	                        <select id="gender03">
-	                            <option>선택</option>
-	                            <option value="남성">남성</option>
-	                            <option value="여성">여성</option>
-	                        </select>
-	                    </td>
-	                    <td>
-	                        <p>영문명</p>
-	                    </td>
-	                    <td>
-	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-	                    </td>
-	                    <td>
-	                        <p>연락처</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>010-1111-1111</p> -->
-	                        <input type="text"  required  name=""/>
-	                    </td>
-	                </tr>
-	            </table>
-	
-	        	<br/><br/>
-	
-		        </div>
-		        <!--information03-->
-	        
-	            <div class="information03" id="travel10" style="display:none;">
-	
-	            <p>여행자정보10</p>
-	
-	            <table cellpadding="0" cellspacing="0">
-	                <tr>
-	                    <td>
-	                        <p><span>*</span> 이름</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>홍길동</p> -->
-	                        <input type="text" name="" required/> 
-	                    </td>
-	
-	                    <td>
-	                        <p><span>*</span> 성별</p>
-	                    </td>
-	                    <td>
-	                        <select id="gender03">
-	                            <option>선택</option>
-	                            <option value="남성">남성</option>
-	                            <option value="여성">여성</option>
-	                        </select>
-	                    </td>
-	                    <td>
-	                        <p>영문명</p>
-	                    </td>
-	                    <td>
-	                        <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name02" required>
-	                        <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name02" required>
-	                    </td>
-	                    <td>
-	                        <p>연락처</p>
-	                    </td>
-	                    <td>
-	<!--                             <p>010-1111-1111</p> -->
-	                        <input type="text"  required  name=""/>
-	                    </td>
-	                </tr>
-	            </table>
-	
-		        </div>
-		        <!--information03-->
-            
             
 
         </div><!--information-->

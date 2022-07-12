@@ -7,8 +7,8 @@
 	<!-- 상담신청 등록  -->	
 	<insert id="register"> 
 	<![CDATA[
-	INSERT INTO inquire(category, companyName, manager, contactNumber, contactDate, content, regDate)
-	VALUES (#{category}, #{companyName}, #{manager}, #{contactNumber}, #{contactDate}, #{content}, NOW())
+	INSERT INTO inquire(category, title, companyName, manager, contactNumber, contactDate, content, regDate)
+	VALUES (#{category}, #{title}, #{companyName}, #{manager}, #{contactNumber}, #{contactDate}, #{content}, NOW())
 	]]>
 	</insert>
 	<!-- 상담신청 등록  -->	
@@ -48,5 +48,6 @@
 	]]>
 	</insert>
 	<!-- 입점 문의  -->	
+	
 	
 </mapper>

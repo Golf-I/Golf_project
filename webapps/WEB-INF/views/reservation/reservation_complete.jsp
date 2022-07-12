@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <input type="button" id="confirm_btn" value="확인" onclick="location.href='index';">
+            <input type="button" id="confirm_btn" value="확인" onclick="location.href='member_reservation';">
 
         </div><!--reservation_confirm-->
 

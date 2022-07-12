@@ -1448,7 +1448,7 @@
 
             <div class="member_review">
 
-                <a href="javascript:openwindow();" > <!-- onclick="openwindow();" -->
+                <a href="javascript:openwindow();" >
                 
                 <div class="review_m_01">
                     <div class="review_top">
@@ -1479,23 +1479,27 @@
         
 			<%-- 페이징  --%>    
 			<div class="num_btn">
-<%-- 			
-				<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage}"><p>&lt;&lt;</p></a>
- --%>				
+			
+				<c:if test="${pageMaker_rev.totalCount != 1 && pageMaker_rev.totalCount != 0}">
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage}"><p>&lt;&lt;</p></a>
+				</c:if>
+				
 				<c:if test="${pageMaker_rev.prev}">
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.startPage-1}"><p>&lt;</p></a>
 				</c:if>
 				
 				<c:forEach begin="${pageMaker_rev.startPage}" end="${pageMaker_rev.endPage}" var="p">
-					<a href="product_detail?product_code=${param.product_code}&page=${p}" style="color: red;"><p>${p}</p></a>    
+					<a href="product_detail?product_code=${param.product_code}&page=${p}" style="color:red;"><p>${p}</p></a>    
 				</c:forEach>
 				
 				<c:if test="${pageMaker_rev.next && pageMaker_rev.endPage>0}">
 					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage+1}"><p>&gt;</p></a>
 				</c:if>
-<%-- 				
-				<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage}"><p>&gt;&gt;</p></a>
- --%>
+
+				<c:if test="${pageMaker_rev.totalCount != 1 && pageMaker_rev.totalCount != 0}">
+					<a href="product_detail?product_code=${param.product_code}&page=${pageMaker_rev.endPage}"><p>&gt;&gt;</p></a>
+				</c:if>
+
 			</div><!-- class="num_btn" -->
 			<%-- 페이징  --%>
 			

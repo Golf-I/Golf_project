@@ -1,11 +1,13 @@
 package com.spring.controller;
 
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -16,6 +18,7 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -150,7 +153,6 @@ public class MemberController {
 	public String findId(String phone, MemberVO vo, Model model) throws Exception {
 		
 		MemberVO mvo = mservice.findId(phone);
-//		logger.info("*** mvo : " + mvo);
 		
 		model.addAttribute("mvo", mvo.getId());
 		
@@ -298,7 +300,6 @@ public class MemberController {
 			out.println("alert('변경되었습니다.');");
 			out.println("self.close();");
 			out.println("window.opener.location.reload(true);");
-//			out.println("location.href='../mypage'");
 			out.println("</script>");
 			out.flush();
 			return null;
@@ -372,12 +373,15 @@ public class MemberController {
 	
 	
 	/* 상품 예약 */
-	@RequestMapping(value = "/reservation", method = RequestMethod.POST)
-	public String memberReservation(ReservationVO rvo, TravelerVO tvo) throws Exception{
+	@RequestMapping(value = "/reservation", method = {RequestMethod.POST, RequestMethod.GET})
+	public String memberReservation(@ModelAttribute(value="ReservationVO") ReservationVO vo, 
+									@ModelAttribute(value="TravelerVO") TravelerVO tvo, 
+									Model model) throws Exception{
 		
-		rservice.memberReservation(rvo);
-//		rservice.travelerReservation(tvo);
-		logger.info("pvo : " + rvo);
+//		rservice.memberReservation(rvo);
+		logger.info("확인!!!!!!!! : " + vo);
+		logger.info("확인!!!!!!!! : " + tvo.toString());
+		
 		
 		return "redirect:../reservation_complete";
 	} // memberReservation

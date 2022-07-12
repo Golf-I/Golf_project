@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>consulting</title>
 	<link href="${pageContext.request.contextPath}/resources/css/consulting.css" rel="stylesheet">
-	<script	src="${pageContext.request.contextPath}/resources/js/consulting_form.js"></script>
+	<script	type="text/javascript" src="${pageContext.request.contextPath}/resources/js/consulting_form.js"></script>
+  	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
@@ -18,6 +19,8 @@
             <p>상담신청</p>
 
 			<form method="POST"	action="category/inquire" onsubmit="return formCheck();">
+
+			<input type="hidden" value="${param.title}" name="title">
 
             <div class="consulting_box">
 

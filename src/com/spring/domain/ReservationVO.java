@@ -1,9 +1,11 @@
 package com.spring.domain;
 
 import java.sql.Date;
+import java.util.List;
 
 public class ReservationVO {
 
+	private List<TravelerVO> travelList;
 	private int product_code;
 	private int idx;
 	private String sortation;
@@ -33,6 +35,12 @@ public class ReservationVO {
 	private	Date regDate;
 	
 	
+	public List<TravelerVO> getReserList() {
+		return travelList;
+	}
+	public void setReserList(List<TravelerVO> travelList) {
+		this.travelList = travelList;
+	}
 	public int getProduct_code() {
 		return product_code;
 	}
@@ -175,14 +183,15 @@ public class ReservationVO {
 	
 	@Override
 	public String toString() {
-		return "ReservationVO [product_code=" + product_code + ", idx=" + idx + ", sortation=" + sortation + ", id="
-				+ id + ", productName=" + productName + ", region=" + region + ", city=" + city + ", departure_date="
-				+ departure_date + ", arrival_date=" + arrival_date + ", personnel=" + personnel + ", booker=" + booker
-				+ ", booker_phone=" + booker_phone + ", booker_email=" + booker_email + ", booker_gender="
-				+ booker_gender + ", product_price=" + product_price + ", day_park=" + day_park + ", day_il=" + day_il
-				+ ", memo=" + memo + ", option_singleRoom=" + option_singleRoom + ", option_addVehicle="
-				+ option_addVehicle + ", option_businessUpgrade=" + option_businessUpgrade + ", total_price="
-				+ total_price + ", regDate=" + regDate + "]";
+		return "ReservationVO [travelList=" + travelList + ", product_code=" + product_code + ", idx=" + idx
+				+ ", sortation=" + sortation + ", id=" + id + ", productName=" + productName + ", region=" + region
+				+ ", city=" + city + ", departure_date=" + departure_date + ", arrival_date=" + arrival_date
+				+ ", personnel=" + personnel + ", booker=" + booker + ", booker_phone=" + booker_phone
+				+ ", booker_email=" + booker_email + ", booker_gender=" + booker_gender + ", product_price="
+				+ product_price + ", day_park=" + day_park + ", day_il=" + day_il + ", memo=" + memo
+				+ ", option_singleRoom=" + option_singleRoom + ", option_addVehicle=" + option_addVehicle
+				+ ", option_businessUpgrade=" + option_businessUpgrade + ", total_price=" + total_price + ", regDate="
+				+ regDate + "]";
 	}
 	
 }

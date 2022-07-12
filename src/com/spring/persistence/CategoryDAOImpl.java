@@ -1,11 +1,14 @@
 package com.spring.persistence;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.spring.domain.InquireVO;
+import com.spring.domain.MembershipVO;
 import com.spring.domain.PromotionVO;
 
 
@@ -52,6 +55,5 @@ public class CategoryDAOImpl implements CategoryDAO{
 		sqlSession.insert(namespace+".store", vo);
 		//System.out.println("-- DAOImpl : signUp() 실행 완료 ");
 	} // store
-	
-	
+
 }

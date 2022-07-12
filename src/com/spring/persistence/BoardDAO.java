@@ -2,10 +2,13 @@ package com.spring.persistence;
 
 import java.util.List;
 
+import com.spring.domain.AcademyVO;
 import com.spring.domain.BoardVO;
 import com.spring.domain.CommentVO;
 import com.spring.domain.Criteria;
+import com.spring.domain.EventVO;
 import com.spring.domain.ItineraryVO;
+import com.spring.domain.MembershipVO;
 import com.spring.domain.NoReservationVO;
 import com.spring.domain.ProductVO;
 import com.spring.domain.ReviewVO;
@@ -19,15 +22,27 @@ public interface BoardDAO {
 
 	public int countPackage() throws Exception; // 패키지 상품 전체 게시글 갯수 조회
 	
-	public int countComment(CommentVO cvo) throws Exception; // 상품별점/평점 전체 게시글 갯수 조회
+	public int countComment(CommentVO vo) throws Exception; // 상품별점/평점 전체 게시글 갯수 조회
 	
-	public int countReview(ReviewVO rvo) throws Exception; // 상품리뷰 전체 게시글 갯수 조회
+	public int countReview(ReviewVO vo) throws Exception; // 상품리뷰 전체 게시글 갯수 조회
 
+	public int countMembership() throws Exception; // 회원권 전체 게시글 갯수 조회
+
+	public int countAcademy() throws Exception; // 아카데미 전체 게시글 갯수 조회
+	
+	public int countEvent() throws Exception; // 이벤트 전체 게시글 갯수 조회
+	
 	public List<BoardVO> selectNotice(Criteria cri) throws Exception; // 공지사항 전체 게시글 조회
 
 	public List<BoardVO> selectQnA(Criteria cri) throws Exception; // 자주묻는질문 전체 게시글 조회
 	
 	public List<ProductVO> selectPackages(Criteria cri) throws Exception; // 패키지 상품 총 게시물 조회
+	
+	public List<MembershipVO> selectMembership(Criteria cri) throws Exception; // 회원권 총 게시물 조회
+	
+	public List<AcademyVO> selectAcademy(Criteria cri) throws Exception; // 아카데미 총 게시물 조회
+	
+	public List<EventVO> selectEvent(Criteria cri) throws Exception; // 아카데미 총 게시물 조회
 	
 	public List<BoardVO> lookup(BoardVO vo) throws Exception; // 게시물 조회
 	
@@ -40,6 +55,12 @@ public interface BoardDAO {
 	public List<CommentVO> oneComment(CommentVO vo, Criteria cri) throws Exception; // 상품별점/평점 조회
 	
 	public List<NoReservationVO> oneNoReser(NoReservationVO vo) throws Exception; // 예약불가 기간 조회
+
+	public List<MembershipVO> oneMembership(MembershipVO vo) throws Exception; // 회원권 조회
+	
+	public List<AcademyVO> oneAcademy(AcademyVO vo) throws Exception; // 아카데미 조회
+	
+	public List<EventVO> oneEvent(EventVO vo) throws Exception; // 아카데미 조회
 	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
 	

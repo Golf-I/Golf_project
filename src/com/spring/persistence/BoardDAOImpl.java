@@ -10,11 +10,14 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.spring.domain.AcademyVO;
 import com.spring.domain.BoardVO;
 import com.spring.domain.CommentVO;
 import com.spring.domain.Criteria;
+import com.spring.domain.EventVO;
 import com.spring.domain.InquireVO;
 import com.spring.domain.ItineraryVO;
+import com.spring.domain.MembershipVO;
 import com.spring.domain.NoReservationVO;
 import com.spring.domain.ProductVO;
 import com.spring.domain.PromotionVO;
@@ -79,6 +82,36 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return count;
 	} // countReview
+	
+	
+	/* 회원권 전체 게시글 갯수 조회 */
+	@Override
+	public int countMembership() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countMembership");
+		
+		return count;
+	} // countMembership
+	
+	
+	/* 아카데미 전체 게시글 갯수 조회 */
+	@Override
+	public int countAcademy() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countAcademy");
+		
+		return count;
+	} // countAcademy
+	
+	
+	/* 이벤트 전체 게시글 갯수 조회 */
+	@Override
+	public int countEvent() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countEvent");
+		
+		return count;
+	} // countEvent
 
 	
 	/* 공지사항 전체 게시글 조회 */
@@ -116,6 +149,36 @@ public class BoardDAOImpl implements BoardDAO{
 		return bbsList;
 	} // selectPackages
 
+	
+	/* 회원권 전체  게시글 조회 */
+	@Override
+	public List<MembershipVO> selectMembership(Criteria cri) throws Exception {
+
+		List<MembershipVO> membershipList = sqlSession.selectList(namespace+".selectMembership", cri);
+		
+		return membershipList;
+	} // selectMembership
+	
+	
+	/* 회원권 전체  게시글 조회 */
+	@Override
+	public List<AcademyVO> selectAcademy(Criteria cri) throws Exception {
+		
+		List<AcademyVO> academyList = sqlSession.selectList(namespace+".selectAcademy", cri);
+		
+		return academyList;
+	} // selectMembership
+	
+	
+	/* 이벤트 전체 게시글 조회 */
+	@Override
+	public List<EventVO> selectEvent(Criteria cri) throws Exception {
+		
+		List<EventVO> eventList = sqlSession.selectList(namespace+".selectEvent", cri);
+		
+		return eventList;
+	} // selectEvent
+	
 	
 	/* 게시물 조회 */
 	@Override
@@ -196,6 +259,39 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return noResList;
 	} // oneNoReser
+	
+	
+	/* 회원권 조회 */
+	@Override
+	public List<MembershipVO> oneMembership(MembershipVO vo) throws Exception {
+		
+		List<MembershipVO> membershipList = new ArrayList<MembershipVO>();
+		membershipList = sqlSession.selectList(namespace+".oneMembership", vo);
+		
+		return membershipList;
+	} // oneMembership
+	
+	
+	/* 아카데미 조회 */
+	@Override
+	public List<AcademyVO> oneAcademy(AcademyVO vo) throws Exception {
+		
+		List<AcademyVO> academyList = new ArrayList<AcademyVO>();
+		academyList = sqlSession.selectList(namespace+".oneAcademy", vo);
+		
+		return academyList;
+	} // oneAcademy
+	
+	
+	/* 아카데미 조회 */
+	@Override
+	public List<EventVO> oneEvent(EventVO vo) throws Exception {
+		
+		List<EventVO> eventList = new ArrayList<EventVO>();
+		eventList = sqlSession.selectList(namespace+".oneEvent", vo);
+		
+		return eventList;
+	} // oneEvent
 
 
 	/* 상품별점/평점 등록 */

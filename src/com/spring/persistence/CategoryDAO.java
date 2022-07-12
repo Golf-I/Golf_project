@@ -12,5 +12,5 @@ public interface CategoryDAO {
 	public void wholesale(PromotionVO vo) throws Exception; // 홀세일 문의
 
 	public void store(PromotionVO vo) throws Exception; // 입점 문의
-	 
+	
 }

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -73,23 +75,24 @@
 
                 <div class="product01">
 
-                    <a href="membership_detail">
-
-                            <div class="box01">
-
-                                <div>
-                                    <p>가격</p>
-                                    <p>12,000,000원</p>
-                                </div>
-    
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png">
-                                </div>
-                            </div>
-
-                    </a>
-
-                    <a href="#">
+					<c:forEach items="${membershipList}" var="membershipList">
+					<a href="membership_detail?no=${membershipList.no}">
+						
+						<div class="box01">
+						    <div>
+						        <p>가격</p>
+						        <p><fmt:formatNumber value="${membershipList.price}" pattern="#,###" />원</p>
+<!-- 						        <p>12,000,000원</p> -->
+						    </div>
+						    <div>
+						        <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png">
+						     </div>
+						</div><!-- box01 -->
+					</a>
+					</c:forEach>
+	
+                </div>	
+<%--                     <a href="#">
 
                         <div class="box02">
 
@@ -119,11 +122,11 @@
                             </div>
                         </div>
 
-                    </a>
+                    </a> 
 
-                </div>
+                </div> --%>
 
-                <div class="product02">
+                <%-- <div class="product02">
 
                     <a href="#">
 
@@ -225,13 +228,38 @@
 
                     </a>
 
-                </div>
+                </div> --%>
 
+            </div>
+            
+            
+           	<%-- 페이징  --%>    
+			<div class="num_btn">
+			
+				<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+					<a href="membership?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+				</c:if>
+				
+				<c:if test="${pageMaker.prev}">
+					<a href="membership?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+				</c:if>
+				
+				<c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+					<a href="membership?page=${p}" style="color:red;"><p>${p}</p></a>    
+				</c:forEach>
+				
+				<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+					<a href="membership?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+				</c:if>
+
+				<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+					<a href="membership?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+				</c:if>
+
+			</div><!-- class="num_btn" -->
+			<%-- 페이징  --%>
                 
-
-                <div class="num_btn">
-
-                    <a href="#">
+<!--                     <a href="#">
                         <p><</p>
                     </a>
 
@@ -265,14 +293,8 @@
 
                     <a href="#">
                         <p>></p>
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
+                    </a> -->
+                
         </div>
 
     </section>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -11,7 +13,8 @@
 <body>
 
     <section class="event_01">
-
+	
+		
         <div class="route">
 
             <a href="index">
@@ -24,7 +27,8 @@
 
             <p>></p>
 
-            <p>총 15개</p>
+            <p>총 ${total}개</p>
+<!--             <p>총 15개</p> -->
         </div>
 
 
@@ -38,8 +42,9 @@
 
             <div class="event_box01">
 
-           
-             <a href="event_detail">
+        	<c:forEach items="${eventList}" var="eventList">
+
+             <a href="event_detail?no=${eventList.no}">
 
                 <div class="event01">
 
@@ -50,15 +55,20 @@
                     <div class="txt_01">
                         
                         <p>이벤트 ></p>
-                        <p>50% 할인찬스!</p>
-                        <p>#최대 24만원 할인찬스/세일홀릭</p>
+                        <p>${eventList.title}</p>
+                        <p>${eventList.regdate}</p>
+<!--                         <p>50% 할인찬스!</p>
+                        <p>#최대 24만원 할인찬스/세일홀릭</p> -->
                     </div>
 
                 </div>
 
              </a>
 
-             <a href="../event02/event02.html">
+			</c:forEach>
+			
+		
+             <%-- <a href="../event02/event02.html">
                 <div class="event02">
                     <div>
                         <img src="${pageContext.request.contextPath}/resources/img/event/event02.png">
@@ -104,11 +114,11 @@
                     </div>
 
                 </div>
-             </a>
+             </a> --%>
 
             </div><!--event_box01-->
 
-            <div class="event_box02">
+            <%-- <div class="event_box02">
 
            
                 <a href="#">
@@ -322,15 +332,36 @@
                    </div>
                 </a>
    
-               </div><!--event_box04-->
+               </div> --%><!--event_box04-->
 
 
         </div><!--event_zon-->
 
 
+
         <div class="number_btn">
 
-            <a href="#">
+			<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+				<a href="event?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+			</c:if>
+			
+			<c:if test="${pageMaker.prev}">
+				<a href="event?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+			</c:if>
+			
+			<c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+				<a href="event?page=${p}" style="color:red;"><p>${p}</p></a>    
+			</c:forEach>
+			
+			<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+				<a href="event?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+			</c:if>
+
+			<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+				<a href="event?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+			</c:if>
+
+            <!-- <a href="#">
                 <p><</p>
             </a>
             <a href="#">
@@ -356,7 +387,7 @@
             </a>
             <a href="#">
                 <p>></p>
-            </a>
+            </a> -->
         </div>
 
     </section><!--event_01-->

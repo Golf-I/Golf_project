@@ -394,10 +394,10 @@
 	
 	
 		<div class="country">
-			<div><a href="freegolf">일본 자유골프→</a></div>
-			<div><a href="freegolf">태국 자유골프→</a></div>
-			<div><a href="freegolf">베트남 자유골프→</a></div>
-			<div><a href="freegolf">대만 자유골프→</a></div>
+            <div><a href="freegolf?region=일본">일본 자유골프→</a></div>
+            <div><a href="freegolf?region=태국">태국 자유골프→</a></div>
+            <div><a href="freegolf?region=베트남">베트남 자유골프→</a></div>
+            <div><a href="freegolf?region=대만">대만 자유골프→</a></div>
 		</div>
 		
 	</div><!--자유골프-->

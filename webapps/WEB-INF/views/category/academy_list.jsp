@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -71,15 +73,22 @@
 
                 <div class="line01"></div>
 
+                
                 <div class="product01">
 
-                    <a href="academy_detail">
+	                <c:forEach items="${academyList}" var="academyList">
+                    <a href="academy_detail?no=${academyList.no}">
                         <div>
                             <img src="${pageContext.request.contextPath}/resources/img/academy/01academy.png">
                         </div>
                     </a>
+	                </c:forEach>
 
-                    <a href="#">
+                </div>
+
+                
+                
+<%--                     <a href="#">
                         <div>
                             <img src="${pageContext.request.contextPath}/resources/img/academy/02academy.png">
                         </div>
@@ -89,11 +98,10 @@
                         <div>
                             <img src="${pageContext.request.contextPath}/resources/img/academy/03academy.png">
                         </div>
-                    </a>
+                    </a> --%>
 
-                </div>
 
-                <div class="product02">
+                <%-- <div class="product02">
 
                     <a href="#">
                         <div>
@@ -135,11 +143,39 @@
                         </div>
                     </a>
 
-                </div>
+                </div> --%>
 
-                <div class="num_btn">
+            </div>
+            
 
-                    <a href="#">
+           	<%-- 페이징  --%>    
+			<div class="num_btn">
+			
+				<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+					<a href="academy?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+				</c:if>
+				
+				<c:if test="${pageMaker.prev}">
+					<a href="academy?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+				</c:if>
+				
+				<c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+					<a href="academy?page=${p}" style="color:red;"><p>${p}</p></a>    
+				</c:forEach>
+				
+				<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+					<a href="academy?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+				</c:if>
+
+				<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+					<a href="academy?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+				</c:if>
+
+			</div><!-- class="num_btn" -->
+			<%-- 페이징  --%>
+
+
+<!--                     <a href="#">
                         <p><</p>
                     </a>
 
@@ -173,13 +209,9 @@
 
                     <a href="#">
                         <p>></p>
-                    </a>
-
-
-                </div>
-
-
-            </div>
+                    </a> 
+                    
+                </div> -->
 
         </div><!--academy-->
 

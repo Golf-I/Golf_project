@@ -46,6 +46,7 @@
 			<input type="hidden" name="region" value="${param.region}">
 			<input type="hidden" name="city" value="${param.city}">
 			<input type="hidden" name="product_code" value="${param.product_code}">
+			<input type="hidden" name="product_code" value="${param.product_code}">
 			<input type="hidden" name="weekday_fee" value="${param.weekday_fee}">
 			<input type="hidden" name="weekend_fee" value="${param.weekend_fee}">
 			<input type="hidden" name="id" value="${sessionScope.id}">
@@ -482,13 +483,13 @@
                             </td>
                             <td>
                                 <!-- <p>홍길동</p> -->
-                                <input type="text" name="reserList.traveler" required/>
+                                <input type="text" name="travelList[0].traveler" required/>
                             </td>
                             <td>
                                 <p><span>*</span> 성별</p>
                             </td>
                             <td>
-                                <select id="gender01" name="travelList.traveler_gender">
+                                <select id="gender01" name="travelList[0].traveler_gender">
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
                                 </select>
@@ -532,7 +533,7 @@
 	                            <p><span>*</span> 성별</p>
 	                        </td>
 	                        <td>
-	                            <select id="gender03" name="travelList[1].travler_gender">
+	                            <select id="gender03" name="travelList[1].traveler_gender">
 	                                <option value="남성">남성</option>
 	                                <option value="여성">여성</option>
 	                            </select>

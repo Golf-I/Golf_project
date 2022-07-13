@@ -35,10 +35,10 @@ public class ReservationVO {
 	private	Date regDate;
 	
 	
-	public List<TravelerVO> getReserList() {
+	public List<TravelerVO> getTravelList() {
 		return travelList;
 	}
-	public void setReserList(List<TravelerVO> travelList) {
+	public void setTravelList(List<TravelerVO> travelList) {
 		this.travelList = travelList;
 	}
 	public int getProduct_code() {
@@ -193,5 +193,6 @@ public class ReservationVO {
 				+ ", option_businessUpgrade=" + option_businessUpgrade + ", total_price=" + total_price + ", regDate="
 				+ regDate + "]";
 	}
+	
 	
 }

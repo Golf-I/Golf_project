@@ -5,7 +5,6 @@ import java.util.List;
 
 public class TravelerVO{
 
-	private List<ReservationVO> reserList;
 	private int idx;
 	private int no;						// 인덱스
 	private	String productName;			// 상품명
@@ -18,13 +17,6 @@ public class TravelerVO{
 	private	String traveler_lastname;	// 여행자 이름
 	private	String traveler_phone;			// 여행자 연락처
 	
-	
-	public List<ReservationVO> getReserList() {
-		return reserList;
-	}
-	public void setReserList(List<ReservationVO> reserList) {
-		this.reserList = reserList;
-	}
 	public int getIdx() {
 		return idx;
 	}
@@ -92,14 +84,12 @@ public class TravelerVO{
 		this.traveler_phone = traveler_phone;
 	}
 	
-	
 	@Override
 	public String toString() {
-		return "TravelerVO [reserList=" + reserList + ", idx=" + idx + ", no=" + no + ", productName=" + productName
-				+ ", departure_date=" + departure_date + ", arrival_date=" + arrival_date + ", booker=" + booker
-				+ ", traveler=" + traveler + ", traveler_gender=" + traveler_gender + ", traveler_firstname="
-				+ traveler_firstname + ", traveler_lastname=" + traveler_lastname + ", traveler_phone=" + traveler_phone
-				+ "]";
+		return "TravelerVO [idx=" + idx + ", no=" + no + ", productName=" + productName + ", departure_date="
+				+ departure_date + ", arrival_date=" + arrival_date + ", booker=" + booker + ", traveler=" + traveler
+				+ ", traveler_gender=" + traveler_gender + ", traveler_firstname=" + traveler_firstname
+				+ ", traveler_lastname=" + traveler_lastname + ", traveler_phone=" + traveler_phone + "]";
 	}
 	
 }

@@ -374,14 +374,18 @@ public class MemberController {
 	
 	/* 상품 예약 */
 	@RequestMapping(value = "/reservation", method = {RequestMethod.POST, RequestMethod.GET})
-	public String memberReservation(@ModelAttribute(value="ReservationVO") ReservationVO vo, 
-									@ModelAttribute(value="TravelerVO") TravelerVO tvo, 
-									Model model) throws Exception{
+	public String memberReservation(Model model, ReservationVO vo) throws Exception{
 		
-//		rservice.memberReservation(rvo);
+		rservice.memberReservation(vo);
 		logger.info("확인!!!!!!!! : " + vo);
-		logger.info("확인!!!!!!!! : " + tvo.toString());
 		
+		int[] travels = new int[vo.getTravelList().size()];
+		int result = 1;
+		
+		for(int i=0; i<vo.getTravelList().size(); i++) {
+//			travels[i] = rservice.insertTraveler(vo.getTravelList().get(i));
+			result *= travels[i];
+		}
 		
 		return "redirect:../reservation_complete";
 	} // memberReservation

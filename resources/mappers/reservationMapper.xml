@@ -6,13 +6,13 @@
 	<!-- 상품 예약 -->
 	<insert id="memberReservation">
 	<![CDATA[
-	INSERT INTO reservation (sortation, id, productName, region, 
+	INSERT INTO reservation (product_code, sortation, id, productName, region, 
 							city,  personnel, 
 							booker, booker_phone, booker_email, booker_gender, 
 							product_price, memo, 
 							option_singleRoom, option_addVehicle, option_businessUpgrade, 
 							total_price, regDate)
-	VALUES (#{sortation}, #{id}, #{productName}, #{region}, 
+	VALUES (#{product_code}, #{sortation}, #{id}, #{productName}, #{region}, 
 			#{city},  #{personnel},
 			#{booker}, #{booker_phone}, #{booker_email}, #{booker_gender},
 			#{product_price}, #{memo},
@@ -25,6 +25,20 @@
 	#{departure_date}, #{arrival_date},
 -->
 	<!-- 상품 예약 -->
+	
+	
+	<!-- 여행자정보 삽입 -->
+	<insert id="addTraveler">
+	<![CDATA[
+	INSERT INTO traveler (product_code, productName, departure_date, arrival_date, booker,
+						  traveler, traveler_gender, traveler_firstname, 
+						  traveler_lastname, traveler_phone)
+	VALUES (#{product_code}, #{productName}, #{departure_date}, #{arrival_date}, 
+			#{booker}, #{traveler}, #{traveler_gender}, 
+			#{traveler_firstname}, #{traveler_lastname}, #{traveler_phone})
+	]]>
+	</insert>
+	<!-- 여행자정보 삽입   -->
 
 
 	<!-- 예약 내역 가져오기 -->

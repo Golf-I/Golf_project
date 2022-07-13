@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import org.springframework.stereotype.Service;
 
 import com.spring.domain.ReservationVO;
+import com.spring.domain.TravelerVO;
 import com.spring.persistence.ReservationDAO;
 
 @Service
@@ -43,6 +44,17 @@ public class ReservationServiceImpl implements ReservationService{
 		
 		return reserList;
 	} // oneReservation
+
+	
+	/* 여행자정보 삽입 */
+	@Override
+	public void addTraveler(ReservationVO vo) throws Exception {
+//		public void addTraveler(List<TravelerVO> list) throws Exception {
+
+//		rdao.addTraveler(list);
+		rdao.addTraveler(vo);
+		
+	} // addTraveler
 	
 	
 

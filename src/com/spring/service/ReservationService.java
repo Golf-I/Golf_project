@@ -3,6 +3,7 @@ package com.spring.service;
 import java.util.List;
 
 import com.spring.domain.ReservationVO;
+import com.spring.domain.TravelerVO;
 
 public interface ReservationService {
 
@@ -11,4 +12,8 @@ public interface ReservationService {
 	public List<ReservationVO> getReservation(String id) throws Exception; // 예약내역 가져오기
 	
 	public List<ReservationVO> oneReservation(String id, int idx) throws Exception; // 예약 내역 1개 가져오기
+
+//	public void addTraveler(List<TravelerVO> list) throws Exception; // 여행자정보 삽입
+	public void addTraveler(ReservationVO vo) throws Exception; // 여행자정보 삽입
+
 }

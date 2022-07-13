@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.spring.domain.ProductVO;
 import com.spring.domain.ReservationVO;
+import com.spring.domain.TravelerVO;
 
 @Repository
 public class ReservationDAOImpl implements ReservationDAO{
@@ -51,6 +52,17 @@ public class ReservationDAOImpl implements ReservationDAO{
 		return reserList;
 //		return null;
 	} // oneReservation
+
+
+	/* 여행자정보 삽입 */
+	@Override
+	public void addTraveler(ReservationVO vo) throws Exception {
+//	public void addTraveler(List<TravelerVO> list) throws Exception {
+
+//		int result = sqlSession.insert(namespace+".addTraveler", list);
+		sqlSession.insert(namespace+".addTraveler", vo);
+		
+	} // addTraveler
 	
 	
 	

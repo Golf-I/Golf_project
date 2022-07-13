@@ -5,42 +5,40 @@ import java.util.List;
 
 public class ReservationVO {
 
-	private List<TravelerVO> travelList;
-	private int product_code;
-	private int idx;
-	private String sortation;
-	private	String id;
-	private	String productName;
-	private	String region;
-	private	String city;
-	private	String departure_date;
-	private	String arrival_date;
+	private int product_code;			// 상품코드
+	private int idx;					// 인덱스
+	private String sortation;			// 분류
+	private	String id;					// 예약자 아이디
+	private	String productName;			// 상품명
+	private	String region;				// 지역
+	private	String city;				// 도시
+	private	String departure_date;		// 출발일자
+	private	String arrival_date;		// 도착일자
 	/*
 	 * private Date departure_date; 
 	 * private Date arrival_date;
 	 */	
-	private	int personnel;
-	private	String booker;
-	private	String booker_phone;
-	private	String booker_email;
-	private	String booker_gender;
-	private	int product_price;
-	private	int day_park;
-	private	int day_il;
-	private	String memo;
-	private	int option_singleRoom;
-	private	int option_addVehicle;
-	private	int option_businessUpgrade;
-	private	int total_price;
-	private	Date regDate;
+	private	int personnel;				// 인원수
+	private	String booker;				// 예약자명
+	private	String booker_phone;		// 예약자 연락처
+	private	String booker_email;		// 예약자 이메일
+	private	String booker_gender;		// 예약자 성별
+	private	int product_price;			// 상품 가격
+	private	int day_park;				// N박
+	private	int day_il;					// N일
+	private	String memo;				// 비고
+	private	int option_singleRoom;		// 싱글룸 옵션
+	private	int option_addVehicle;		// 차량 옵션
+	private	int option_businessUpgrade;	// 비즈니스업그레이드 옵션
+	private	int total_price;			// 총 결제금액
+	private	Date regDate;				// 등록일자
 	
+	private	String traveler;			// 여행자
+	private	String traveler_gender;		// 여행자 성별
+	private	String traveler_firstname;	// 여행자 성
+	private	String traveler_lastname;	// 여행자 이름
+	private	String traveler_phone;		// 여행자 연락처
 	
-	public List<TravelerVO> getTravelList() {
-		return travelList;
-	}
-	public void setTravelList(List<TravelerVO> travelList) {
-		this.travelList = travelList;
-	}
 	public int getProduct_code() {
 		return product_code;
 	}
@@ -179,20 +177,49 @@ public class ReservationVO {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
-	
+	public String getTraveler() {
+		return traveler;
+	}
+	public void setTraveler(String traveler) {
+		this.traveler = traveler;
+	}
+	public String getTraveler_gender() {
+		return traveler_gender;
+	}
+	public void setTraveler_gender(String traveler_gender) {
+		this.traveler_gender = traveler_gender;
+	}
+	public String getTraveler_firstname() {
+		return traveler_firstname;
+	}
+	public void setTraveler_firstname(String traveler_firstname) {
+		this.traveler_firstname = traveler_firstname;
+	}
+	public String getTraveler_lastname() {
+		return traveler_lastname;
+	}
+	public void setTraveler_lastname(String traveler_lastname) {
+		this.traveler_lastname = traveler_lastname;
+	}
+	public String getTraveler_phone() {
+		return traveler_phone;
+	}
+	public void setTraveler_phone(String traveler_phone) {
+		this.traveler_phone = traveler_phone;
+	}
 	
 	@Override
 	public String toString() {
-		return "ReservationVO [travelList=" + travelList + ", product_code=" + product_code + ", idx=" + idx
-				+ ", sortation=" + sortation + ", id=" + id + ", productName=" + productName + ", region=" + region
-				+ ", city=" + city + ", departure_date=" + departure_date + ", arrival_date=" + arrival_date
-				+ ", personnel=" + personnel + ", booker=" + booker + ", booker_phone=" + booker_phone
-				+ ", booker_email=" + booker_email + ", booker_gender=" + booker_gender + ", product_price="
-				+ product_price + ", day_park=" + day_park + ", day_il=" + day_il + ", memo=" + memo
-				+ ", option_singleRoom=" + option_singleRoom + ", option_addVehicle=" + option_addVehicle
-				+ ", option_businessUpgrade=" + option_businessUpgrade + ", total_price=" + total_price + ", regDate="
-				+ regDate + "]";
+		return "ReservationVO [product_code=" + product_code + ", idx=" + idx + ", sortation=" + sortation + ", id="
+				+ id + ", productName=" + productName + ", region=" + region + ", city=" + city + ", departure_date="
+				+ departure_date + ", arrival_date=" + arrival_date + ", personnel=" + personnel + ", booker=" + booker
+				+ ", booker_phone=" + booker_phone + ", booker_email=" + booker_email + ", booker_gender="
+				+ booker_gender + ", product_price=" + product_price + ", day_park=" + day_park + ", day_il=" + day_il
+				+ ", memo=" + memo + ", option_singleRoom=" + option_singleRoom + ", option_addVehicle="
+				+ option_addVehicle + ", option_businessUpgrade=" + option_businessUpgrade + ", total_price="
+				+ total_price + ", regDate=" + regDate + ", traveler=" + traveler + ", traveler_gender="
+				+ traveler_gender + ", traveler_firstname=" + traveler_firstname + ", traveler_lastname="
+				+ traveler_lastname + ", traveler_phone=" + traveler_phone + "]";
 	}
-	
 	
 }

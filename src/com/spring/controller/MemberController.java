@@ -379,14 +379,13 @@ public class MemberController {
 		rservice.memberReservation(vo);
 		logger.info("확인!!!!!!!! : " + vo);
 		
-		int[] travels = new int[vo.getTravelList().size()];
-		int result = 1;
-		
-		for(int i=0; i<vo.getTravelList().size(); i++) {
-//			travels[i] = rservice.insertTraveler(vo.getTravelList().get(i));
-			result *= travels[i];
-		}
-		
+//		for(int i=0; i<vo.getTravelList().size(); i++) {
+		  
+//			rservice.addTraveler(vo.getTravelList());
+			rservice.addTraveler(vo);
+		  
+//		}
+		 
 		return "redirect:../reservation_complete";
 	} // memberReservation
 	

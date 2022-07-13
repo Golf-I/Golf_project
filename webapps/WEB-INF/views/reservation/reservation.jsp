@@ -46,7 +46,6 @@
 			<input type="hidden" name="region" value="${param.region}">
 			<input type="hidden" name="city" value="${param.city}">
 			<input type="hidden" name="product_code" value="${param.product_code}">
-			<input type="hidden" name="product_code" value="${param.product_code}">
 			<input type="hidden" name="weekday_fee" value="${param.weekday_fee}">
 			<input type="hidden" name="weekend_fee" value="${param.weekend_fee}">
 			<input type="hidden" name="id" value="${sessionScope.id}">
@@ -483,13 +482,15 @@
                             </td>
                             <td>
                                 <!-- <p>홍길동</p> -->
-                                <input type="text" name="travelList[0].traveler" required/>
+                                <input type="text" name="traveler" required/>
+<!--                                 <input type="text" name="travelList[0].traveler" required/> -->
                             </td>
                             <td>
                                 <p><span>*</span> 성별</p>
                             </td>
                             <td>
-                                <select id="gender01" name="travelList[0].traveler_gender">
+                                <select id="gender01" name="traveler_gender">
+<!--                                 <select id="gender01" name="travelList[0].traveler_gender"> -->
                                     <option value="남성">남성</option>
                                     <option value="여성">여성</option>
                                 </select>
@@ -499,16 +500,21 @@
                             </td>
                             <td>
                                 <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
-                                 name="travelList[0].traveler_firstname" required>
+                                 name="traveler_firstname" required>
+<!--                                 <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
+                                 name="travelList[0].traveler_firstname" required> -->
                                 <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
-                                 name="travelList[0].traveler_lastname" required>
+                                 name="traveler_lastname" required>
+<!--                                 <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
+                                 name="travelList[0].traveler_lastname" required> -->
                             </td>
                             <td>
                                 <p>연락처</p>
                             </td>
                             <td>
                                 <!-- <p>010-1111-1111</p> -->
-                                <input type="text" name="travelList[0].traveler_phone" required/>
+                                <input type="text" name="traveler_phone" required/>
+<!--                                 <input type="text" name="travelList[0].traveler_phone" required/> -->
                             </td>
                         </tr>
                     </table>
@@ -526,14 +532,16 @@
 	                        </td>
 	                        <td>
 	<!--                             <p>홍길동</p> -->
-	                            <input type="text" name="travelList[1].traveler" required/> 
+	                            <input type="text" name="traveler" required/> 
+<!-- 	                            <input type="text" name="travelList[1].traveler" required/>  -->
 	                        </td>
 	
 	                        <td>
 	                            <p><span>*</span> 성별</p>
 	                        </td>
 	                        <td>
-	                            <select id="gender03" name="travelList[1].traveler_gender">
+	                            <select id="gender03" name="traveler_gender">
+<!-- 	                            <select id="gender03" name="travelList[1].traveler_gender"> -->
 	                                <option value="남성">남성</option>
 	                                <option value="여성">여성</option>
 	                            </select>
@@ -543,16 +551,21 @@
 	                        </td>
 	                        <td>
 	                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
+	                            name="traveler_firstname" required>
+	                           <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
+	                            name="traveler_lastname" required>
+<!-- 	                            <input type="text" size="6" maxlength="6" placeholder="성(예,HONG)" id="last_name01" 
 	                            name="travelList[1].traveler_firstname" required>
 	                           <input type="text" size="10" maxlength="10" placeholder="성(예,GILDONG)" id="name01" 
-	                            name="travelList[1].traveler_lastname" required>
+	                            name="travelList[1].traveler_lastname" required> -->
 	                        </td>
 	                        <td>
 	                            <p>연락처</p>
 	                        </td>
 	                        <td>
 	<!--                             <p>010-1111-1111</p> -->
-	                            <input type="text" name="travelList[1].traveler_phone" required />
+	                            <input type="text" name="traveler_phone" required />
+<!-- 	                            <input type="text" name="travelList[1].traveler_phone" required /> -->
 	                        </td>
 	                    </tr>
 	                </table>

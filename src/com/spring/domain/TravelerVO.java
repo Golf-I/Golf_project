@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TravelerVO{
 
-	private int idx;
+	private int product_code;			// 상품코드
 	private int no;						// 인덱스
 	private	String productName;			// 상품명
 	private	Date departure_date;		// 출발일자
@@ -15,13 +15,14 @@ public class TravelerVO{
 	private	String traveler_gender;		// 여행자 성별
 	private	String traveler_firstname;	// 여행자 성
 	private	String traveler_lastname;	// 여행자 이름
-	private	String traveler_phone;			// 여행자 연락처
+	private	String traveler_phone;		// 여행자 연락처
 	
-	public int getIdx() {
-		return idx;
+	
+	public int getProduct_code() {
+		return product_code;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+	public void setProduct_code(int product_code) {
+		this.product_code = product_code;
 	}
 	public int getNo() {
 		return no;
@@ -86,10 +87,10 @@ public class TravelerVO{
 	
 	@Override
 	public String toString() {
-		return "TravelerVO [idx=" + idx + ", no=" + no + ", productName=" + productName + ", departure_date="
-				+ departure_date + ", arrival_date=" + arrival_date + ", booker=" + booker + ", traveler=" + traveler
-				+ ", traveler_gender=" + traveler_gender + ", traveler_firstname=" + traveler_firstname
-				+ ", traveler_lastname=" + traveler_lastname + ", traveler_phone=" + traveler_phone + "]";
+		return "TravelerVO [product_code=" + product_code + ", no=" + no + ", productName=" + productName
+				+ ", departure_date=" + departure_date + ", arrival_date=" + arrival_date + ", booker=" + booker
+				+ ", traveler=" + traveler + ", traveler_gender=" + traveler_gender + ", traveler_firstname="
+				+ traveler_firstname + ", traveler_lastname=" + traveler_lastname + ", traveler_phone=" + traveler_phone
+				+ "]";
 	}
-	
 }

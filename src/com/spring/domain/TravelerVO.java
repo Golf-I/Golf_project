@@ -1,7 +1,7 @@
 package com.spring.domain;
 
 import java.sql.Date;
-import java.util.List;
+import java.sql.Timestamp;
 
 public class TravelerVO{
 
@@ -17,7 +17,7 @@ public class TravelerVO{
 	private	String traveler_firstname;	// 여행자 성
 	private	String traveler_lastname;	// 여행자 이름
 	private	String traveler_phone;		// 여행자 연락처
-	
+	private Timestamp regDate;			// 등록일자
 	
 	public int getProduct_code() {
 		return product_code;
@@ -27,6 +27,9 @@ public class TravelerVO{
 	}
 	public int getIdx() {
 		return idx;
+	}
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
 	public int getNo() {
 		return no;
@@ -88,15 +91,20 @@ public class TravelerVO{
 	public void setTraveler_phone(String traveler_phone) {
 		this.traveler_phone = traveler_phone;
 	}
+	public Timestamp getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(Timestamp regDate) {
+		this.regDate = regDate;
+	}
 	
 	@Override
 	public String toString() {
-
 		return "TravelerVO [product_code=" + product_code + ", idx=" + idx + ", no=" + no + ", productName="
 				+ productName + ", departure_date=" + departure_date + ", arrival_date=" + arrival_date + ", booker="
 				+ booker + ", traveler=" + traveler + ", traveler_gender=" + traveler_gender + ", traveler_firstname="
 				+ traveler_firstname + ", traveler_lastname=" + traveler_lastname + ", traveler_phone=" + traveler_phone
-				+ "]";
+				+ ", regDate=" + regDate + "]";
 	}
 
 }

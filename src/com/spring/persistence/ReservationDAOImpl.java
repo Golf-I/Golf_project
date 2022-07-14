@@ -63,6 +63,16 @@ public class ReservationDAOImpl implements ReservationDAO{
 		sqlSession.insert(namespace+".addTraveler", vo);
 		
 	} // addTraveler
+
+
+	/* idx 가져오기 */
+	@Override
+	public int getIdx(ReservationVO vo) throws Exception {
+		
+		int idx = sqlSession.selectOne(namespace+".getIdx", vo);
+		
+		return idx;
+	} // getIdx
 	
 	
 	

@@ -1,6 +1,7 @@
 package com.spring.domain;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 public class ReservationVO {
@@ -29,7 +30,7 @@ public class ReservationVO {
 	private	int option_addVehicle;		// 차량 옵션
 	private	int option_businessUpgrade;	// 비즈니스업그레이드 옵션
 	private	int total_price;			// 총 결제금액
-	private	Date regDate;				// 등록일자
+	private	Timestamp regDate;			// 등록일자
 	
 	private	String traveler;			// 여행자
 	private	String traveler_gender;		// 여행자 성별
@@ -169,10 +170,10 @@ public class ReservationVO {
 	public void setTotal_price(int total_price) {
 		this.total_price = total_price;
 	}
-	public Date getRegDate() {
+	public Timestamp getRegDate() {
 		return regDate;
 	}
-	public void setRegDate(Date regDate) {
+	public void setRegDate(Timestamp regDate) {
 		this.regDate = regDate;
 	}
 	public String getTraveler() {

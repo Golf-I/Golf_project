@@ -4,6 +4,9 @@ import java.io.PrintWriter;
 import java.lang.reflect.Array;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
@@ -374,18 +377,17 @@ public class MemberController {
 	
 	/* 상품 예약 */
 	@RequestMapping(value = "/reservation", method = {RequestMethod.POST, RequestMethod.GET})
-	public String memberReservation(Model model, ReservationVO vo) throws Exception{
-		
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd"); 
-//		Date date = formatter.parse();
-		
-//		logger.info("gg : " + t);
+	public String memberReservation(Model model, ReservationVO vo, HttpSession session) throws Exception{
 		
 		rservice.memberReservation(vo);
 		logger.info("확인!!!!!!!! : " + vo);
 		
-//		rservice.addTraveler(vo);
-		 
+		int idx = rservice.getIdx(vo);
+//		logger.info("idx : " + idx);
+		vo.setIdx(idx);
+		logger.info("vo : " + vo);
+		rservice.addTraveler(vo);
+		
 		return "redirect:../reservation_complete";
 	} // memberReservation
 	

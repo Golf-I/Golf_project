@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>freegolf</title>
 	<link href="${pageContext.request.contextPath}/resources/css/freegolf_detail.css" rel="stylesheet">
+	<script	src="${pageContext.request.contextPath}/resources/js/reservation.js"></script>
 </head>
 <body>
 
@@ -16,6 +17,7 @@
 	<input type="checkbox" id="map">
 
 	<section class="freegolf_detail_box">
+        
         <div class="freegolf_detail">
 
             <div class="route">
@@ -387,13 +389,14 @@
 
 
                 <div class="calendar_right">
-
+<%--
                     <div class="calendar_right_title">
                         <div>
                             <p>※ 이용일 추가하기</p>
                             <label for="calendar_btn">추가</label>
                         </div>
                     </div>
+--%>
 
 
                     <table class="calender_top" cellpadding="0" cellspacing="0">
@@ -773,7 +776,7 @@
                         </tr>
 
                     </table>
-
+<%-- 
                     <div class="opt_plus">
                         <p>※ 이용일 추가하기</p>
 
@@ -781,6 +784,7 @@
                             <p>추가</p>
                         </label>
                     </div>
+--%>
 
                     <table class="opt_bot" cellpadding="0" cellspacing="0">
                         <tr>
@@ -1213,11 +1217,12 @@
 
 
             </div><!--notice-->
-
+<%-- 
             <div class="total">
                 <p>총 결제 금액</p>
                 <p>640,000원 <span>(2인 요금)</span></p>
             </div>
+--%>
 
             <div class="btn">
                 <input type="submit" value="예약" id="btn01">

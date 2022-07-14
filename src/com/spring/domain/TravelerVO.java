@@ -28,9 +28,6 @@ public class TravelerVO{
 	public int getIdx() {
 		return idx;
 	}
-	public void setProduct_code(int product_code) {
-		this.product_code = product_code;
-	}
 	public int getNo() {
 		return no;
 	}

@@ -194,6 +194,7 @@
 								<p><fmt:formatNumber value="${bbsList.lowestPrice}" pattern="#,###" />원 ~ </p>
 							</div>
 
+						<%-- 
 							<div class="review_box_01">
 								<div class="star01">
 									<div>
@@ -231,7 +232,9 @@
 									</div>
 
 								</div><!--review01-->
+
 							</div> <!--review_box_01-->
+						--%>
 						</a>
 					</div><!--product_01-->
  

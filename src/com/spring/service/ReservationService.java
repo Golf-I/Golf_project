@@ -13,7 +13,8 @@ public interface ReservationService {
 	
 	public List<ReservationVO> oneReservation(String id, int idx) throws Exception; // 예약 내역 1개 가져오기
 
-//	public void addTraveler(List<TravelerVO> list) throws Exception; // 여행자정보 삽입
 	public void addTraveler(ReservationVO vo) throws Exception; // 여행자정보 삽입
+	
+	public int getIdx(ReservationVO vo) throws Exception; // idx 가져오기
 
 }

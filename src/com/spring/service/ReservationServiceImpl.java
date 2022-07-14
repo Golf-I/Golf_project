@@ -49,12 +49,20 @@ public class ReservationServiceImpl implements ReservationService{
 	/* 여행자정보 삽입 */
 	@Override
 	public void addTraveler(ReservationVO vo) throws Exception {
-//		public void addTraveler(List<TravelerVO> list) throws Exception {
 
-//		rdao.addTraveler(list);
 		rdao.addTraveler(vo);
 		
 	} // addTraveler
+
+	
+	/* idx 가져오기 */
+	@Override
+	public int getIdx(ReservationVO vo) throws Exception {
+		
+		int idx = rdao.getIdx(vo);
+		
+		return idx;
+	} // getIdx
 	
 	
 

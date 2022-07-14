@@ -820,7 +820,7 @@ overflow: hidden;}
 
 .agree01 p
 {width: 80px; height: 20px;
-float: left; color: red;
+float: left; /* color: red; */
 margin-left: 505px; line-height: 20px;
 font-size: 14px;}
 
@@ -856,7 +856,7 @@ overflow: hidden;}
 
 .agree02 p
 {width: 80px; height: 20px;
-float: left; color: red;
+float: left; /* color: red; */
 margin-left: 505px; line-height: 20px;
 font-size: 14px;}
 

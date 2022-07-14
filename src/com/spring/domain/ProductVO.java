@@ -25,7 +25,7 @@ public class ProductVO {
 	private	String golfCourse;			 	// 골프장
 	private	int weekday_fee;			 	// 주중요금
 	private	int weekend_fee;			 	// 주말요금
-	private	byte[] img; 				 	//	상품 이미지 blob
+	private	byte[] img; 				 	// 상품 이미지 blob
 	private	byte[] serveimg; 			 	// 상품 서브이미지 blob;
 	private	String golfCourse_info;		 	// 골프장 소개
 	private	byte[] golf_img1; 			 	// 골프장 이미지 1 blob;
@@ -37,7 +37,9 @@ public class ProductVO {
 	private	String not_include;			 	// 불포함사항
 	private	String etc;					 	// 기타사항
 	private	String precaution;			 	// 주의사항
-	
+	private	int option_singleRoom;			// 추가 싱글룸 차지	
+	private	int option_addVehicle;			// 2인 단독차량 추가금
+	private	int option_businessUpgrade;		// 비즈니스 업그레이드
 	
 	public int getProduct_code() {
 		return product_code;
@@ -225,7 +227,24 @@ public class ProductVO {
 	public void setPrecaution(String precaution) {
 		this.precaution = precaution;
 	}
-	
+	public int getOption_singleRoom() {
+		return option_singleRoom;
+	}
+	public void setOption_singleRoom(int option_singleRoom) {
+		this.option_singleRoom = option_singleRoom;
+	}
+	public int getOption_addVehicle() {
+		return option_addVehicle;
+	}
+	public void setOption_addVehicle(int option_addVehicle) {
+		this.option_addVehicle = option_addVehicle;
+	}
+	public int getOption_businessUpgrade() {
+		return option_businessUpgrade;
+	}
+	public void setOption_businessUpgrade(int option_businessUpgrade) {
+		this.option_businessUpgrade = option_businessUpgrade;
+	}
 	
 	@Override
 	public String toString() {
@@ -239,7 +258,9 @@ public class ProductVO {
 				+ golfCourse_info + ", golf_img1=" + Arrays.toString(golf_img1) + ", golf_img2="
 				+ Arrays.toString(golf_img2) + ", hotel_info=" + hotel_info + ", hotel_img1="
 				+ Arrays.toString(hotel_img1) + ", hotel_img2=" + Arrays.toString(hotel_img2) + ", include=" + include
-				+ ", not_include=" + not_include + ", etc=" + etc + ", precaution=" + precaution + "]";
+				+ ", not_include=" + not_include + ", etc=" + etc + ", precaution=" + precaution
+				+ ", option_singleRoom=" + option_singleRoom + ", option_addVehicle=" + option_addVehicle
+				+ ", option_businessUpgrade=" + option_businessUpgrade + "]";
 	}
-
+	
 }

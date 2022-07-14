@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>privacy_policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>email</title>
     <link href="${pageContext.request.contextPath}/resources/css/email.css" rel="stylesheet">
 </head>
 <body>
 
-    <section>
+    <section class="web">
 
         <div class="title">
             <p>이메일 무단 수집 거부</p>
@@ -29,7 +29,28 @@
 			</p>
         </div>
 
+    </section>
+    
+    
+    <!-- 모바일 -->
+    <section class="mobile">
 
+        <div class="email_m">
+
+            <div class="icon_m">
+                <img src="img/email.png">
+            </div>
+
+            <p>본 웹 사이트에 게시된 메일 주소의<br>
+                무단 수집을 거부합니다.</p>
+
+            <p>본 사이트에 게시된 이메일 주소가 전자우편수집 프로그램이나
+                그 밖에 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며
+                이를 위반시 정보통신망법에 의해 형사처벌 됨을 유념하시기 바랍니다.</p>
+
+            <input type="button" value="확인" id="email_m_btn">
+        </div>
+        
     </section>
 
 </body>

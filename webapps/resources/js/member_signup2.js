@@ -15,7 +15,6 @@
 		if( !($("#agree02").is(":checked") ) ){
 			$("#agree02false").removeAttr("style", "display:none");
 			$("#agree02false").attr("style", "color:#FF0000");
-
 			return false;
 		}
 			

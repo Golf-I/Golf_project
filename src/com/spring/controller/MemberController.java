@@ -376,15 +376,15 @@ public class MemberController {
 	@RequestMapping(value = "/reservation", method = {RequestMethod.POST, RequestMethod.GET})
 	public String memberReservation(Model model, ReservationVO vo) throws Exception{
 		
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd"); 
+//		Date date = formatter.parse();
+		
+//		logger.info("gg : " + t);
+		
 		rservice.memberReservation(vo);
 		logger.info("확인!!!!!!!! : " + vo);
 		
-//		for(int i=0; i<vo.getTravelList().size(); i++) {
-		  
-//			rservice.addTraveler(vo.getTravelList());
-			rservice.addTraveler(vo);
-		  
-//		}
+//		rservice.addTraveler(vo);
 		 
 		return "redirect:../reservation_complete";
 	} // memberReservation

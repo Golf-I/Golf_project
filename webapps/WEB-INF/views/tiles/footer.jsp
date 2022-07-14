@@ -108,6 +108,140 @@
 	</div><!--bottom_ex--> 
 	
 	</footer>
+	
+	<!-- 모바일 footer -->
+	<footer class="footer_m">
+
+            <div class="footer_top_m">
+
+                <div class="sns_m">
+
+                    <a href="#">
+                        <img src="img/kakao.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/naver.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/facebook.png">
+                    </a>
+
+                    <a href="#">
+                        <img src="img/band.png">
+                    </a>
+
+
+                </div>
+
+            </div>
+
+            <div class="footer_mid_m">
+                
+                <ul>
+                    
+                    <a href="company/company.html">
+                        <li>
+                            <p>회사소개</p>
+                        </li>
+                    </a>
+
+
+                    <a href="agreement/agreement.html">
+                        <li>
+                            <p>이용약관</p>
+                        </li>
+                    </a>
+
+                    <a href="travel/travel.html">
+                        <li>
+                            <p>여행약관</p>
+                        </li>
+                    </a>
+    
+                    <a href="privacy_policy/privacy_policy.html">
+                        <li>
+                            <p>개인정보처리방침</p>
+                        </li>
+                    </a>
+
+    
+                    <a href="email/email.html">
+                        <li>
+                            <p>이메일무단수집거부</p>
+                        </li>
+                    </a>
+
+    
+                    <a href="hallsale/hallsale.html">
+                        <li>
+                            <p>홀세일문의</p>
+                        </li>
+                    </a>
+                    
+
+                    <a href="pr/pr.html">
+                        <li>
+                            <p>제휴/홍보문의</p>
+                        </li>
+                    </a>
+
+                    <a href="store_inquiry/store_inquiry.html">
+                        <li>
+                            <p>입점문의</p>
+                        </li>
+                    </a>
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer_line_m_02"></div>
+
+            <div class="footer_bottom_ex_m">
+
+                <div class="footer_bottom_m">
+
+                    <p>골프아이</p>
+
+                    <p>서울시 종로구 디지털로 26길 72,2층</p>
+
+                    <div class="footer_box01">
+
+                    <p>사업자번호 : 211-87-15370</p>
+
+                    <a href="#">
+                        <p>사업자정보확인 ></p>
+                    </a>
+
+                    </div>
+
+                    <p>통신판매업신고번호 : 2019-서울구로-0734</p>
+
+                    <div class="footer_box02">
+
+                        <p>대표이사 : 홍길동 개인정보보호책임자 : 홍길동</p>
+
+                        <a href="#">
+                            <p>E-MAIL 문의 ></p>
+                        </a>
+
+                    </div>
+
+                    <p>copyright 1300k.com.ALL RIGHTS RESERVED. 상품 사진을 포함한 모든 콘텐츠는 저작권법 
+                    제 98조에 의거해 보호를 받고 있습니다.</p>
+
+                </div>
+
+                <a href="#">
+                    <p>골프아이 <span>APP</span> 다운받기</p>
+                </a>
+
+            </div>
+
+        </footer>
 
 </body>
 </html>

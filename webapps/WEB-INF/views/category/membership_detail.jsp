@@ -6,8 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>membership</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
+    <title>membership_detail</title>
     <link href="${pageContext.request.contextPath}/resources/css/membership_detail.css" rel="stylesheet">
 </head>
 <body>

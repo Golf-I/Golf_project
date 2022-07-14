@@ -280,10 +280,10 @@ public class BoardServiceImpl implements BoardService{
 
 	/* 여행자 내역 가져오기 */
 	@Override
-	public List<TravelerVO> getTraveler(TravelerVO vo) throws Exception {
+	public List<TravelerVO> getTraveler(int idx) throws Exception {
 
 		List<TravelerVO> travelList = new ArrayList<TravelerVO>();
-		travelList = bdao.getTraveler(vo);
+		travelList = bdao.getTraveler(idx);
 		
 		return travelList;
 	} // getTraveler

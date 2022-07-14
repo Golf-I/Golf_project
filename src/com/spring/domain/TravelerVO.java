@@ -28,8 +28,8 @@ public class TravelerVO{
 	public int getIdx() {
 		return idx;
 	}
-	public void setIdx(int idx) {
-		this.idx = idx;
+	public void setProduct_code(int product_code) {
+		this.product_code = product_code;
 	}
 	public int getNo() {
 		return no;
@@ -94,6 +94,7 @@ public class TravelerVO{
 	
 	@Override
 	public String toString() {
+
 		return "TravelerVO [product_code=" + product_code + ", idx=" + idx + ", no=" + no + ", productName="
 				+ productName + ", departure_date=" + departure_date + ", arrival_date=" + arrival_date + ", booker="
 				+ booker + ", traveler=" + traveler + ", traveler_gender=" + traveler_gender + ", traveler_firstname="

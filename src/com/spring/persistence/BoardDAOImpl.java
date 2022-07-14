@@ -305,10 +305,10 @@ public class BoardDAOImpl implements BoardDAO{
 
 	/* 여행자 내역 가져오기 */
 	@Override
-	public List<TravelerVO> getTraveler(TravelerVO vo) throws Exception {
+	public List<TravelerVO> getTraveler(int idx) throws Exception {
 
 		List<TravelerVO> travelList = new ArrayList<TravelerVO>();
-		travelList = sqlSession.selectList(namespace+".getTraveler", vo);
+		travelList = sqlSession.selectList(namespace+".getTraveler", idx);
 		
 		return travelList;
 	} // getTraveler

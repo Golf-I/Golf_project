@@ -243,7 +243,7 @@ public class HomeController extends HttpServlet {
 		model.addAttribute("reserList", rservice.oneReservation(id, idx));
 		model.addAttribute("pdList", bservice.oneProduct(pvo));
 		model.addAttribute("itiList", bservice.oneItinerary(ivo));
-		model.addAttribute("traList", bservice.getTraveler(tvo));
+		model.addAttribute("traList", bservice.getTraveler(idx));
 		
 		return "member/member_confirmationLetter.jsp";
 	}
@@ -336,7 +336,10 @@ public class HomeController extends HttpServlet {
 
 	/* 예약하기 페이지 호출 */
 	@RequestMapping(value = "reservation", method = RequestMethod.GET)
-	public String reservation(ProductVO pvo, Model model) throws Exception {
+	public String reservation(ProductVO vo, Model model) throws Exception {
+		
+		model.addAttribute("bbsList", bservice.oneProduct(vo));
+		
 		return "reservation/reservation.tiles";
 	}
 

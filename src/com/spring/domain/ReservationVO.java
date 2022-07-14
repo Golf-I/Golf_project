@@ -12,12 +12,10 @@ public class ReservationVO {
 	private	String productName;			// 상품명
 	private	String region;				// 지역
 	private	String city;				// 도시
-	private	String departure_date;		// 출발일자
-	private	String arrival_date;		// 도착일자
-	/*
-	 * private Date departure_date; 
-	 * private Date arrival_date;
-	 */	
+//	private	String departure_date;		// 출발일자
+//	private	String arrival_date;		// 도착일자
+	private Date departure_date; 
+	private Date arrival_date;
 	private	int personnel;				// 인원수
 	private	String booker;				// 예약자명
 	private	String booker_phone;		// 예약자 연락처
@@ -81,16 +79,16 @@ public class ReservationVO {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getDeparture_date() {
+	public Date getDeparture_date() {
 		return departure_date;
 	}
-	public void setDeparture_date(String departure_date) {
+	public void setDeparture_date(Date departure_date) {
 		this.departure_date = departure_date;
 	}
-	public String getArrival_date() {
+	public Date getArrival_date() {
 		return arrival_date;
 	}
-	public void setArrival_date(String arrival_date) {
+	public void setArrival_date(Date arrival_date) {
 		this.arrival_date = arrival_date;
 	}
 	public int getPersonnel() {

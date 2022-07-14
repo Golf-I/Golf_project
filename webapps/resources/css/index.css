@@ -1396,7 +1396,7 @@ background-color: black;}
 
 /*모바일~태블릿*/
 
-@media all and (min-width:320px) and (max-width:768px)
+@media all and (max-width:768px)
 
 {   
     .header, .visual_banner, .recommend_zon, .best_product, .event_zon, .freedom, .notic_zon, .footer
@@ -2093,7 +2093,7 @@ background-color: black;}
     {width: 60%;
     margin: 0 auto;
     position: absolute;
-    top: 19%; left: 2.5%;}
+    top: 15%; left: 2.5%;}
     
     .free_title_m p
     {font-size: 10px;
@@ -2272,7 +2272,9 @@ font-size: 14px; line-height: 14px;
 
 .box01_m div:nth-child(2) p:nth-child(2)
 {height: 25px;
-font-size: 22px; line-height: 25px;}
+font-size: 20px; line-height: 25px;}
+
+.call_box_m .call_time_m_mini {display: none;}
 
 .call_box_m .call_time_m
 {width: 95%; height: 30px;
@@ -2335,49 +2337,39 @@ margin-right: 10px;}
 {width: 100%; height: 100%;}
 
 .footer_m .footer_mid_m
-{width: 95%; height: 60px;
-margin: 0 auto;
-margin-top: 10px; margin-bottom: 10px;}
+{width: 95%; height: 40px;
+margin: 0 auto;}
 
 .footer_mid_m ul
-{width: 250px;
-margin: 0 auto;
-overflow: hidden;}
+{overflow: hidden;}
 
 .footer_mid_m ul a li
 {height: 20px; line-height: 20px;
 float: left; color: #333; font-weight: bold;
-font-size: 11px;}
+font-size: 10px;}
 
 .footer_mid_m ul a:nth-child(1) li
-{width: 50px;
-margin-right: 2px;}
+{margin-right: 5px;}
 
 .footer_mid_m ul a:nth-child(2) li
-{width: 50px;
-margin-right: 2px;}
+{margin-right: 5px;}
 
 .footer_mid_m ul a:nth-child(3) li
-{width: 50px;
-margin-right: 2px;}
+{margin-right: 5px;}
 
 .footer_mid_m ul a:nth-child(4) li
-{width: 90px;
-color: red;}
+{color: red;
+margin-right: 5px;}
 
 .footer_mid_m ul a:nth-child(5) li
-{width: 100px;
-margin-right: 2px;;}
+{margin-right: 5px;}
 
 .footer_mid_m ul a:nth-child(6) li
-{width: 60px;
-margin-right: 2px;}
+{margin-right: 5px;}
 
 .footer_mid_m ul a:nth-child(7) li
-{width: 80px;}
+{margin-right: 5px;}
 
-.footer_mid_m ul a:nth-child(8) li
-{width: 50px;}
 
 .footer_m .footer_line_m_02
 {width: 100%; height: 1px;
@@ -2435,27 +2427,77 @@ font-weight: bold;}
 
 }
 
-/*작은 모바일*/
+/*작은 모바일, 갤럭시 폴드*/
 
-@media all and (min-width:319px) and (max-width:374px)
+@media all and (max-width:319px)
 {
-    .call_box_m .call_time_m p
+    .gnb_mobile li a p
     {font-size: 10px;}
 
-    .freegolf_m .free_title_m
-    {width: 60%;
-    margin: 0 auto;
-    position: absolute;
-    top: 15%; left: 2.5%;}
+    .menu_mobile p 
+    {font-size: 12px;}
 
-    .freegolf_m .free_link_m
-    {width: 60%;
+    .menu_mobile label p
+    {font-size: 12px;} 
+
+    .icon_m a:last-child .icon_m_07
+    {width: 30%;}
+
+    .icon_m_07 div
+    {margin: 0 auto;}
+
+    .freegolf_m .free_title_m
+    {width: 80%;
+    top: 10%;}
+
+    .free_link_m p 
+    {font-size: 10px;}
+
+    .txt_notic_01 p, .txt_notic_02 p, .txt_notic_03 p
+    {font-size: 11px;}
+    
+    
+    .call_box_m .call_time_m
+    {width: 95%; height: 40px;
+    font-size: 8px; text-align: center; font-weight: bold;
+    line-height: 10px;
+    display: none;}
+
+    .call_box_m .call_time_m_mini
+    {width: 95%; height: 50px;
     margin: 0 auto;
-    position: absolute;
-    top: 50%; left: 2.5%;
-    font-size: 12px;}
+    margin-top: 10px; margin-bottom: 10px;
+    display: block;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;}
+
+    .call_time_m_mini p
+    {font-size: 12px; line-height: 20px; text-align: center; font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;}
+
+    .call_time_m_mini span {color: #0d75bc;}
+
+    .call_time_m_mini span:nth-child(3) {color: red;}
+
+    .call_time_m_mini span:nth-child(4) {color: red;}
+
+    .popu_review_01 div, .popu_review_01 p
+    {margin-right: 0;}
+
+    .popu_review_02 div, .popu_review_02 p
+    {margin-right: 0;}
+
+    .bestpro_review_02 div, .bestpro_review_02 p 
+    {margin-right: 0;}
+
+    .bestpro_review_01 div, .bestpro_review_01 p 
+    {margin-right: 0;}
 
 }
+
+
 
 /*태블릿*/
 
@@ -2498,16 +2540,5 @@ font-weight: bold;}
 
     .footer_m .footer_mid_m
     {width: 95%; height: 20px;
-    margin: 0 auto;
-    margin-top: 10px; margin-bottom: 10px;}
-
-    .footer_mid_m ul
-    {width: 542px;
-    margin: 0 auto;}
-
-    .footer_mid_m ul a li
-    {text-align: center;}
-
-    .footer_mid_m ul a:nth-child(4) li
-    {margin-right: 2px;}
+    margin: 5px auto;}
 }

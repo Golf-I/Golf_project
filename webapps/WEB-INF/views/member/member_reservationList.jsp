@@ -218,7 +218,7 @@
                                             <p>상세조회</p>
                                         </a>
             
-                                        <a href="javascript:open('?idx=${reserList.idx}', '결제하기', 'width=1200, height=1000')">
+                                        <a href="javascript:void">
                                             <p>결제하기</p>
                                         </a>
             

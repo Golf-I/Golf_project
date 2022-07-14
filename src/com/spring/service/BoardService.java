@@ -64,7 +64,7 @@ public interface BoardService {
 	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
 	
-	public List<TravelerVO> getTraveler(TravelerVO vo) throws Exception; // 여행자 내역 등록
+	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 등록
 	
 	
 

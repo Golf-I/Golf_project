@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
 	<title>join03</title>
 	<link href="${pageContext.request.contextPath}/resources/css/login.css"	rel="stylesheet">
 	<script	src="${pageContext.request.contextPath}/resources/js/member_signin.js"></script>
@@ -87,6 +87,101 @@
 
         </div><!--login-->
     </div><!--login_ex-->
+    
+    
+   <!-- 모바일 --> 
+   <section class="mobile">
+
+        <input type="button" id="login_mobile">
+
+        <div class="login_m_top">
+
+            <a href="#">
+                <p>←</p>
+            </a>
+
+            <p>로그인</p>
+
+            <a href="../index.html">
+                <img src="img/home_m.png">
+            </a>
+
+        </div>
+
+        <div class="line_login_m"></div>
+
+        <input type="text" id="id_mobile" placeholder="아이디 또는 이메일 아이디">
+
+        <input type="password" id="pw_mobile" placeholder="6~12자리 영문+숫자+특수문자 조합"
+        maxlength="12" size="12">
+
+        <div class="auto_login_m">
+
+            <input type="checkbox" id="auto">
+
+            <p>자동로그인</p>
+
+        </div>
+
+        <label for="login_mobile" class="login_btn_m">
+
+            <p>로그인</p>
+
+        </label>
+
+        <div class="login_menu_m_ex">
+
+            <div class="login_menu_m">
+
+                <a href="../fine_id/id.html">
+                    <p>아이디 찾기</p>
+                </a>
+
+                <p>·</p>
+
+                <a href="../password_find/password_find.html">
+                    <p>비밀번호 찾기</p>
+                </a>
+
+                <p>·</p>
+
+                <a href="../join01/join01.html">
+                    <p>회원가입</p>
+                </a>
+
+
+            </div>
+
+        </div>
+
+        <a href="#">
+
+            <div class="naver_m">
+
+                <div>
+                    <img src="img/naver.png">
+                </div>
+
+                <p>네이버로 로그인</p>
+
+            </div>
+        </a>
+
+        <a href="#">
+            
+            <div class="kakao_m">
+
+                <div>
+                    <img src="img/kakaotalk.png">
+                </div>
+
+                <p>카카오로 로그인</p>
+
+            </div>
+        </a>
+
+
+    </section><!--mobile-->
 
 </body>
 </html>

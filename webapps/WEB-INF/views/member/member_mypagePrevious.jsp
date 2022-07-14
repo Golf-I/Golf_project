@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
     <title>password_check</title>
     <link href="${pageContext.request.contextPath}/resources/css/password_check.css" rel="stylesheet">
 </head>
 <body>
 
-	<section>
+	<section class="web">
 
         <div class="password_check">
 
@@ -46,6 +46,46 @@
 			</form>
 			
         </div><!-- class="password_check" -->
+
+    </section>
+    
+    
+    
+    <!-- 모바일 -->
+    <section class="mobile">
+
+        <div class="pw_check_m_box">
+
+            <p>비밀번호 확인</p>
+
+            <div class="pw_check_m_line01"></div>
+
+            <p><span>an20o0@naver.com</span>  님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</p>
+
+            <div class="chk_box_m">
+
+                <div>
+
+                    <div>
+                        <p>아이디(이메일)</p>
+                        <p>an20o0@naver.com</p>
+                    </div>
+
+                    <div>
+                        <p>비밀번호</p>
+                        <input type="password" id="pw_chk_m">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="pw_btn_m">
+                <input type="button" value="확인" id="pw_check_ok">
+                <input type="button" value="취소" id="pw_back_btn">
+            </div>
+
+        </div>
 
     </section>
 

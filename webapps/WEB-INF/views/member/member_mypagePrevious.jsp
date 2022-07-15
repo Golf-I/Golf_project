@@ -54,13 +54,16 @@
     <!-- 모바일 -->
     <section class="mobile">
 
+		<form action="member/mypagePre" method="post">
+
         <div class="pw_check_m_box">
 
             <p>비밀번호 확인</p>
 
             <div class="pw_check_m_line01"></div>
 
-            <p><span>an20o0@naver.com</span>  님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</p>
+            <p><span>${sessionScope.id}</span>  님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</p>
+<!--             <p><span>an20o0@naver.com</span>  님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</p> -->
 
             <div class="chk_box_m">
 
@@ -68,12 +71,13 @@
 
                     <div>
                         <p>아이디(이메일)</p>
-                        <p>an20o0@naver.com</p>
+                        <input type="email" name="id" size="12" maxlength="12" value="${sessionScope.id}" readonly/>
+<!--                         <p>an20o0@naver.com</p> -->
                     </div>
 
                     <div>
                         <p>비밀번호</p>
-                        <input type="password" id="pw_chk_m">
+                        <input type="password" id="pw_chk_m" name="pw" required>
                     </div>
 
                 </div>
@@ -81,11 +85,13 @@
             </div>
 
             <div class="pw_btn_m">
-                <input type="button" value="확인" id="pw_check_ok">
+                <input type="submit" value="확인" id="pw_check_ok">
                 <input type="button" value="취소" id="pw_back_btn">
             </div>
 
         </div>
+        
+        </form>
 
     </section>
 

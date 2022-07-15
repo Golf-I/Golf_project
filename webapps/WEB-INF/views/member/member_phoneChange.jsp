@@ -27,7 +27,7 @@
                     <p><span><b><u>${sessionScope.id}</u></b></span> 회원정보 중 전화번호를 수정하기 위해 인증절차가 필요합니다.</p>
 
 					
-                    <select id="korea">
+                    <select id="korea" required>
                         <option>대한민국 (+82)</option>
                         <option>대만 (+886)</option>
                         <option>말레이시아 (+60)</option>
@@ -75,40 +75,44 @@
 
         <div class="phone_m_top">
            
-            <a href="#">
+            <a href="javascript:window.close();">
                 <p>←</p>
             </a>
 
             <p>휴대폰변경</p>
 
-            <a href="../index.html">
-                <img src="img/home_m.png">
-            </a>
-
         </div>
 
         <div class="phone_line01"></div>
 
+		<form action="member/memberPhoneUpdate" method="POST">
+		
+		<input type="hidden" name="id" value="${sessionScope.id}"> 
+
         <div class="phone_txt_m_01">
 
             <div>
-                <p><span>an20o0@naver.com</span> 회원정보 중 전화번호를 수정하기 위해 인증절차가 필요합니다.</p>
+                <p><span>${sessionScope.id}</span> 회원정보 중 전화번호를 수정하기 위해 인증절차가 필요합니다.</p>
+<!--                 <p><span>an20o0@naver.com</span> 회원정보 중 전화번호를 수정하기 위해 인증절차가 필요합니다.</p> -->
             </div>
 
         </div>
 
         <div class="phone_txt_m_02">
 
-            <select id="korea_mobile">
-
-                <option>대한민국(+82)</option>
-                <option>　</option>
-                <option>　</option>
-                <option>　</option>
-                <option>　</option>
-                <option>　</option>
-                <option>　</option>
-
+            <select id="korea_mobile" required>
+				<option>대한민국(+82)</option>
+				<option>대만 (+886)</option>
+				<option>말레이시아 (+60)</option>
+				<option>베트남 (+64)</option>
+				<option>인도네시아 (+62)</option>
+				<option>일본 (+81)</option>
+				<option>중국 (+86)</option>
+				<option>타이 (+66)</option>
+				<option>필리핀 (+63)</option>
+				<option>홍콩 (+852)</option>
+				<option>인도 (+91)</option>
+				<option>싱가폴 (+65)</option>
             </select>
 
 
@@ -116,21 +120,22 @@
 
                 <p>전화번호</p>
 
-                <input type="text" id="phone_mobile">
+                <input type="text" id="phone_mobile" name="phone" required>
 
                 <input type="button" value="인증요청" id="chk_m_btn">
 
             </div>
 
 
-            <input type="text" id="phone_chknum_m" placeholder="인증번호 입력">
+            <input type="text" id="phone_chknum_m" placeholder="인증번호 입력" required>
 
         </div>
 
 
-        <input type="button" value="변경하기" id="change_m">
+        <input type="submit" value="변경하기" id="change_m">
 
-
+		</form>
+	
     </section>
     
 </body>

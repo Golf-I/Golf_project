@@ -354,5 +354,7 @@ margin-top: 10px;
 background-color: #ccc;
 float: left;}
 
-
-
+@media all and (max-width:768px)
+{
+    .header {display: none;}
+}

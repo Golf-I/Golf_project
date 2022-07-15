@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
     <title>withdrawal</title>
     <link href="${pageContext.request.contextPath}/resources/css/withdrawal.css" rel="stylesheet">
-	<script	src="${pageContext.request.contextPath}/resources/js/member_secede.js"></script>
 </head>
 <body>
 
 	<section class="web">
 
-		<form action="member/memberSecede" method="POST" onsubmit="return secedeChk();">
+		<form action="member/memberSecede" method="POST">
 
         <div class="withdrawal">
 
@@ -48,7 +47,7 @@
                 </div>
 
                 <div class="chk_txt">
-                    <input type="checkbox" id="chk01">
+                    <input type="checkbox" id="chk01" required>
 	
 					<label for="chk01">
 	                    <p id="secede_check">상기 회원탈퇴 시 처리사항 안내를 확인하였음에 동의합니다.</p>
@@ -85,19 +84,23 @@
 	
     </section>
 
+
+
 	<!-- 모바일 -->
 	<section class="mobile">
+	
+		<form action="member/memberSecede" method="POST">
 
         <div class="withdrawal_m_top">
 
-            <a href="#">
+            <a href="javascript:history.back();">
                 <p>←</p>
             </a>
 
             <p>회원탈퇴</p>
 
-            <a href="#">
-                <img src="img/home_m.png">
+            <a href="index">
+                <img src="${pageContext.request.contextPath}/resources/img/home_m.png">
             </a>
 
         </div>
@@ -126,9 +129,11 @@
 
             <div class="agree_chk_m">
 
-                <input type="checkbox" id="agree_chk_m">
+                <input type="checkbox" id="agree_chk_m" required>
 
-                <p>상기 회원탈퇴 시 처리사항 안내를 확인하였음에 동의합니다.</p>
+				<label for="agree_chk_m">
+               		<p>상기 회원탈퇴 시 처리사항 안내를 확인하였음에 동의합니다.</p>
+				</label>
 
             </div>
 
@@ -137,7 +142,8 @@
         <div class="id_m">
             
             <p>
-                <span>an20o0@naver.com</span> 님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.
+                <span>${sessionScope.id}</span> 님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.
+<!--                 <span>an20o0@naver.com</span> 님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다. -->
             </p>
 
         </div>
@@ -145,19 +151,22 @@
         <div class="id_chk_m">
 
             <p>아이디(이메일)</p>
-            <p>an20o0@naver.com</p>
+            <p>${sessionScope.id}</p>
+            <input type="email" size="12" maxlength="12" id="pw01" name="id" value="${sessionScope.id}" readonly>
+<!--             <p>an20o0@naver.com</p> -->
 
         </div>
 
         <div class="pw_chk_m">
 
             <p>비밀번호</p>
-            <input type="password" id="pw_chk_m_typ">
+            <input type="password" id="pw_chk_m_typ" name="pw" required>
             
         </div>
 
-        <input type="button" value="회원탈퇴" id="withdrawal_mobile_btn">
+        <input type="submit" value="회원탈퇴" id="withdrawal_mobile_btn">
 
+		</form>
 
     </section>
     

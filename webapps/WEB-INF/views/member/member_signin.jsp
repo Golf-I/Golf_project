@@ -96,56 +96,61 @@
 
         <div class="login_m_top">
 
-            <a href="#">
+            <a href="javascript:history.back();">
                 <p>←</p>
             </a>
 
             <p>로그인</p>
 
-            <a href="../index.html">
-                <img src="img/home_m.png">
+            <a href="index">
+                <img src="${pageContext.request.contextPath}/resources/img/signup/home_m.png">
             </a>
 
         </div>
 
         <div class="line_login_m"></div>
 
-        <input type="text" id="id_mobile" placeholder="아이디 또는 이메일 아이디">
+		<!-- form 태그 -->
+		<form method="post" action="member/signin">
 
-        <input type="password" id="pw_mobile" placeholder="6~12자리 영문+숫자+특수문자 조합"
-        maxlength="12" size="12">
+        <input type="email" name="id" id="id_mobile" placeholder="아이디 또는 이메일 아이디" required>
+
+        <input type="password" name="pw" id="pw_mobile" placeholder="6~12자리 영문+숫자+특수문자 조합" maxlength="12" size="12" required>
 
         <div class="auto_login_m">
 
             <input type="checkbox" id="auto">
-
-            <p>자동로그인</p>
+			
+			<label for="auto">
+            	<p>자동로그인</p>
+			</label>
 
         </div>
 
         <label for="login_mobile" class="login_btn_m">
-
-            <p>로그인</p>
-
+            <input type="submit" value="로그인"/>
+<!--             <p>로그인</p> -->
         </label>
+        
+        </form>
 
         <div class="login_menu_m_ex">
 
             <div class="login_menu_m">
 
-                <a href="../fine_id/id.html">
+                <a href="findid">
                     <p>아이디 찾기</p>
                 </a>
 
                 <p>·</p>
 
-                <a href="../password_find/password_find.html">
+                <a href="findpw">
                     <p>비밀번호 찾기</p>
                 </a>
 
                 <p>·</p>
 
-                <a href="../join01/join01.html">
+                <a href="signup">
                     <p>회원가입</p>
                 </a>
 
@@ -159,7 +164,7 @@
             <div class="naver_m">
 
                 <div>
-                    <img src="img/naver.png">
+                    <img src="${pageContext.request.contextPath}/resources/img/signup/naver.png">
                 </div>
 
                 <p>네이버로 로그인</p>
@@ -172,14 +177,13 @@
             <div class="kakao_m">
 
                 <div>
-                    <img src="img/kakaotalk.png">
+                    <img src="${pageContext.request.contextPath}/resources/img/signup/kakaotalk.png">
                 </div>
 
                 <p>카카오로 로그인</p>
 
             </div>
         </a>
-
 
     </section><!--mobile-->
 

@@ -31,26 +31,19 @@
 
                 <div class="gender">
 
-                    <select id="local">
-
-                        <option>내국인</option>
-
-                        <option>외국인</option>
-
+                    <select id="local" required>
+                        <option value="내국인">내국인</option>
+                        <option value="외국인">외국인</option>
                     </select>
 
                     <div class="box_gender">
-
-
-                            <label for="man">
-                                <p>남성</p>
-                            </label>
-
-                            <label for="woman">
-                                <p>여성</p>
-                            </label>
-
-
+	                    <label for="man">
+	                        <p>남성</p>
+	                    </label>
+	
+	                    <label for="woman">
+	                        <p>여성</p>
+	                    </label>
                     </div>
 
                 </div>
@@ -62,15 +55,12 @@
                     <div class="birthday_box">
 
                         <input type="text" size="4" maxlength="4" id="day01" name="birth1" required>
-
                         <p>년</p>
 
                         <input type="text" size="2" maxlength="2" id="day02" name="birth2" required>
-
                         <p>월</p>
 
                         <input type="text" size="2" maxlength="2" id="day03" name="birth3" required>
-
                         <p>일</p>
 
                     </div>
@@ -79,12 +69,10 @@
 
                 <div class="phone">
 
-                    <select id="agency">
-
-                        <option>SKT</option>
-                        <option>KT</option>
-                        <option>LG</option>
-
+                    <select id="agency" name="telecom" required>
+                        <option value="SKT">SKT</option>
+                        <option value="KT">KT</option>
+                        <option value="LG">LG</option>
                     </select>
 
                     <input type="text" size="11" maxlength="11" id="phone_num" placeholder="전화번호" name="phone" required>
@@ -112,17 +100,17 @@
 	<!-- 모바일 -->
 	<section class="mobile">
 
+		<form action="member/memberNameUpdate" method="post">
+	    
+	    <input type="hidden" name="id" value="${sessionScope.id}">
+
         <div class="name_m_top">
 
-            <a href="#">
+            <a href="javascript:window.close();">
                 <p>←</p>
             </a>
 
             <p>이름변경</p>
-
-            <a href="#">
-                <img src="img/home_m.png">
-            </a>
 
         </div>
 
@@ -132,19 +120,17 @@
 
             <p>인증받은 휴대전화 번호는 내 회원정보에 등록하겠습니다.</p>
 
-            <input type="text" placeholder="이름" id="name_m_01">
+            <input type="text" placeholder="이름" id="name_m_01" name="name" required>
 
             <div class="namebox01">
 
-                <select id="name_m_02">
-
-                    <option>내국인</option>
-                    <option>외국인</option>
-
+                <select id="name_m_02" required>
+                    <option value="내국인">내국인</option>
+                    <option value="외국인">외국인</option>
                 </select>
 
-                <input type="radio" name="gendar_m" id="man_m">
-                <input type="radio" name="gendar_m" id="woman_m">
+                <input type="radio" name="gender" id="man_m" value="male">
+                <input type="radio" name="gender" id="woman_m" value="female">
 
                 <div class="gender_mobile_box">
 
@@ -169,7 +155,7 @@
 
                     <div class="day01_m">
 
-                        <input type="text" id="day_text_01" size="4" maxlength="4">
+                        <input type="text" id="day_text_01" name="birth1" size="4" maxlength="4" required>
 
                         <p>년</p>
 
@@ -177,7 +163,7 @@
 
                     <div class="day02_m">
 
-                        <input type="text" id="day_text_02" size="2" maxlength="2">
+                        <input type="text" id="day_text_02" name="birth2" size="2" maxlength="2" required> 
 
                         <p>월</p>
                         
@@ -185,7 +171,7 @@
 
                     <div class="day03_m">
 
-                        <input type="text" id="day_text_03" size="2" maxlength="2">
+                        <input type="text" id="day_text_03" name="birth3" size="2" maxlength="2" required>
 
                         <p>일</p>
                         
@@ -197,34 +183,30 @@
 
             <div class="namebox03">
 
-                <select id="name_m_03">
-
-                    <option>SKT</option>
-                    <option>KT</option>
-                    <option>LG</option>
-
+                <select id="name_m_03" name="telecom" required>
+                    <option value="SKT">SKT</option>
+                    <option value="KT">KT</option>
+                    <option value="LG">LG</option>
                 </select>
 
 
                 <div class="phonenum_box_m">
-
-                    <input type="text" placeholder="전화번호" id="phonenum_m" size="11" maxlength="11">
-
+                    <input type="text" placeholder="전화번호" id="phonenum_m" name="phone" size="11" maxlength="11" required>
                     <input type="button" value="인증요청" id="certi_m_btn">
-
                 </div>
 
 
             </div>
 
 
-            <input type="text" id="certification_m" placeholder="인증번호 입력">
+            <input type="text" id="certification_m" placeholder="인증번호 입력" required>
             
         </div><!--name_m_box_ex-->
 
 
-        <input type="button" value="변경하기" id="change_m">
+        <input type="submit" value="변경하기" id="change_m">
 
+		</form>
 
     </section>
 

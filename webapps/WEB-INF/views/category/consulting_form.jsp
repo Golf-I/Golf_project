@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
     <title>consulting</title>
 	<link href="${pageContext.request.contextPath}/resources/css/consulting.css" rel="stylesheet">
-	<script	type="text/javascript" src="${pageContext.request.contextPath}/resources/js/consulting_form.js"></script>
   	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
@@ -18,7 +17,7 @@
 
             <p>상담신청</p>
 
-			<form method="POST"	action="category/inquire" onsubmit="return formCheck();">
+			<form method="POST"	action="category/inquire" >
 
 			<input type="hidden" value="${param.title}" name="title">
 
@@ -42,10 +41,10 @@
                     </div>
 
                     <div class="agree_chk">
-                        	<input type="checkbox" id="agree">
+                        	<input type="checkbox" id="agree" required>
 						
 						<label for="agree">
-		                    <p id="agree_check">동의합니다.</p>
+		                    <p>동의합니다.</p>
 						</label>
                     </div>
 
@@ -56,8 +55,7 @@
            	<div class="select_box">
                 <p>※ 원하시는 상담 카테고리를 선택해주세요.</p>
 
-                <select name="category" id="product">
-                    <option value="">카테고리를 선택해주세요.</option>
+                <select name="category" id="product" required>
                     <option value="회원권">회원권</option>
                     <option value="아카데미">아카데미</option>
                 </select>
@@ -110,18 +108,22 @@
     
     
     <!-- 모바일 -->
-       <section class="mobile">
+   	<section class="mobile">
+
+		<form method="POST"	action="category/inquire">
+	
+		<input type="hidden" value="${param.title}" name="title">
 
         <div class="consulting_m_top">
 
-            <a href="#">
+            <a href="javascript:history.back();">
                 <p>←</p>
             </a>
 
             <p>상담신청</p>
 
-            <a href="#">
-                <img src="img/home_m.png">
+            <a href="index">
+                <img src="${pageContext.request.contextPath}/resources/img/home_m.png">
             </a>
 
         </div>
@@ -132,7 +134,7 @@
 
             <div>
                 <p>㈜골프아이는 해외 골프장과 회원권 제휴되어 더 좋은 조건으로 골프 회원권을 구입하실 수 있습니다.<br>
-                    회원권에 대한 궁금한 사항이 있으시면 언제라도 문의 주시기 바랍니다.</p>
+                	회원권에 대한 궁금한 사항이 있으시면 언제라도 문의 주시기 바랍니다.</p>
             </div>
 
         </div>
@@ -155,9 +157,11 @@
 
             <div class="agree_chk_m">
 
-                <input type="checkbox" id="agree_chk_m">
+                <input type="checkbox" id="agree_chk_m" required>
 
-                <p>동의합니다.</p>
+				<label for="agree_chk_m">
+	                <p>동의합니다.</p>
+				</label>
 
             </div>
 
@@ -167,11 +171,9 @@
 
             <p>※ 원하시는 상담 카테고리를 선택해주세요.</p>
 
-            <select id="select_m">
-
-                <option>회원권</option>
-                <option>아카데미</option>
-
+            <select id="select_m" name="category" required>
+                <option value="회원권">회원권</option>
+                <option value="아카데미">아카데미</option>
             </select>
 
         </div>
@@ -183,43 +185,43 @@
             <div>
 
                 <p><span>*</span> 기업명/고객명</p>
-                <input type="text" id="call_m_01">
+                <input type="text" id="call_m_01" name="companyName" required>
 
             </div>
 
             <div>
 
                 <p><span>*</span> 담당자</p>
-                <input type="text" id="call_m_02">
+                <input type="text" id="call_m_02" name="manager" required>
 
             </div>
 
             <div>
 
                 <p><span>*</span> 연락처</p>
-                <input type="text" id="call_m_03">
+                <input type="text" id="call_m_03" name="contactNumber" required>
 
             </div>
 
             <div>
 
                 <p><span>*</span> 상담일/시간</p>
-                <input type="text" id="call_m_04">
+                <input type="text" id="call_m_04" name="contactDate" required>
 
             </div>
 
             <div>
 
                 <p><span>*</span> 상담내용</p>
-                <textarea id="call_m_05"></textarea>
+                <textarea id="call_m_05" name="content" required></textarea>
 
             </div>
 
         </div>
 
+        <input type="submit" value="상담신청 보내기" id="consulting_m_btn">
 
-        <input type="button" value="상담신청 보내기" id="consulting_m_btn">
-
+		</form>
 
     </section>
 

@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, minimum-scale=1.0, user-scalable=no">
 	<title>footer</title>
 	<link href="${pageContext.request.contextPath}/resources/css/footer.css" rel="stylesheet">
 </head>
@@ -117,19 +117,19 @@
                 <div class="sns_m">
 
                     <a href="#">
-                        <img src="img/kakao.png">
+                        <img src="${pageContext.request.contextPath}/resources/img/kakao.png">
                     </a>
 
                     <a href="#">
-                        <img src="img/naver.png">
+                        <img src="${pageContext.request.contextPath}/resources/img/naver.png">
                     </a>
 
                     <a href="#">
-                        <img src="img/facebook.png">
+                        <img src="${pageContext.request.contextPath}/resources/img/facebook.png">
                     </a>
 
                     <a href="#">
-                        <img src="img/band.png">
+                        <img src="${pageContext.request.contextPath}/resources/img/band.png">
                     </a>
 
 
@@ -141,53 +141,54 @@
                 
                 <ul>
                     
-                    <a href="company/company.html">
+                    <a href="company">
                         <li>
                             <p>회사소개</p>
                         </li>
                     </a>
 
 
-                    <a href="agreement/agreement.html">
+                    <a href="terms-of-service">
                         <li>
                             <p>이용약관</p>
                         </li>
                     </a>
 
-                    <a href="travel/travel.html">
+                    <a href="travel-terms-and-conditions">
                         <li>
                             <p>여행약관</p>
                         </li>
                     </a>
     
-                    <a href="privacy_policy/privacy_policy.html">
+                    <a href="privacy_policy">
                         <li>
                             <p>개인정보처리방침</p>
                         </li>
                     </a>
 
     
-                    <a href="email/email.html">
+                    <a href="javascript:open('unauthorized-email-collection', '이메일무단수집거부', 
+                    		'width=360, height=330')">
                         <li>
                             <p>이메일무단수집거부</p>
                         </li>
                     </a>
 
     
-                    <a href="hallsale/hallsale.html">
+                    <a href="wholesale">
                         <li>
                             <p>홀세일문의</p>
                         </li>
                     </a>
                     
 
-                    <a href="pr/pr.html">
+                    <a href="promotion">
                         <li>
                             <p>제휴/홍보문의</p>
                         </li>
                     </a>
 
-                    <a href="store_inquiry/store_inquiry.html">
+                    <a href="store">
                         <li>
                             <p>입점문의</p>
                         </li>
@@ -230,8 +231,7 @@
 
                     </div>
 
-                    <p>copyright 1300k.com.ALL RIGHTS RESERVED. 상품 사진을 포함한 모든 콘텐츠는 저작권법 
-                    제 98조에 의거해 보호를 받고 있습니다.</p>
+                    <p>copyright 1300k.com.ALL RIGHTS RESERVED. 상품 사진을 포함한 모든 콘텐츠는 저작권법 제 98조에 의거해 보호를 받고 있습니다.</p>
 
                 </div>
 

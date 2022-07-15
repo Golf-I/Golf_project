@@ -5,8 +5,8 @@ li {list-style: none;}
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
-    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../font/Spoqa\ Han\ Sans\ Regular.woff);
 }
 
 body {font-family: SpoqaHanSansNeo;}
@@ -31,13 +31,15 @@ padding-top: 40px; padding-bottom: 40px; box-sizing: border-box;
 text-align: center; line-height: 50px;
 font-size: 32px; font-weight: bold;}
 
-#id_w
+/* #id_w */
+#email
 {width: 450px; height: 50px;
 margin-left: 50px;
 margin-top: 40px;
 margin-bottom: 5px;}
 
-#pw_w
+/* #pw_w */
+#pw
 {width: 450px; height: 50px;
 margin-left: 50px;
 margin-bottom: 20px;}
@@ -218,13 +220,18 @@ float: left;}
 #login_mobile
 {display: none;}
 
-.login_btn_m p
+/* .login_btn_m p */
+.login_btn_m input[type=submit]
 {width: 95%; height: 40px;
 margin: 0 auto;
 text-align: center; line-height: 40px; font-size: 14px;
+margin-left: 14px;
+margin-bottom: 10px;
 border-radius: 5px;
 background-color: #0d75bc;
+border-color: 0d75bc;
 color: white;}
+
 
 .login_menu_m_ex
 {width: 95%;

@@ -7,15 +7,16 @@
 	<insert id="memberReservation">
 	<![CDATA[
 	INSERT INTO reservation (product_code, sortation, id, productName, region, 
-							city,  personnel, 
+							city, departure_date, arrival_date, personnel, 
 							booker, booker_phone, booker_email, booker_gender, 
-							product_price, memo, 
+							product_price, day_park, day_il, memo, 
 							option_singleRoom, option_addVehicle, option_businessUpgrade, 
 							total_price, regDate)
 	VALUES (#{product_code}, #{sortation}, #{id}, #{productName}, #{region}, 
-			#{city},  #{personnel},
+			#{city}, #{departure_date}, DATE_ADD(#{departure_date}, INTERVAL +#{day_il}-1 DAY), 
+			#{personnel},
 			#{booker}, #{booker_phone}, #{booker_email}, #{booker_gender},
-			#{product_price}, #{memo},
+			#{product_price}, #{day_park}, #{day_il}, #{memo},
 			#{option_singleRoom}, #{option_addVehicle}, #{option_businessUpgrade},
 			#{total_price}, NOW())
 	]]>
@@ -30,12 +31,12 @@
 	<!-- 여행자정보 삽입 -->
 	<insert id="addTraveler">
 	<![CDATA[
-	INSERT INTO traveler (product_code, productName, departure_date, arrival_date, booker,
+	INSERT INTO traveler (idx, product_code, productName, departure_date, arrival_date, booker,
 						  traveler, traveler_gender, traveler_firstname, 
-						  traveler_lastname, traveler_phone)
-	VALUES (#{product_code}, #{productName}, #{departure_date}, #{arrival_date}, 
+						  traveler_lastname, traveler_phone, regDate)
+	VALUES (#{idx}, #{product_code}, #{productName}, #{departure_date}, #{arrival_date}, 
 			#{booker}, #{traveler}, #{traveler_gender}, 
-			#{traveler_firstname}, #{traveler_lastname}, #{traveler_phone})
+			#{traveler_firstname}, #{traveler_lastname}, #{traveler_phone}, NOW())
 	]]>
 	</insert>
 	<!-- 여행자정보 삽입   -->
@@ -63,6 +64,17 @@
 	]]>
 	</select>
 	<!-- 예약 내역 1개 가져오기 -->
+
+
+	<!-- idx 가져오기 -->
+	<select id="getIdx" resultType="int">
+	SELECT idx
+	FROM reservation
+	WHERE product_code = #{product_code}
+	AND productName = #{productName}
+	AND departure_date = #{departure_date}
+	</select>
+	<!-- idx 가져오기 -->
 
 
 </mapper>

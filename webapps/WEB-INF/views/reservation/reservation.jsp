@@ -52,8 +52,13 @@
 			<input type="hidden" name="weekday_fee" value="${param.weekday_fee}">
 			<input type="hidden" name="weekend_fee" value="${param.weekend_fee}">
 			<input type="hidden" name="id" value="${sessionScope.id}">
+			
+			<c:forEach items="${bbsList}" var="bbsList">
+			<input type="hidden" name="day_park" value="${bbsList.day_park} ">
+			<input type="hidden" name="day_il" value="${bbsList.day_il}">
+			</c:forEach>
 
-            <p>예약하기</p>
+            <!-- <p>예약하기</p> -->
 
             <div class="line01"></div>
 
@@ -283,10 +288,11 @@
                         <td>
                             <!-- <p>1,090,000 원 (1인 기준)</p> -->
                             <c:if test="${param.weekday_fee != null}">
-                            	<input type="text" name="lowestPrice" value="${param.weekday_fee}" id="lowestPrice" readonly/>원 (1인 기준)
+                            	<input type="text" name="product_price" value="${param.weekday_fee}" id="lowestPrice" readonly/>원 (1인 기준)
+                            	
                             </c:if>
                             <c:if test="${param.weekend_fee != null}">
-                            	<input type="text" name="lowestPrice" value="${param.weekend_fee}" id="lowestPrice" readonly/>원 (1인 기준)
+                            	<input type="text" name="product_price" value="${param.weekend_fee}" id="lowestPrice" readonly/>원 (1인 기준)
                             </c:if>
                         </td>
                         
@@ -301,12 +307,16 @@
                             <p>출발일</p>
                         </td>
 
-                        <td>
-                            <p><input type="text" name="departure_date" id="datepicker" required></p>
-<!--                             <p>2022-05-25</p> -->
-                        </td>
+						<c:forEach items="${bbsList}" var="bbsList">
+							<td>
+								<p>
+									<input type="text" name="departure_date" id="datepicker"
+										value="${bbsList.period_start}" required>
+								</p> <!--                             <p>2022-05-25</p> -->
+							</td>
+						</c:forEach>
 
-                        <td>
+						<td>
                             <p>인원</p>
                         </td>
 
@@ -325,7 +335,7 @@
                         <td rowspan="6">
                             <!-- <p>2,180,000원</p>
                             <p>(2인요금)</p> -->
-                            <input type="text" name="total_price" id="total_price" /> 원 (2인요금) <!-- name="" -->
+                            <input type="text" name="total_price" id="total_price" readonly="readonly"/> 원
                         </td>
 
                     </tr>
@@ -541,7 +551,7 @@
                 </div><!--information02-->
  
                  <div class="information03" id="travel02">
-<!--   
+<%--   
 	                <p>여행자정보02</p>
 	
 	                <table cellpadding="0" cellspacing="0">
@@ -596,7 +606,7 @@
 	                </table>
           
                	<br/><br/>
--->
+--%>
 	            </div> 
 	            <!--information03-->
             
@@ -660,13 +670,13 @@
 
 
         </div><!--notice-->
-
+<%-- 
         <div class="total">
             <p>총 결제 금액</p>
             <input type="text" name="totalPrice" id="totalPrice" readonly /> 원<span>(2인 요금)</span>
             <!-- <p>2,180,000원 <span>(2인 요금)</span></p> -->
-            
         </div>
+--%>
 
         <div class="btn">
             <input type="submit" value="예약" id="btn01">

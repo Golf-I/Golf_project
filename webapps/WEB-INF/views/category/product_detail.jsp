@@ -37,7 +37,7 @@
 
                 <p>></p>
 
-                <select>
+                <select required>
                     <option>도쿄/간토</option>
                     <option>오사카/간사이</option>
                     <option>홋카이도/삿포로</option>

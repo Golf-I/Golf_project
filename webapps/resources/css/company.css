@@ -7,13 +7,16 @@ img {display: block;}
 @font-face {
     font-family: SpoqaHanSansNeo;
     src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../font/Spoqa\ Han\ Sans\ Regular.woff);
 }
 
 body 
 {font-family: SpoqaHanSansNeo;}
 
+.mobile {display: none;}
 
-section
+
+.web
 {width: 100%; max-width: 1920px; min-width: 1340px;
 margin: 0 auto;}
 
@@ -49,7 +52,7 @@ height: 750px;}
 
 /*모바일,테블릿보다 크게, 1920px 보다는 작게 이미지 맞춘 거*/
 
-@media all and (min-width: 768px) and (max-width:1919px)
+@media all and (min-width: 769px) and (max-width:1919px)
 {
 .visual {display: none;}
 
@@ -150,3 +153,115 @@ background-color: blue;
 margin-bottom: 100px;}
 
 
+@media all and (max-width:768px)
+{   
+
+    .web {display: none;}
+
+    .mobile
+    {width: 100%; height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: block;}
+    
+    .pr_m_top
+    {width: 95%; height: 40px;
+    margin: 0 auto;}
+    
+    .pr_m_top a:nth-child(1)
+    {width: 30px; height: 30px;
+    text-align: center; line-height: 30px; font-size: 18px;
+    margin-top: 5px; margin-right: 5px;
+    color: #0d75bc;
+    float: left;}
+    
+    .pr_m_top>p:nth-child(2)
+    {font-weight: bold; line-height: 40px;
+    float: left;}
+    
+    .pr_m_top a:nth-child(3)
+    {width: 30px; height: 30px;
+    margin-top: 5px; margin-right: 5px;
+    float: right;}
+    
+    .pr_m_top a:nth-child(3) img 
+    {width: 100%; height: 100%;}
+    
+    .pr_line01
+    {width: 100%; height: 1px;
+    background-color: #ccc;}
+    
+    .company_img_m
+    {width: 100%;
+    margin-bottom: 20px;}
+    
+    .company_img_m img
+    {width: 100%; height: auto;}
+    
+    .company_tit_m_01
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;}
+    
+    .company_tit_m_01 p:nth-child(1)
+    {font-size: 22px;
+    text-align: center; line-height: 22px; font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .company_tit_m_01 p:nth-child(2)
+    {font-size: 12px; text-align: center;
+    line-height: 20px;}
+    
+    .company_txt_m_01
+    {width: 95%;
+    margin: 0 auto;}
+    
+    .company_txt_m_01 p
+    {line-height: 20px; font-size: 12px;
+    margin-bottom: 5px;
+    text-align: justify;}
+    
+    .company_txt_m_01 p:nth-child(1)
+    {font-weight: bold;}
+    
+    .line_img_m
+    {width: 100%; 
+    margin-top: 10px;
+    margin-bottom: 10px;}
+    
+    .line_img_m img {width: 100%; height: auto;}
+    
+    .company_txt_m_02
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;}
+    
+    .company_txt_m_02 p
+    {line-height: 20px; font-size: 12px;
+    margin-bottom: 5px;
+    text-align: justify;}
+    
+    .company_txt_m_02 p:nth-child(1)
+    {font-weight: bold;}
+    
+    .company_tit_m_02
+    {width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;}
+    
+    .company_tit_m_02 p:nth-child(1)
+    {font-size: 22px;
+    text-align: center; line-height: 22px; font-weight: bold;
+    margin-bottom: 5px;}
+    
+    .company_tit_m_02 p:nth-child(2)
+    {font-size: 12px; text-align: center;
+    line-height: 20px;}
+    
+    .map_m
+    {width: 100%;
+    margin-bottom: 10px;}
+    
+    .map_m img
+    {width: 100%; height: auto;} 
+}

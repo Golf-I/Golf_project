@@ -11,6 +11,8 @@ img {display: block;}
 body 
 {font-family: SpoqaHanSansNeo;}
 
+.footer_m {display: none;}
+
 .footer
 {width: 100%;}
 
@@ -140,3 +142,130 @@ background-color: black;}
 text-align: center; line-height: 20px;
 margin-top: 2.5px; color: #ccc;
 background-color: black;}
+
+@media all and (max-width:768px)
+{
+
+.footer {display: none;}
+
+.footer_m
+{width: 100%;
+display: block;}
+
+.footer_m .footer_top_m
+{width: 100%; height: 40px;
+background-color: #333;}
+
+.footer_top_m .sns_m
+{width: 150px; height: 30px;
+margin: 0 auto;
+padding-top: 5px;}
+
+.sns_m a 
+{width: 30px; height: 30px;
+float: left;
+margin-right: 10px;}
+
+.sns_m a:last-child {margin-right: 0;}
+
+.sns_m a img
+{width: 100%; height: 100%;}
+
+.footer_m .footer_mid_m
+{width: 95%; height: 40px;
+margin: 0 auto;}
+
+.footer_mid_m ul
+{overflow: hidden;}
+
+.footer_mid_m ul a li
+{height: 20px; line-height: 20px;
+float: left; color: #333; font-weight: bold;
+font-size: 10px;}
+
+.footer_mid_m ul a:nth-child(1) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(2) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(3) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(4) li
+{color: red;
+margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(5) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(6) li
+{margin-right: 5px;}
+
+.footer_mid_m ul a:nth-child(7) li
+{margin-right: 5px;}
+
+
+.footer_m .footer_line_m_02
+{width: 100%; height: 1px;
+background-color: #ccc;}
+
+.footer_m .footer_bottom_ex_m
+{width: 100%;
+background-color: #f3f3f3;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 12px;
+line-height: 20px;}
+
+.footer_bottom_ex_m .footer_bottom_m
+{width: 95%;
+margin: 0 auto;}
+
+.footer_bottom_m a {color:#333; font-weight: bold;}
+
+.footer_bottom_m>p:nth-child(1)
+{font-size: 18px;
+font-weight: bold;
+margin-bottom: 5px;}
+
+.footer_bottom_m .footer_box01
+{width: 100%;}
+
+.footer_box01>p
+{float: left;}
+
+.footer_box01>p:nth-child(1)
+{margin-right: 2px;}
+
+.footer_bottom_m .footer_box02
+{width: 100%;}
+
+.footer_box02>p
+{float: left;}
+
+.footer_box02>p:nth-child(1)
+{margin-right: 2px;}
+
+.footer_bottom_ex_m>a p
+{width: 200px; height: 30px;
+border: 1px solid #333;
+background-color: white;
+margin: 0 auto;
+margin-top: 10px;
+font-size: 14px; line-height: 30px; text-align: center;
+color: #333;}
+
+.footer_bottom_ex_m>a span
+{color: #0d75bc;
+font-weight: bold;}
+
+
+}
+
+@media all and (min-width:601px) and (max-width:768px)
+{
+    .footer_m .footer_mid_m
+    {width: 95%; height: 20px;
+    margin: 5px auto;}
+}

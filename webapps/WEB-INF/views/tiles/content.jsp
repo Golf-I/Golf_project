@@ -409,7 +409,7 @@
 		
 			<div class="title_notic">
 				<p>공지사항</p>
-				<p><a href="login">+ 더보기</a></p>
+				<p><a href="#">+ 더보기</a></p>
 			</div>
 
 			<div class="notic_box">
@@ -501,16 +501,32 @@
 	       <div class="header_button">
 	
 	           <div class="search_m">
-	               <a href="search/search.html">
+	               <a href="#">
 	                   <img src="${pageContext.request.contextPath}/resources/img/search_mobile.png">
 	               </a>
 	           </div>
 	
-	           <div class="login_m">
-	               <a href="login">
-	                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
-	               </a>
-	           </div>
+	
+			<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+			           <div class="login_m">
+			               <a href="mypage_pre">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:when>
+					
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+			           <div class="login_m">
+			               <a href="login">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:otherwise>    
+			</c:choose>
+	
 	
 	       </div>
 	
@@ -523,24 +539,24 @@
 	               <ul>
 	
 	
-				<c:choose>
-					<%-- 로그인 했을 때 --%>
-					<c:when test="${sessionScope.id != null}">
-					</c:when>
-					
-					<%-- 로그인 안했을 때 --%>
-					<c:otherwise>
-						<li>
-						    <a href="login">
-						        <p>로그인</p>
-						    </a>
-						</li>
+					<c:choose>
+						<%-- 로그인 했을 때 --%>
+						<c:when test="${sessionScope.id != null}">
+						</c:when>
 						
-						<li>
-						    <div></div>
-						</li>
-					</c:otherwise>    
-				</c:choose>
+						<%-- 로그인 안했을 때 --%>
+						<c:otherwise>
+							<li>
+							    <a href="login">
+							        <p>로그인</p>
+							    </a>
+							</li>
+							
+							<li>
+							    <div></div>
+							</li>
+						</c:otherwise>    
+					</c:choose>
 				
 	                  <li>
 	                      <a href="#">
@@ -554,62 +570,62 @@
 				
 				
 						<li>
-				<c:choose>
-					<%-- 로그인 했을 때 --%>
-					<c:when test="${sessionScope.id != null}">
-		                 <a href="mypage_pre">
-		                     <p>예약확인</p>
-		                 </a>
-					</c:when>
-				
-					<%-- 로그인 안했을 때 --%>
-					<c:otherwise>
-		                <a href="login">
-		                    <p>예약확인</p>
-		                </a>
-					</c:otherwise>
-				</c:choose>
+						<c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+				                 <a href="mypage_pre">
+				                     <p>예약확인</p>
+				                 </a>
+							</c:when>
+						
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+				                <a href="login">
+				                    <p>예약확인</p>
+				                </a>
+							</c:otherwise>
+						</c:choose>
 				        </li>
 				        
 				
-				<c:choose>
-					<%-- 로그인 했을 때 --%>
-					<c:when test="${sessionScope.id != null}">
-							<li>
-							    <div></div>
-							</li>
+						<c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+									<li>
+									    <div></div>
+									</li>
+									
+									<li>
+									    <a href="member/signout">
+									        <p>로그아웃</p>
+									    </a>
+									</li>
+							</c:when>
 							
-							<li>
-							    <a href="member/signout">
-							        <p>로그아웃</p>
-							    </a>
-							</li>
-					</c:when>
-					
-					<%-- 로그인 안했을 때 --%>
-					<c:otherwise>
-					</c:otherwise>
-				</c:choose>
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+							</c:otherwise>
+						</c:choose>
 				
 				
-				<c:choose>
-					<%-- 로그인 했을 때 --%>
-					<c:when test="${sessionScope.id != null}">
-						<li>
-							<div></div>
-						</li>
-					
-						<a href="mypage_pre">
-							<li>
-								<p>마이페이지</p>
-							</li>
-						</a>
-					</c:when>
-				
-					<%-- 로그인 안했을 때 --%>
-					<c:otherwise>
-					</c:otherwise>
-				</c:choose>
+						<c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+								<li>
+									<div></div>
+								</li>
+							
+								<a href="mypage_pre">
+									<li>
+										<p>마이페이지</p>
+									</li>
+								</a>
+							</c:when>
+						
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+							</c:otherwise>
+						</c:choose>
 	
 	               </ul>
 	
@@ -1355,29 +1371,25 @@
 
             <div class="free_title_m">
                 <p><span>지</span>역별 자유골프 만들기</p>
-                <p>고객이 직접 골프장, 호텔, 렌터카, 기타 등등을<br>
-                    만들어 보세요!
-                </p>
+                <p>고객이 직접 골프장, 호텔, 렌터카, 기타 등등을<br>만들어 보세요!</p>
             </div>
 
             <div class="free_link_m">
-
-                <a href="#">
-                    <p>일본 자유골프</p>
-                </a>
-
-                <a href="#">
-                    <p>태국 자유골프</p>
-                </a>
-
-                <a href="#">
-                    <p>베트남 자유골프</p>
-                </a>
-
-                <a href="#">
-                    <p>대만 자유골프</p>
-                </a>
-
+				<a href="freegolf?region=일본">
+				    <p>일본 자유골프</p>
+				</a>
+				
+				<a href="freegolf?region=태국">
+				    <p>태국 자유골프</p>
+				</a>
+				
+				<a href="freegolf?region=베트남">
+				    <p>베트남 자유골프</p>
+				</a>
+				
+				<a href="freegolf?region=대만">
+				    <p>대만 자유골프</p>
+				</a>
             </div>
 
         </div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -635,7 +636,7 @@
             <header class="header_m">
     
                 <label for="menu_m" class="menu_m">
-                    <img src="img/menu_btn.png">
+                    <img src="${pageContext.request.contextPath}/resources/img/freegolf/menu_btn.png">
                 </label>
     
                 <div class="rout_m">
@@ -645,16 +646,30 @@
                 <div class="header_button">
     
                     <div class="main_m">
-                        <a href="../index.html">
-                            <img src="img/home_m.png">
+                        <a href="index">
+                            <img src="${pageContext.request.contextPath}/resources/img/freegolf/home_m.png">
                         </a>
                     </div>
     
-                    <div class="login_m">
-                        <a href="../login/login.html">
-                            <img src="img/login_mobile.png">
-                        </a>
-                    </div>
+    			<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+			           <div class="login_m">
+			               <a href="mypage_pre">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:when>
+					
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+			           <div class="login_m">
+			               <a href="login">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:otherwise>    
+				</c:choose>
     
                 </div>
     
@@ -666,15 +681,25 @@
     
                         <ul>
     
-                            <li>
-                                <a href="../login/login.html">
-                                    <p>로그인</p>
-                                </a>
-                            </li>
+                        <c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+							</c:when>
+							
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+								<li>
+								    <a href="login">
+								        <p>로그인</p>
+								    </a>
+								</li>
+								
+								<li>
+								    <div></div>
+								</li>
+							</c:otherwise>    
+						</c:choose>
     
-                            <li>
-                                <div></div>
-                            </li>
     
                             <li>
                                 <a href="#">
@@ -687,20 +712,60 @@
                             </li>
     
                             <li>
-                                <a href="#">
-                                    <p>예약확인</p>
-                                </a>
+							<c:choose>
+								<%-- 로그인 했을 때 --%>
+								<c:when test="${sessionScope.id != null}">
+					                 <a href="mypage_pre">
+					                     <p>예약확인</p>
+					                 </a>
+								</c:when>
+							
+								<%-- 로그인 안했을 때 --%>
+								<c:otherwise>
+					                <a href="login">
+					                    <p>예약확인</p>
+					                </a>
+								</c:otherwise>
+							</c:choose>
                             </li>
+                            
+                            <c:choose>
+								<%-- 로그인 했을 때 --%>
+								<c:when test="${sessionScope.id != null}">
+										<li>
+										    <div></div>
+										</li>
+										
+										<li>
+										    <a href="member/signout">
+										        <p>로그아웃</p>
+										    </a>
+										</li>
+								</c:when>
+								
+								<%-- 로그인 안했을 때 --%>
+								<c:otherwise>
+								</c:otherwise>
+							</c:choose>
     
-                            <li>
-                                <div></div>
-                            </li>
-    
-                            <li>
-                                <a href="#">
-                                    <p>마이페이지</p>
-                                </a>
-                            </li>
+							<c:choose>
+								<%-- 로그인 했을 때 --%>
+								<c:when test="${sessionScope.id != null}">
+									<li>
+										<div></div>
+									</li>
+								
+									<a href="mypage_pre">
+										<li>
+											<p>마이페이지</p>
+										</li>
+									</a>
+								</c:when>
+							
+								<%-- 로그인 안했을 때 --%>
+								<c:otherwise>
+								</c:otherwise>
+							</c:choose>
     
                         </ul>
     
@@ -755,7 +820,7 @@
                             <div class="japan_m">
     
                                 <ul>
-                                    <a href="../sub/sub.html">
+                                    <a href="category">
                                         <li>
                                             <p>도쿄/간도</p>
                                         </li>
@@ -965,7 +1030,7 @@
                             <div class="event_m">
     
                                 <ul>
-                                    <a href="#">
+                                    <a href="event">
                                         <li>
                                             <p>기획전/이벤트</p>
                                         </li>
@@ -977,13 +1042,13 @@
                             <div class="academy_m">
     
                                 <ul>
-                                    <a href="#">
+                                    <a href="membership">
                                         <li>
                                                 <p>회원권</p>
                                         </li>
                                     </a>
     
-                                    <a href="#">
+                                    <a href="academy">
                                         <li>
                                                 <p>아카데미</p>
                                         </li>
@@ -1056,7 +1121,7 @@
                     <div class="procuct_01_m">
     
                         <div>
-                            <img src="img/product01.png">
+                            <img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
                         </div>
     
                         <div class="txt_m_01">
@@ -1077,7 +1142,7 @@
                     <div>
     
                         <div>
-                            <img src="img/product02.png">
+                            <img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
                         </div>
     
                         <div>
@@ -1098,7 +1163,7 @@
                     <div>
     
                         <div>
-                            <img src="img/product03.png">
+                            <img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
                         </div>
     
                         <div>
@@ -1113,202 +1178,12 @@
     
                     </div>
                 </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product01.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product02.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product03.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product01.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product02.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product03.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product01.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product01.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
-
-                <a href="#">
-                    
-                    <div>
-    
-                        <div>
-                            <img src="img/product01.png">
-                        </div>
-    
-                        <div>
-                            <p>일본/도쿄</p>
-                            <p>썬라이즈 골프장 18홀</p>
-                            <p>1,090,000원~</p>
-                        </div>
-    
-                        <div>
-                            <p>상세보기</p>
-                        </div>
-    
-                    </div>
-                </a>
-    
     
             </div><!--product-->
     
     
             <div class="num_m_btn">
+            
                 <a href="#">
                     <p><</p>
                 </a>
@@ -1356,188 +1231,49 @@
                 </div>
     
                 <a href="#">
-                    <img src="img/01golfccourse.png">
+                    <img src="${pageContext.request.contextPath}/resources/img/freegolf/01golfccourse.png">
                 </a>
     
                 <a href="#">
-                    <img src="img/02golfccourse.png">
+                    <img src="${pageContext.request.contextPath}/resources/img/freegolf/02golfccourse.png">
                 </a>
     
                 <a href="#">
-                    <img src="img/03golfccourse.png">
+                    <img src="${pageContext.request.contextPath}/resources/img/freegolf/03golfccourse.png">
                 </a>
     
             </div>
     
             <div class="freegolf_m">
     
-                <img src="img/background_mobile.png">
+                <img src="${pageContext.request.contextPath}/resources/img/background_mobile.png">
     
                 <div class="free_title_m">
                     <p><span>지</span>역별 자유골프 만들기</p>
-                    <p>고객이 직접 골프장, 호텔, 렌터카, 기타 등등을<br>
-                        만들어 보세요!
-                    </p>
+                    <p>고객이 직접 골프장, 호텔, 렌터카, 기타 등등을<br>만들어 보세요!</p>
                 </div>
     
                 <div class="free_link_m">
     
-                    <a href="freegolf.html">
+                    <a href="freegolf?region=일본">
                         <p>일본 자유골프</p>
                     </a>
     
-                    <a href="#">
+                    <a href="freegolf?region=태국">
                         <p>태국 자유골프</p>
                     </a>
     
-                    <a href="#">
+                    <a href="freegolf?region=베트남">
                         <p>베트남 자유골프</p>
                     </a>
     
-                    <a href="#">
+                    <a href="freegolf?region=대만">
                         <p>대만 자유골프</p>
                     </a>
     
                 </div>
     
             </div>
-    
-    
-            <footer class="footer_m">
-    
-                <div class="footer_top_m">
-    
-                    <div class="sns_m">
-    
-                        <a href="#">
-                            <img src="img/kakao.png">
-                        </a>
-    
-                        <a href="#">
-                            <img src="img/naver.png">
-                        </a>
-    
-                        <a href="#">
-                            <img src="img/facebook.png">
-                        </a>
-    
-                        <a href="#">
-                            <img src="img/band.png">
-                        </a>
-    
-    
-                    </div>
-    
-                </div>
-    
-                <div class="footer_mid_m">
-                    
-                    <ul>
-                        
-                        <a href="../company/company.html">
-                            <li>
-                                <p>회사소개</p>
-                            </li>
-                        </a>
-    
-    
-                        <a href="../agreement/agreement.html">
-                            <li>
-                                <p>이용약관</p>
-                            </li>
-                        </a>
-    
-                        <a href="../travel/travel.html">
-                            <li>
-                                <p>여행약관</p>
-                            </li>
-                        </a>
-        
-                        <a href="../privacy_policy/privacy_policy.html">
-                            <li>
-                                <p>개인정보처리방침</p>
-                            </li>
-                        </a>
-    
-        
-                        <a href="../email/email.html">
-                            <li>
-                                <p>이메일무단수집거부</p>
-                            </li>
-                        </a>
-    
-        
-                        <a href="../hallsale/hallsale.html">
-                            <li>
-                                <p>홀세일문의</p>
-                            </li>
-                        </a>
-                        
-    
-                        <a href="../pr/pr.html">
-                            <li>
-                                <p>제휴/홍보문의</p>
-                            </li>
-                        </a>
-    
-                        <a href="../store_inquiry/store_inquiry.html">
-                            <li>
-                                <p>입점문의</p>
-                            </li>
-                        </a>
-    
-                    </ul>
-    
-                </div>
-    
-    
-                <div class="footer_line_m_02"></div>
-    
-                <div class="footer_bottom_ex_m">
-    
-                    <div class="footer_bottom_m">
-    
-                        <p>골프아이</p>
-    
-                        <p>서울시 종로구 디지털로 26길 72,2층</p>
-    
-                        <div class="footer_box01">
-    
-                        <p>사업자번호 : 211-87-15370</p>
-    
-                        <a href="#">
-                            <p>사업자정보확인 ></p>
-                        </a>
-    
-                        </div>
-    
-                        <p>통신판매업신고번호 : 2019-서울구로-0734</p>
-    
-                        <div class="footer_box02">
-    
-                            <p>대표이사 : 홍길동 개인정보보호책임자 : 홍길동</p>
-    
-                            <a href="#">
-                                <p>E-MAIL 문의 ></p>
-                            </a>
-    
-                        </div>
-    
-                        <p>copyright 1300k.com.ALL RIGHTS RESERVED. 상품 사진을 포함한 모든 콘텐츠는 저작권법 
-                        제 98조에 의거해 보호를 받고 있습니다.</p>
-    
-                    </div>
-    
-                    <a href="#">
-                        <p>골프아이 <span>APP</span> 다운받기</p>
-                    </a>
-    
-                </div>
-    
-            </footer>
-    
-    
-         
     
     </section><!--mobile-->
 

@@ -6,18 +6,18 @@ img {display: block;}
 
 @font-face {
     font-family: gmarket;
-    src: url(../../font/GmarketSansTTFMedium.ttf);
+    src: url(../font/GmarketSansTTFMedium.ttf);
 }
 
 @font-face {
     font-family: gmarket_b;
-    src: url(../../font/GmarketSansTTFBold.ttf);
+    src: url(../font/GmarketSansTTFBold.ttf);
 }
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
-    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../font/Spoqa\ Han\ Sans\ Regular.woff);
 }
 
 body {font-family: SpoqaHanSansNeo;}

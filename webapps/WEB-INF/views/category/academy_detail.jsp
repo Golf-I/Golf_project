@@ -153,7 +153,7 @@
 
         <div class="rout_m">
     
-            <a href="../academy/academy.html">
+            <a href="index">
                 <p>←</p>
             </a>
     
@@ -161,7 +161,7 @@
     
             <div class="rout_icon_m">
     
-                <a href="../index.html">
+                <a href="index">
                     <img src="img/home_m.png">
                 </a>
     

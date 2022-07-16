@@ -10,8 +10,8 @@ img {display: block;}
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
-    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../font/Spoqa\ Han\ Sans\ Regular.woff);
 }
 
 body 

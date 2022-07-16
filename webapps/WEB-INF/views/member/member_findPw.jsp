@@ -35,8 +35,7 @@
             <div class="find_number_box">
 
                 <div class="find_text">
-                <p>비밀번호의 경우 암호화 저장되어 분실 시 찾아드릴 수 없는 정보입니다.
-	                <br>본인 확인을 통해 비밀번호를 재설정 하실 수 있습니다.
+                <p>비밀번호의 경우 암호화 저장되어 분실 시 찾아드릴 수 없는 정보입니다.<br>본인 확인을 통해 비밀번호를 재설정 하실 수 있습니다.
                 </p>
                 </div>
 
@@ -138,7 +137,7 @@
             	<p>아이디(이메일)</p>
 			</label>
 
-            <input type="text" id="id_m" name="id" required>
+            <input type="email" id="id_m" name="id" required>
             
         </div>
 
@@ -149,7 +148,7 @@
             <p>비밀번호 찾기 방법을 선택해주세요.</p>
 
             <div class="chk01_m">
-                <input type="radio" name="password_m" id="email_m" name="mail" value="1">
+                <input type="checkbox" id="email_m" name="mail" value="1"><!-- name="password_m"  -->
 
 				<label for="email_m">
 	                <p>E-mail(이메일)주소</p>
@@ -157,7 +156,7 @@
             </div>
 
             <div class="chk02_m">
-                <input type="radio" name="password_m" id="phone_num_m" name="phone" value="2">
+                <input type="checkbox" id="phone_num_m" name="phone" value="2"><!-- name="password_m" -->
 
 				<label for="phone_num_m">
 	                <p>등록된 휴대폰</p>

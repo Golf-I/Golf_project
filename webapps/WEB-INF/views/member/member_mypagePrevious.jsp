@@ -86,7 +86,7 @@
 
             <div class="pw_btn_m">
                 <input type="submit" value="확인" id="pw_check_ok">
-                <input type="button" value="취소" id="pw_back_btn">
+                <input type="button" value="취소" id="pw_back_btn" onclick="history.back();">
             </div>
 
         </div>

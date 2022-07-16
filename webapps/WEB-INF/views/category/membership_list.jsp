@@ -150,11 +150,25 @@
 					</a>
 				</div>
 				
-	           <div class="login_m">
-	               <a href="login">
-	                   <img src="${pageContext.request.contextPath}/resources/img/member/membership/login_mobile.png">
-	               </a>
-	           </div>
+				<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+			           <div class="login_m">
+			               <a href="mypage_pre">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:when>
+					
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+			           <div class="login_m">
+			               <a href="login">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:otherwise>    
+				</c:choose>
 	
 	       </div>
 	
@@ -605,111 +619,6 @@
                 </div>
 
             </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/03academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/02academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/03academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/02academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/03academy.png">
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div>
-                    <p>가격</p>
-                    <p>12,000,000원</p>
-                </div>
-
-                <div>
-                    <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png">
-                </div>
-
-            </a>
-
 
         </div>
 

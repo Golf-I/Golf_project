@@ -93,7 +93,7 @@
 
         <div class="withdrawal_m_top">
 
-            <a href="javascript:history.back();">
+            <a href="index">
                 <p>←</p>
             </a>
 

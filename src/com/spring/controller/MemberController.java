@@ -197,7 +197,8 @@ public class MemberController {
 				MimeMessage message = mailSender.createMimeMessage();
 				MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
 				messageHelper.setFrom("gyrud6744@gmail.com"); // 보내는 사람 생략 시 작동 X
-				messageHelper.setTo("gyrud6744@gmail.com"); // 받는 사람
+				messageHelper.setTo(vo.getId()); // 받는 사람
+//				messageHelper.setTo("gyrud6744@gmail.com"); // 받는 사람
 				messageHelper.setSubject("골프아이 임시 비밀번호입니다."); // 메일 제목 (생략 가능)
 				String content = "< 고객님의 비밀번호는 [ " + mvo.getPw() + " ] 입니다. >";
 				messageHelper.setText(content); // 메일 내용

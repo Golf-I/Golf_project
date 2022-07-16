@@ -435,7 +435,7 @@
 
         <div class="confirmation_m_top">
            
-            <a href="#">
+            <a href="index">
                 <p>←</p>
             </a>
 

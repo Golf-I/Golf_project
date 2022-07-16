@@ -134,10 +134,19 @@ public class HomeController extends HttpServlet {
 
 	/* 네이버 로그인 콜백 호출 */
 	@RequestMapping(value = "naverlogin", method = RequestMethod.GET)
-	public String naverlogin(HttpSession session, HttpServletRequest req, MemberVO vo, Model model) {
+	public String naverlogin(MemberVO vo, Model model) {
 		
 		model.addAttribute("vo", vo);
 
+		return "member/naverloginCallback.tiles";
+	}
+	
+	/* 네이버 모바일로그인 콜백 호출 */
+	@RequestMapping(value = "mobilenaverlogin", method = RequestMethod.GET)
+	public String mobilenaverlogin(MemberVO vo, Model model) {
+		
+		model.addAttribute("vo", vo);
+		
 		return "member/naverloginCallback.tiles";
 	}
 

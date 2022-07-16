@@ -185,7 +185,6 @@
 							<div>
 								<img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
 							</div>
-
 					
 							<div class="product_text_01">
 								<p>${bbsList.arrival} 출발 ></p>
@@ -193,48 +192,6 @@
 								<p>${bbsList.productName}</p>
 								<p><fmt:formatNumber value="${bbsList.lowestPrice}" pattern="#,###" />원 ~ </p>
 							</div>
-
-						<%-- 
-							<div class="review_box_01">
-								<div class="star01">
-									<div>
-										<img src="${pageContext.request.contextPath}/resources/img/category/star.png">
-									</div>
-									<!-- <div>
-	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
-	                                </div>
-	                                <div>
-	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
-	                                </div>
-	                                <div>
-	                                    <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
-	                                </div> -->
-									<div>
-										<img src="${pageContext.request.contextPath}/resources/img/category/02star.png">
-									</div>
-								</div>
-								<!--star-->
-
-								<div class="review01">
-
-									<div class="talk01">
-										<div>
-											<img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
-										</div>
-										<p>203</p>
-									</div>
-
-									<div class="like01">
-										<div>
-											<img src="${pageContext.request.contextPath}/resources/img/category/good.png">
-										</div>
-										<p>8.5</p>
-									</div>
-
-								</div><!--review01-->
-
-							</div> <!--review_box_01-->
-						--%>
 						</a>
 					</div><!--product_01-->
  
@@ -275,7 +232,6 @@
 	
 	
 	
-	
 	<!-- 모바일 -->
 	<section class="mobile">
 	
@@ -284,7 +240,7 @@
 	    <header class="header_m">
 	
 	        <label for="menu_m" class="menu_m">
-	            <img src="img/menu_btn.png">
+	            <img src="${pageContext.request.contextPath}/resources/img/category/menu_btn.png">
 	        </label>
 	
 	        <div class="rout_m">
@@ -293,17 +249,31 @@
 	
 	        <div class="header_button">
 	
-	            <div class="main_m">
-	                <a href="#">
-	                    <img src="img/home_m.png">
-	                </a>
-	            </div>
-	
-	            <div class="login_m">
-	                <a href="#">
-	                    <img src="img/login_mobile.png">
-	                </a>
-	            </div>
+                    <div class="main_m">
+                        <a href="index">
+                            <img src="${pageContext.request.contextPath}/resources/img/freegolf/home_m.png">
+                        </a>
+                    </div>
+    
+    			<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+			           <div class="login_m">
+			               <a href="mypage_pre">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:when>
+					
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+			           <div class="login_m">
+			               <a href="login">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:otherwise>    
+				</c:choose>
 	
 	        </div>
 	
@@ -313,51 +283,104 @@
 	
 	            <div class="gnb_mobile">
 	
-	                <ul>
+	               <ul>
 	
-	                    <li>
-	                        <a href="#">
-	                            <p>로그인</p>
-	                        </a>
-	                    </li>
 	
-	                    <li>
-	                        <div></div>
-	                    </li>
+					<c:choose>
+						<%-- 로그인 했을 때 --%>
+						<c:when test="${sessionScope.id != null}">
+						</c:when>
+						
+						<%-- 로그인 안했을 때 --%>
+						<c:otherwise>
+							<li>
+							    <a href="login">
+							        <p>로그인</p>
+							    </a>
+							</li>
+							
+							<li>
+							    <div></div>
+							</li>
+						</c:otherwise>    
+					</c:choose>
+				
+	                  <li>
+	                      <a href="#">
+	                          <p>즐겨찾기</p>
+	                      </a>
+	                  </li>
 	
-	                    <li>
-	                        <a href="#">
-	                            <p>즐겨찾기</p>
-	                        </a>
-	                    </li>
+	                  <li>
+	                      <div></div>
+	                  </li>
+				
+				
+						<li>
+						<c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+				                 <a href="mypage_pre">
+				                     <p>예약확인</p>
+				                 </a>
+							</c:when>
+						
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+				                <a href="login">
+				                    <p>예약확인</p>
+				                </a>
+							</c:otherwise>
+						</c:choose>
+				        </li>
+				        
+				
+						<c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+									<li>
+									    <div></div>
+									</li>
+									
+									<li>
+									    <a href="member/signout">
+									        <p>로그아웃</p>
+									    </a>
+									</li>
+							</c:when>
+							
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+							</c:otherwise>
+						</c:choose>
+				
+				
+						<c:choose>
+							<%-- 로그인 했을 때 --%>
+							<c:when test="${sessionScope.id != null}">
+								<li>
+									<div></div>
+								</li>
+							
+								<a href="mypage_pre">
+									<li>
+										<p>마이페이지</p>
+									</li>
+								</a>
+							</c:when>
+						
+							<%-- 로그인 안했을 때 --%>
+							<c:otherwise>
+							</c:otherwise>
+						</c:choose>
 	
-	                    <li>
-	                        <div></div>
-	                    </li>
+	               </ul>
 	
-	                    <li>
-	                        <a href="#">
-	                            <p>예약확인</p>
-	                        </a>
-	                    </li>
+	               <label for="menu_m" id="close">
+	                   <p>←</p>
+	               </label>
 	
-	                    <li>
-	                        <div></div>
-	                    </li>
-	
-	                    <li>
-	                        <a href="#">
-	                            <p>마이페이지</p>
-	                        </a>
-	                    </li>
-	
-	                </ul>
-	
-	                <label for="menu_m" id="close">
-	                    <p>←</p>
-	                </label>
-	
-	            </div>
+	           </div>
 	
 	            <input type="radio" name="sub_menu" id="submenu01" checked>
 	            <input type="radio" name="sub_menu" id="submenu02">
@@ -614,7 +637,7 @@
 	                    <div class="event_m">
 	
 	                        <ul>
-	                            <a href="#">
+	                            <a href="event">
 	                                <li>
 	                                    <p>기획전/이벤트</p>
 	                                </li>
@@ -626,13 +649,13 @@
 	                    <div class="academy_m">
 	
 	                        <ul>
-	                            <a href="#">
+	                            <a href="membership">
 	                                <li>
 	                                        <p>회원권</p>
 	                                </li>
 	                            </a>
 	
-	                            <a href="#">
+	                            <a href="academy">
 	                                <li>
 	                                        <p>아카데미</p>
 	                                </li>
@@ -749,8 +772,6 @@
 	                <option>김해출발</option>
 	                <option>대구출발</option>
 	            </select>
-	
-	            
 	        </div>
 	
 	    </div>
@@ -765,7 +786,7 @@
 	            <div>
 	
 	                <div>
-	                    <img src="img/product01.png">
+	                    <img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
 	                </div>
 	
 	                <div class="txt01_m">
@@ -783,19 +804,19 @@
 	
 	                    <div class="star_m_01">
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                    </div>
 	
@@ -804,7 +825,7 @@
 	                        <div>
 	
 	                            <div>
-	                                <img src="img/talk.png">
+	                                <img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 	                            </div>
 	
 	                            <p>203</p>
@@ -813,7 +834,7 @@
 	
 	                        <div>
 	                            <div>
-	                                <img src="img/good.png">
+	                                <img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 	                            </div>
 	
 	                            <p>8.5</p>
@@ -832,7 +853,7 @@
 	            <div>
 	
 	                <div>
-	                    <img src="img/product01.png">
+	                    <img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
 	                </div>
 	
 	                <div class="txt02_m">
@@ -850,19 +871,19 @@
 	
 	                    <div class="star_m_02">
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                        <div>
-	                            <img src="img/star.png">
+	                            <img src="${pageContext.request.contextPath}/resources/img/category/star.png">
 	                        </div>
 	                    </div>
 	
@@ -871,7 +892,7 @@
 	                        <div>
 	
 	                            <div>
-	                                <img src="img/talk.png">
+	                                <img src="${pageContext.request.contextPath}/resources/img/category/talk.png">
 	                            </div>
 	
 	                            <p>203</p>
@@ -880,7 +901,7 @@
 	
 	                        <div>
 	                            <div>
-	                                <img src="img/good.png">
+	                                <img src="${pageContext.request.contextPath}/resources/img/category/good.png">
 	                            </div>
 	
 	                            <p>8.5</p>
@@ -896,565 +917,15 @@
 	
 	    </div>
 	
-	    <div class="product_m_box02">
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt03_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_03">
-	
-	                    <div class="star_m_03">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_03">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt04_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_04">
-	
-	                    <div class="star_m_04">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_04">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	                            
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	        
-	    </div><!--02-->
-	
-	    <div class="product_m_box03">
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt03_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_05">
-	
-	                    <div class="star_m_05">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_05">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt06_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_06">
-	
-	                    <div class="star_m_06">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_06">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	                            
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	        
-	    </div><!--03-->
-	
-	    <div class="product_m_box04">
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt07_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_07">
-	
-	                    <div class="star_m_07">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_07">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt08_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_08">
-	
-	                    <div class="star_m_08">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_08">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	                            
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	        
-	    </div><!--04-->
-	
-	    <div class="product_m_box05">
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt09_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_09">
-	
-	                    <div class="star_m_09">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_09">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	
-	        <a href="#">
-	
-	            <div>
-	
-	                <div>
-	                    <img src="img/product01.png">
-	                </div>
-	
-	                <div class="txt10_m">
-	
-	                    <div>
-	                        <p>인천출발 ></p>
-	                        <p>태국/치앙마이</p>
-	                        <p>치앙마이 아티타야 3박 5일</p>
-	                        <p>1,090,000원~</p>
-	                    </div>
-	
-	                </div>
-	
-	                <div class="icon_m_10">
-	
-	                    <div class="star_m_10">
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                        <div>
-	                            <img src="img/star.png">
-	                        </div>
-	                    </div>
-	
-	                    <div class="good_m_10">
-	
-	                        <div>
-	
-	                            <div>
-	                                <img src="img/talk.png">
-	                            </div>
-	
-	                            <p>203</p>
-	                            
-	                        </div>
-	
-	                        <div>
-	                            <div>
-	                                <img src="img/good.png">
-	                            </div>
-	
-	                            <p>8.5</p>
-	                        </div>
-	
-	                    </div>
-	
-	
-	                </div>
-	
-	            </div>
-	        </a>
-	        
-	    </div><!--05-->
 	
 	    <div class="banner_m">
-	        <a href="#">
-	            <img src="img/freebanner_m.png">
+	        <a href="freegolf">
+	            <img src="${pageContext.request.contextPath}/resources/img/category/freebanner_m.png">
 	        </a>
 	    </div>
 	
 	    <div class="num_m_btn">
+	    
 	        <a href="#">
 	            <p><</p>
 	        </a>

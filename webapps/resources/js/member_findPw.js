@@ -33,3 +33,18 @@
 		} // if
 	}; // checkbox_check
 	
+	
+	// 모바일 비밀번호 찾기 방법 필수 선택
+	$(document).ready(function(){
+		
+		// 이메일 주소를 체크했을 때 등록된 휴대폰 해제
+		$("#email_m").click(function(){
+			$("#phone_num_m").prop("checked", false);
+		}); // click
+		
+		// 등록된 휴대폰을 체크했을 때 등록된 이메일 해제
+		$("#phone_num_m").click(function(){
+			$("#email_m").prop("checked", false);
+		}); // click
+		
+	}); // ready

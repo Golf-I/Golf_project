@@ -55,3 +55,41 @@
 	
 	}); // on
 	
+	
+	/* ----------------------------------------------------------------------------------- */
+	
+	// 모바일 약관 체크박스1
+	$(document).ready(function(){
+		$("#chk_m_01").click(function(){
+
+			// 전체 동의하기 클릭 시
+			if( $("#chk_m_01").is(":checked") ){
+				$("input[class=checkbox_m]").prop("checked", true);
+
+			// 전체 동의하기 해제
+			}else{
+				$("input[class=checkbox_m]").prop("checked", false);
+			
+			} //if
+			
+		}); // click
+	}); // ready
+		
+	
+	
+	// 모바일 약관 체크박스2
+	$(document).on('click','.checkbox_m',function(){ 
+		
+		// 4개의 체크박스 모두 체크됐을 때 전체 동의하기도 체크
+		if($("input[class=checkbox_m]:checked").length == $(".checkbox_m").length){         
+			$('#chk_m_01').prop('checked',true);     
+		
+		// 1개의 체크박스가 해제됐을 때 전체 동의하기 미체크
+		}else{ 
+			$('#chk_m_01').prop('checked',false);     
+		} 
+	
+	}); // on
+	
+	/* ----------------------------------------------------------------------------------- */
+	

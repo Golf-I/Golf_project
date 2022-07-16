@@ -75,7 +75,7 @@
 
         <div class="phone_m_top">
            
-            <a href="javascript:window.close();">
+            <a href="index">
                 <p>←</p>
             </a>
 

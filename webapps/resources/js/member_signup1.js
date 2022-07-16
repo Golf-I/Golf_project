@@ -36,7 +36,7 @@
 		}
 			
 	}; // join1_check
-
+	
 	
 	// 이메일 중복 확인 메소드
 	function duplCheck(){
@@ -196,5 +196,91 @@
 		});
 	};
 	/* 카카오 회원탈퇴  */
+	
+	
+	
+	/* ------------------------------------------------------------------------------------------- */
+
+	// 모바일
+	
+	var m_button = false;
+
+	// 유효성 검사
+	function m_join1_check(){
+		
+		// 비밀번호 일치
+		if( $("#password_m_re").val() != "" && $("#password_m").val() != $("#password_m_re").val() ){
+			$("#m_pwfalse").removeAttr("style", "display:none");
+			$("#m_pwfalse").attr("style", "color:#FF0000");
+			$("#password_m_re").focus();
+			
+			// 2초 뒤 사라짐
+			setTimeout(function(){
+				$("#m_pwfalse").attr("style", "display:none");
+			}, 2000);
+
+			return false;
+		}
+		
+		
+		// 중복 확인 버튼 클릭여부 확인
+		if(!m_button){
+			$("#m_emailfalse").removeAttr("style", "display:none");
+			$("#m_emailfalse").attr("style", "color:#FF0000");
+			$("#id_m").focus();
+			
+			// 2초 뒤 사라짐
+			setTimeout(function(){
+				$("#m_emailfalse").attr("style", "display:none");
+			}, 2000);
+			return false;
+		}
+			
+	}; // join1_check
+	
+	// 이메일 중복 확인 메소드
+	function m_duplCheck(){
+
+		// 이메일 입력값이 없을 때
+		if( $("#id_m").val() == "" ){
+			$("#id_m").focus();
+			return false;
+			
+		// 이메일 입력값이 있을 때
+		}else{
+			
+			$.ajax({
+				type:"GET",
+				url: "member/duplCheck",
+				data: { id: $("#id_m").val() },
+				datatype: "text",
+				success: function(check){
+					
+					// 이메일이 존재할 때
+					if(check == 1){
+						alert("가입된 계정입니다.");
+						m_button = false;
+						return false;
+						
+					// 이메일이 존재하지 않을 때
+					}else{ 
+						alert("사용하실 수 있는 계정입니다.");
+						m_button = true;
+						//console.log("check : 0 = "+button);
+						m_join1_check(m_button);
+						return m_button;
+					}
+					
+				}, // success
+				error: function(datastatus){
+					//alert("오류가 발생하였습니다. <br/> 관리자에게 문의해주세요.");
+					console.log(datastatus);
+				} // error
+			}); // ajax
+			
+		} // if	
+	}; // duplCheck
+	
+	/* ------------------------------------------------------------------------------------------- */
 
 	

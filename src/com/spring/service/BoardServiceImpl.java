@@ -2,6 +2,7 @@ package com.spring.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -287,5 +288,35 @@ public class BoardServiceImpl implements BoardService{
 		
 		return travelList;
 	} // getTraveler
+
+
+	/* 패키지 상품 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getPdImgList() throws Exception {
+
+		List<Map<String, Object>> list = bdao.getPdImgList();
+		
+		return list;
+	} // getPdImgList
+	
+	
+	/* 이벤트/기획전 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getEventImgList() throws Exception {
+		
+		List<Map<String, Object>> list = bdao.getEventImgList();
+		
+		return list;
+	} // getEventImgList
+	
+	
+	/* 패키지 상품 한 개 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getPdOneImg(ProductVO vo) throws Exception {
+		
+		List<Map<String, Object>> list = bdao.getPdOneImg(vo);
+		
+		return list;
+	} // getPdOneImg
 
 }

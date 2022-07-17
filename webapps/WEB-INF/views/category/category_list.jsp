@@ -176,27 +176,32 @@
 
 			<div class="all_box">
 				<div class="product_zon01">
-				
+
 					<%-- 게시물 노출 --%>
-					<c:forEach items="${bbsList}" var="bbsList">
-					
+					<c:forEach items="${image}" var="image" varStatus="status">
 					<div class="product01">
-						<a href="product_detail?region=${param.region}&city=${param.city}&product_code=${bbsList.product_code}&productName=${bbsList.productName}">
-							<div>
-								<img src="${pageContext.request.contextPath}/resources/img/category/product01.png">
-							</div>
+
+						<a href="product_detail?region=${param.region}&city=${param.city}&
+						product_code=${bbsList[status.index].product_code}&productName=${bbsList[status.index].productName}">
+
+						<div>
+							<img src="data:image/png;base64,${image}" style="width:320px;">
+<%-- 						<img src="${pageContext.request.contextPath}/resources/img/category/product01.png"> --%>
+						</div>
+
 					
 							<div class="product_text_01">
-								<p>${bbsList.arrival} 출발 ></p>
-								<p>${bbsList.city}</p>
-								<p>${bbsList.productName}</p>
-								<p><fmt:formatNumber value="${bbsList.lowestPrice}" pattern="#,###" />원 ~ </p>
+								<p>${bbsList[status.index].arrival} 출발 ></p>
+								<p>${bbsList[status.index].city}</p>
+								<p>${bbsList[status.index].productName}</p>
+								<p><fmt:formatNumber value="${bbsList[status.index].lowestPrice}" pattern="#,###" />원 ~ </p>
 							</div>
 						</a>
+						
 					</div><!--product_01-->
- 
 					</c:forEach>
 					<%-- 게시물 노출 --%>
+ 
 
 				</div> <!--zon05--> 
 			</div> <!--all_box-->

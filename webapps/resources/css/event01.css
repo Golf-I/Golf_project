@@ -69,7 +69,7 @@ overflow: hidden;}
 .event_box01 a,.event_box02 a,.event_box03 a,.event_box04 a
 {width: 320px; 
 float: left;
-margin-right: 20px;}
+margin-right: 15px;}
 
 .event_box01 a:last-child,.event_box02 a:last-child,.event_box03 a:last-child,.event_box04 a:last-child
 {margin-right: 0;}
@@ -78,7 +78,8 @@ margin-right: 20px;}
 {width: 320px;}
 
 .event01>div:nth-child(1),.event02>div:nth-child(1),.event03>div:nth-child(1),.event04>div:nth-child(1)
-{width: 320px; height: 320px;}
+{width: 320px; height: 270px;}
+/* {width: 320px; height: 320px;} */
 
 .event01 .txt_01,.event02 .txt_02,.event03 .txt_03,.event04 .txt_04
 {width: 300px;

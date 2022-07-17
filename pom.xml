@@ -300,5 +300,15 @@
 	<!-- 파일관련 / 썸네일라이브러리 -->
 	
 	
+	<!-- 이미지 불러오기 -->
+	<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+	<dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	    <version>1.9</version>
+	</dependency>
+	<!-- 이미지 불러오기 -->
+	
+	
    </dependencies> 	
 </project>

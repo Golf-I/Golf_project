@@ -42,21 +42,20 @@
 
             <div class="event_box01">
 
-        	<c:forEach items="${eventList}" var="eventList">
-
-             <a href="event_detail?no=${eventList.no}">
-
+        	<c:forEach items="${image}" var="image" varStatus="status">
+            <a href="event_detail?no=${eventList[status.index].no}">
+			
                 <div class="event01">
 
                     <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event01.png">
+						<img src="data:image/png;base64,${image}" style="width:320px; height:280px;">
+                        <%-- <img src="${pageContext.request.contextPath}/resources/img/event/event01.png"> --%>
                     </div>
 
                     <div class="txt_01">
-                        
                         <p>이벤트 ></p>
-                        <p>${eventList.title}</p>
-                        <p>${eventList.regdate}</p>
+                        <p>${eventList[status.index].title}</p>
+                        <p>${eventList[status.index].regdate}</p>
 <!--                         <p>50% 할인찬스!</p>
                         <p>#최대 24만원 할인찬스/세일홀릭</p> -->
                     </div>
@@ -64,8 +63,7 @@
                 </div>
 
              </a>
-
-			</c:forEach>
+   			</c:forEach>
 			
             </div><!--event_box01-->
 

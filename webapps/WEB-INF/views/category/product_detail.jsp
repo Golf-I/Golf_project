@@ -145,7 +145,9 @@
             <div class="detail_img_box">
 
                 <div class="detail_left">
-
+					<c:forEach items="${image}" var="image">
+						<img src="data:image/png;base64,${image}" style="width:660px; height:500px;">
+					</c:forEach>
                 </div>
                 
                 <c:forEach items="${bbsList}" var="bbsList">
@@ -245,11 +247,31 @@
                     </div><!--설명-->
 
                     <div class="img_mini">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div>
+							<c:forEach items="${serveimg}" var="serveimg">
+								<img src="data:image/png;base64,${serveimg}" style="width:130px; height:100px;">
+							</c:forEach>
+                        </div>
+                        <div>
+							<c:forEach items="${golf_img1}" var="golf_img1">
+								<img src="data:image/png;base64,${golf_img1}" style="width:130px; height:100px;">
+							</c:forEach>
+                        </div>
+                        <div>
+							<c:forEach items="${golf_img2}" var="golf_img2">
+								<img src="data:image/png;base64,${golf_img2}" style="width:130px; height:100px;">
+							</c:forEach>
+                        </div>
+                        <div>
+							<c:forEach items="${hotel_img1}" var="hotel_img1">
+								<img src="data:image/png;base64,${hotel_img1}" style="width:130px; height:100px;">
+							</c:forEach>
+                        </div>
+                        <div>
+							<c:forEach items="${hotel_img2}" var="hotel_img2">
+								<img src="data:image/png;base64,${hotel_img2}" style="width:130px; height:100px;">
+							</c:forEach>
+                        </div>
                     </div><!--작은 이미지-->
 
                 </div><!--right-->
@@ -746,8 +768,18 @@
                         <p>골프장명 : ${bbsList.golfCourse}</p>
     
                         <div class="golf_img_d">
-                            <div></div>
-                            <div></div>
+                            
+                            <div>
+							<c:forEach items="${golf_img1}" var="golf_img1">
+								<img src="data:image/png;base64,${golf_img1}" style="width:660px; height:500px;">
+							</c:forEach>
+	                        </div>
+	                        <div>
+							<c:forEach items="${golf_img2}" var="golf_img2">
+								<img src="data:image/png;base64,${golf_img2}" style="width:660px; height:500px;">
+							</c:forEach>
+                            </div>
+                            
                         </div>
     
                         <div class="golf_detail_txt">
@@ -783,8 +815,16 @@
                         <p>숙박명 : ${bbsList.hotel}</p>
     
                         <div class="hotel_img_d">
-                            <div></div>
-                            <div></div>
+                            <div>
+							<c:forEach items="${hotel_img1}" var="hotel_img1">
+								<img src="data:image/png;base64,${hotel_img1}" style="width:660px; height:500px;">
+							</c:forEach>
+	                        </div>
+	                        <div>
+							<c:forEach items="${hotel_img2}" var="hotel_img2">
+								<img src="data:image/png;base64,${hotel_img2}" style="width:660px; height:500px;">
+							</c:forEach>
+                            </div>
                         </div>
     
                         <div class="hotel_detail_txt">

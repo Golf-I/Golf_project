@@ -5,7 +5,7 @@ img {display: block;}
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
 }
 
 body 

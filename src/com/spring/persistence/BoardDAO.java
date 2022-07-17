@@ -1,6 +1,7 @@
 package com.spring.persistence;
 
 import java.util.List;
+import java.util.Map;
 
 import com.spring.domain.AcademyVO;
 import com.spring.domain.BoardVO;
@@ -65,5 +66,11 @@ public interface BoardDAO {
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
 	
 	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 등록
+	
+	public List<Map<String, Object>> getPdImgList() throws Exception; // 패키지 상품 전체 이미지 출력
+	
+	public List<Map<String, Object>> getEventImgList() throws Exception; // 이벤트 전체 이미지 출력
+	
+	public List<Map<String, Object>> getPdOneImg(ProductVO vo) throws Exception; // 패키지 상품 한 개 이미지 출력
 
 }

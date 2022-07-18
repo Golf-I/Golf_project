@@ -10,8 +10,8 @@ img {display: block;}
 
 @font-face {
     font-family: SpoqaHanSansNeo;
-    src: url(../../font/SpoqaHanSansNeo-Regular.ttf);
-    src: url(../../font/Spoqa\ Han\ Sans\ Regular.woff);
+    src: url(../font/SpoqaHanSansNeo-Regular.ttf);
+    src: url(../font/Spoqa\ Han\ Sans\ Regular.woff);
 }
 
 body {font-family: SpoqaHanSansNeo;}
@@ -164,7 +164,7 @@ margin-bottom: 70px;}
 
 .all_box .product_zon01
 {width: 1040px; height: 347px;
-overflow: hidden;}
+/* overflow: hidden; */}
 
 /*product01*/
 .product_zon01 .product01

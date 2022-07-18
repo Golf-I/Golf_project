@@ -1,22 +1,31 @@
 package com.spring.controller;
 
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.inject.Inject;
+import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.sql.rowset.serial.SerialBlob;
 
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.domain.AcademyVO;
 import com.spring.domain.BoardVO;
@@ -134,10 +143,19 @@ public class HomeController extends HttpServlet {
 
 	/* 네이버 로그인 콜백 호출 */
 	@RequestMapping(value = "naverlogin", method = RequestMethod.GET)
-	public String naverlogin(HttpSession session, HttpServletRequest req, MemberVO vo, Model model) {
+	public String naverlogin(MemberVO vo, Model model) {
 		
 		model.addAttribute("vo", vo);
 
+		return "member/naverloginCallback.tiles";
+	}
+	
+	/* 네이버 모바일로그인 콜백 호출 */
+	@RequestMapping(value = "mobilenaverlogin", method = RequestMethod.GET)
+	public String mobilenaverlogin(MemberVO vo, Model model) {
+		
+		model.addAttribute("vo", vo);
+		
 		return "member/naverloginCallback.tiles";
 	}
 
@@ -286,10 +304,37 @@ public class HomeController extends HttpServlet {
 
 	/* 패키지 상품 목록 페이지 호출 */
 	@RequestMapping(value = "category", method = RequestMethod.GET)
-	public String categoryPage(Criteria cri, Model model) throws Exception {
+	public String categoryPage(Criteria cri, Model model, HttpServletResponse response) throws Exception {
 		
 		int total = bservice.countPackage();
 
+		/* 이미지 출력 */
+		List<Map<String, Object>> resultList = null;
+		List<String> paramList = new ArrayList<String>();
+		
+		try {
+			
+			resultList = bservice.getPdImgList();
+			model.addAttribute("resultList", resultList);
+
+			Iterator<Map<String, Object>> itr = resultList.iterator();
+			
+			while(itr.hasNext()) {
+				
+				Map<String, Object> element = (Map<String, Object>)itr.next();
+				byte[] encoded = Base64.encodeBase64((byte[])element.get("img")); 
+				String encodedString = new String(encoded);
+				element.put("base64", encodedString);
+				paramList.add(encodedString);
+				logger.debug("fileinfo : " + encodedString);
+				model.addAttribute("image", paramList);
+			}
+		 			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		/* 이미지 출력 */
+		
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
@@ -303,8 +348,72 @@ public class HomeController extends HttpServlet {
 
 	/* 가격/상품정보 페이지 호출 */
 	@RequestMapping(value = "product_detail", method = RequestMethod.GET)
-	public String product_detail(ProductVO pvo, ReviewVO rvo, CommentVO cvo, ItineraryVO ivo, NoReservationVO nrvo,
+	public String product_detail(ProductVO pvo, ReviewVO rvo, CommentVO cvo, 
+								ItineraryVO ivo, NoReservationVO nrvo,
 								Criteria cri, Model model) throws Exception {
+		
+		/* 이미지 출력 */
+		List<Map<String, Object>> resultList = null;
+		List<String> paramList = new ArrayList<String>();
+		List<String> paramList2 = new ArrayList<String>();
+		List<String> paramList3 = new ArrayList<String>();
+		List<String> paramList4 = new ArrayList<String>();
+		List<String> paramList5 = new ArrayList<String>();
+		List<String> paramList6 = new ArrayList<String>();
+		
+		try {
+			
+			resultList = bservice.getPdOneImg(pvo);
+			model.addAttribute("resultList", resultList);
+			
+			Iterator<Map<String, Object>> itr = resultList.iterator();
+			
+			while(itr.hasNext()) {
+				
+				Map<String, Object> element = (Map<String, Object>)itr.next();
+				
+				byte[] encoded = Base64.encodeBase64((byte[])element.get("img")); 
+				byte[] encoded2 = Base64.encodeBase64((byte[])element.get("serveimg")); 
+				byte[] encoded3 = Base64.encodeBase64((byte[])element.get("golf_img1")); 
+				byte[] encoded4 = Base64.encodeBase64((byte[])element.get("golf_img2")); 
+				byte[] encoded5 = Base64.encodeBase64((byte[])element.get("hotel_img1")); 
+				byte[] encoded6 = Base64.encodeBase64((byte[])element.get("hotel_img2")); 
+				
+				String encodedString = new String(encoded);
+				String encodedString2 = new String(encoded2);
+				String encodedString3 = new String(encoded3);
+				String encodedString4 = new String(encoded4);
+				String encodedString5 = new String(encoded5);
+				String encodedString6 = new String(encoded6);
+				
+				element.put("base64", encodedString);
+				element.put("base64", encodedString2);
+				element.put("base64", encodedString3);
+				element.put("base64", encodedString4);
+				element.put("base64", encodedString5);
+				element.put("base64", encodedString6);
+				
+				paramList.add(encodedString);
+				paramList2.add(encodedString2);
+				paramList3.add(encodedString3);
+				paramList4.add(encodedString4);
+				paramList5.add(encodedString5);
+				paramList6.add(encodedString6);
+				
+				logger.debug("fileinfo : " + encodedString);
+				
+				model.addAttribute("image", paramList);
+				model.addAttribute("serveimg", paramList2);
+				model.addAttribute("golf_img1", paramList3);
+				model.addAttribute("golf_img2", paramList4);
+				model.addAttribute("hotel_img1", paramList5);
+				model.addAttribute("hotel_img2", paramList6);
+			}
+		 			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		/* 이미지 출력 */
 		
 		int commenttotal = bservice.countComment(cvo);
 		int reviewtotal = bservice.countReview(rvo);
@@ -380,6 +489,34 @@ public class HomeController extends HttpServlet {
 		
 		int total = bservice.countEvent();
 
+		/* 이미지 출력 */
+		List<Map<String, Object>> resultList = null;
+		List<String> paramList = new ArrayList<String>();
+		
+		try {
+			
+			resultList = bservice.getEventImgList();
+			model.addAttribute("resultList", resultList);
+
+			Iterator<Map<String, Object>> itr = resultList.iterator();
+			
+			while(itr.hasNext()) {
+				
+				Map<String, Object> element = (Map<String, Object>)itr.next();
+				byte[] encoded = Base64.encodeBase64((byte[])element.get("img1")); 
+				String encodedString = new String(encoded);
+				element.put("base64", encodedString);
+				paramList.add(encodedString);
+				logger.debug("fileinfo : " + encodedString);
+				model.addAttribute("image", paramList);
+			}
+		 			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		/* 이미지 출력 */
+		
+		
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);

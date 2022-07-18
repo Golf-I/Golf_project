@@ -314,4 +314,34 @@ public class BoardDAOImpl implements BoardDAO{
 	} // getTraveler
 
 
+	/* 패키지 상품 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getPdImgList() throws Exception {
+
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getPdImgList");
+		
+		return list;
+	} // getPdImgList
+	
+	
+	/* 이벤트/기획전 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getEventImgList() throws Exception {
+		
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getEventImgList");
+		
+		return list;
+	} // getEventImgList
+	
+	
+	/* 패키지 상품 한 개 이미지 출력  */
+	@Override
+	public List<Map<String, Object>> getPdOneImg(ProductVO vo) throws Exception {
+		
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getPdOneImg", vo);
+		
+		return list;
+	} // getPdOneImg
+
+
 }

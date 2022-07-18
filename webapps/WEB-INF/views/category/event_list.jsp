@@ -42,21 +42,20 @@
 
             <div class="event_box01">
 
-        	<c:forEach items="${eventList}" var="eventList">
-
-             <a href="event_detail?no=${eventList.no}">
-
+        	<c:forEach items="${image}" var="image" varStatus="status">
+            <a href="event_detail?no=${eventList[status.index].no}">
+			
                 <div class="event01">
 
                     <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event01.png">
+						<img src="data:image/png;base64,${image}" style="width:320px; height:280px;">
+                        <%-- <img src="${pageContext.request.contextPath}/resources/img/event/event01.png"> --%>
                     </div>
 
                     <div class="txt_01">
-                        
                         <p>이벤트 ></p>
-                        <p>${eventList.title}</p>
-                        <p>${eventList.regdate}</p>
+                        <p>${eventList[status.index].title}</p>
+                        <p>${eventList[status.index].regdate}</p>
 <!--                         <p>50% 할인찬스!</p>
                         <p>#최대 24만원 할인찬스/세일홀릭</p> -->
                     </div>
@@ -64,8 +63,7 @@
                 </div>
 
              </a>
-
-			</c:forEach>
+   			</c:forEach>
 			
             </div><!--event_box01-->
 
@@ -142,11 +140,25 @@
 					</a>
 				</div>
 				
-	           <div class="login_m">
-	               <a href="login">
-	                   <img src="${pageContext.request.contextPath}/resources/img/member/membership/login_mobile.png">
-	               </a>
-	           </div>
+				<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+			           <div class="login_m">
+			               <a href="mypage_pre">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:when>
+					
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+			           <div class="login_m">
+			               <a href="login">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:otherwise>    
+				</c:choose>
 	
 	       </div>
 	
@@ -602,114 +614,6 @@
                 
             </a>
 
-            <a href="#">
-
-                <div class="event03_m">
-
-                    <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event03.png">
-                    </div>
-
-                    <div class="txt_m_03">
-                        <p>기획전 ></p>
-                        <p>떠나자, 골프투어 1회 기획전!</p>
-                        <p>#지금 바로 갈 수 있는 골프투어</p>
-                    </div>
-
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div class="event04_m">
-
-                    <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event04.png">
-                    </div>
-
-                    <div class="txt_m_04">
-                        <p>이벤트 ></p>
-                        <p>한 여름 밤의 꿈 '슈퍼이벤트'</p>
-                        <p>#여름에 떠나는 일본 방방곡곡 골프</p>
-                    </div>
-
-                </div>
-                
-            </a>
-
-            <a href="#">
-
-                <div class="event05_m">
-
-                    <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event01.png">
-                    </div>
-
-                    <div class="txt_m_05">
-                        <p>이벤트 ></p>
-                        <p>50% 할인찬스!</p>
-                        <p>#최대 24만원 할인찬스/세일홀릭</p>
-                    </div>
-
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div class="event06_m">
-
-                    <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event02.png">
-                    </div>
-
-                    <div class="txt_m_06">
-                        <p>기획전 ></p>
-                        <p>골프아이 프로모션!</p>
-                        <p>#프로모션/한 눈에 확인해보세요.</p>
-                    </div>
-
-                </div>
-                
-            </a>
-
-            <a href="#">
-
-                <div class="event07_m">
-
-                    <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event03.png">
-                    </div>
-
-                    <div class="txt_m_07">
-                        <p>기획전 ></p>
-                        <p>떠나자, 골프투어 1회 기획전!</p>
-                        <p>#지금 바로 갈 수 있는 골프투어</p>
-                    </div>
-
-                </div>
-
-            </a>
-
-            <a href="#">
-
-                <div class="event08_m">
-
-                    <div>
-                        <img src="${pageContext.request.contextPath}/resources/img/event/event04.png">
-                    </div>
-
-                    <div class="txt_m_08">
-                        <p>이벤트 ></p>
-                        <p>한 여름 밤의 꿈 '슈퍼이벤트'</p>
-                        <p>#여름에 떠나는 일본 방방곡곡 골프</p>
-                    </div>
-
-                </div>
-                
-            </a>
-
         </div>
         
         <br/>
@@ -766,21 +670,21 @@
 
             <div class="free_link_m">
 
-                <a href="#">
-                    <p>일본 자유골프</p>
-                </a>
-
-                <a href="#">
-                    <p>태국 자유골프</p>
-                </a>
-
-                <a href="#">
-                    <p>베트남 자유골프</p>
-                </a>
-
-                <a href="#">
-                    <p>대만 자유골프</p>
-                </a>
+				<a href="freegolf?region=일본">
+				    <p>일본 자유골프</p>
+				</a>
+				
+				<a href="freegolf?region=태국">
+				    <p>태국 자유골프</p>
+				</a>
+				
+				<a href="freegolf?region=베트남">
+				    <p>베트남 자유골프</p>
+				</a>
+				
+				<a href="freegolf?region=대만">
+				    <p>대만 자유골프</p>
+				</a>
 
             </div>
 

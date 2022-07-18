@@ -198,7 +198,7 @@
 
         <div class="store_m_top">
            
-            <a href="javascript:history.back();">
+            <a href="index">
                 <p>←</p>
             </a>
 

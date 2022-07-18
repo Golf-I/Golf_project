@@ -144,11 +144,25 @@
 	               </a>
 	           </div>
 	
-	           <div class="login_m">
-	               <a href="login">
-	                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
-	               </a>
-	           </div>
+				<c:choose>
+					<%-- 로그인 했을 때 --%>
+					<c:when test="${sessionScope.id != null}">
+			           <div class="login_m">
+			               <a href="mypage_pre">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:when>
+					
+					<%-- 로그인 안했을 때 --%>
+					<c:otherwise>
+			           <div class="login_m">
+			               <a href="login">
+			                   <img src="${pageContext.request.contextPath}/resources/img/login_mobile.png">
+			               </a>
+			           </div>
+					</c:otherwise>    
+				</c:choose>
 	
 	       </div>
 
@@ -574,30 +588,6 @@
         </div>
 
         <div class="acadamy_box_m">
-
-            <a href="#">
-                <img src="${pageContext.request.contextPath}/resources/img/academy/01academy.png">
-            </a>
-
-            <a href="#">
-                <img src="${pageContext.request.contextPath}/resources/img/academy/02academy.png">
-            </a>
-
-            <a href="#">
-                <img src="${pageContext.request.contextPath}/resources/img/academy/03academy.png">
-            </a>
-
-            <a href="#">
-                <img src="${pageContext.request.contextPath}/resources/img/academy/01academy.png">
-            </a>
-
-            <a href="#">
-                <img src="${pageContext.request.contextPath}/resources/img/academy/02academy.png">
-            </a>
-
-            <a href="#">
-                <img src="${pageContext.request.contextPath}/resources/img/academy/03academy.png">
-            </a>
 
             <a href="#">
                 <img src="${pageContext.request.contextPath}/resources/img/academy/01academy.png">

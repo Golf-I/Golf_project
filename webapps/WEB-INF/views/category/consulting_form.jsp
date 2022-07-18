@@ -116,7 +116,7 @@
 
         <div class="consulting_m_top">
 
-            <a href="javascript:history.back();">
+            <a href="javascript:window.close();">
                 <p>←</p>
             </a>
 

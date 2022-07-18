@@ -312,9 +312,11 @@ public class HomeController extends HttpServlet {
 		List<Map<String, Object>> resultList = null;
 		List<String> paramList = new ArrayList<String>();
 		
+		logger.info("resultList :" + resultList);
+		
 		try {
 			
-			resultList = bservice.getPdImgList();
+			resultList = bservice.getPdImgList(cri);
 			model.addAttribute("resultList", resultList);
 
 			Iterator<Map<String, Object>> itr = resultList.iterator();
@@ -495,7 +497,7 @@ public class HomeController extends HttpServlet {
 		
 		try {
 			
-			resultList = bservice.getEventImgList();
+			resultList = bservice.getEventImgList(cri);
 			model.addAttribute("resultList", resultList);
 
 			Iterator<Map<String, Object>> itr = resultList.iterator();
@@ -543,6 +545,35 @@ public class HomeController extends HttpServlet {
 
 		int total = bservice.countMembership();
 
+		/* 이미지 출력 */
+		List<Map<String, Object>> resultList = null;
+		List<String> paramList = new ArrayList<String>();
+		
+		logger.info("resultList :" + resultList);
+		
+		try {
+			
+			resultList = bservice.getMSImgList(cri);
+			model.addAttribute("resultList", resultList);
+
+			Iterator<Map<String, Object>> itr = resultList.iterator();
+			
+			while(itr.hasNext()) {
+				
+				Map<String, Object> element = (Map<String, Object>)itr.next();
+				byte[] encoded = Base64.encodeBase64((byte[])element.get("img")); 
+				String encodedString = new String(encoded);
+				element.put("base64", encodedString);
+				paramList.add(encodedString);
+				logger.debug("fileinfo : " + encodedString);
+				model.addAttribute("image", paramList);
+			}
+		 			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		/* 이미지 출력 */
+		
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);
@@ -569,6 +600,35 @@ public class HomeController extends HttpServlet {
 		
 		int total = bservice.countAcademy();
 
+		/* 이미지 출력 */
+		List<Map<String, Object>> resultList = null;
+		List<String> paramList = new ArrayList<String>();
+		
+		logger.info("resultList :" + resultList);
+		
+		try {
+			
+			resultList = bservice.getACAImgList(cri);
+			model.addAttribute("resultList", resultList);
+
+			Iterator<Map<String, Object>> itr = resultList.iterator();
+			
+			while(itr.hasNext()) {
+				
+				Map<String, Object> element = (Map<String, Object>)itr.next();
+				byte[] encoded = Base64.encodeBase64((byte[])element.get("img1")); 
+				String encodedString = new String(encoded);
+				element.put("base64", encodedString);
+				paramList.add(encodedString);
+				logger.debug("fileinfo : " + encodedString);
+				model.addAttribute("image", paramList);
+			}
+		 			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		/* 이미지 출력 */
+		
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);
 		pageMaker.setTotalCount(total);

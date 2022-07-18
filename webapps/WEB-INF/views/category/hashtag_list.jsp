@@ -385,45 +385,32 @@
         </div>
 
 
+    	<%-- 페이징 --%>
         <div class="num_m_btn">
         
-            <a href="#">
-                <p><</p>
-            </a>
+			<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+				<a href="hashtag?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+			</c:if>
+			
+			<c:if test="${pageMaker.prev}">
+			<a href="hashtag?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+			</c:if>
+			
+               <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+            		<a href="hashtag?page=${p}" style="color: red;"><p>${p}</p></a>    
+               </c:forEach>
 
-            <a href="#">
-                <p>1</p>
-            </a>
+			<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+			<a href="hashtag?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+			</c:if>
+			
+			<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+				<a href="hashtag?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+			</c:if>
+			
+		</div><!--btn-->
+		<%-- 페이징 --%>
 
-            <a href="#">
-                <p>2</p>
-            </a>
-
-            <a href="#">
-                <p>3</p>
-            </a>
-
-            <a href="#">
-                <p>4</p>
-            </a>
-
-            <a href="#">
-                <p>5</p>
-            </a>
-
-            <a href="#">
-                <p>6</p>
-            </a>
-
-            <a href="#">
-                <p>7</p>
-            </a>
-
-            <a href="#">
-                <p>></p>
-            </a>
-            
-        </div>
 
         <div class="freegolf_m">
 

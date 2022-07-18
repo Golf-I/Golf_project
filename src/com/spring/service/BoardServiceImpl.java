@@ -108,6 +108,26 @@ public class BoardServiceImpl implements BoardService{
 	} // countEvent
 	
 	
+	/* 해쉬태그 전체 게시글 갯수 조회 */
+	@Override
+	public int countHashtag() throws Exception {
+		
+		int count = bdao.countHashtag();
+		
+		return count;
+	} // countHashtag
+
+
+	/* 자유골프 전체 게시글 갯수 조회 */
+	@Override
+	public int countFreegolf() throws Exception {
+		
+		int count = bdao.countFreegolf();
+		
+		return count;
+	} // countFreegolf
+	
+	
 	/* 공지사항 전체 게시글 조회 */
 	@Override
 	public List<BoardVO> selectNotice(Criteria cri) throws Exception {
@@ -169,6 +189,26 @@ public class BoardServiceImpl implements BoardService{
 		
 		return eventList;
 	} // selectEvent
+	
+	
+	/* 해쉬태그 전체 게시글 조회 */
+	@Override
+	public List<ProductVO> selectHashtag(Criteria cri) throws Exception {
+		
+		List<ProductVO> tagList = bdao.selectHashtag(cri);
+		
+		return tagList;
+	} // selectHashtag
+	
+	
+	/* 자유골프 전체 게시글 조회 */
+	@Override
+	public List<ProductVO> selectFreegolf(Criteria cri) throws Exception {
+		
+		List<ProductVO> freeList = bdao.selectFreegolf(cri);
+		
+		return freeList;
+	} // selectFreegolf
 	
 
 	/* 게시물 조회 */
@@ -270,6 +310,16 @@ public class BoardServiceImpl implements BoardService{
 	} // oneEvent
 
 	
+	/* 자유골프 조회 */
+	@Override
+	public List<ProductVO> oneFreegolf(ProductVO vo) throws Exception {
+		List<ProductVO> freeList = new ArrayList<ProductVO>();
+		freeList = bdao.oneFreegolf(vo);
+		
+		return freeList;
+	} // oneFreegolf
+
+	
 	/* 상품평점/별점 등록 */
 	@Override
 	public void addComment(CommentVO vo) throws Exception {
@@ -292,9 +342,9 @@ public class BoardServiceImpl implements BoardService{
 
 	/* 패키지 상품 전체 이미지 출력 */
 	@Override
-	public List<Map<String, Object>> getPdImgList() throws Exception {
+	public List<Map<String, Object>> getPdImgList(Criteria cri) throws Exception {
 
-		List<Map<String, Object>> list = bdao.getPdImgList();
+		List<Map<String, Object>> list = bdao.getPdImgList(cri);
 		
 		return list;
 	} // getPdImgList
@@ -302,12 +352,32 @@ public class BoardServiceImpl implements BoardService{
 	
 	/* 이벤트/기획전 전체 이미지 출력 */
 	@Override
-	public List<Map<String, Object>> getEventImgList() throws Exception {
+	public List<Map<String, Object>> getEventImgList(Criteria cri) throws Exception {
 		
-		List<Map<String, Object>> list = bdao.getEventImgList();
+		List<Map<String, Object>> list = bdao.getEventImgList(cri);
 		
 		return list;
 	} // getEventImgList
+	
+	
+	/* 회원권 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getMSImgList(Criteria cri) throws Exception {
+		
+		List<Map<String, Object>> list = bdao.getMSImgList(cri);
+		
+		return list;
+	} // getMSImgList
+	
+	
+	/* 아카데미 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getACAImgList(Criteria cri) throws Exception {
+		
+		List<Map<String, Object>> list = bdao.getACAImgList(cri);
+		
+		return list;
+	} // getACAImgList
 	
 	
 	/* 패키지 상품 한 개 이미지 출력 */

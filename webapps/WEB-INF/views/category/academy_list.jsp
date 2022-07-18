@@ -76,10 +76,13 @@
                 
                 <div class="product01">
 
-	                <c:forEach items="${academyList}" var="academyList">
-                    <a href="academy_detail?no=${academyList.no}">
+					<c:forEach items="${image}" var="image" varStatus="status">
+<%-- 	                <c:forEach items="${academyList}" var="academyList"> --%>
+                    <a href="academy_detail?no=${academyList[status.index].no}">
                         <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/academy/01academy.png">
+							<img src="data:image/png;base64,${image}" style="width:333px; height:305px;">
+                        
+<%--                             <img src="${pageContext.request.contextPath}/resources/img/academy/01academy.png"> --%>
                         </div>
                     </a>
 	                </c:forEach>

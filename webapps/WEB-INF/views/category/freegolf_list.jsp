@@ -185,393 +185,35 @@
 
 					</div><!--01-->
 
-					<div class="product02">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
-						</div>
-
-						<div class="pro_box_02">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash02">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-						</div>
-
-					</div><!--02-->
-
-					<div class="product03">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
-						</div>
-
-						<div class="pro_box_03">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash03">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--03-->
-
-				</div><!--1줄-->
-
-				<div class="free_pro_02">
-
-					<div class="product04">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
-						</div>
-
-						<div class="pro_box_04">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash04">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--04-->
-
-					<div class="product05">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
-						</div>
-
-						<div class="pro_box_05">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash05">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--05-->
-
-					<div class="product06">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
-						</div>
-
-						<div class="pro_box_06">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash06">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--06-->
-
-				</div><!--2줄-->
-
-				<div class="free_pro_03">
-
-					<div class="product07">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
-						</div>
-
-						<div class="pro_box_07">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash07">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-						</div>
-
-					</div><!--07-->
-
-					<div class="product08">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
-						</div>
-
-						<div class="pro_box_08">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash08">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--08-->
-
-					<div class="product09">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
-						</div>
-
-						<div class="pro_box_09">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash09">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--09-->
-
-				</div><!--3줄-->
-
-				<div class="free_pro_04">
-
-					<div class="product10">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
-						</div>
-
-						<div class="pro_box_10">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash10">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--10-->
-
-					<div class="product11">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
-						</div>
-
-						<div class="pro_box_11">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash11">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--11-->
-
-					<div class="product12">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
-						</div>
-
-						<div class="pro_box_12">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash12">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--12-->
-
-				</div><!--4줄-->
-
-				<div class="free_pro_05">
-
-					<div class="product13">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product01.png">
-						</div>
-
-						<div class="pro_box_13">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash13">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-						</div>
-
-					</div><!--13-->
-
-					<div class="product14">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product02.png">
-						</div>
-
-						<div class="pro_box_14">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash14">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-
-						</div>
-
-					</div><!--14-->
-
-					<div class="product15">
-
-						<div>
-							<img src="${pageContext.request.contextPath}/resources/img/freegolf/product03.png">
-						</div>
-
-						<div class="pro_box_15">
-
-							<p>일본/도쿄</p>
-
-							<p>썬라이즈 골프장 18홀</p>
-
-
-							<div class="cash15">
-
-								<p>1,090,000원~</p>
-
-								<a href="#">상세보기</a>
-							</div>
-
-						</div>
-
-					</div><!--15-->
-
 				</div><!--5줄-->
 
 			</div>
 
+			<%-- 페이징 --%>
 			<div class="number_btn">
-				<a href="#">
-					<p><</p>
-				</a> <a href="#">
-					<p>1</p>
-				</a> <a href="#">
-					<p>2</p>
-				</a> <a href="#">
-					<p>3</p>
-				</a> <a href="#">
-					<p>4</p>
-				</a> <a href="#">
-					<p>5</p>
-				</a> <a href="#">
-					<p>6</p>
-				</a> <a href="#">
-					<p>7</p>
-				</a> <a href="#">
-					<p>></p>
-				</a>
+			
+				<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+					<a href="freegolf?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+				</c:if>
+				
+				<c:if test="${pageMaker.prev}">
+				<a href="freegolf?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
+				</c:if>
+				
+                <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="p">
+             		<a href="freegolf?page=${p}" style="color: red;"><p>${p}</p></a>    
+                </c:forEach>
+
+				<c:if test="${pageMaker.next && pageMaker.endPage>0}">
+				<a href="freegolf?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
+				</c:if>
+				
+				<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+					<a href="freegolf?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+				</c:if>
+			
 			</div><!--btn-->
+			<%-- 페이징 --%>
 
 
 			<div class="golf_course">
@@ -619,10 +261,10 @@
         </div>
 
         <div class="country">
-            <div><a href="freegolf">일본 자유골프→</a></div>
-            <div><a href="freegolf">태국 자유골프→</a></div>
-            <div><a href="freegolf">베트남 자유골프→</a></div>
-            <div><a href="freegolf">대만 자유골프→</a></div>
+            <div><a href="freegolf?region=일본">일본 자유골프→</a></div>
+            <div><a href="freegolf?region=태국">태국 자유골프→</a></div>
+            <div><a href="freegolf?region=베트남">베트남 자유골프→</a></div>
+            <div><a href="freegolf?region=대만">대만 자유골프→</a></div>
         </div>
         
     </div> <!--자유골프-->
@@ -822,74 +464,74 @@
                                 <ul>
                                     <a href="category">
                                         <li>
-                                            <p>도쿄/간도</p>
+                                          <p>도쿄/간도</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>오사카/간사이</p>
+                                          <p>오사카/간사이</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>홋카이도/삿포로</p>
+                                          <p>홋카이도/삿포로</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>오키나와/나하</p>
+                                          <p>오키나와/나하</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>후쿠오카/야마구치</p>
+                                          <p>후쿠오카/야마구치</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>가고시마/미야자키</p>
+                                          <p>가고시마/미야자키</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>구마모토/오이타</p>
+                                          <p>구마모토/오이타</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>나카사키/사가</p>
+                                          <p>나카사키/사가</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>아오모리/니카타</p>
+                                          <p>아오모리/니카타</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>나고야/도카이</p>
+                                          <p>나고야/도카이</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>오카야마/츄고쿠</p>
+                                          <p>오카야마/츄고쿠</p>
                                         </li>
                                     </a>
     
     
                                     <a href="#">
                                         <li>
-                                            <p>다카마츠/마츠야마</p>
+                                          <p>다카마츠/마츠야마</p>
                                         </li>
                                     </a>
     
@@ -904,31 +546,31 @@
     
                                     <a href="#">
                                         <li>
-                                            <p>방콕/파타야</p>
+                                          <p>방콕/파타야</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>치앙마이/치앙라이</p>
+                                          <p>치앙마이/치앙라이</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>푸켓</p>
+                                          <p>푸켓</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>칸차나부리/아유타야</p>
+                                          <p>칸차나부리/아유타야</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>후아힌</p>
+                                          <p>후아힌</p>
                                         </li>
                                     </a>
     
@@ -943,37 +585,37 @@
     
                                     <a href="#">
                                         <li>
-                                            <p>나트랑</p>
+                                          <p>나트랑</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>푸꾸옥</p>
+                                          <p>푸꾸옥</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>다낭</p>
+                                          <p>다낭</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>하노이</p>
+                                          <p>하노이</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>호치민</p>
+                                          <p>호치민</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>달랏</p>
+                                          <p>달랏</p>
                                         </li>
                                     </a>
     
@@ -988,37 +630,37 @@
     
                                     <a href="#">
                                         <li>
-                                            <p>가오슝</p>
+                                          <p>가오슝</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>타이중</p>
+                                          <p>타이중</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>타이페이</p>
+                                          <p>타이페이</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>신죽</p>
+                                          <p>신죽</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>타오위안</p>
+                                          <p>타오위안</p>
                                         </li>
                                     </a>
     
                                     <a href="#">
                                         <li>
-                                            <p>이란/화련</p>
+                                           p>이란/화련</p>
                                         </li>
                                     </a>
     
@@ -1032,7 +674,7 @@
                                 <ul>
                                     <a href="event">
                                         <li>
-                                            <p>기획전/이벤트</p>
+                                          <p>기획전/이벤트</p>
                                         </li>
                                     </a>
                                 </ul>
@@ -1044,13 +686,13 @@
                                 <ul>
                                     <a href="membership">
                                         <li>
-                                                <p>회원권</p>
+                                          <p>회원권</p>
                                         </li>
                                     </a>
     
                                     <a href="academy">
                                         <li>
-                                                <p>아카데미</p>
+                                          <p>아카데미</p>
                                         </li>
                                     </a>
     

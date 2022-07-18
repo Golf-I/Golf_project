@@ -114,6 +114,26 @@ public class BoardDAOImpl implements BoardDAO{
 	} // countEvent
 
 	
+	/* 이벤트 전체 게시글 갯수 조회 */
+	@Override
+	public int countHashtag() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countHashtag");
+		
+		return count;
+	} // countHashtag
+
+
+	/* 이벤트 전체 게시글 갯수 조회 */
+	@Override
+	public int countFreegolf() throws Exception {
+		
+		int count = sqlSession.selectOne(namespace+".countFreegolf");
+		
+		return count;
+	} // countFreegolf
+	
+	
 	/* 공지사항 전체 게시글 조회 */
 	@Override
 	public List<BoardVO> selectNotice(Criteria cri) throws Exception {
@@ -178,6 +198,26 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return eventList;
 	} // selectEvent
+	
+	
+	/* 해쉬태그 전체 게시글 조회 */
+	@Override
+	public List<ProductVO> selectHashtag(Criteria cri) throws Exception {
+		
+		List<ProductVO> tagList = sqlSession.selectList(namespace+".selectHashtag", cri);
+		
+		return tagList;
+	} // selectEvent
+	
+	
+	/* 자유골프 전체 게시글 조회 */
+	@Override
+	public List<ProductVO> selectFreegolf(Criteria cri) throws Exception {
+		
+		List<ProductVO> freeList = sqlSession.selectList(namespace+".selectFreegolf", cri);
+		
+		return freeList;
+	} // selectFreegolf
 	
 	
 	/* 게시물 조회 */
@@ -293,6 +333,17 @@ public class BoardDAOImpl implements BoardDAO{
 		return eventList;
 	} // oneEvent
 
+	
+	/* 자유골프 조회 */
+	@Override
+	public List<ProductVO> oneFreegolf(ProductVO vo) throws Exception {
+		
+		List<ProductVO> freeList = new ArrayList<ProductVO>();
+		freeList = sqlSession.selectList(namespace+".oneFreegolf", vo);
+		
+		return freeList;
+	} // oneFreegolf
+	
 
 	/* 상품별점/평점 등록 */
 	@Override
@@ -316,9 +367,9 @@ public class BoardDAOImpl implements BoardDAO{
 
 	/* 패키지 상품 전체 이미지 출력 */
 	@Override
-	public List<Map<String, Object>> getPdImgList() throws Exception {
+	public List<Map<String, Object>> getPdImgList(Criteria cri) throws Exception {
 
-		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getPdImgList");
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getPdImgList", cri);
 		
 		return list;
 	} // getPdImgList
@@ -326,13 +377,33 @@ public class BoardDAOImpl implements BoardDAO{
 	
 	/* 이벤트/기획전 이미지 출력 */
 	@Override
-	public List<Map<String, Object>> getEventImgList() throws Exception {
+	public List<Map<String, Object>> getEventImgList(Criteria cri) throws Exception {
 		
-		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getEventImgList");
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getEventImgList", cri);
 		
 		return list;
 	} // getEventImgList
 	
+	
+	/* 회원권 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getMSImgList(Criteria cri) throws Exception {
+
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getMSImgList", cri);
+		
+		return list;
+	} // getMSImgList
+	
+	
+	/* 아카데미 전체 이미지 출력 */
+	@Override
+	public List<Map<String, Object>> getACAImgList(Criteria cri) throws Exception {
+		
+		List<Map<String, Object>> list = sqlSession.selectList(namespace+".getACAImgList", cri);
+		
+		return list;
+	} // getACAImgList
+
 	
 	/* 패키지 상품 한 개 이미지 출력  */
 	@Override
@@ -342,6 +413,7 @@ public class BoardDAOImpl implements BoardDAO{
 		
 		return list;
 	} // getPdOneImg
+
 
 
 }

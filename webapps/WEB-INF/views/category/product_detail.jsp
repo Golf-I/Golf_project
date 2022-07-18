@@ -145,9 +145,11 @@
             <div class="detail_img_box">
 
                 <div class="detail_left">
+
 					<c:forEach items="${image}" var="image">
 						<img src="data:image/png;base64,${image}" style="width:660px; height:500px;">
 					</c:forEach>
+                	
                 </div>
                 
                 <c:forEach items="${bbsList}" var="bbsList">

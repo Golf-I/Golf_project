@@ -33,6 +33,10 @@ public interface BoardDAO {
 	
 	public int countEvent() throws Exception; // 이벤트 전체 게시글 갯수 조회
 	
+	public int countHashtag() throws Exception; // 해쉬태그 목록 전체 게시글 갯수 조회
+	
+	public int countFreegolf() throws Exception; // 자유골프 목록 전체 게시글 갯수 조회
+	
 	public List<BoardVO> selectNotice(Criteria cri) throws Exception; // 공지사항 전체 게시글 조회
 
 	public List<BoardVO> selectQnA(Criteria cri) throws Exception; // 자주묻는질문 전체 게시글 조회
@@ -44,6 +48,10 @@ public interface BoardDAO {
 	public List<AcademyVO> selectAcademy(Criteria cri) throws Exception; // 아카데미 총 게시물 조회
 	
 	public List<EventVO> selectEvent(Criteria cri) throws Exception; // 아카데미 총 게시물 조회
+	
+	public List<ProductVO> selectHashtag(Criteria cri) throws Exception; // 해쉬태그 총 게시물 조회
+	
+	public List<ProductVO> selectFreegolf(Criteria cri) throws Exception; // 자유골프 총 게시물 조회
 	
 	public List<BoardVO> lookup(BoardVO vo) throws Exception; // 게시물 조회
 	
@@ -63,13 +71,19 @@ public interface BoardDAO {
 	
 	public List<EventVO> oneEvent(EventVO vo) throws Exception; // 아카데미 조회
 	
+	public List<ProductVO> oneFreegolf(ProductVO vo) throws Exception; // 자유골프 조회
+	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
 	
 	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 등록
 	
-	public List<Map<String, Object>> getPdImgList() throws Exception; // 패키지 상품 전체 이미지 출력
+	public List<Map<String, Object>> getPdImgList(Criteria cri) throws Exception; // 패키지 상품 전체 이미지 출력
 	
-	public List<Map<String, Object>> getEventImgList() throws Exception; // 이벤트 전체 이미지 출력
+	public List<Map<String, Object>> getEventImgList(Criteria cri) throws Exception; // 이벤트 전체 이미지 출력
+
+	public List<Map<String, Object>> getMSImgList(Criteria cri) throws Exception; // 회원권 전체 이미지 출력
+	
+	public List<Map<String, Object>> getACAImgList(Criteria cri) throws Exception; // 아카데미 전체 이미지 출력
 	
 	public List<Map<String, Object>> getPdOneImg(ProductVO vo) throws Exception; // 패키지 상품 한 개 이미지 출력
 

@@ -75,17 +75,20 @@
 
                 <div class="product01">
 
-					<c:forEach items="${membershipList}" var="membershipList">
-					<a href="membership_detail?no=${membershipList.no}">
+		
+					<c:forEach items="${image}" var="image" varStatus="status">
+
+					<a href="membership_detail?no=${membershipList[status.index].no}">
 						
 						<div class="box01">
 						    <div>
 						        <p>가격</p>
-						        <p><fmt:formatNumber value="${membershipList.price}" pattern="#,###" />원</p>
+						        <p><fmt:formatNumber value="${membershipList[status.index].price}" pattern="#,###" />원</p>
 <!-- 						        <p>12,000,000원</p> -->
 						    </div>
 						    <div>
-						        <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png">
+   								<img src="data:image/png;base64,${image}" style="width:333px; height:290px;">
+<%-- 						        <img src="${pageContext.request.contextPath}/resources/img/member/membership/01academy.png"> --%>
 						     </div>
 						</div><!-- box01 -->
 					</a>

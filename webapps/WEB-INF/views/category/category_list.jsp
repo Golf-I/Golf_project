@@ -185,7 +185,7 @@
 						product_code=${bbsList[status.index].product_code}&productName=${bbsList[status.index].productName}">
 
 						<div>
-							<img src="data:image/png;base64,${image}" style="width:320px;">
+							<img src="data:image/png;base64,${image}" style="width:320px; height:250px">
 <%-- 						<img src="${pageContext.request.contextPath}/resources/img/category/product01.png"> --%>
 						</div>
 
@@ -208,9 +208,11 @@
 
 				<%-- 페이징  --%>    
 				<div class="number_btn">
-<%-- 
-					<a href="category?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
- --%>					
+
+					<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+						<a href="category?page=${pageMaker.startPage}"><p>&lt;&lt;</p></a>
+					</c:if>
+					
 					<c:if test="${pageMaker.prev}">
 					<a href="category?page=${pageMaker.startPage-1}"><p>&lt;</p></a>
 					</c:if>
@@ -222,9 +224,11 @@
 					<c:if test="${pageMaker.next && pageMaker.endPage>0}">
 					<a href="category?page=${pageMaker.endPage+1}"><p>&gt;</p></a>
 					</c:if>
-<%-- 					
-					<a href="category?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
- --%>
+					
+					<c:if test="${pageMaker.totalCount != 1 && pageMaker.totalCount != 0}">
+						<a href="category?page=${pageMaker.endPage}"><p>&gt;&gt;</p></a>
+					</c:if>
+					
 				</div>
 				<%-- 페이징  --%>
 				

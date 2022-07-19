@@ -11,11 +11,10 @@
 	// 인원 체크 시 여행자정보 display
 	$(document).ready(function(){
 		
-		var input = "";
-		
 		// 인원 선택 시
 		$("#num01").change(function(){
 			
+			var input = "";
 			var each = $("#num01 option:selected").val();
 			
 			for(var i=2; i<=each; i++){
@@ -44,6 +43,7 @@
 			$(".information03").append(input);
 			
 		}); // change
+		
 	}); // ready
 	
 	

@@ -12,6 +12,7 @@
 	<link href="${pageContext.request.contextPath}/resources/css/detail.css" rel="stylesheet">
 	<script	src="${pageContext.request.contextPath}/resources/js/product_detail.js"></script>
 </head>
+
 <body>
 
     <input type="checkbox" id="call">
@@ -372,7 +373,16 @@
                                 <div class="txt_week01">
 <!--                                     <p>1,090,000</p> -->
                                     <p><fmt:formatNumber value="${bbsList.weekday_fee}" pattern="#,###" />원</p>
-                                    <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekday_fee=${bbsList.weekday_fee}">예약하기</a>
+                                    
+                                    <c:choose>
+                                    	<c:when test="${sessionScope.id != null}">
+		                                    <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekday_fee=${bbsList.weekday_fee}">예약하기</a>
+                                    	</c:when>
+                                    	<c:otherwise>
+		                                    <a href="javascript:alert('로그인 후 예약이 가능합니다.');">예약하기</a>
+                                    	</c:otherwise>
+                                    </c:choose>
+                                    
                                 </div>
     
                             </div>
@@ -388,7 +398,15 @@
                                 <div class="txt_weekend01">
 <!--                                     <p>1,090,000</p> -->
                                     <p><fmt:formatNumber value="${bbsList.weekend_fee}" pattern="#,###" />원</p>
-                                    <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekend_fee=${bbsList.weekend_fee}">예약하기</a>
+                                    
+                                    <c:choose>
+                                    	<c:when test="${sessionScope.id != null}">
+		                                    <a href="reservation?region=${param.region}&city=${param.city}&product_code=${param.product_code}&productName=${param.productName}&weekend_fee=${bbsList.weekend_fee}">예약하기</a>
+                                    	</c:when>
+                                    	<c:otherwise>
+		                                    <a href="javascript:alert('로그인 후 예약이 가능합니다.');">예약하기</a>
+                                    	</c:otherwise>
+                                    </c:choose>
                                 </div>
     
                             </div>
@@ -981,33 +999,19 @@
                                 <div class="typing01">
 
                                  <p>페이웨이/그린</p>
-
-                                 <div class="typing_st_01">
-
-                                    
-                                     <label for="green01">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="green02">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="green03">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="green04">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="green05">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-                                    
+                                 
+                                 <div class="typing_st_01" id="myform">
+									    <fieldset>
+									        <legend><!-- 이모지 별점 --></legend>
+									        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+									        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+									        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+									        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+									        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+									    </fieldset>
                                  </div><!-- typing_st_01 -->
 
-                                 <p>0</p>
+                                 <p><input type="text" id="myform_p1" style="width:20px;"></p>
                                 
                                 </div><!--01-->
 
@@ -1147,10 +1151,10 @@
 					<%-- 고객평점/별점 로그인 후 사용 가능 --%>					
 					<c:choose>
 						<c:when test="${sessionScope.id != null}">
-                        	<textarea id="text01" name="comment" style="overflow:hidden;"></textarea>
+                        	<textarea id="text01" name="comment"></textarea>
 						</c:when>
 						<c:otherwise>
-                        	<textarea id="text01" onclick="return login();" style="overflow:hidden;"></textarea>
+                        	<textarea id="text01" readonly>로그인 후 이용 가능합니다.</textarea>
 						</c:otherwise>
 					</c:choose>
 					<%-- 고객평점/별점 로그인 후 사용 가능 --%>					
@@ -1168,6 +1172,7 @@
 						</c:when>
 						
 						<c:otherwise>
+	                        <input type="button" id="reset_t" value="로그인하러 가기" onclick="location.href='login';" style="width:200px;">
 						</c:otherwise>
 						
 						</c:choose>

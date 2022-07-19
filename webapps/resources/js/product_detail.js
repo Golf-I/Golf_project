@@ -111,4 +111,32 @@
 		window.open(url, "shareBand", "width=500, height=800, resizable=yes");
 		
 	} // shareLine
-
+	
+	
+	// 별점/평점 가져오기
+	$(document).ready(function(){
+		
+//		var pairway = parseInt($("input[name=rating]:checked").val()); 
+		var pairway = $("input[name=rating]").val(); 
+		
+		if( $("#rate1").is(":checked") ){
+			
+			console.log("ㅋ");
+			
+		}else if( $("#rate2").is(":checked") ){
+			
+			console.log("ㅋㅋ");
+		}else if( $("#rate3").is(":checked") ){
+			
+			console.log("ㅋㅋㅋ");
+		}else if( $("#rate4").is(":checked") ){
+			
+			console.log("ㅋㅋㅋㅋ");
+		}else{
+			
+			console.log("ㅋㅋㅋㅋㅋ");
+		}
+		
+		
+		
+	});

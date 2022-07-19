@@ -239,8 +239,6 @@
 	
 	
 	
-	
-	
 	<!-- 모바일 -->
 	<section class="mobile">
 	

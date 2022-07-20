@@ -889,54 +889,48 @@
                 <div class="grade01">
 
 					<%-- 상품 별점 --%>
-                    <p><span>0.0</span>/5</p>
+                    <p><span>0</span>/5</p>
 <!--                     <p><span>8.9</span>/10</p>
  -->
-                    <div class="star01">
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                        </div>
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                        </div>
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                        </div>
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/02star_detail.png">
-                        </div>
-                        <div>
-                            <img src="${pageContext.request.contextPath}/resources/img/detail01/03star_detail.png">
-                        </div>
+                    <div class="star01"id="myform">
+   
+					    <fieldset>
+					        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+					    </fieldset>
+					    
                     </div>
 
-                    <p>총 00명 참여</p>
+<!--                     <p>총 00명 참여</p> -->
 
                 </div><!--01-->
 
                 <div class="grade02">
-                    <p>0.0</p>
+                    <p>0</p>
                     <p>페이웨이/그린</p>
                 </div>
 
 
                 <div class="grade03">
-                    <p>0.0</p>
+                    <p>0</p>
                     <p>플레이 속도</p>
                 </div>
 
                 <div class="grade04">
-                    <p>0.0</p>
+                    <p>0</p>
                     <p>캐디</p>
                 </div>
 
                 <div class="grade05">
-                    <p>0.0</p>
+                    <p>0</p>
                     <p>부대시설</p>
                 </div>
 
                 <div class="grade06">
-                    <p>0.0</p>
+                    <p>0</p>
                     <p>가이드</p>
                 </div>
 
@@ -974,7 +968,7 @@
 
             <div class="type01">
 
-                <p>전체<span> 2개</span></p>
+                <p>전체 <span>${commenttotal}개</span></p>
 
                 <div class="line_type"></div>
 
@@ -1003,11 +997,11 @@
                                  <div class="typing_st_01" id="myform">
 									    <fieldset>
 									        <legend><!-- 이모지 별점 --></legend>
-									        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
-									        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
-									        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
-									        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
-									        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+									        <input type="radio" name="score_fairways" value="5" id="rate1-5"><label for="rate1-5">⭐</label>
+									        <input type="radio" name="score_fairways" value="4" id="rate1-4"><label for="rate1-4">⭐</label>
+									        <input type="radio" name="score_fairways" value="3" id="rate1-3"><label for="rate1-3">⭐</label>
+									        <input type="radio" name="score_fairways" value="2" id="rate1-2"><label for="rate1-2">⭐</label>
+									        <input type="radio" name="score_fairways" value="1" id="rate1-1"><label for="rate1-1">⭐</label>
 									    </fieldset>
                                  </div><!-- typing_st_01 -->
 
@@ -1019,31 +1013,18 @@
 
                                     <p>플레이속도</p>
    
-                                    <div class="typing_st_02">
-		
-									<label for="play01">
-										<img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-									</label>
+                                    <div class="typing_st_02" id="myform">
+									    <fieldset>
+									        <legend><!-- 이모지 별점 --></legend>
+									        <input type="radio" name="score_playSpeed" value="5" id="rate2-5"><label for="rate2-5">⭐</label>
+									        <input type="radio" name="score_playSpeed" value="4" id="rate2-4"><label for="rate2-4">⭐</label>
+									        <input type="radio" name="score_playSpeed" value="3" id="rate2-3"><label for="rate2-3">⭐</label>
+									        <input type="radio" name="score_playSpeed" value="2" id="rate2-2"><label for="rate2-2">⭐</label>
+									        <input type="radio" name="score_playSpeed" value="1" id="rate2-1"><label for="rate2-1">⭐</label>
+									    </fieldset>
+                                 </div><!-- typing_st_01 -->
 
-                                    <label for="play02">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="play03">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="play04">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-
-                                    <label for="play05">
-                                        <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                    </label>
-                                       
-                                    </div>
-   
-                                    <p>0</p>
+                                 <p><input type="text" id="myform_p2" style="width:20px;"></p>
                                    
                                    </div><!--02-->
 
@@ -1051,63 +1032,37 @@
 
                                     <p>캐디</p>
    
-                                    <div class="typing_st_03">
-   
-                                        <label for="caddy01">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="caddy02">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="caddy03">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="caddy04">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="caddy05">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-                                       
-                                    </div>
-   
-                                    <p>0</p>
+                                    <div class="typing_st_03" id="myform">
+									    <fieldset>
+									        <legend><!-- 이모지 별점 --></legend>
+									        <input type="radio" name="score_caddy" value="5" id="rate3-5"><label for="rate3-5">⭐</label>
+									        <input type="radio" name="score_caddy" value="4" id="rate3-4"><label for="rate3-4">⭐</label>
+									        <input type="radio" name="score_caddy" value="3" id="rate3-3"><label for="rate3-3">⭐</label>
+									        <input type="radio" name="score_caddy" value="2" id="rate3-2"><label for="rate3-2">⭐</label>
+									        <input type="radio" name="score_caddy" value="1" id="rate3-1"><label for="rate3-1">⭐</label>
+									    </fieldset>
+                                 	</div><!-- typing_st_01 -->
+
+									<p><input type="text" id="myform_p3" style="width:20px;"></p>
                                    
-                                   </div><!--03-->
+                                    </div><!--03-->
 
                                    <div class="typing04">
 
                                     <p>부대시설</p>
    
-                                    <div class="typing_st_04">
-   
-                                        <label for="amenities01">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="amenities02">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="amenities03">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="amenities04">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="amenities05">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-                                       
-                                    </div>
-   
-                                    <p>0</p>
+                                    <div class="typing_st_04" id="myform">
+									    <fieldset>
+									        <legend><!-- 이모지 별점 --></legend>
+									        <input type="radio" name="score_facilities" value="5" id="rate4-5"><label for="rate4-5">⭐</label>
+									        <input type="radio" name="score_facilities" value="4" id="rate4-4"><label for="rate4-4">⭐</label>
+									        <input type="radio" name="score_facilities" value="3" id="rate4-3"><label for="rate4-3">⭐</label>
+									        <input type="radio" name="score_facilities" value="2" id="rate4-2"><label for="rate4-2">⭐</label>
+									        <input type="radio" name="score_facilities" value="1" id="rate4-1"><label for="rate4-1">⭐</label>
+									    </fieldset>
+                                 	</div><!-- typing_st_01 -->
+
+                                 	<p><input type="text" id="myform_p4" style="width:20px;"></p>
                                    
                                    </div><!--04-->
 
@@ -1115,32 +1070,21 @@
 
                                     <p>가이드</p>
    
-                                    <div class="typing_st_05">
+                                    <div class="typing_st_05" id="myform">
    
-                                        <label for="guide01">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="guide02">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="guide03">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="guide04">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-   
-                                        <label for="guide05">
-                                            <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                        </label>
-                                       
-                                    </div>
-   
-                                    <p>0</p>
-                                   
+									    <fieldset>
+									        <legend><!-- 이모지 별점 --></legend>
+									        <input type="radio" name="score_guide" value="5" id="rate5-5"><label for="rate5-5">⭐</label>
+									        <input type="radio" name="score_guide" value="4" id="rate5-4"><label for="rate5-4">⭐</label>
+									        <input type="radio" name="score_guide" value="3" id="rate5-3"><label for="rate5-3">⭐</label>
+									        <input type="radio" name="score_guide" value="2" id="rate5-2"><label for="rate5-2">⭐</label>
+									        <input type="radio" name="score_guide" value="1" id="rate5-1"><label for="rate5-1">⭐</label>
+									    </fieldset>
+									    
+                                 	</div><!-- typing_st_01 -->
+
+                                 	<p><input type="text" id="myform_p5" style="width:20px;"></p>
+                                 	
                                    </div><!--05-->
                                 
                             </div>
@@ -1154,7 +1098,7 @@
                         	<textarea id="text01" name="comment"></textarea>
 						</c:when>
 						<c:otherwise>
-                        	<textarea id="text01" readonly>로그인 후 이용 가능합니다.</textarea>
+                        	<textarea id="text01" placeholder="로그인 후 이용 가능합니다." readonly></textarea>
 						</c:otherwise>
 					</c:choose>
 					<%-- 고객평점/별점 로그인 후 사용 가능 --%>					
@@ -1214,22 +1158,17 @@
                                 <p><span>${commList.average_score}</span>/5</p>
                             </div>
 
-                            <div class="grade_star01">
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/02star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/03star_detail.png">
-                                </div>
+                            <div class="grade_star01"id="myform">
+   
+							    <fieldset>
+							        <legend><!-- 이모지 별점 --></legend>
+							        
+							        <c:forEach items="1" end="5">
+							        	<input type="radio" value="${commList.score_fairways}" disabled="disabled" checked><label>⭐</label>
+							        </c:forEach>
+							        
+							    </fieldset>
+									    
                             </div>
 
                         </div><!--grade_re_box01-->
@@ -1251,22 +1190,17 @@
 
                             <p>페이웨이/그린</p>
 
-                            <div class="golf_star01">
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
+                            <div class="golf_star01" id="myform">
+   
+							    <fieldset>
+							        <legend><!-- 이모지 별점 --></legend>
+							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    </fieldset>
+							    
                             </div>
 
                             <p>${commList.score_fairways}</p>
@@ -1277,22 +1211,16 @@
 
                             <p>플레이 속도</p>
 
-                            <div class="golf_star02">
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
+                            <div class="golf_star02" id="myform">
+   
+							    <fieldset>
+							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    </fieldset>
+							    
                             </div>
 
                             <p>${commList.score_playSpeed}</</p>
@@ -1303,22 +1231,16 @@
 
                             <p>캐디</p>
 
-                            <div class="golf_star03">
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
+                            <div class="golf_star03" id="myform">
+   
+							    <fieldset>
+							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    </fieldset>
+							    
                             </div>
 
                             <p>${commList.score_caddy}</p>
@@ -1329,22 +1251,16 @@
 
                             <p>부대시설</p>
 
-                            <div class="golf_star04">
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
+                            <div class="golf_star04" id="myform">
+   
+							    <fieldset>
+							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    </fieldset>
+							    
                             </div>
 
                             <p>${commList.score_facilities}</p>
@@ -1355,22 +1271,16 @@
 
                             <p>가이드</p>
 
-                            <div class="golf_star05">
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
-                                <div>
-                                    <img src="${pageContext.request.contextPath}/resources/img/detail01/01star_detail.png">
-                                </div>
+                            <div class="golf_star05" id="myform">
+   
+							    <fieldset>
+							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    </fieldset>
+							    
                             </div>
 
                             <p>${commList.score_guide}</p>

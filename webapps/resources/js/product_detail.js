@@ -113,30 +113,222 @@
 	} // shareLine
 	
 	
-	// 별점/평점 가져오기
+	// 별점/평점 등록하기
 	$(document).ready(function(){
 		
-//		var pairway = parseInt($("input[name=rating]:checked").val()); 
-		var pairway = $("input[name=rating]").val(); 
+		var fairway; 
+		var playSpeed;
+		var caddy;
+		var facility;
+		var guide;
 		
-		if( $("#rate1").is(":checked") ){
-			
-			console.log("ㅋ");
-			
-		}else if( $("#rate2").is(":checked") ){
-			
-			console.log("ㅋㅋ");
-		}else if( $("#rate3").is(":checked") ){
-			
-			console.log("ㅋㅋㅋ");
-		}else if( $("#rate4").is(":checked") ){
-			
-			console.log("ㅋㅋㅋㅋ");
-		}else{
-			
-			console.log("ㅋㅋㅋㅋㅋ");
-		}
+		// fairway
+		$("#rate1-1").change(function(){
+			if( $("#rate1-1").is(":checked") ){
+				console.log("1");
+				fairway = 1;
+				$("#myform_p1").val(fairway);
+			}
+		}); 
+		
+		$("#rate1-2").change(function(){
+			if( $("#rate1-2").is(":checked") ){
+				console.log("2");
+				fairway = 2;
+				$("#myform_p1").val(fairway);
+			}
+		}); 
+		
+		$("#rate1-3").change(function(){
+			if( $("#rate1-3").is(":checked") ){
+				console.log("3");
+				fairway = 3;
+				$("#myform_p1").val(fairway);
+			}
+		}); 
+		
+		$("#rate1-4").change(function(){
+			if( $("#rate1-4").is(":checked") ){
+				console.log("4");
+				fairway = 4;
+				$("#myform_p1").val(fairway);
+			}
+		}); 
+		
+		$("#rate1-5").change(function(){
+			if( $("#rate1-5").is(":checked") ){
+				console.log("5");
+				fairway = 5;
+				$("#myform_p1").val(fairway);
+			}
+		}); 
 		
 		
+		// playSpeed
+		$("#rate2-1").change(function(){
+			if( $("#rate2-1").is(":checked") ){
+				console.log("1");
+				playSpeed = 1;
+				$("#myform_p2").val(playSpeed);
+			}
+		}); 
+		
+		$("#rate2-2").change(function(){
+			if( $("#rate2-2").is(":checked") ){
+				console.log("2");
+				playSpeed = 2;
+				$("#myform_p2").val(playSpeed);
+			}
+		}); 
+		
+		$("#rate2-3").change(function(){
+			if( $("#rate2-3").is(":checked") ){
+				console.log("3");
+				playSpeed = 3;
+				$("#myform_p2").val(playSpeed);
+			}
+		}); 
+		
+		$("#rate2-4").change(function(){
+			if( $("#rate2-4").is(":checked") ){
+				console.log("4");
+				playSpeed = 4;
+				$("#myform_p2").val(playSpeed);
+			}
+		}); 
+		
+		$("#rate2-5").change(function(){
+			if( $("#rate2-5").is(":checked") ){
+				console.log("5");
+				playSpeed = 5;
+				$("#myform_p2").val(playSpeed);
+			}
+		}); 
+		
+		
+		// caddy
+		$("#rate3-1").change(function(){
+			if( $("#rate3-1").is(":checked") ){
+				console.log("1");
+				caddy = 1;
+				$("#myform_p3").val(caddy);
+			}
+		}); 
+		
+		$("#rate3-2").change(function(){
+			if( $("#rate3-2").is(":checked") ){
+				console.log("2");
+				caddy = 2;
+				$("#myform_p3").val(caddy);
+			}
+		}); 
+		
+		$("#rate3-3").change(function(){
+			if( $("#rate3-3").is(":checked") ){
+				console.log("3");
+				caddy = 3;
+				$("#myform_p3").val(caddy);
+			}
+		}); 
+		
+		$("#rate3-4").change(function(){
+			if( $("#rate3-4").is(":checked") ){
+				console.log("4");
+				caddy = 4;
+				$("#myform_p3").val(caddy);
+			}
+		}); 
+		
+		$("#rate3-5").change(function(){
+			if( $("#rate3-5").is(":checked") ){
+				console.log("5");
+				caddy = 5;
+				$("#myform_p3").val(caddy);
+			}
+		}); 
+		
+		
+		// facility
+		$("#rate4-1").change(function(){
+			if( $("#rate4-1").is(":checked") ){
+				console.log("1");
+				facility = 1;
+				$("#myform_p4").val(facility);
+			}
+		}); 
+		
+		$("#rate4-2").change(function(){
+			if( $("#rate4-2").is(":checked") ){
+				console.log("2");
+				facility = 2;
+				$("#myform_p4").val(facility);
+			}
+		}); 
+		
+		$("#rate4-3").change(function(){
+			if( $("#rate4-3").is(":checked") ){
+				console.log("3");
+				facility = 3;
+				$("#myform_p4").val(facility);
+			}
+		}); 
+		
+		$("#rate4-4").change(function(){
+			if( $("#rate4-4").is(":checked") ){
+				console.log("4");
+				facility = 4;
+				$("#myform_p4").val(facility);
+			}
+		}); 
+		
+		$("#rate4-5").change(function(){
+			if( $("#rate4-5").is(":checked") ){
+				console.log("5");
+				facility = 5;
+				$("#myform_p4").val(facility);
+			}
+		}); 
+		
+		
+		// guide
+		$("#rate5-1").change(function(){
+			if( $("#rate5-1").is(":checked") ){
+				console.log("1");
+				guide = 1;
+				$("#myform_p5").val(guide);
+			}
+		}); 
+		
+		$("#rate5-2").change(function(){
+			if( $("#rate5-2").is(":checked") ){
+				console.log("2");
+				guide = 2;
+				$("#myform_p5").val(guide);
+			}
+		}); 
+		
+		$("#rate5-3").change(function(){
+			if( $("#rate5-3").is(":checked") ){
+				console.log("3");
+				guide = 3;
+				$("#myform_p5").val(guide);
+			}
+		}); 
+		
+		$("#rate5-4").change(function(){
+			if( $("#rate5-4").is(":checked") ){
+				console.log("4");
+				guide = 4;
+				$("#myform_p5").val(guide);
+			}
+		}); 
+		
+		$("#rate5-5").change(function(){
+			if( $("#rate5-5").is(":checked") ){
+				console.log("5");
+				guide = 5;
+				$("#myform_p5").val(guide);
+			}
+		}); 
 		
 	});

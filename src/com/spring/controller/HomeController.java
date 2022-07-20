@@ -441,6 +441,7 @@ public class HomeController extends HttpServlet {
 		model.addAttribute("noResList", bservice.oneNoReser(nrvo));
 		model.addAttribute("pageMaker_com", pageMaker_com);
 		model.addAttribute("pageMaker_rev", pageMaker_rev);
+		model.addAttribute("commenttotal", commenttotal);
 		
 		return "category/product_detail.tiles";
 	}

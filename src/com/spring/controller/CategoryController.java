@@ -139,6 +139,7 @@ public class CategoryController {
 	@RequestMapping(value = "comment", method = RequestMethod.POST)
 	public String comment(CommentVO vo) throws Exception{
 		
+//		logger.info("@@@@@@@ vo :" + vo);
 		bservice.addComment(vo);
 		
 		return "redirect:../product_detail?product_code="+vo.getProduct_code();

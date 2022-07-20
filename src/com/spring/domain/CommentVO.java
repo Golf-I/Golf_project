@@ -12,12 +12,12 @@ public class CommentVO {
 	private	byte[] comment_user_profile;	// 상품별점/평점 작성 프로필 blob
 	private	String comment;					// 상품별점/평점 코멘트
 	private	Date comment_regdate;			// 코멘트 등록일자
-	private	double score_fairways;			// 상품별점/평점 - 페이웨이/그린
-	private	double score_playSpeed;			// 상품별점/평점 - 플레이속도
-	private	double score_caddy;				// 상품별점/평점 - 캐디
-	private	double score_facilities;		// 상품별점/평점 - 부대시설
-	private	double score_guide;				// 상품별점/평점 - 가이드
-	private	double average_score;			// 평균 고객 별점
+	private	int score_fairways;			// 상품별점/평점 - 페이웨이/그린
+	private	int score_playSpeed;			// 상품별점/평점 - 플레이속도
+	private	int score_caddy;				// 상품별점/평점 - 캐디
+	private	int score_facilities;		// 상품별점/평점 - 부대시설
+	private	int score_guide;				// 상품별점/평점 - 가이드
+	private	int average_score;			// 평균 고객 별점
 	
 	
 	public int getProduct_code() {
@@ -59,37 +59,37 @@ public class CommentVO {
 	public double getScore_fairways() {
 		return score_fairways;
 	}
-	public void setScore_fairways(double score_fairways) {
+	public void setScore_fairways(int score_fairways) {
 		this.score_fairways = score_fairways;
 	}
 	public double getScore_playSpeed() {
 		return score_playSpeed;
 	}
-	public void setScore_playSpeed(double score_playSpeed) {
+	public void setScore_playSpeed(int score_playSpeed) {
 		this.score_playSpeed = score_playSpeed;
 	}
 	public double getScore_caddy() {
 		return score_caddy;
 	}
-	public void setScore_caddy(double score_caddy) {
+	public void setScore_caddy(int score_caddy) {
 		this.score_caddy = score_caddy;
 	}
 	public double getScore_facilities() {
 		return score_facilities;
 	}
-	public void setScore_facilities(double score_facilities) {
+	public void setScore_facilities(int score_facilities) {
 		this.score_facilities = score_facilities;
 	}
 	public double getScore_guide() {
 		return score_guide;
 	}
-	public void setScore_guide(double score_guide) {
+	public void setScore_guide(int score_guide) {
 		this.score_guide = score_guide;
 	}
 	public double getAverage_score() {
 		return average_score;
 	}
-	public void setAverage_score(double average_score) {
+	public void setAverage_score(int average_score) {
 		this.average_score = average_score;
 	}
 	

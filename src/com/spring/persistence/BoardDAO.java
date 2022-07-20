@@ -55,6 +55,8 @@ public interface BoardDAO {
 	
 	public List<BoardVO> lookup(BoardVO vo) throws Exception; // 게시물 조회
 	
+	public List<ReviewVO> review_lookup(ReviewVO vo) throws Exception; // 상품 리뷰 조회
+	
 	public List<ProductVO> oneProduct(ProductVO vo) throws Exception; // 패키지 상품 게시물 조회
 
 	public List<ItineraryVO> oneItinerary(ItineraryVO vo) throws Exception; // 일정표 게시물 조회

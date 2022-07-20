@@ -231,6 +231,17 @@ public class BoardDAOImpl implements BoardDAO{
 	} // lookup
 	
 	
+	/* 상품 리뷰 조회 */
+	@Override
+	public List<ReviewVO> review_lookup(ReviewVO vo) throws Exception {
+		
+		List<ReviewVO> revList = new ArrayList<ReviewVO>();
+		revList = sqlSession.selectList(namespace+".review_lookup", vo);
+		
+		return revList;
+	} // review_lookup
+	
+	
 	/* 패키지 상품 게시물 조회 */
 	@Override
 	public List<ProductVO> oneProduct(ProductVO vo) throws Exception {

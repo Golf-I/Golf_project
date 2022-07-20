@@ -674,7 +674,7 @@
     
                                     <div class="review01">
                                         <div class="star01">
-                                            <div>
+<%--                                             <div>
                                             	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
                                             	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
                                             	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
@@ -698,7 +698,7 @@
                                             	<img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"
                                             	onmouseover="this.src='${pageContext.request.contextPath}/resources/img/detail01/star.png'"
                                             	onmouseout="this.src='${pageContext.request.contextPath}/resources/img/detail01/02star.png'">
-                                            </div>
+                                            </div> --%>
                                         </div>
     
                                         <div class="good_icon01">
@@ -736,11 +736,11 @@
     
                                     <div class="review02">
                                         <div class="star02">
+<%--                                             <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
                                             <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
                                             <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
                                             <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/star.png"></div>
-                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"></div>
+                                            <div><img src="${pageContext.request.contextPath}/resources/img/detail01/02star.png"></div> --%>
                                         </div>
     
                                         <div class="good_icon02">
@@ -883,23 +883,46 @@
                 </div><!--menu02-->
 
             
+            <%-- 상품 전체 별점/평점 변수 선언 --%>
+			<c:forEach items="${commList}" var="i">
+			<c:set var="totalFairways" value="${totalFairways + i.score_fairways}"/>
+			<c:set var="totalPlaySpeed" value="${totalPlaySpeed + i.score_playSpeed}"/>
+			<c:set var="totalCaddy" value="${totalCaddy + i.score_caddy}"/>
+			<c:set var="totalFacilities" value="${totalFacilities + i.score_facilities}"/>
+			<c:set var="totalGuide" value="${totalGuide + i.score_guide}"/>
+			</c:forEach>
+
+			<c:set var="AVGFairways" value="${totalFairways / commenttotal}"/>
+			<c:set var="AVGPlaySpeed" value="${totalPlaySpeed / commenttotal}"/>
+			<c:set var="AVGCaddy" value="${totalCaddy / commenttotal}"/>
+			<c:set var="AVGFacilities" value="${totalFacilities / commenttotal}"/>
+			<c:set var="AVGGuide" value="${totalGuide / commenttotal}"/>
+			<c:set var="totalAVG" value="${AVGFairways + AVGPlaySpeed + AVGCaddy + AVGFacilities + AVGGuide}"/>
+            <%-- 상품 전체 별점/평점 변수 선언 --%>
 
             <div class="grade_box">
 
                 <div class="grade01">
 
 					<%-- 상품 별점 --%>
-                    <p><span>0</span>/5</p>
-<!--                     <p><span>8.9</span>/10</p>
- -->
-                    <div class="star01"id="myform">
+					<c:choose>
+						<c:when test="${totalAVG <= 0}">
+		                    <p><span>0.0/5</span></p>
+						</c:when>
+	
+						<c:otherwise>
+	                    <p><span><fmt:formatNumber value="${totalAVG / 5}" pattern=".0" /></span>/5</p>
+						</c:otherwise>
+					</c:choose>
+                    
+                    <div class="star01" id="myform">
    
 					    <fieldset>
-					        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" disabled="disabled" checked><label>⭐</label>
+					        <input type="radio" disabled="disabled" checked><label>⭐</label>
 					    </fieldset>
 					    
                     </div>
@@ -909,34 +932,34 @@
                 </div><!--01-->
 
                 <div class="grade02">
-                    <p>0</p>
+                    <p><fmt:formatNumber value="${AVGFairways}" pattern=".0" /></p>
                     <p>페이웨이/그린</p>
                 </div>
 
 
                 <div class="grade03">
-                    <p>0</p>
+                    <p><fmt:formatNumber value="${AVGPlaySpeed}" pattern=".0" /></p>
                     <p>플레이 속도</p>
                 </div>
 
                 <div class="grade04">
-                    <p>0</p>
+                    <p><fmt:formatNumber value="${AVGCaddy}" pattern=".0" /></p>
                     <p>캐디</p>
                 </div>
 
                 <div class="grade05">
-                    <p>0</p>
+                    <p><fmt:formatNumber value="${AVGFacilities}" pattern=".0" /></p>
                     <p>부대시설</p>
                 </div>
 
                 <div class="grade06">
-                    <p>0</p>
+                    <p><fmt:formatNumber value="${AVGGuide}" pattern=".0" /></p>
                     <p>가이드</p>
                 </div>
 
             </div><!--평점-->
 
-			<input type="checkbox" id="green01">
+<!-- 			<input type="checkbox" id="green01">
             <input type="checkbox" id="green02">
             <input type="checkbox" id="green03">
             <input type="checkbox" id="green04">
@@ -964,7 +987,7 @@
             <input type="checkbox" id="guide02">
             <input type="checkbox" id="guide03">
             <input type="checkbox" id="guide04">
-            <input type="checkbox" id="guide05">
+            <input type="checkbox" id="guide05"> -->
 
             <div class="type01">
 
@@ -1155,10 +1178,15 @@
 
                             <div class="grade_num01">
 <!--                                 <p><span>8.9</span>5</p> -->
-                                <p><span>${commList.average_score}</span>/5</p>
+				
+				
+					<c:set var="sum" value="${commList.score_fairways + commList.score_playSpeed 
+							+ commList.score_caddy + commList.score_facilities + commList.score_guide}"/>
+							
+                                <p><span>${sum / 5}</span>/5</p>
                             </div>
 
-                            <div class="grade_star01"id="myform">
+<%--                             <div class="grade_star01"id="myform">
    
 							    <fieldset>
 							        <legend><!-- 이모지 별점 --></legend>
@@ -1169,7 +1197,7 @@
 							        
 							    </fieldset>
 									    
-                            </div>
+                            </div> --%>
 
                         </div><!--grade_re_box01-->
 
@@ -1193,12 +1221,20 @@
                             <div class="golf_star01" id="myform">
    
 							    <fieldset>
-							        <legend><!-- 이모지 별점 --></legend>
-							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    	<c:if test="${commList.score_fairways < 5}">
+							    		<c:forEach begin="1" end="${5 - commList.score_fairways}" step="1" var="j">
+							        		<input type="radio" disabled="disabled" ><label>⭐</label>
+							        	</c:forEach>
+							    	</c:if>
+
+							        <c:forEach begin="1" end="${commList.score_fairways}" var="i">
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+<!-- 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
+							    	</c:forEach>
+							    	
 							    </fieldset>
 							    
                             </div>
@@ -1214,11 +1250,19 @@
                             <div class="golf_star02" id="myform">
    
 							    <fieldset>
-							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+								    <c:if test="${commList.score_playSpeed < 5}">
+							    		<c:forEach begin="1" end="${5 - commList.score_playSpeed}" step="1" var="j">
+							        		<input type="radio" disabled="disabled" ><label>⭐</label>
+							        	</c:forEach>
+							    	</c:if>
+							    
+							        <c:forEach begin="1" end="${commList.score_playSpeed}" var="i">
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+<!-- 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
+							    	</c:forEach>
 							    </fieldset>
 							    
                             </div>
@@ -1234,11 +1278,19 @@
                             <div class="golf_star03" id="myform">
    
 							    <fieldset>
-							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+ 									<c:if test="${commList.score_caddy < 5}">
+							    		<c:forEach begin="1" end="${5 - commList.score_caddy}" step="1" var="j">
+							        		<input type="radio" disabled="disabled" ><label>⭐</label>
+							        	</c:forEach>
+							    	</c:if>
+							    
+							        <c:forEach begin="1" end="${commList.score_caddy}" var="i">
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+<!-- 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
+							    	</c:forEach>
 							    </fieldset>
 							    
                             </div>
@@ -1252,13 +1304,20 @@
                             <p>부대시설</p>
 
                             <div class="golf_star04" id="myform">
-   
 							    <fieldset>
-							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+									<c:if test="${commList.score_facilities < 5}">
+							    		<c:forEach begin="1" end="${5 - commList.score_facilities}" step="1" var="j">
+							        		<input type="radio" disabled="disabled" ><label>⭐</label>
+							        	</c:forEach>
+							    	</c:if>							    
+							    
+							    	<c:forEach begin="1" end="${commList.score_facilities}" var="i">
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+<!-- 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
+							    	</c:forEach>
 							    </fieldset>
 							    
                             </div>
@@ -1274,11 +1333,19 @@
                             <div class="golf_star05" id="myform">
    
 							    <fieldset>
-							        <input type="radio" value="5" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="4" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="3" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="2" disabled="disabled" checked><label>⭐</label>
-							        <input type="radio" value="1" disabled="disabled" checked><label>⭐</label>
+							    	<c:if test="${commList.score_guide < 5}">
+							    		<c:forEach begin="1" end="${5 - commList.score_guide}" step="1" var="j">
+							        		<input type="radio" disabled="disabled" ><label>⭐</label>
+							        	</c:forEach>
+							    	</c:if>	
+							    
+							        <c:forEach begin="1" end="${commList.score_guide}" var="i">
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+<!-- 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
+							    	</c:forEach>
 							    </fieldset>
 							    
                             </div>
@@ -1389,11 +1456,23 @@
                      
                     </div><!--left-->
 
-                     <a href="#">
-                        <div class="review_right">
-                            <p>리뷰작성</p>
-                        </div>
-                     </a>
+					<c:choose>
+						<c:when test="${sessionScope.id != null}">
+							<a href="javascript:open('review_write', '리뷰작성', 'width=500, height=500');">
+								<div class="review_right">
+									<p>리뷰작성</p>
+								</div>
+							</a>
+						</c:when>
+						
+						<c:otherwise>
+							<a href="javascript:alert('로그인 후 이용 가능합니다.');">
+								<div class="review_right">
+									<p>리뷰작성</p>
+								</div>
+							</a>						
+						</c:otherwise>
+					</c:choose>
                 </div> <!-- review_box02 -->
 
             </div><!--review02-->
@@ -1404,7 +1483,7 @@
 
             <div class="member_review">
 
-                <a href="javascript:openwindow();" >
+                <a href="javascript:open('detail_review?product_code=${param.product_code}&review_no=${revList.review_no}', '리뷰 내용', 'width=1000, height=930');" >
                 
                 <div class="review_m_01">
                     <div class="review_top">
@@ -1412,14 +1491,15 @@
                             <img src="${pageContext.request.contextPath}/resources/img/detail01/member.png">
                         </div>
 
-                        <p>${revList.review_username}</p>
+                        <p>${fn:substring(revList.review_user, 0, fn:length(revList.review_user)-12)}***</p>
+                        
 <!--                    <p>홍*동</p> -->
 
-						<p>${revList.review_regdate}</p>
+						<p>${revList.regdate}</p>
 <!--                    <p>2022.05.20</p> -->
                     </div>
                     
-						<p>${revList.review_contents}</p>
+						<p>${revList.contents}</p>
                         
                </div><!-- review_m_01 -->
                

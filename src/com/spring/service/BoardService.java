@@ -55,6 +55,8 @@ public interface BoardService {
 	
 	public List<BoardVO> lookup(BoardVO vo) throws Exception; // 게시물 조회
 
+	public List<ReviewVO> review_lookup(ReviewVO vo) throws Exception; // 상품 리뷰 조회
+
 	public List<ProductVO> oneProduct(ProductVO vo) throws Exception; // 상품 게시물 조회
 
 	public List<ItineraryVO> oneItinerary(ItineraryVO vo) throws Exception; // 일정표 게시물 조회
@@ -75,7 +77,7 @@ public interface BoardService {
 	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
 	
-	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 등록
+	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 가져오기
 
 	public List<Map<String, Object>> getPdImgList(Criteria cri) throws Exception; // 패키지 상품 전체 이미지 출력
 	

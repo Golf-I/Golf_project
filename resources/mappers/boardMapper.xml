@@ -186,6 +186,18 @@
 	<!-- 게시물 조회 -->
 	
 	
+	<!-- 상품 리뷰 조회 -->
+	<select id="review_lookup" resultType="com.spring.domain.ReviewVO">
+	<![CDATA[
+	SELECT *
+	FROM package_product_review
+	WHERE product_code = #{product_code}
+	AND review_no = #{review_no}
+	]]>
+	</select>
+	<!-- 상품 리뷰 조회 -->
+	
+	
 	<!-- 상품 게시물 조회 -->
 	<select id="oneProduct" resultType="com.spring.domain.ProductVO">
 	<![CDATA[
@@ -214,7 +226,7 @@
 	SELECT *
 	FROM package_product_review
 	WHERE product_code = #{product_code}
-	ORDER BY review_regdate DESC
+	ORDER BY regdate DESC
 	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
@@ -227,7 +239,7 @@
 	SELECT *
 	FROM package_product_comment
 	WHERE product_code = #{product_code}
-	ORDER BY comment_regdate DESC
+	ORDER BY comment_no DESC
 	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
@@ -305,10 +317,10 @@
 	<![CDATA[
 	INSERT INTO package_product_comment(product_code, comment_user, comment_user_profile, 
 									comment, comment_regdate, score_fairways, score_playSpeed,
-									score_caddy, score_facilities, score_guide, average_score)
+									score_caddy, score_facilities, score_guide)
 	VALUES (#{product_code}, #{comment_user}, #{comment_user_profile}, #{comment}, 
 		NOW(), #{score_fairways}, #{score_playSpeed}, #{score_caddy}, #{score_facilities}, 
-		#{score_guide}, #{average_score})
+		#{score_guide})
 	]]>
 	</insert>
 	<!-- 상품별점/평점 등록 -->

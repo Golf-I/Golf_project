@@ -463,9 +463,17 @@ public class HomeController extends HttpServlet {
 
 	/* 상품 리뷰 새창 페이지 호출 */
 	@RequestMapping(value = "detail_review", method = RequestMethod.GET)
-	public String product_detail_Popup() {
-//		return "category/product_review.tiles";
+	public String product_detail(Model model, ReviewVO vo) throws Exception{
+		
+		model.addAttribute("revList", bservice.review_lookup(vo));
+		
 		return "category/product_review.jsp";
+	}
+	
+	/* 상품 리뷰 작성 페이지 호출 */
+	@RequestMapping(value = "review_write", method = RequestMethod.GET)
+	public String product_review_write() {
+		return "category/product_review_write.jsp";
 	}
 
 	/* 해시태그 목록 페이지 호출 */

@@ -31,9 +31,9 @@
 		</div>
 		
 		<div class="line02"></div>
-		<div class="golf_img">
+<%-- 		<div class="golf_img">
 			<img src="${pageContext.request.contextPath}/resources/img/review/golfimg.png">
-		</div>
+		</div> --%>
 
 		<div class="review_box">
 <!-- 			<p>	이번에 또 한번 갔다왔습니다. 골프장컨디션이 정말 좋아졌네요ㅎ 예전에는 바로옆에 스카이밸리 코스 차량비용받아서 많이 이용은

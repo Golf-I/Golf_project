@@ -363,6 +363,15 @@ public class BoardDAOImpl implements BoardDAO{
 		sqlSession.insert(namespace+".addComment", vo);
 		
 	} // addComment
+	
+	
+	/* 상품 리뷰 등록 */
+	@Override
+	public void addReview(ReviewVO vo) throws Exception {
+		
+		sqlSession.insert(namespace+".addReview", vo);
+		
+	} // addReview
 
 
 	/* 여행자 내역 가져오기 */

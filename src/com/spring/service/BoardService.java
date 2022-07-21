@@ -76,6 +76,8 @@ public interface BoardService {
 	public List<ProductVO> oneFreegolf(ProductVO vo) throws Exception; // 자유골프 조회
 	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
+
+	public void addReview(ReviewVO vo) throws Exception; // 상품 리뷰 등록
 	
 	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 가져오기
 

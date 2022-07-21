@@ -226,7 +226,7 @@
 	SELECT *
 	FROM package_product_review
 	WHERE product_code = #{product_code}
-	ORDER BY regdate DESC
+	ORDER BY review_no DESC
 	LIMIT #{pageStart}, #{perPageNum}
 	]]>
 	</select>
@@ -321,6 +321,18 @@
 	VALUES (#{product_code}, #{comment_user}, #{comment_user_profile}, #{comment}, 
 		NOW(), #{score_fairways}, #{score_playSpeed}, #{score_caddy}, #{score_facilities}, 
 		#{score_guide})
+	]]>
+	</insert>
+	<!-- 상품별점/평점 등록 -->
+	
+	
+	<!-- 상품별점/평점 등록 -->
+	<insert id="addReview">
+	<![CDATA[
+	INSERT INTO package_product_review(product_code, review_user, review_user_profile, 
+									title, contents, regdate)
+	VALUES (#{product_code}, #{review_user}, #{review_user_profile}, #{title}, 
+		#{contents}, NOW())
 	]]>
 	</insert>
 	<!-- 상품별점/평점 등록 -->

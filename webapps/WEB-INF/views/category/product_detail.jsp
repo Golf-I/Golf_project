@@ -914,15 +914,24 @@
 	                    <p><span><fmt:formatNumber value="${totalAVG / 5}" pattern=".0" /></span>/5</p>
 						</c:otherwise>
 					</c:choose>
-                    
+					
+					<fmt:formatNumber var="total" type="number" maxFractionDigits="0" value="${totalAVG / 5}" />
+
                     <div class="star01" id="myform">
-   
 					    <fieldset>
-					        <input type="radio" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" disabled="disabled" checked><label>⭐</label>
-					        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							<c:if test="${total < 5}">
+							<c:forEach begin="1" end="${5 - total}" step="1" var="j">
+							<input type="radio" disabled="disabled" ><label>⭐</label>
+							</c:forEach>
+							</c:if>
+							
+							<c:forEach begin="1" end="${total}" var="i">
+							<input type="radio" disabled="disabled" checked><label>⭐</label>
+<!-- 							        	<input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label>
+							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
+							</c:forEach>
 					    </fieldset>
 					    
                     </div>
@@ -1458,7 +1467,7 @@
 
 					<c:choose>
 						<c:when test="${sessionScope.id != null}">
-							<a href="javascript:open('review_write', '리뷰작성', 'width=500, height=500');">
+							<a href="javascript:open('review_write?product_code=${param.product_code}', '리뷰작성', 'width=1400, height=820');">
 								<div class="review_right">
 									<p>리뷰작성</p>
 								</div>
@@ -1499,7 +1508,7 @@
 <!--                    <p>2022.05.20</p> -->
                     </div>
                     
-						<p>${revList.contents}</p>
+						<p>클릭하시면 내용을 볼 수 있습니다.</p>
                         
                </div><!-- review_m_01 -->
                

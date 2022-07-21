@@ -77,6 +77,8 @@ public interface BoardDAO {
 	
 	public void addComment(CommentVO vo) throws Exception; // 상품별점/평점 등록
 	
+	public void addReview(ReviewVO vo) throws Exception; // 상품 리뷰 등록
+	
 	public List<TravelerVO> getTraveler(int idx) throws Exception; // 여행자 내역 등록
 	
 	public List<Map<String, Object>> getPdImgList(Criteria cri) throws Exception; // 패키지 상품 전체 이미지 출력

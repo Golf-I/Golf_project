@@ -219,7 +219,7 @@
     
                         </div><!--도착지역-->
 
-                        <div class="evaluation">
+<%--                         <div class="evaluation">
 
                             <div class="evaluation_title">
                                 <div><img src="${pageContext.request.contextPath}/resources/img/detail01/good_icon.png"></div>
@@ -233,7 +233,7 @@
                             </div>
 
     
-                        </div><!--상품별점-->
+                        </div> --%><!--상품별점-->
 
                         <div class="money">
 

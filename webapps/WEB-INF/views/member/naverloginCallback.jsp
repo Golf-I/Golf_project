@@ -26,10 +26,32 @@
 		  var sns = "naver";
 		  
 		  // 아이디 중복 확인
+		  var duplForm = document.createElement('form');
 		  
-		  
+			  duplForm.name = 'snsDuplForm';
+			  duplForm.method = 'POST';
+			  duplForm.action = 'member/snsDuplCheck';
+			  
+			  var duplInput1 = document.createElement('input');
+			  var duplInput2 = document.createElement('input');
+			  
+			  duplInput1.setAttribute("type", "hidden");
+			  duplInput1.setAttribute("name", "id");
+			  duplInput1.setAttribute("value", id);
+			  
+			  duplInput2.setAttribute("type", "hidden");
+			  duplInput2.setAttribute("name", "sns");
+			  duplInput2.setAttribute("value", sns);
+			  
+			  duplForm.appendChild(duplInput1);
+			  duplForm.appendChild(duplInput2);
+			  
+			  document.body.appendChild(duplForm);
+			  
+			  duplForm.submit();
+		
 		  // 회원가입 페이지로 이동
-		  var naverform = document.createElement('form');
+		 /*  var naverform = document.createElement('form');
         	
         	naverform.name = 'naverform';
         	naverform.method = 'POST';
@@ -58,7 +80,7 @@
         	
         	document.body.appendChild(naverform);
         	
-        	naverform.submit();
+        	naverform.submit(); */
 	  }
 	  
 	</script>

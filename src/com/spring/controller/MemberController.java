@@ -49,6 +49,7 @@ public class MemberController {
 	@Inject 
 	private ReservationService rservice;
 	
+	
 	/* 회원가입  */
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
 	public String signUp(MemberVO vo) throws Exception {
@@ -74,13 +75,31 @@ public class MemberController {
 	
 	/* 소셜아이디 이메일 중복 확인  */
 	@RequestMapping(value = "snsDuplCheck", method = RequestMethod.POST)
-	public int snsDuplCheck(/* @RequestParam("id") String id, @RequestParam("sns") String sns, */
-							MemberVO vo, HttpServletResponse response) throws Exception{
+	public String snsDuplCheck(/* @RequestParam("id") String id, @RequestParam("sns") String sns, */
+							MemberVO vo, HttpServletResponse response, HttpSession session) throws Exception{
 		logger.info("MemController vo : " + vo);
+
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		
 		int check = 0;
 		check = mservice.snsDuplCheck(vo);
 		
-		return (Integer)check;
+		logger.info("MemController check : " + check);
+		
+		if(check == 1) {
+			out.println("<script>");
+			out.println("self.close();");
+			out.println("</script>");
+			snsSignIn(vo, session);
+			return null;
+		} else { 
+			out.println("<script>");
+			out.println("location.href='../signup'"); 
+			out.println("</script>");
+			out.flush();
+			return "redirect:../login"; 
+		}
 	} // snsDuplCheck
 	
 	

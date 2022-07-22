@@ -98,7 +98,9 @@
                 
             </div><!-- information -->
 
-            <p>* 필수 입력 항목입니다.</p>
+            <div class="red_txt_w">
+            	<p>* 필수 입력 항목입니다.</p>
+            </div>
 
             <table cellpadding="0" cellspacing="0">
 

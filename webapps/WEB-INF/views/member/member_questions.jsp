@@ -128,31 +128,50 @@
                 <input type="checkbox" id="question10">
                 <input type="checkbox" id="question11">
                 <input type="checkbox" id="question12">
+                
+                
+                <div class="q_top_w"></div>
 
                 <div class="question_box">
 
                     <ul>
 
 						<c:forEach items="${bbsList}" var="bbsList">
+                        
                         <li>
-                            <label for="question01" class="question01">
-                                <p>Q</p>
+                        
+
+                            
+                            	<label for="question01" class="question01">
+                                	
+                                	<p>Q</p>
                                 
-                                <p>${bbsList.title}</p>
-							</label>
+                                	<p>${bbsList.title}</p>
+                                	
+								</label>
+								
 
+                            
                             <div class="answer01">
-
+                            
                                 <p>A</p>
-
+                                
                                 <div>
-                                    <p>${bbsList.contents}</p>
-                                </div>
-
+                                	<p>${bbsList.contents}</p>
+                       			</div>
+                       			
                             </div>
+                            
 
+                            
+                            <div></div>
+
+                           
                         </li>
+                        
 						</c:forEach>
+						
+						
 
                     </ul>
 

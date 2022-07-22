@@ -918,12 +918,13 @@
 					<fmt:formatNumber var="total" type="number" maxFractionDigits="0" value="${totalAVG / 5}" />
 
                     <div class="star01" id="myform">
-					    <fieldset>
+					    <fieldset><%--
 							<c:if test="${total < 5}">
-							<c:forEach begin="1" end="${5 - total}" step="1" var="j">
+ 							<c:forEach begin="1" end="${5 - total}" step="1" var="j">
 							<input type="radio" disabled="disabled" ><label>⭐</label>
-							</c:forEach>
+							</c:forEach> 
 							</c:if>
+							
 							
 							<c:forEach begin="1" end="${total}" var="i">
 							<input type="radio" disabled="disabled" checked><label>⭐</label>
@@ -931,7 +932,7 @@
 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
 							        <input type="radio" disabled="disabled" checked><label>⭐</label>
 							        <input type="radio" disabled="disabled" checked><label>⭐</label> -->
-							</c:forEach>
+							</c:forEach>--%>
 					    </fieldset>
 					    
                     </div>

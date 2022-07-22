@@ -23,7 +23,8 @@ body {font-family: SpoqaHanSansNeo;}
 
 .sub
 {width: 100%; max-width: 1920px; min-width: 1340px;
-margin: 0 auto;}
+margin: 0 auto;
+margin-bottom: 50px;}
 
 section .japen01
 {width: 1340px;
@@ -160,7 +161,8 @@ margin-top: 10px;}
 .right .all_box
 {width: 1040px;
 margin-top: 70px;
-margin-bottom: 70px;}
+margin-bottom: 70px;
+overflow:hidden;}
 
 .all_box .product_zon01
 {width: 1040px; height: 347px;
@@ -170,7 +172,9 @@ margin-bottom: 70px;}
 .product_zon01 .product01
 {width: 320px; 
 border: 1px solid #ccc; 
-float: left;}
+float: left;
+margin-right:24px;
+margin-bottom:24px;}
 
 .product01 .product_text_01
 {margin-top: 10px;
@@ -1548,7 +1552,7 @@ margin-left: 5px;}
 a .talk15 p, a .like15 p {color: #ccc;}
 
 .right .number_btn
-{width: 260px; height: 20px;
+{width:240px; height: 20px;
 overflow: hidden;
 margin: 0 auto;
 margin-bottom: 100px;}
@@ -1556,11 +1560,9 @@ margin-bottom: 100px;}
 .number_btn a p 
 {width: 20px; height: 20px;
 line-height: 20px; text-align: center;
-margin-right: 10px; font-weight: bold;
+font-weight: bold;
 float: left;}
 
-.number_btn a:last-child p
-{margin-right: 0;}
 
 .number_btn a:nth-child(2) p
 {color: red;}

@@ -483,81 +483,70 @@
                             <td>요금(1박기준)</td>
                             <td>선택</td>
                         </tr>
-                    </table>
 
+                         <tr>
+                             <td>임페리얼 japan (구 소호텔)</td>
+                             <td>★★★★☆</td>
+                             <td>180,000</td>
+                             <td> <a href="#">선택</a></td>
+                         </tr>
 
-                    <div class="scroll_01">
+                        
+                         <tr>
+                             <td>가나무라 호텔</td>
+                             <td>★★★☆☆</td>
+                             <td>120,000</td>
+                             <td> <a href="#">선택</a></td>
+                         </tr>
 
-                        <table cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td>임페리얼 japan (구 소호텔)</td>
-                                <td>★★★★☆</td>
-                                <td>180,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
+                         <tr>
+                             <td>이노시키 호텔</td>
+                             <td>★★★☆☆</td>
+                             <td>90,000</td>
+                             <td> <a href="#">선택</a></td>
+                         </tr>
 
-                           
-                            <tr>
-                                <td>가나무라 호텔</td>
-                                <td>★★★☆☆</td>
-                                <td>120,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
+                         <tr>
+                             <td>소호텔</td>
+                             <td>★★★★☆</td>
+                             <td>160,000</td>
+                             <td> <a href="#">선택</a></td>
+                         </tr>
 
-                            <tr>
-                                <td>이노시키 호텔</td>
-                                <td>★★★☆☆</td>
-                                <td>90,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
+                         <tr>
+                             <td>펠리시 기노야</td>
+                             <td>★★★☆☆</td>
+                             <td>100,000</td>
+                             <td> <a href="#">선택</a></td>
+                         </tr>
 
-                            <tr>
-                                <td>소호텔</td>
-                                <td>★★★★☆</td>
-                                <td>160,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
+                         <tr>
+                             <td>메리어트 호텔</td>
+                             <td>★★★☆☆</td>
+                             <td>300,000</td>
+                             <td> <a href="#">선택</a></td>
+                         </tr>
 
-                            <tr>
-                                <td>펠리시 기노야</td>
-                                <td>★★★☆☆</td>
-                                <td>100,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
+                         <tr>
+                             <td>가나무라 호텔</td>
+                             <td>★★★★★</td>
+                             <td>120,000</td>
+                             <td> 
+                                 <a href="#">선택</a>
+                             </td>
+                         </tr>
 
-                            <tr>
-                                <td>메리어트 호텔</td>
-                                <td>★★★☆☆</td>
-                                <td>300,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
+                         <tr>
+                             <td>가나무라 호텔</td>
+                             <td>★★★☆☆</td>
+                             <td>120,000</td>
+                             <td> 
+                                 <a href="#">선택</a>
+                             </td>
+                         </tr>
 
-                            <tr>
-                                <td>가나무라 호텔</td>
-                                <td>★★★★★</td>
-                                <td>120,000</td>
-                                <td> 
-                                    <a href="#">
-                                        선택
-                                    </a>
-                                </td>
-                            </tr>
+					</table>
 
-                            <tr>
-                                <td>가나무라 호텔</td>
-                                <td>★★★☆☆</td>
-                                <td>120,000</td>
-                                <td> 
-                                    <a href="#">
-                                        선택
-                                    </a>
-                                </td>
-                            </tr>
-
-                        </table>
-
-                    </div>
-                    
                 </div><!--left-->
 
                 <input type="button" id="chk_day_01">
@@ -716,40 +705,34 @@
                             <td>가격</td>
                             <td>선택</td>
                         </tr>
-                    </table>
 
+						<tr>
+						    <td>나리타공항 ↔ 골프장 송영서비스 (1인 기준)</td>
+						    <td>180,000</td>
+						    <td> <a href="#">선택</a></td>
+						</tr>
+						
+						
+						<tr>
+						    <td>도쿄 반나절 투어 (1인 기준)</td>
+						    <td>120,000</td>
+						    <td> <a href="#">선택</a></td>
+						</tr>
+						
+						<tr>
+						    <td>1일 렌터카 (Sienta GPS 또는 동급)</td>
+						    <td>90,000</td>
+						    <td> <a href="#">선택</a></td>
+						</tr>
+						
+						<tr>
+						    <td>디즈인렌드 입장권 (1인 기준)</td>
+						    <td>160,000</td>
+						    <td> <a href="#">선택</a></td>
+						</tr>
 
-                    <div class="scroll_02">
+					</table>
 
-                        <table cellpadding="0" cellspacing="0">
-                            <tr>
-                                <td>나리타공항 ↔ 골프장 송영서비스 (1인 기준)</td>
-                                <td>180,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
-
-                           
-                            <tr>
-                                <td>도쿄 반나절 투어 (1인 기준)</td>
-                                <td>120,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
-
-                            <tr>
-                                <td>1일 렌터카 (Sienta GPS 또는 동급)</td>
-                                <td>90,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
-
-                            <tr>
-                                <td>디즈인렌드 입장권 (1인 기준)</td>
-                                <td>160,000</td>
-                                <td> <a href="#">선택</a></td>
-                            </tr>
-
-                        </table>
-
-                    </div>
                     
                 </div><!--left-->
 
@@ -788,7 +771,7 @@
 
                     <table class="opt_bot" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td>이용일</td>
+                            <td>이용기간</td>
                             <td colspan="2">
                                 <div class="opt_chk_left">
                                     <div>
@@ -836,6 +819,160 @@
                 </div>
             
             </div><!--옵션사항-->
+
+
+			<!--렌터카-->
+			<div class="line04"></div>
+
+            <div class="car">
+
+                <div class="car_title">
+                    <p>렌터카</p>
+                </div>
+                 
+                <div class="car_left">
+
+                    <table cellpadding="0" cellspacing="0">
+
+                        <tr>
+                            <td>옵션</td>
+                            <td>가격</td>
+                            <td>선택</td>
+                        </tr>
+
+                        <tr>
+                            <td>1일 렌터카 (Sienta GPS 또는 동급)</td>
+                            <td>90,000</td>
+                            <td> <a href="#">선택</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>1일 렌터카 (Sienta GPS 또는 동급)</td>
+                            <td>90,000</td>
+                            <td> <a href="#">선택</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>1일 렌터카 (Sienta GPS 또는 동급)</td>
+                            <td>90,000</td>
+                            <td> <a href="#">선택</a></td>
+                        </tr>
+
+                    </table>
+
+                </div><!--왼-->
+                
+                
+				<div class="car_right">
+
+                    <input type="button" id="car_day_01">
+                    <input type="button" id="car_day_02">
+
+                    <div class="car_chk_in">
+                        
+                        <table cellpadding="0" cellspacing="0">
+                            
+                            <tr>
+                                <td>대여일</td>
+                                <td>
+                                    <div class="car_day01">
+                                        <p>2022-05-25</p>
+                                    </div>
+
+                                    <label for="car_day_01">
+                                        <img src="${pageContext.request.contextPath}/resources/img/freegolf/day.png">
+                                    </label>
+                                </td>
+                            
+                                <td>반납일</td>
+                                <td>
+                                    <div class="car_day02">
+                                        <p>2022-05-27</p>
+                                    </div>
+
+                                    <label for="car_day_02">
+                                        <img src="${pageContext.request.contextPath}/resources/img/freegolf/day.png">
+                                    </label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>차량정보</p>
+                                </td>
+
+                                <td>
+                                    <p>　</p>
+                                </td>
+
+                                <td>
+                                    <p>가격(1박기준)</p>
+                                </td>
+
+                                <td>
+                                    <p>　</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>대여장소</p>
+                                </td>
+
+                                <td>
+                                    <p>　</p>
+                                </td>
+
+                                <td>
+                                    <p>반납장소</p>
+                                </td>
+
+                                <td>
+                                    <p>　</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>기타</p>
+                                </td>
+
+                                <td colspan="3">
+                                    <p>　</p>
+                                </td>
+                            </tr>
+
+                        </table>
+                     </div><!--chk_in-->
+
+
+                     <div class="car_opt">
+
+                        <table cellpadding="0" cellspacing="0">
+
+                            <tr>
+                                <td>
+                                    <p>포함사항</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>　</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                     </div>
+
+                </div><!--오-->
+
+            </div><!--렌터카-->
+
+
+
 
 
             <div class="reservation">

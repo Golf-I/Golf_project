@@ -2672,6 +2672,8 @@ margin-right: 10px;}
 #myform input[type=radio]{
     display: none; /* 라디오박스 감춤 */
 }
+
+
 #myform label{
     font-size: 12px; /* 이모지 크기 */
     color: transparent; /* 기존 이모지 컬러 제거 */
@@ -2687,3 +2689,13 @@ margin-right: 10px;}
 #myform input[type=radio]:checked ~ label{
     text-shadow: 0 0 0 #a00; /* 마우스 클릭 체크 */
 }
+
+
+
+
+#myform_p1, #myform_p2, #myform_p3, #myform_p4, #myform_p5
+{border:none;
+margin-top:5px;
+background-color:#d6d6d6;
+text-align:center;
+font-weight:bold;}

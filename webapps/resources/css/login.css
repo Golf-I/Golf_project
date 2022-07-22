@@ -102,10 +102,11 @@ margin-bottom: 20px;}
 
 a .naver
 {width: 450px; height: 50px;
-background-color: #00d700;
+background-color: #1ec800;
 margin-bottom: 10px;
 margin-left: 50px;
 border-radius: 5px;}
+
 
 a .naver .naver_logo
 {width: 30px; height: 30px;
@@ -118,7 +119,6 @@ text-align: center; line-height: 50px;
 font-weight: bold;
 float: left;
 color: white;}
-
 
 
 a .kakao_login

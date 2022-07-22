@@ -342,7 +342,7 @@
 	<select id="getTraveler" resultType="com.spring.domain.TravelerVO">
 	<![CDATA[
 	SELECT *
-	FROM traveler
+	FROM package_traveler
 	WHERE idx = #{idx}
 	]]>
 	</select>

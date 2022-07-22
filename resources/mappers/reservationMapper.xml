@@ -31,7 +31,7 @@
 	<!-- 여행자정보 삽입 -->
 	<insert id="addTraveler">
 	<![CDATA[
-	INSERT INTO traveler (idx, product_code, productName, departure_date, arrival_date, booker,
+	INSERT INTO package_traveler (idx, product_code, productName, departure_date, arrival_date, booker,
 						  traveler, traveler_gender, traveler_firstname, 
 						  traveler_lastname, traveler_phone, regDate)
 	VALUES (#{idx}, #{product_code}, #{productName}, #{departure_date}, #{arrival_date}, 
@@ -68,11 +68,13 @@
 
 	<!-- idx 가져오기 -->
 	<select id="getIdx" resultType="int">
+	<![CDATA[
 	SELECT idx
 	FROM reservation
 	WHERE product_code = #{product_code}
 	AND productName = #{productName}
 	AND departure_date = #{departure_date}
+	]]>
 	</select>
 	<!-- idx 가져오기 -->
 

@@ -278,7 +278,7 @@
 
                         <td>
                             <!-- <p>도쿄 이타코(水鄕) 골프 2박3일!</p> -->
-                		    <input type="text" name="productName" value="${param.productName}" readonly/>
+                		    <input type="text" name="productName" id="golf01" value="${param.productName}" readonly/>
                         </td>
 
                         <td>
@@ -475,7 +475,7 @@
 
                             <td>
                                 <!-- <p>an20o0@naver.com</p> -->
-                                <input type="email" name="booker_email" required/>
+                                <input type="email" id="email_w" name="booker_email" required/>
                             </td>
 
 

@@ -138,6 +138,10 @@ box-sizing: border-box; color: #0d75bc; font-weight: bold;}
 background-color: #ccc;
 margin-bottom: 50px;}
 
+.questions_right .q_top_w
+{width:1040px; height:1px;
+background-color:#333;}
+
 .questions_right .question_box
 {width: 1040px;
 overflow: hidden;
@@ -145,8 +149,6 @@ margin-bottom: 100px;}
 
 .question_box ul li
 {width: 1040px;
-border-bottom: 1px solid #ccc;
-box-sizing: border-box;
 transition: all 0.3s;}
 
 #question01,#question02,#question03,#question04,#question05 {display: none;}
@@ -156,23 +158,26 @@ transition: all 0.3s;}
 
 /*01*/
 
-.question_box ul li:nth-child(1)
-{width: 1040px;
-border-top: 1px solid #333;
-box-sizing: border-box;}
+/*.question_box ul li:nth-child(1)
+{width: 1040px;}
 
-#question01:checked ~ .question_box ul li:nth-child(1) .answer01 /*A 나오는 거*/
+#question01:checked ~ .question_box ul li:nth-child(1) .answer01 A 나오는 거
 {height: 150px;}
 
 #question01:checked ~ .question_box .question01 p:nth-child(1)
 {background-color: black;}
 
+#question01:checked ~ .question_box ul li .answer01
+{display:block;}
+
 .question_box ul li:nth-child(1):hover .question01
 {margin-bottom: 10px;}
 
-.question_box ul li .question01
-{width: 1000px; height: 50px;
-margin-left: 20px;}
+.question_box ul li div:nth-child(1) .question01
+{width: 1000px;
+margin-left: 20px;
+overflow:hidden;
+display:block;}
 
 .question01>p
 {float: left;}
@@ -187,29 +192,103 @@ margin-left: 20px;
 color: white;}
 
 .question01>p:nth-child(2)
-{font-size: 14px; line-height: 50px;
+{width:930px;
+font-size: 14px; line-height: 50px;
 font-weight: bold;}
 
-
 .question_box ul li .answer01
-{width: 1000px; height: 0;
-margin-left: 20px;
-overflow: hidden;}
+{width: 1000px;
+margin-left: 20px; margin-bottom:20px;
+overflow: hidden;
+display:none;}
 
 .answer01 p, .answer01 div 
 {float: left;}
 
 .answer01>p:nth-child(1)
-{width: 30px; height: 30px;
+{width: 30px; height:30px;
 text-align: center; line-height: 30px;
 border-radius: 15px;
 background-color: #0d75bc;
 margin-top: 10px; margin-right: 20px; color: white;}
 
-.answer01 div
+.answer01>div:nth-child(2)>p
 {width: 950px; float: left;
 margin-top: 10px; margin-bottom: 10px;
 font-size: 14px; line-height: 30px;}
+
+
+.question_box ul li .test01
+{width:1040px; height:1px;
+background-color:#ccc;}*/
+
+#question01:checked ~ .question_box ul li:nth-child(1) .answer01
+{display: block;}
+
+#question01:checked ~ .question_box ul li .question01>p:nth-child(1)
+{background-color:#333;}
+
+.questions_right .question_box
+{width:1040px;}
+
+.question_box>ul>li
+{width:1040px;}
+
+.question01
+{width:1000px;
+margin: 5px auto;
+overflow:hidden;
+display:block;}
+
+label>p:nth-child(1)
+{width:30px; height:30px;
+float:left;
+margin-right:10px;
+text-align: center; line-height: 30px;
+border-radius: 15px;
+background-color: #dddddd;
+color: white;}
+
+label>p:nth-child(2)
+{width:960px;
+float:left;
+line-height:30px;
+font-size: 14px;
+font-weight: bold;}
+
+
+.question_box>ul>li>div:nth-child(2)
+{width:1000px;
+margin: 5px auto;
+margin-bottom:10px;
+padding-top:10px;
+overflow:hidden;
+display:none;}
+
+.question_box>ul>li>div:nth-child(2)>p:nth-child(1)
+{width:30px; height:30px;
+float:left;
+margin-right:10px;
+text-align: center; line-height: 30px;
+border-radius: 15px;
+background-color: #0d75bc;
+color: white;}
+
+.question_box>ul>li>div:nth-child(2)>div:nth-child(2)
+{width:960px;
+float:left;
+line-height:30px;
+font-size: 14px;}
+
+.question_box>ul>li>div:nth-child(3)
+{width:1040px; height:1px;
+background-color:#ccc;}
+
+
+
+
+
+
 
 /*02*/
 
@@ -738,7 +817,7 @@ margin-top: 10px; margin-bottom: 10px;
 font-size: 14px; line-height: 30px;}
 
 .questions_right .num_chk
-{width: 570px; height: 20px;
+{width: 240px; height: 20px;
 overflow: hidden;
 margin: 0 auto;
 margin-bottom: 100px;}
@@ -746,8 +825,11 @@ margin-bottom: 100px;}
 .num_chk a p 
 {width: 20px; height: 20px;
 line-height: 20px; text-align: center;
-margin-right: 10px; font-weight: bold;
+font-weight: bold;
 float: left; color: #333;}
+
+.num_chk a p:hover
+{color:red;}
 
 .num_chk a:last-child p
 {margin-right: 0;}

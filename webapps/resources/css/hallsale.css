@@ -110,7 +110,7 @@ margin-top: 5px; margin-right: 5px;}
 float: left;
 font-weight: bold;}
 
-.hallsale>p:nth-child(3)
+.red_txt_w>p
 {width: 1200px; height: 20px; line-height: 20px;
 margin-bottom: 10px;
 font-size: 14px; color: red;
@@ -295,7 +295,7 @@ box-sizing: border-box;}
 font-size: 14px; line-height: 40px;
 text-indent: 20px; float: left;}
 
-.hallsale table tr:nth-child(8) td:nth-child(1) a:nth-child(2) p
+/*.hallsale table tr:nth-child(8) td:nth-child(1) a:nth-child(2) p
 {width: 80px; height: 30px;
 font-size: 14px; text-align: center; line-height: 30px; text-indent: 0;
 margin-top: 5px; margin-right: 5px;
@@ -306,9 +306,15 @@ float: left;}
 .hallsale table tr:nth-child(8) td:nth-child(1) p:nth-child(3)
 {font-size: 14px; line-height: 40px;
 margin-right: 20px;
-float: left;}
+float: left;}*/
 
-.hallsale table tr:nth-child(8) td:nth-child(1) p:nth-child(4)
+input[type=file]
+{width:180px;
+float:left;
+margin-right:10px;
+line-height: 40px;}
+
+.hallsale table tr:nth-child(8) td:nth-child(1) p:nth-child(3)
 {font-size: 14px; line-height: 40px;
 color: red;
 float: left;}
